@@ -6,7 +6,7 @@
   <link href="https://yvzha0.github.io/atom.xml" rel="self"/>
   
   <link href="https://yvzha0.github.io/"/>
-  <updated>2024-01-24T09:04:21.629Z</updated>
+  <updated>2024-01-24T15:00:49.307Z</updated>
   <id>https://yvzha0.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>本人搭建个人博客过程及遇到的问题</title>
+    <link href="https://yvzha0.github.io/2024/01/24/ben-ren-da-jian-ge-ren-bo-ke-guo-cheng-ji-yu-dao-de-wen-ti/"/>
+    <id>https://yvzha0.github.io/2024/01/24/ben-ren-da-jian-ge-ren-bo-ke-guo-cheng-ji-yu-dao-de-wen-ti/</id>
+    <published>2024-01-24T13:57:08.000Z</published>
+    <updated>2024-01-24T15:00:49.307Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一、前言&quot;&gt;&lt;a href=&quot;#一、前言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="搭建博客前言" scheme="https://yvzha0.github.io/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%89%8D%E8%A8%80/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>MD5碰撞学习</title>

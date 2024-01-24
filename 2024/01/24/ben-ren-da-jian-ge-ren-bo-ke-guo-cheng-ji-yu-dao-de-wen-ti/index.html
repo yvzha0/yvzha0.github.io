@@ -4,13 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="MD5碰撞学习, Blog Of yvzha0">
-    <meta name="description" content="在CTF中，我遇到了以下的问题
-&amp;lt;?php
-        $flag=&#34;&#34;;
-        $v1=$_GET[&#39;v1&#39;];
-        $v2=$_GET[&#39;v2&#39;];
-        if(isset($v1) &amp;amp;">
+    <meta name="keywords" content="本人搭建个人博客过程及遇到的问题, Blog Of yvzha0">
+    <meta name="description" content="一、前言我在搭建这个博客时，前前后后花费了近一天的时间，中间还放弃了一次，其中遇到了许多问题，所以写下这篇文章来记录一下。
+二、准备工作Git 官网Hexo 官网Node.js 官网Github 官网域名(可选)
+三、博客环境搭建1. 安装">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -22,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>MD5碰撞学习 | Blog Of yvzha0</title>
+    <title>本人搭建个人博客过程及遇到的问题 | Blog Of yvzha0</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -342,12 +339,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">MD5碰撞学习</h1>
+                    <h1 class="description center-align post-title">本人搭建个人博客过程及遇到的问题</h1>
                 </div>
             </div>
         </div>
@@ -369,17 +366,9 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/MD5/">
-                                <span class="chip bg-color">MD5</span>
-                            </a>
-                        
-                            <a href="/tags/PHP/">
-                                <span class="chip bg-color">PHP</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -387,8 +376,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                网络攻防学习
+                            <a href="/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%89%8D%E8%A8%80/" class="post-category">
+                                搭建博客前言
                             </a>
                         
                     </div>
@@ -414,14 +403,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    473
+                    841
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -444,70 +433,95 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>在CTF中，我遇到了以下的问题</p>
-<pre class="line-numbers language-php" data-language="php"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
-        <span class="token variable">$flag</span><span class="token operator">=</span><span class="token string double-quoted-string">""</span><span class="token punctuation">;</span>
-        <span class="token variable">$v1</span><span class="token operator">=</span><span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'v1'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token variable">$v2</span><span class="token operator">=</span><span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'v2'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">isset</span><span class="token punctuation">(</span><span class="token variable">$v1</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token keyword">isset</span><span class="token punctuation">(</span><span class="token variable">$v2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">ctype_alpha</span><span class="token punctuation">(</span><span class="token variable">$v1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-                <span class="token keyword">die</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"v1 error"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">is_numeric</span><span class="token punctuation">(</span><span class="token variable">$v2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-                <span class="token keyword">die</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"v2 error"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">md5</span><span class="token punctuation">(</span><span class="token variable">$v1</span><span class="token punctuation">)</span><span class="token operator">==</span><span class="token function">md5</span><span class="token punctuation">(</span><span class="token variable">$v2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-                <span class="token keyword">echo</span> <span class="token variable">$flag</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
-        
-            <span class="token keyword">echo</span> <span class="token string double-quoted-string">"where is flag?"</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token delimiter important">?&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <h1 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h1><p>我在搭建这个博客时，前前后后花费了近一天的时间，中间还放弃了一次，其中遇到了许多问题，所以写下这篇文章来记录一下。</p>
+<h1 id="二、准备工作"><a href="#二、准备工作" class="headerlink" title="二、准备工作"></a>二、准备工作</h1><p><strong>Git <a target="_blank" rel="noopener" href="https://git-scm.com/downloads">官网</a></strong><br><strong>Hexo <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">官网</a></strong><br><strong>Node.js <a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/">官网</a></strong><br><strong>Github <a target="_blank" rel="noopener" href="https://github.com/">官网</a></strong><br><strong>域名(可选)</strong></p>
+<h1 id="三、博客环境搭建"><a href="#三、博客环境搭建" class="headerlink" title="三、博客环境搭建"></a>三、博客环境搭建</h1><h2 id="1-安装Git和Node-js"><a href="#1-安装Git和Node-js" class="headerlink" title="1. 安装Git和Node.js"></a>1. 安装Git和Node.js</h2><p>可以参考如下文章</p>
+<p><strong><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/137448719">Git安装教程</a></strong><br><strong><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/137445273">Nodejs安装</a></strong></p>
+<h2 id="2-安装Hexo"><a href="#2-安装Hexo" class="headerlink" title="2. 安装Hexo"></a>2. 安装Hexo</h2><ol>
+<li><p>在你的博客存放目录下右击鼠标，选择<strong>Open Git Bash here</strong>,打开Git命令行</p>
+<p><img src="/..%5Cimage%5Cimage-20240124221659266.png" alt="image-20240124221659266"></p>
+<p><img src="D:..\image\image-20240124221844205.png" alt="image-20240124221844205"></p>
+</li>
+<li><p>输入以下命令下载Hexo</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-cli <span class="token parameter variable">-g</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>输入以下命令查看Hexo版本信息来确认是否安装成功</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo <span class="token parameter variable">-v</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>在题目中，只有GET方法传入的v1为字符串，v2为数字，并且它们两个的md5值相同时才能得到flag，要实现这样的效果，就要实现它们两个的MD5碰撞。</p>
-<h3 id="PHP中的弱比较"><a href="#PHP中的弱比较" class="headerlink" title="PHP中的弱比较"></a>PHP中的弱比较</h3><ol>
-<li>字符串与int类型的比较，先判断字符串开头是否为数字，如果不是，则判断为false，如果是的话，就把字符串中的第一个字母出现前的数字截取进行比较，比如“123a234”就截取123与int比较</li>
-<li>上述问题是字符串之间的比较，无法以第一种方法绕开，可以用0e开头的方法绕过，因为PHP中认为e是指数运算，比如0e123代表0的123次方，所以只要把两个字符串构造为0e开头的并且后面没有字母，就可以比较为true，因为0的任何次方都是0</li>
+
+
+<p><img src="/..%5Cimage%5Cimage-20240124222128867.png" alt="image-20240124222128867"></p>
+</li>
+<li><p>执行hexo init来初始化，初始化后会多出一些文件</p>
+</li>
+<li><p>执行hexo g生成html页面</p>
+</li>
+<li><p>使用hexo s启动服务，可以看到博客的页面，服务默认在4000端口，如果不满意，可以使用hexo server -p 1234来指定端口</p>
+</li>
 </ol>
-<p>针对上面的题目，只要构造字符串v1和数字v2的MD5值都是0e开头的并且后面没有字母即可得到flag</p>
-<h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><ol>
-<li>使用以下python脚本，我这里为纯数字字符串，视情况修改</li>
+<h2 id="3-将博客部署到github远程仓库"><a href="#3-将博客部署到github远程仓库" class="headerlink" title="3. 将博客部署到github远程仓库"></a>3. 将博客部署到github远程仓库</h2><ol>
+<li><p>登录Github新建一个仓库，仓库名必须为你的<code>Github用户名.github.io</code></p>
+</li>
+<li><p>回到Git Bash中，配置Github账户信息（用户名和邮箱都替换成你自己Github上的）</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config <span class="token parameter variable">--global</span> user.name <span class="token string">"用户名"</span>
+<span class="token function">git</span> config <span class="token parameter variable">--global</span> user.email <span class="token string">"邮箱"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li><p>生成ssh</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ssh-keygen <span class="token parameter variable">-t</span> rsa <span class="token parameter variable">-C</span> <span class="token string">"你的Github邮箱"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>然后按Git Bash给出的路径找到<code>id_rsa.pub</code>文件，并复制其中的内容</p>
+</li>
+<li><p>在github的设置中找到SSH and GPG keys,点击New SSH Key，在key中填入刚才复制的公钥。</p>
+<p><img src="/..%5Cimage%5Cimage-20240124223131119.png" alt="image-20240124223131119"></p>
+<p><img src="/..%5Cimage%5Cimage-20240124223243461.png" alt="image-20240124223243461"></p>
+</li>
+<li><p>打开配置文件_config.yml，找到下图所示地方修改为自己的仓库地址</p>
+<p><img src="/..%5Cimage%5Cimage-20240124223718648.png" alt="image-20240124223718648"></p>
+<p><img src="/..%5Cimage%5Cimage-20240124223825653.png" alt="image-20240124223825653"></p>
+</li>
+<li><p>执行如下命令将项目提交到仓库</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git <span class="token parameter variable">--save</span>  <span class="token comment">#安装部署工具</span>
+hexo clean                            <span class="token comment">#清除缓存       可缩写hexo c</span>
+hexo generate                         <span class="token comment">#生成静态文件    可缩写hexo g</span>
+hexo deploy                           <span class="token comment">#部署到Github   可缩写hexo d</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>如果提交失败，可能是我遇到的问题，解决方法如下</p>
+<ul>
+<li><p>首先测试SSH连接，这里我连接失败,报错ssh: connect to host github.com port 22: Connection timed out</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ssh</span> <span class="token parameter variable">-T</span> git@github.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>在存放公钥私钥(id_rsa和id_rsa.pub)的文件里，新建config文本，内容如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">Host github.com
+User 注册github的邮箱
+Hostname ssh.github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa
+Port 443<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>之后再测试SSH连接成功，然后重新提交到仓库即可</p>
+<p><img src="/..%5Cimage%5Cimage-20240124224642665.png" alt="image-20240124224642665"></p>
+</li>
+</ul>
+</li>
 </ol>
-<pre class="line-numbers language-python3" data-language="python3"><code class="language-python3">import hashlib
-import itertools
-import string
+<h1 id="四、博客主题切换"><a href="#四、博客主题切换" class="headerlink" title="四、博客主题切换"></a>四、博客主题切换</h1><p>自己可以去Hexo官网选择自己心仪的主题，这里以我使用的为例</p>
+<h2 id="1-主题下载与切换"><a href="#1-主题下载与切换" class="headerlink" title="1. 主题下载与切换"></a>1. 主题下载与切换</h2><p><a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery/releases/tag/v2.0.0">点击</a>下载并且解压到themes目录里面</p>
+<p>或者通过Git拉取</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/blinkfox/hexo-theme-matery.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-from tqdm import tqdm
-
-
-def md5(s):
-    return hashlib.md5(s.encode()).hexdigest()
-
-def find_string():
-    for length in tqdm(range(9, 10)):
-        for combination in itertools.product(string.digits, repeat=length):
-            candidate = ''.join(combination)
-            if md5(candidate).startswith('0e') and not any(c.isalpha() for c in md5(candidate)):
-                return candidate
-
-result = find_string()
-print(result)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<ol start="2">
-<li>以上方法太费时间，建议直接在网上寻找</li>
-</ol>
-<pre class="line-numbers language-text" data-language="text"><code class="language-text">一些MD5值为0e开头的字符串：
-QNKCDZO   =&gt; 0e830400451993494058024219903391
-240610708 =&gt; 0e462097431906509019562988736854
-s878926199a =&gt; 0e545993274517709034328855841020
-s155964671a =&gt; 0e342768416822451524974117254469
-s214587387a =&gt; 0e848240448830537924465865611904
-s214587387a =&gt; 0e848240448830537924465865611904<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>参考：<a href="https://link.zhihu.com/?target=https://www.cnblogs.com/Oran9e/p/6537204.html">0e开头MD5值小结 - Oran9e - 博客园</a> 博客</p>
-<p>如下，可以得到答案</p>
-<p><img src="/../image/Snipaste_2024-01-24_17-02-45.png" alt="img"></p>
+<p>修改 Hexo 根目录下的 <code>_config.yml</code> 的 <code>theme</code> 的值：<code>theme: hexo-theme-matery</code></p>
+<h4 id="config-yml-文件的其它修改建议"><a href="#config-yml-文件的其它修改建议" class="headerlink" title="_config.yml 文件的其它修改建议:"></a><code>_config.yml</code> 文件的其它修改建议:</h4><ul>
+<li>请修改 <code>_config.yml</code> 的 <code>url</code> 的值为你的网站主 <code>URL</code>（如：<code>http://xxx.github.io</code>）。</li>
+<li>建议修改两个 <code>per_page</code> 的分页条数值为 <code>6</code> 的倍数，如：<code>12</code>、<code>18</code> 等，这样文章列表在各个屏幕下都能较好的显示。</li>
+<li>如果你是中文用户，则建议修改 <code>language</code> 的值为 <code>zh-CN</code>。</li>
+</ul>
+<h2 id="2-主题的配置"><a href="#2-主题的配置" class="headerlink" title="2. 主题的配置"></a>2. 主题的配置</h2><p>参考<a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md">官方文档</a>或者此<a target="_blank" rel="noopener" href="https://blog.csdn.net/guixinchn/article/details/108152957">博客</a></p>
+<h1 id="五、参考链接"><a href="#五、参考链接" class="headerlink" title="五、参考链接"></a>五、参考链接</h1><p><a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery/tree/develop">https://github.com/blinkfox/hexo-theme-matery/tree/develop</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44732432/article/details/124714408">https://blog.csdn.net/qq_44732432/article/details/124714408</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_48927364/article/details/123405585">https://blog.csdn.net/weixin_48927364/article/details/123405585</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Lutheran/p/15915295.html">https://www.cnblogs.com/Lutheran/p/15915295.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/guixinchn/article/details/108152957">https://blog.csdn.net/guixinchn/article/details/108152957</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/137476045">https://zhuanlan.zhihu.com/p/137476045</a></p>
 
                 
             </div>
@@ -534,7 +548,7 @@ s214587387a =&gt; 0e848240448830537924465865611904<span aria-hidden="true" class
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://yvzha0.github.io/2024/01/24/md5-peng-zhuang-xue-xi/">https://yvzha0.github.io/2024/01/24/md5-peng-zhuang-xue-xi/</a>
+                    <a href="https://yvzha0.github.io/2024/01/24/ben-ren-da-jian-ge-ren-bo-ke-guo-cheng-ji-yu-dao-de-wen-ti/">https://yvzha0.github.io/2024/01/24/ben-ren-da-jian-ge-ren-bo-ke-guo-cheng-ji-yu-dao-de-wen-ti/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -571,15 +585,7 @@ s214587387a =&gt; 0e848240448830537924465865611904<span aria-hidden="true" class
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/MD5/">
-                                    <span class="chip bg-color">MD5</span>
-                                </a>
-                            
-                                <a href="/tags/PHP/">
-                                    <span class="chip bg-color">PHP</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -656,9 +662,10 @@ s214587387a =&gt; 0e848240448830537924465865611904<span aria-hidden="true" class
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2024/01/24/ben-ren-da-jian-ge-ren-bo-ke-guo-cheng-ji-yu-dao-de-wen-ti/">
                     <div class="card-image">
@@ -676,9 +683,9 @@ s214587387a =&gt; 0e848240448830537924465865611904<span aria-hidden="true" class
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-01-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -691,6 +698,7 @@ s214587387a =&gt; 0e848240448830537924465865611904<span aria-hidden="true" class
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -698,7 +706,7 @@ s214587387a =&gt; 0e848240448830537924465865611904<span aria-hidden="true" class
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2024/01/24/md5-peng-zhuang-xue-xi/">
@@ -732,7 +740,6 @@ s214587387a =&gt; 0e848240448830537924465865611904<span aria-hidden="true" class
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
