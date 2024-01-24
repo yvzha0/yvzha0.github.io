@@ -439,8 +439,8 @@
 <p><strong><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/137448719">Git安装教程</a></strong><br><strong><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/137445273">Nodejs安装</a></strong></p>
 <h2 id="2-安装Hexo"><a href="#2-安装Hexo" class="headerlink" title="2. 安装Hexo"></a>2. 安装Hexo</h2><ol>
 <li><p>在你的博客存放目录下右击鼠标，选择<strong>Open Git Bash here</strong>,打开Git命令行</p>
-<p><img src="/..%5Cimage%5Cimage-20240124221659266.png" alt="image-20240124221659266"></p>
-<p><img src="D:..\image\image-20240124221844205.png" alt="image-20240124221844205"></p>
+<p><img src="/../image/image-20240124221659266.png" alt="image-20240124221659266"></p>
+<p><img src="D:../image/image-20240124221844205.png" alt="image-20240124221844205"></p>
 </li>
 <li><p>输入以下命令下载Hexo</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-cli <span class="token parameter variable">-g</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -450,7 +450,7 @@
 
 
 
-<p><img src="/..%5Cimage%5Cimage-20240124222128867.png" alt="image-20240124222128867"></p>
+<p><img src="/../image/image-20240124222128867.png" alt="image-20240124222128867"></p>
 </li>
 <li><p>执行hexo init来初始化，初始化后会多出一些文件</p>
 </li>
@@ -472,12 +472,12 @@
 <li><p>然后按Git Bash给出的路径找到<code>id_rsa.pub</code>文件，并复制其中的内容</p>
 </li>
 <li><p>在github的设置中找到SSH and GPG keys,点击New SSH Key，在key中填入刚才复制的公钥。</p>
-<p><img src="/..%5Cimage%5Cimage-20240124223131119.png" alt="image-20240124223131119"></p>
-<p><img src="/..%5Cimage%5Cimage-20240124223243461.png" alt="image-20240124223243461"></p>
+<p><img src="/../image/image-20240124223131119.png" alt="image-20240124223131119"></p>
+<p><img src="/../image/image-20240124223243461.png" alt="image-20240124223243461"></p>
 </li>
 <li><p>打开配置文件_config.yml，找到下图所示地方修改为自己的仓库地址</p>
-<p><img src="/..%5Cimage%5Cimage-20240124223718648.png" alt="image-20240124223718648"></p>
-<p><img src="/..%5Cimage%5Cimage-20240124223825653.png" alt="image-20240124223825653"></p>
+<p><img src="/../image/image-20240124223718648.png" alt="image-20240124223718648"></p>
+<p><img src="/../image/image-20240124223825653.png" alt="image-20240124223825653"></p>
 </li>
 <li><p>执行如下命令将项目提交到仓库</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git <span class="token parameter variable">--save</span>  <span class="token comment">#安装部署工具</span>
@@ -499,7 +499,7 @@ IdentityFile ~/.ssh/id_rsa
 Port 443<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 <li><p>之后再测试SSH连接成功，然后重新提交到仓库即可</p>
-<p><img src="/..%5Cimage%5Cimage-20240124224642665.png" alt="image-20240124224642665"></p>
+<p><img src="/../image/image-20240124224642665.png" alt="image-20240124224642665"></p>
 </li>
 </ul>
 </li>
