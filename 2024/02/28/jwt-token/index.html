@@ -439,7 +439,7 @@
                 <p>[TOC]</p>
 <h1 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h1><h2 id="1-什么是JSON-Web令牌"><a href="#1-什么是JSON-Web令牌" class="headerlink" title="1. 什么是JSON Web令牌"></a>1. 什么是JSON Web令牌</h2><p>JSON Web Token (JWT) 是一种开放标准 ( <a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc7519">RFC 7519</a> )，它定义了一种紧凑且独立的方式，用于在各方之间以 JSON 对象的形式安全地传输信息。该信息可以被验证和信任，因为它是经过数字签名的。JWT 可以使用密钥（使用<strong>HMAC算法）或使用RSA</strong>或<strong>ECDSA</strong>的公钥/私钥对其进行签名。</p>
 <p>认证过程：</p>
-<p><img src="/..%5Cimage%5Cwebp" alt="JWT的认证过程"></p>
+<p><img src="/../image/webp" alt="JWT的认证过程"></p>
 <p>标头的内容应如下所示：</p>
 <pre class="line-numbers language-http" data-language="http"><code class="language-http"><span class="token header"><span class="token header-name keyword">Authorization</span><span class="token punctuation">:</span> <span class="token header-value">Bearer &lt;token&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
@@ -490,7 +490,7 @@
 <p>在计算出签名哈希后，JWT头，有效载荷和签名哈希的三个部分组合成一个字符串，每个部分用”.”分隔，就构成整个JWT对象。</p>
 <h3 id="3-4-Base64URL算法"><a href="#3-4-Base64URL算法" class="headerlink" title="3.4 Base64URL算法"></a>3.4 Base64URL算法</h3><p>Base64URL与Base64的区别是在对字符串进行Base64编码之后把其中的’+’换成’-‘，把’/‘换成’_’，把结尾的’=’去掉</p>
 <p>下面显示了一个 JWT，它具有先前的标头和有效负载编码，并且使用密钥进行签名。</p>
-<p><img src="/..%5Cimage%5Cencoded-jwt3.png" alt="编码 JWT"></p>
+<p><img src="/../image/encoded-jwt3.png" alt="编码 JWT"></p>
 <h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p>[1]: <a target="_blank" rel="noopener" href="https://jwt.io/introduction">https://jwt.io/introduction</a>	“Introduction to JSON Web Tokens”<br>[2]: <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/d1644e281250">https://www.jianshu.com/p/d1644e281250</a>	“JWT全面解读、详细使用步骤”</p>
 
                 
