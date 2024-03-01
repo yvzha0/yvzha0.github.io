@@ -52,9 +52,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0">
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Blog Of yvzha0" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="Blog Of yvzha0" type="application/atom+xml">
 </head>
 
 
@@ -398,21 +398,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-02-29
+                    2024-03-01
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.8k
+                    2.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    8 分
                 </div>
                 
 
@@ -500,6 +500,7 @@
 <li><strong>关键声明操纵</strong>：在某些情况下，”kid”（密钥ID）声明可能会被滥用。攻击者可能试图操纵”kid”声明，使用不同的密钥进行签名验证。</li>
 </ul>
 <p>为了防止JWT声明滥用，实现客户端和服务器端的适当验证和验证机制至关重要。验证声明以确保它们是有效的、经过授权的，并且与用户的上下文相关。此外，始终验证JWT的签名以确保令牌的完整性并防止篡改。遵循JWT实施的最佳实践、安全的密钥管理和定期的密钥轮换也将有助于减轻JWT声明滥用的风险。</p>
+<p><strong>alg:none漏洞</strong></p>
 <p>在webgoat靶场中，一道题目要求获取管理员权限重置投票数</p>
 <p><img src="/../image/Snipaste_2024-02-29_14-02-46.png"></p>
 <p>切换用户点击重置投票数按钮后，抓包查看返回信息发现不行</p>
@@ -513,6 +514,28 @@
 <p>Base64编码后为：eyJpYXQiOjE3MTAwNTA4MzEsImFkbWluIjoidHJ1ZSIsInVzZXIiOiJKZXJyeSJ9</p>
 <p>将两部分Base64URL编码后合并再加第三部分为：eyJhbGciOiJub25lIn0.eyJpYXQiOjE3MTAwNTA4MzEsImFkbWluIjoidHJ1ZSIsInVzZXIiOiJKZXJyeSJ9.</p>
 <p><img src="/../image/image-20240229142837001.png" alt="image-20240229142837001"></p>
+<h1 id="三、刷新令牌"><a href="#三、刷新令牌" class="headerlink" title="三、刷新令牌"></a>三、刷新令牌</h1><p>通常有两种类型的令牌：访问令牌和刷新令牌。访问令牌用于对服务器进行API调用。访问令牌的使用寿命有限，这就是刷新令牌的作用所在。一旦访问令牌不再有效，就可以向服务器请求通过提供刷新令牌来获得新的访问令牌。刷新令牌可能会过期，但其使用寿命要长得多。这解决了用户必须使用其凭据再次进行身份验证的问题。</p>
+<p>服务器返回的格式可能如下：</p>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">{</span>
+    <span class="token property">"token_type"</span><span class="token operator">:</span><span class="token string">"bearer"</span><span class="token punctuation">,</span>
+    <span class="token property">"access_token"</span><span class="token operator">:</span><span class="token string">"XXXX.YYYY.ZZZZ"</span><span class="token punctuation">,</span>
+    <span class="token property">"expires_in"</span><span class="token operator">:</span><span class="token number">10</span><span class="token punctuation">,</span>
+    <span class="token property">"refresh_token"</span><span class="token operator">:</span><span class="token string">"4a9a0b1eac1a34201b3c5659944e8b7"</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>刷新令牌是一个随机字符串，服务器可以跟踪它（在内存或数据库中），以便将刷新令牌与授予刷新令牌的用户相匹配。因此，在这种情况下，无论何时访问令牌仍然有效，我们都可以称之为“无状态”会话，服务器端都没有设置用户会话的负担，令牌是自包含的。当访问令牌不再有效时，服务器需要查询存储的刷新令牌，以确保该令牌不会以任何方式被阻止。</p>
+<p>每当攻击者持有访问令牌时，该令牌仅在一定时间内有效（例如10分钟）。然后，攻击者需要刷新令牌来获取新的访问令牌。这就是为什么刷新令牌需要更好的保护。服务器完成所有验证后，必须向客户端返回一个新的刷新令牌和一个新访问令牌。客户端可以使用新的访问令牌来进行API调用。</p>
+<p>无论选择何种解决方案，都应在服务器端存储足够的信息，以验证用户是否仍然可信。你可以考虑很多事情，比如存储ip地址，跟踪刷新令牌的使用次数（在访问令牌的有效时间窗口中多次使用刷新令牌可能表明有奇怪的行为，你可以撤销所有令牌，让用户再次进行身份验证）。还要跟踪哪个访问令牌属于哪个刷新令牌，否则攻击者可能会使用攻击者的刷新令牌为其他用户获取新的访问令牌。</p>
+<p>下面是一个没有把刷新令牌和对应的访问令牌对应起来的例子：</p>
+<p>实验要求我们以Tom的身份结账</p>
+<p><img src="/../image/Snipaste_2024-03-01_15-57-29.png"></p>
+<p>查看日志可以发现Tom以前使用过的访问令牌，同时我们知道Jerry的账号和密码，可以重新登录获取刷新令牌</p>
+<p><img src="/../image/image-20240301155958601.png" alt="image-20240301155958601"></p>
+<p><img src="/../image/image-20240301160109799.png" alt="image-20240301160109799"></p>
+<p>将过期的Tom的访问令牌和Jerry的新的刷新令牌结合获取新的访问令牌</p>
+<p><img src="/../image/image-20240301160323385.png" alt="image-20240301160323385"></p>
+<p>最后再以Tom的访问令牌购买商品</p>
+<p><img src="/../image/image-20240301160459466.png" alt="image-20240301160459466"></p>
 <h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p>[1]: <a target="_blank" rel="noopener" href="https://jwt.io/introduction">https://jwt.io/introduction</a>	“Introduction to JSON Web Tokens”<br>[2]: <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/d1644e281250">https://www.jianshu.com/p/d1644e281250</a>	“JWT全面解读、详细使用步骤”</p>
 
                 
@@ -938,7 +961,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">3.1k</span>
+                        class="white-color">3.8k</span>
             
             
             
