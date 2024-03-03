@@ -4,8 +4,20 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JWT Token, Blog Of yvzha0">
-    <meta name="description" content="一、介绍1. 什么是JSON Web令牌JSON Web Token (JWT) 是一种开放标准 ( RFC 7519 )，它定义了一种紧凑且独立的方式，用于在各方之间以 JSON 对象的形式安全地传输信息。该信息可以被验证和信任，因为它是">
+    <meta name="keywords" content="SBS数据格式, Blog Of yvzha0">
+    <meta name="description" content="消息类型有六种消息类型 - MSG、SEL、ID、AIR、STA、CLK。来自飞机的大多数数据都包含在 MSG 行中，而其他类型则由用户输入或系统设置触发。
+
+
+
+ID
+Type
+Description
+
+
+
+SEL
+选择更改消息
+当用户在">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +29,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JWT Token | Blog Of yvzha0</title>
+    <title>SBS数据格式 | Blog Of yvzha0</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -337,12 +349,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JWT Token</h1>
+                    <h1 class="description center-align post-title">SBS数据格式</h1>
                 </div>
             </div>
         </div>
@@ -366,23 +378,14 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/JWT/">
-                                <span class="chip bg-color">JWT</span>
+                            <a href="/tags/%E4%BF%A1%E5%AE%89%E8%B5%9B%E9%A1%B9%E7%9B%AE/">
+                                <span class="chip bg-color">信安赛项目</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                网络攻防学习
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -391,21 +394,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-02-28
+                    2024-03-03
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-03-01
+                    2024-03-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.6k
+                    2.4k
                 </div>
                 
 
@@ -435,108 +438,291 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h1><h2 id="1-什么是JSON-Web令牌"><a href="#1-什么是JSON-Web令牌" class="headerlink" title="1. 什么是JSON Web令牌"></a>1. 什么是JSON Web令牌</h2><p>JSON Web Token (JWT) 是一种开放标准 ( <a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc7519">RFC 7519</a> )，它定义了一种紧凑且独立的方式，用于在各方之间以 JSON 对象的形式安全地传输信息。该信息可以被验证和信任，因为它是经过数字签名的。JWT 可以使用密钥（使用<strong>HMAC算法）或使用RSA</strong>或<strong>ECDSA</strong>的公钥/私钥对其进行签名。</p>
-<p>认证过程：</p>
-<p><img src="/../image/webp" alt="JWT的认证过程"></p>
-<p>标头的内容应如下所示：</p>
-<pre class="line-numbers language-http" data-language="http"><code class="language-http"><span class="token header"><span class="token header-name keyword">Authorization</span><span class="token punctuation">:</span> <span class="token header-value">Bearer &lt;token&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h2 id="2-JSON-Web令牌使用场景"><a href="#2-JSON-Web令牌使用场景" class="headerlink" title="2. JSON Web令牌使用场景"></a>2. JSON Web令牌使用场景</h2><ul>
-<li><strong>授权</strong>：这是使用 JWT 最常见的场景。用户登录后，每个后续请求都将包含 JWT，从而允许用户访问该令牌允许的路由、服务和资源。单点登录是当今广泛使用 JWT 的一项功能，因为它的开销很小并且能够轻松地跨不同域使用。</li>
-<li><strong>信息交换</strong>：JSON Web 令牌是在各方之间安全传输信息的好方法。因为 JWT 可以进行签名（例如，使用公钥/私钥对），所以可以确定发送者就是他们所说的人。此外，由于签名是使用标头和有效负载计算的，因此还可以验证内容是否未被篡改。</li>
-</ul>
-<h2 id="3-JSON-Web令牌的结构"><a href="#3-JSON-Web令牌的结构" class="headerlink" title="3. JSON Web令牌的结构"></a>3. JSON Web令牌的结构</h2><p>JSON Web 令牌由用点 (.)分隔的三个部分组成，它们是：</p>
-<ul>
-<li>标头</li>
-<li>有效载荷</li>
-<li>签名</li>
-</ul>
-<p>因此，JWT 通常如下所示。</p>
-<pre class="line-numbers language-none"><code class="language-none">xxxxx.yyyyy.zzzzz<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h3 id="3-1-标头"><a href="#3-1-标头" class="headerlink" title="3.1 标头"></a>3.1 标头</h3><p>标头通常由两部分组成：令牌的类型（JWT）和所使用的签名算法（例如 HMAC SHA256 或 RSA，可以为none）。</p>
-<p>例如：</p>
-<pre class="line-numbers language-none"><code class="language-none">{
-  "alg": "HS256",
-  "typ": "JWT"
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>然后，对该 JSON 进行<strong>Base64Url</strong>编码以形成 JWT 的第一部分。</p>
-<h3 id="3-2-有效载荷"><a href="#3-2-有效载荷" class="headerlink" title="3.2 有效载荷"></a>3.2 有效载荷</h3><p>有效载荷部分，是JWT的主体内容部分，其中包含声明，也是一个JSON对象。 JWT指定七个默认字段供选择。声明是关于实体（通常是用户）和附加数据的声明。申明分为三种类型：注册申明、公开申明和私人申明。</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc7519#section-4.1"><strong>注册声明</strong></a>：这些是一组预定义的声明，不是强制性的，而是推荐的，以提供一组有用的、可互操作的声明。其中一些是： <strong>iss</strong>（发行者）、 <strong>exp</strong>（到期时间）、 <strong>sub</strong>（主题）、 <strong>aud</strong>（受众）、<strong>nbf</strong>（在此之前不可用）、<strong>iat</strong>（发布时间）、<strong>jti</strong>（JWT ID用于标识该JWT）。</li>
-<li><a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc7519#section-4.2"><strong>公开声明</strong></a>：这些可以由使用 JWT 的人随意定义。但为了避免冲突，它们应该在<a target="_blank" rel="noopener" href="https://www.iana.org/assignments/jwt/jwt.xhtml">IANA JSON Web 令牌注册表</a>中定义，或者定义为包含防冲突命名空间的 URI。</li>
-<li><a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc7519#section-4.3"><strong>私人声明</strong></a>：这些是为在同意使用它们的各方之间共享信息而创建的自定义声明，既不是注册声明也不是公开声明。</li>
-</ul>
-<p>示例：</p>
-<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">{</span>
-  <span class="token property">"sub"</span><span class="token operator">:</span> <span class="token string">"1234567890"</span><span class="token punctuation">,</span>
-  <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"John Doe"</span><span class="token punctuation">,</span>
-  <span class="token property">"admin"</span><span class="token operator">:</span> <span class="token boolean">true</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>默认情况下JWT是未加密的，任何人都可以解读其内容，因此不要构建隐私信息字段，存放保密信息，以防止信息泄露。</p>
-<p>然后对有效负载进行<strong>Base64Url</strong>编码以形成 JSON Web 令牌的第二部分。</p>
-<h3 id="3-3-签名"><a href="#3-3-签名" class="headerlink" title="3.3 签名"></a>3.3 签名</h3><p>签名哈希部分是对上面两部分数据签名，通过指定的算法生成哈希，以确保数据不会被篡改。</p>
-<p>首先，需要指定一个密码（secret）。该密码仅仅为保存在服务器中，并且不能向用户公开。然后，使用标头中指定的签名算法（默认情况下为HMAC SHA256）根据以下公式生成签名。</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token function">HMACSHA256</span><span class="token punctuation">(</span>
-  <span class="token function">base64UrlEncode</span><span class="token punctuation">(</span>header<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"."</span> <span class="token operator">+</span>
-  <span class="token function">base64UrlEncode</span><span class="token punctuation">(</span>payload<span class="token punctuation">)</span><span class="token punctuation">,</span>
-  secret<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>签名用于验证消息在传输过程中没有发生更改，并且在使用私钥签名的令牌的情况下，它还可以验证 JWT 的发送者是否是其所说的人。</p>
-<p>在计算出签名哈希后，JWT头，有效载荷和签名哈希的三个部分组合成一个字符串，每个部分用”.”分隔，就构成整个JWT对象。</p>
-<h3 id="3-4-Base64URL算法"><a href="#3-4-Base64URL算法" class="headerlink" title="3.4 Base64URL算法"></a>3.4 Base64URL算法</h3><p>Base64URL与Base64的区别是在对字符串进行Base64编码之后把其中的’+’换成’-‘，把’/‘换成’_’，把结尾的’=’去掉</p>
-<p>下面显示了一个 JWT，它具有先前的标头和有效负载编码，并且使用密钥进行签名。</p>
-<p><img src="/../image/encoded-jwt3.png" alt="编码 JWT"></p>
-<h1 id="二、JWT声明滥用"><a href="#二、JWT声明滥用" class="headerlink" title="二、JWT声明滥用"></a>二、JWT声明滥用</h1><p>JWT声明滥用指的是对JSON Web Token（JWT）中的声明进行不当或未经授权的操纵。JWT是一种紧凑且自包含的方式，用于在两方之间表示信息。它由头部、有效载荷（声明）和签名组成。</p>
-<p>JWT声明滥用可以通过不同的方式发生：</p>
-<ul>
-<li><strong>未授权声明</strong>：恶意用户可能试图向JWT添加未授权的声明，以获取他们无权访问的特定功能或资源。例如，普通用户尝试修改他们的JWT以声称自己拥有管理员权限。</li>
-<li><strong>篡改声明</strong>：攻击者可能试图修改JWT中现有声明的值，以操纵自己的身份或更改其权限。例如，更改”user_id”声明以冒充不同的用户。</li>
-<li><strong>过多声明</strong>：攻击者可能试图在JWT中包含许多不必要或虚假的声明，以增加令牌的大小并可能破坏系统的性能或引起其他问题。</li>
-<li><strong>过期或修改过期声明</strong>：如果攻击者能够修改”exp”声明以延长令牌的过期时间，他们可以有效地获得超出其预期会话的访问权限。</li>
-<li><strong>重放攻击</strong>：攻击者可能试图重用旧会话中的有效JWT，以冒充原始用户或利用限时功能。</li>
-<li><strong>关键声明操纵</strong>：在某些情况下，”kid”（密钥ID）声明可能会被滥用。攻击者可能试图操纵”kid”声明，使用不同的密钥进行签名验证。</li>
-</ul>
-<p>为了防止JWT声明滥用，实现客户端和服务器端的适当验证和验证机制至关重要。验证声明以确保它们是有效的、经过授权的，并且与用户的上下文相关。此外，始终验证JWT的签名以确保令牌的完整性并防止篡改。遵循JWT实施的最佳实践、安全的密钥管理和定期的密钥轮换也将有助于减轻JWT声明滥用的风险。</p>
-<h2 id="1-alg-none漏洞"><a href="#1-alg-none漏洞" class="headerlink" title="1. alg:none漏洞"></a>1. alg:none漏洞</h2><p>由于头部的alg可以为none，也就是说签名的方式是空的，如果后端开启空加密的话，攻击者就可以随意改身份</p>
-<p>在webgoat靶场中，一道题目要求获取管理员权限重置投票数</p>
-<p><img src="/../image/Snipaste_2024-02-29_14-02-46.png"></p>
-<p>切换用户点击重置投票数按钮后，抓包查看返回信息发现不行</p>
-<p><img src="/../image/image-20240229140749980.png" alt="image-20240229140749980"></p>
-<p>将抓到的包中的JWT信息放到<a target="_blank" rel="noopener" href="https://jwt.io/#debugger-io">这个网站</a>查看信息</p>
-<p><img src="/../image/image-20240229141134153.png" alt="image-20240229141134153"></p>
-<p>我们可以尝试将admin的false改为ture，但是改了之后签名我们无法修改正确，但是因为alg的值是可以为none的，这时也就是不加密签名，签名的值就可以留空。我们就可以攻击成功，使用<a target="_blank" rel="noopener" href="http://www.hiencode.com/base64.html">这个网站</a>对我们修改的内容进行编码</p>
-<p>头部：{ “alg”: “none”}</p>
-<p>Base64编码后为：eyJhbGciOiJub25lIn0=</p>
-<p>有效载荷：{“iat”:1710050831,”admin”:”true”,”user”:”Jerry”}</p>
-<p>Base64编码后为：eyJpYXQiOjE3MTAwNTA4MzEsImFkbWluIjoidHJ1ZSIsInVzZXIiOiJKZXJyeSJ9</p>
-<p>将两部分Base64URL编码后合并再加第三部分为：eyJhbGciOiJub25lIn0.eyJpYXQiOjE3MTAwNTA4MzEsImFkbWluIjoidHJ1ZSIsInVzZXIiOiJKZXJyeSJ9.</p>
-<p><img src="/../image/image-20240229142837001.png" alt="image-20240229142837001"></p>
-<h1 id="三、刷新令牌"><a href="#三、刷新令牌" class="headerlink" title="三、刷新令牌"></a>三、刷新令牌</h1><p>通常有两种类型的令牌：访问令牌和刷新令牌。访问令牌用于对服务器进行API调用。访问令牌的使用寿命有限，这就是刷新令牌的作用所在。一旦访问令牌不再有效，就可以向服务器请求通过提供刷新令牌来获得新的访问令牌。刷新令牌可能会过期，但其使用寿命要长得多。这解决了用户必须使用其凭据再次进行身份验证的问题。</p>
-<p>服务器返回的格式可能如下：</p>
-<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">{</span>
-    <span class="token property">"token_type"</span><span class="token operator">:</span><span class="token string">"bearer"</span><span class="token punctuation">,</span>
-    <span class="token property">"access_token"</span><span class="token operator">:</span><span class="token string">"XXXX.YYYY.ZZZZ"</span><span class="token punctuation">,</span>
-    <span class="token property">"expires_in"</span><span class="token operator">:</span><span class="token number">10</span><span class="token punctuation">,</span>
-    <span class="token property">"refresh_token"</span><span class="token operator">:</span><span class="token string">"4a9a0b1eac1a34201b3c5659944e8b7"</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>刷新令牌是一个随机字符串，服务器可以跟踪它（在内存或数据库中），以便将刷新令牌与授予刷新令牌的用户相匹配。因此，在这种情况下，无论何时访问令牌仍然有效，我们都可以称之为“无状态”会话，服务器端都没有设置用户会话的负担，令牌是自包含的。当访问令牌不再有效时，服务器需要查询存储的刷新令牌，以确保该令牌不会以任何方式被阻止。</p>
-<p>每当攻击者持有访问令牌时，该令牌仅在一定时间内有效（例如10分钟）。然后，攻击者需要刷新令牌来获取新的访问令牌。这就是为什么刷新令牌需要更好的保护。服务器完成所有验证后，必须向客户端返回一个新的刷新令牌和一个新访问令牌。客户端可以使用新的访问令牌来进行API调用。</p>
-<p>无论选择何种解决方案，都应在服务器端存储足够的信息，以验证用户是否仍然可信。你可以考虑很多事情，比如存储ip地址，跟踪刷新令牌的使用次数（在访问令牌的有效时间窗口中多次使用刷新令牌可能表明有奇怪的行为，你可以撤销所有令牌，让用户再次进行身份验证）。还要跟踪哪个访问令牌属于哪个刷新令牌，否则攻击者可能会使用攻击者的刷新令牌为其他用户获取新的访问令牌。</p>
-<p>下面是一个没有把刷新令牌和对应的访问令牌对应起来的例子：</p>
-<p>实验要求我们以Tom的身份结账</p>
-<p><img src="/../image/Snipaste_2024-03-01_15-57-29.png"></p>
-<p>查看日志可以发现Tom以前使用过的访问令牌，同时我们知道Jerry的账号和密码，可以重新登录获取刷新令牌</p>
-<p><img src="/../image/image-20240301155958601.png" alt="image-20240301155958601"></p>
-<p><img src="/../image/image-20240301160109799.png" alt="image-20240301160109799"></p>
-<p>将过期的Tom的访问令牌和Jerry的新的刷新令牌结合获取新的访问令牌</p>
-<p><img src="/../image/image-20240301160323385.png" alt="image-20240301160323385"></p>
-<p>最后再以Tom的访问令牌购买商品</p>
-<p><img src="/../image/image-20240301160459466.png" alt="image-20240301160459466"></p>
-<h1 id="四、参考链接"><a href="#四、参考链接" class="headerlink" title="四、参考链接"></a>四、参考链接</h1><p>[1]: <a target="_blank" rel="noopener" href="https://jwt.io/introduction">https://jwt.io/introduction</a>	“Introduction to JSON Web Tokens”<br>[2]: <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/d1644e281250">https://www.jianshu.com/p/d1644e281250</a>	“JWT全面解读、详细使用步骤”</p>
+                <h1 id="消息类型"><a href="#消息类型" class="headerlink" title="消息类型"></a>消息类型</h1><p>有六种消息类型 - MSG、SEL、ID、AIR、STA、CLK。来自飞机的大多数数据都包含在 MSG 行中，而其他类型则由用户输入或系统设置触发。</p>
+<table>
+<thead>
+<tr>
+<th><strong>ID</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>SEL</strong></td>
+<td><strong>选择更改消息</strong></td>
+<td>当用户在基站中更改所选飞机时生成。</td>
+</tr>
+<tr>
+<td><strong>ID</strong></td>
+<td><strong>新的 ID 消息</strong></td>
+<td>当被跟踪的飞机设置或更改其呼号时生成。</td>
+</tr>
+<tr>
+<td><strong>AIR</strong></td>
+<td><strong>新的飞机消息</strong></td>
+<td>当 SBS 捕获到一个当前未被跟踪的飞机信号时生成。</td>
+</tr>
+<tr>
+<td><strong>STA</strong></td>
+<td><strong>状态变更消息</strong></td>
+<td>根据数据设置菜单中的超时数值，当飞机的状态发生变化时生成。</td>
+</tr>
+<tr>
+<td><strong>CLK</strong></td>
+<td><strong>点击消息</strong></td>
+<td>当用户双击（或按回车键）飞机时生成（即打开飞机详细信息窗口）。</td>
+</tr>
+<tr>
+<td><strong>MSG</strong></td>
+<td><strong>传输消息</strong></td>
+<td>由飞机生成。共有八种不同的消息类型。</td>
+</tr>
+</tbody></table>
+<p>来自飞机的传输消息 ( <strong>MSG</strong> ) 可能是八种类型之一：</p>
+<table>
+<thead>
+<tr>
+<th><strong>ID</strong></th>
+<th><strong>Type</strong></th>
+<th></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>MSG,1</strong></td>
+<td>**ES 身份识别和类别 **</td>
+<td><strong>DF17 BDS 0,8</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>MSG,2</strong></td>
+<td><strong>ES 地面位置消息</strong></td>
+<td><strong>DF17 BDS 0,6</strong></td>
+<td>由机头起落架压地开关触发。</td>
+</tr>
+<tr>
+<td><strong>MSG,3</strong></td>
+<td><strong>ES 空中位置消息</strong></td>
+<td><strong>DF17 BDS 0,5</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>MSG,4</strong></td>
+<td><strong>ES 空中速度消息</strong></td>
+<td><strong>DF17 BDS 0,9</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>MSG,5</strong></td>
+<td><strong>监视高度消息</strong></td>
+<td><strong>DF4, DF20</strong></td>
+<td>由地面雷达触发。未经 CRC 安全保护。如果飞机先前已发送过 MSG,1、2、3、4 或 8 信号，则只会输出 MSG,5。</td>
+</tr>
+<tr>
+<td><strong>MSG,6</strong></td>
+<td><strong>监视ID消息</strong></td>
+<td><strong>DF5, DF21</strong></td>
+<td>由地面雷达触发。未经 CRC 安全保护。如果飞机先前已发送过 MSG,1、2、3、4 或 8 信号，则只会输出 MSG,6。</td>
+</tr>
+<tr>
+<td><strong>MSG,7</strong></td>
+<td><strong>空对空消息</strong></td>
+<td><strong>DF16</strong></td>
+<td>由TCAS触发。MSG,7 现在包含在SBS套接字输出中。</td>
+</tr>
+<tr>
+<td><strong>MSG,8</strong></td>
+<td><strong>全呼应消息</strong></td>
+<td><strong>DF11</strong></td>
+<td>广播，但也可以由地面雷达触发</td>
+</tr>
+</tbody></table>
+<h1 id="字段数据"><a href="#字段数据" class="headerlink" title="字段数据"></a>字段数据</h1><p>每种上述消息类型可能包含多达22个由逗号分隔的数据字段。这些字段如下：</p>
+<table>
+<thead>
+<tr>
+<th><strong>字段 1:</strong></th>
+<th><strong>消息类型</strong></th>
+<th>(MSG, STA, ID, AIR, SEL 或 CLK)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>字段 2:</strong></td>
+<td><strong>传输类型</strong></td>
+<td>MSG 子类型 1 到 8。不被其他消息类型使用。</td>
+</tr>
+<tr>
+<td><strong>字段 3:</strong></td>
+<td><strong>会话 ID</strong></td>
+<td>数据库会话记录编号</td>
+</tr>
+<tr>
+<td><strong>字段 4:</strong></td>
+<td><strong>飞机ID</strong></td>
+<td>数据库飞机记录编号</td>
+</tr>
+<tr>
+<td><strong>字段 5:</strong></td>
+<td><strong>HexIdent</strong></td>
+<td>飞机模式 S 十六进制代码</td>
+</tr>
+<tr>
+<td><strong>字段 6:</strong></td>
+<td><strong>航班ID</strong></td>
+<td>数据库航班记录编号</td>
+</tr>
+<tr>
+<td><strong>字段 7:</strong></td>
+<td><strong>生成消息日期</strong></td>
+<td>字面意思</td>
+</tr>
+<tr>
+<td><strong>字段 8:</strong></td>
+<td><strong>生成消息时间</strong></td>
+<td>字面意思</td>
+</tr>
+<tr>
+<td><strong>字段 9:</strong></td>
+<td><strong>记录消息日期</strong></td>
+<td>字面意思</td>
+</tr>
+<tr>
+<td><strong>字段 10:</strong></td>
+<td><strong>记录消息时间</strong></td>
+<td>字面意思</td>
+</tr>
+</tbody></table>
+<p>上述基本数据字段对所有消息来说都是标准的（字段 2 仅用于 MSG）。</p>
+<p>下面的字段包含特定飞机信息。</p>
+<table>
+<thead>
+<tr>
+<th><strong>字段 11:</strong></th>
+<th><strong>呼号</strong></th>
+<th>一个八位数字的飞行 ID - 可以是航班号或注册号（甚至什么都没有）。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>字段 12:</strong></td>
+<td><strong>高度</strong></td>
+<td>模式 C 高度。相对于 1013.2mb（飞行层）的高度。不是海平面以上高度。</td>
+</tr>
+<tr>
+<td><strong>字段 13:</strong></td>
+<td><strong>地速</strong></td>
+<td>地面速度（不是指示空速）</td>
+</tr>
+<tr>
+<td><strong>字段 14:</strong></td>
+<td><strong>航迹</strong></td>
+<td>飞机的航迹（不是航向）。由东西向速度和南北向速度派生而来</td>
+</tr>
+<tr>
+<td><strong>字段 15:</strong></td>
+<td><strong>纬度</strong></td>
+<td>北纬和东经为正。南纬和西经为负。</td>
+</tr>
+<tr>
+<td><strong>字段 16:</strong></td>
+<td><strong>经度</strong></td>
+<td>北纬和东经为正。南纬和西经为负。</td>
+</tr>
+<tr>
+<td><strong>字段 17:</strong></td>
+<td><strong>垂直速率</strong></td>
+<td>64英尺分辨率</td>
+</tr>
+<tr>
+<td><strong>字段 18:</strong></td>
+<td><strong>应答器代码</strong></td>
+<td>分配的模式 A 应答器代码。</td>
+</tr>
+<tr>
+<td><strong>字段 19:</strong></td>
+<td><strong>警报（应答器代码变化）</strong></td>
+<td>标志表示应答器代码已更改。</td>
+</tr>
+<tr>
+<td><strong>字段 20:</strong></td>
+<td><strong>紧急</strong></td>
+<td>标志表示已设置紧急代码</td>
+</tr>
+<tr>
+<td><strong>字段 21:</strong></td>
+<td><strong>SPI（标识）</strong></td>
+<td>标志表示已激活应答器标识。</td>
+</tr>
+<tr>
+<td><strong>字段 22:</strong></td>
+<td><strong>是否在地面</strong></td>
+<td>标志表示地面静压开关处于活动状态</td>
+</tr>
+</tbody></table>
+<p>注（感谢 Edgy）：</p>
+<p>套接字数据输出 -1 表示真，0 表示假。两者都表示它未被使用。</p>
+<p>字段 11（呼号）是一个8字符（6位ASCII子集）字段。在基站中，NULL 显示为 ‘@’，这是 ASCII 中的 NULL。在驾驶舱中，它只是应答器窗口上的一个空格，但被发送为 NULL。因此，如果机组在驾驶舱中输入八个空格，这将在基站中显示为 @@@@@@@@。</p>
+<p>字段 12（高度）可以是 25 英尺或 100 英尺分辨率。模式-C 是 100 英尺，但如今许多飞机发送 25 英尺分辨率，以便能够在欧洲的 IFR（RVSM）空域中飞行。BaseStation 仅显示气压高度，但数据中有 HAE（相对于椭球体的高度），这是通过发送 GPS 高度与气压高度之间的差值来表示的。</p>
+<h1 id="消息内容"><a href="#消息内容" class="headerlink" title="消息内容"></a>消息内容</h1><p>每种消息类型包含不同的字段内容。在下表中，绿色表示发送的字段，灰色显示传输空数据的字段。MSG信号包含多达22个字段，而其他消息类型包含多达10个字段。</p>
+<p><img src="/../image/image-20240303155719572.png" alt="image-20240303155719572"><br>注：</p>
+<ol>
+<li>STA 消息使用呼号字段记录基于用户超时值的状态标志。 值为 <strong>PL</strong>（位置丢失），<strong>SL</strong>（信号丢失），<strong>RM</strong>（删除），<strong>AD</strong>（删除）和 <strong>OK</strong>（如果飞机返回到覆盖区，则用于重置超时）。</li>
+<li>CLK 消息在字段 4 和 6 中返回值 <strong>-1</strong>。字段 5 为空。</li>
+<li>MSG,7（空对空消息）最近才包含在套接字输出中。</li>
+<li>虽然飞机现在发送航向和真空速度，但这些值在套接字输出中不可用。</li>
+</ol>
+<p>从上表中您可以看到，MSG,1 消息仅发送前十一个字段的数据，其余的 11 个字段为空。这导致在此消息格式（以及其他 MSG 格式）中出现了很多逗号。</p>
+<p>以下是每种消息的示例：</p>
+<table>
+<thead>
+<tr>
+<th>SEL,,496,2286,4CA4E5,27215,2010/02/19,18:06:07.710,2010/02/19,18:06:07.710,RYR1427</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ID,,496,7162,405637,27928,2010/02/19,18:06:07.115,2010/02/19,18:06:07.115,EZY691A</td>
+</tr>
+<tr>
+<td>AIR,,496,5906,400F01,27931,2010/02/19,18:06:07.128,2010/02/19,18:06:07.128</td>
+</tr>
+<tr>
+<td>STA,,5,179,400AE7,10103,2008/11/28,14:58:51.153,2008/11/28,14:58:51.153,RM</td>
+</tr>
+<tr>
+<td>CLK,,496,-1,,-1,2010/02/19,18:18:19.036,2010/02/19,18:18:19.036</td>
+</tr>
+<tr>
+<td>MSG,1,145,256,7404F2,11267,2008/11/28,23:48:18.611,2008/11/28,23:53:19.161,RJA1118,,,,,,,,,,,</td>
+</tr>
+<tr>
+<td>MSG,2,496,603,400CB6,13168,2008/10/13,12:24:32.414,2008/10/13,12:28:52.074,,,0,76.4,258.3,54.05735,-4.38826,,,,,,0</td>
+</tr>
+<tr>
+<td>MSG,3,496,211,4CA2D6,10057,2008/11/28,14:53:50.594,2008/11/28,14:58:51.153,,37000,,,51.45735,-1.02826,,,0,0,0,0</td>
+</tr>
+<tr>
+<td>MSG,4,496,469,4CA767,27854,2010/02/19,17:58:13.039,2010/02/19,17:58:13.368,,,288.6,103.2,,,-832,,,,,</td>
+</tr>
+<tr>
+<td>MSG,5,496,329,394A65,27868,2010/02/19,17:58:12.644,2010/02/19,17:58:13.368,,10000,,,,,,,0,,0,0</td>
+</tr>
+<tr>
+<td>MSG,6,496,237,4CA215,27864,2010/02/19,17:58:12.846,2010/02/19,17:58:13.368,,33325,,,,,,0271,0,0,0,0</td>
+</tr>
+<tr>
+<td>MSG,7,496,742,51106E,27929,2011/03/06,07:57:36.523,2011/03/06,07:57:37.054,,3775,,,,,,,,,,0</td>
+</tr>
+<tr>
+<td>MSG,8,496,194,405F4E,27884,2010/02/19,17:58:13.244,2010/02/19,17:58:13.368,,,,,,,,,,,,0</td>
+</tr>
+</tbody></table>
+<h1 id="插值"><a href="#插值" class="headerlink" title="插值"></a>插值</h1><p>可以看到，没有单个的 MSG 类型提供我们在基站中使用的所有数据，而且某些数据字段是特定于某种消息类型的。呼号仅在 MSG,1 中找到，垂直速率仅在 MSG,4 中找到，而标识仅在 MSG,6 中找到。</p>
+<p>要收集一个飞机的所有数据字段，至少需要接收四种 MSG 类型（MSG,1、MSG,3、MSG,4 和 MSG,6），但请注意 MSG,6 仅由地面雷达询问触发。如果飞机在任何地面雷达覆盖范围之外，将不会发送 MSG,6。由于 MSG,6 是唯一发送标识码的消息，这意味着仅在探测到处于 Mode S 地面雷达覆盖范围内的飞机的 SBS 用户才会显示此标识码。</p>
+<p>同样，MSG,5 和 MSG,8 仅在询问时发送，但这些类型中的数据在其他消息中也可用。</p>
+<p>MSG,5 和 MSG,6 未经 CRC 安全保护，只有在飞机已经发送过 MSG,1、2、3、4 或 8 的情况下才会收到。</p>
+<h1 id="地面目标"><a href="#地面目标" class="headerlink" title="地面目标"></a>地面目标</h1><p>如果字段 22（IsOnGround）正在发送，则会触发字段 12（高度）和字段 15 和 16（纬度和经度）中的值的变化。字段 12（高度）将重置为零，并且只要飞机保持在地面上，就不会发送任何高度数据。</p>
+<h1 id="位置准确性"><a href="#位置准确性" class="headerlink" title="位置准确性"></a>位置准确性</h1><p>ADS-B 中的紧凑位置报告使用 17 位发送纬度/经度数据，当在空中时，这可以达到 5.1 米的精度。17 位相当于纬度/经度值的四位小数 - 例如 N54.1234、W145.1234。对于地面操作，需要更高的位置准确性，因此纬度/经度值扩展到五位小数 - 例如 N54.12345、W145.12345 - 这可以达到 1.25 米的精度。</p>
+<p>为了将此精度纳入 17 位字符串中，一些数据被丢弃 - 不再发送完整的纬度/经度位置数据。在基站中，用户需要通过基站位置管理器添加缺失的数据，这就是为什么只有在基站位置管理器中设置了位置时，纬度/经度值才会被正确解释。对于大多数用户，向位置管理器中添加一个家庭位置就足够了，但移动用户需要为可能访问的国外机场添加更多位置。我所说的国外是指洲际，因为基站现在可以将地面交通正确绘制到设置位置的范围内（以前只能到 90 海里）。</p>
+<p>套接字数据始终显示纬度/经度数据到五位小数，并且可以提供完整的 1.25 米精度，如果有数据被发送的话。</p>
 
                 
             </div>
@@ -563,7 +749,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://yvzha0.github.io/2024/02/28/jwt-token/">https://yvzha0.github.io/2024/02/28/jwt-token/</a>
+                    <a href="https://yvzha0.github.io/2024/03/03/sbs-shu-ju-ge-shi/">https://yvzha0.github.io/2024/03/03/sbs-shu-ju-ge-shi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -601,8 +787,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/JWT/">
-                                    <span class="chip bg-color">JWT</span>
+                                <a href="/tags/%E4%BF%A1%E5%AE%89%E8%B5%9B%E9%A1%B9%E7%9B%AE/">
+                                    <span class="chip bg-color">信安赛项目</span>
                                 </a>
                             
                         </div>
@@ -681,9 +867,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2024/03/03/sbs-shu-ju-ge-shi/">
                     <div class="card-image">
@@ -701,9 +888,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-03-03
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-03
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -712,6 +899,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -730,13 +918,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/01/24/ben-ren-da-jian-ge-ren-bo-ke-guo-cheng-ji-yu-dao-de-wen-ti/">
+                <a href="/2024/02/28/jwt-token/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="本人搭建个人博客过程及遇到的问题">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="JWT Token">
                         
-                        <span class="card-title">本人搭建个人博客过程及遇到的问题</span>
+                        <span class="card-title">JWT Token</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -747,19 +935,27 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-28
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%89%8D%E8%A8%80/" class="post-category">
-                                    搭建博客前言
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    网络攻防学习
                                 </a>
                             
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JWT/">
+                        <span class="chip bg-color">JWT</span>
+                    </a>
+                    
                 </div>
                 
             </div>
