@@ -64,9 +64,9 @@ SEL
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0">
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Blog Of yvzha0" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="Blog Of yvzha0" type="application/atom+xml">
 </head>
 
 
@@ -723,7 +723,8 @@ SEL
 <h2 id="位置准确性"><a href="#位置准确性" class="headerlink" title="位置准确性"></a>位置准确性</h2><p>ADS-B 中的紧凑位置报告使用 17 位发送纬度/经度数据，当在空中时，这可以达到 5.1 米的精度。17 位相当于纬度/经度值的四位小数 - 例如 N54.1234、W145.1234。对于地面操作，需要更高的位置准确性，因此纬度/经度值扩展到五位小数 - 例如 N54.12345、W145.12345 - 这可以达到 1.25 米的精度。</p>
 <p>为了将此精度纳入 17 位字符串中，一些数据被丢弃 - 不再发送完整的纬度/经度位置数据。在基站中，用户需要通过基站位置管理器添加缺失的数据，这就是为什么只有在基站位置管理器中设置了位置时，纬度/经度值才会被正确解释。对于大多数用户，向位置管理器中添加一个家庭位置就足够了，但移动用户需要为可能访问的国外机场添加更多位置。我所说的国外是指洲际，因为基站现在可以将地面交通正确绘制到设置位置的范围内（以前只能到 90 海里）。</p>
 <p>套接字数据始终显示纬度/经度数据到五位小数，并且可以提供完整的 1.25 米精度，如果有数据被发送的话。</p>
-<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p>[1]: <a target="_blank" rel="noopener" href="http://woodair.net/SBS/Article/Barebones42_Socket_Data.htm">http://woodair.net/SBS/Article/Barebones42_Socket_Data.htm</a>	“SBS BaseStation”</p>
+
                 
             </div>
             <hr/>
@@ -1151,7 +1152,7 @@ SEL
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">6.2k</span>
+                        class="white-color">6.4k</span>
             
             
             
