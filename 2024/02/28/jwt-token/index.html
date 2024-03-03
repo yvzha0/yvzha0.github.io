@@ -398,7 +398,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-03-01
+                    2024-03-03
                 </div>
                 
 
@@ -435,17 +435,17 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h1><h2 id="1-什么是JSON-Web令牌"><a href="#1-什么是JSON-Web令牌" class="headerlink" title="1. 什么是JSON Web令牌"></a>1. 什么是JSON Web令牌</h2><p>JSON Web Token (JWT) 是一种开放标准 ( <a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc7519">RFC 7519</a> )，它定义了一种紧凑且独立的方式，用于在各方之间以 JSON 对象的形式安全地传输信息。该信息可以被验证和信任，因为它是经过数字签名的。JWT 可以使用密钥（使用<strong>HMAC算法）或使用RSA</strong>或<strong>ECDSA</strong>的公钥/私钥对其进行签名。</p>
+                <h2 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h2><h3 id="1-什么是JSON-Web令牌"><a href="#1-什么是JSON-Web令牌" class="headerlink" title="1. 什么是JSON Web令牌"></a>1. 什么是JSON Web令牌</h3><p>JSON Web Token (JWT) 是一种开放标准 ( <a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc7519">RFC 7519</a> )，它定义了一种紧凑且独立的方式，用于在各方之间以 JSON 对象的形式安全地传输信息。该信息可以被验证和信任，因为它是经过数字签名的。JWT 可以使用密钥（使用<strong>HMAC算法）或使用RSA</strong>或<strong>ECDSA</strong>的公钥/私钥对其进行签名。</p>
 <p>认证过程：</p>
 <p><img src="/../image/webp" alt="JWT的认证过程"></p>
 <p>标头的内容应如下所示：</p>
 <pre class="line-numbers language-http" data-language="http"><code class="language-http"><span class="token header"><span class="token header-name keyword">Authorization</span><span class="token punctuation">:</span> <span class="token header-value">Bearer &lt;token&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h2 id="2-JSON-Web令牌使用场景"><a href="#2-JSON-Web令牌使用场景" class="headerlink" title="2. JSON Web令牌使用场景"></a>2. JSON Web令牌使用场景</h2><ul>
+<h3 id="2-JSON-Web令牌使用场景"><a href="#2-JSON-Web令牌使用场景" class="headerlink" title="2. JSON Web令牌使用场景"></a>2. JSON Web令牌使用场景</h3><ul>
 <li><strong>授权</strong>：这是使用 JWT 最常见的场景。用户登录后，每个后续请求都将包含 JWT，从而允许用户访问该令牌允许的路由、服务和资源。单点登录是当今广泛使用 JWT 的一项功能，因为它的开销很小并且能够轻松地跨不同域使用。</li>
 <li><strong>信息交换</strong>：JSON Web 令牌是在各方之间安全传输信息的好方法。因为 JWT 可以进行签名（例如，使用公钥/私钥对），所以可以确定发送者就是他们所说的人。此外，由于签名是使用标头和有效负载计算的，因此还可以验证内容是否未被篡改。</li>
 </ul>
-<h2 id="3-JSON-Web令牌的结构"><a href="#3-JSON-Web令牌的结构" class="headerlink" title="3. JSON Web令牌的结构"></a>3. JSON Web令牌的结构</h2><p>JSON Web 令牌由用点 (.)分隔的三个部分组成，它们是：</p>
+<h3 id="3-JSON-Web令牌的结构"><a href="#3-JSON-Web令牌的结构" class="headerlink" title="3. JSON Web令牌的结构"></a>3. JSON Web令牌的结构</h3><p>JSON Web 令牌由用点 (.)分隔的三个部分组成，它们是：</p>
 <ul>
 <li>标头</li>
 <li>有效载荷</li>
@@ -454,7 +454,7 @@
 <p>因此，JWT 通常如下所示。</p>
 <pre class="line-numbers language-none"><code class="language-none">xxxxx.yyyyy.zzzzz<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h3 id="3-1-标头"><a href="#3-1-标头" class="headerlink" title="3.1 标头"></a>3.1 标头</h3><p>标头通常由两部分组成：令牌的类型（JWT）和所使用的签名算法（例如 HMAC SHA256 或 RSA，可以为none）。</p>
+<h4 id="3-1-标头"><a href="#3-1-标头" class="headerlink" title="3.1 标头"></a>3.1 标头</h4><p>标头通常由两部分组成：令牌的类型（JWT）和所使用的签名算法（例如 HMAC SHA256 或 RSA，可以为none）。</p>
 <p>例如：</p>
 <pre class="line-numbers language-none"><code class="language-none">{
   "alg": "HS256",
@@ -462,7 +462,7 @@
 }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>然后，对该 JSON 进行<strong>Base64Url</strong>编码以形成 JWT 的第一部分。</p>
-<h3 id="3-2-有效载荷"><a href="#3-2-有效载荷" class="headerlink" title="3.2 有效载荷"></a>3.2 有效载荷</h3><p>有效载荷部分，是JWT的主体内容部分，其中包含声明，也是一个JSON对象。 JWT指定七个默认字段供选择。声明是关于实体（通常是用户）和附加数据的声明。申明分为三种类型：注册申明、公开申明和私人申明。</p>
+<h4 id="3-2-有效载荷"><a href="#3-2-有效载荷" class="headerlink" title="3.2 有效载荷"></a>3.2 有效载荷</h4><p>有效载荷部分，是JWT的主体内容部分，其中包含声明，也是一个JSON对象。 JWT指定七个默认字段供选择。声明是关于实体（通常是用户）和附加数据的声明。申明分为三种类型：注册申明、公开申明和私人申明。</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc7519#section-4.1"><strong>注册声明</strong></a>：这些是一组预定义的声明，不是强制性的，而是推荐的，以提供一组有用的、可互操作的声明。其中一些是： <strong>iss</strong>（发行者）、 <strong>exp</strong>（到期时间）、 <strong>sub</strong>（主题）、 <strong>aud</strong>（受众）、<strong>nbf</strong>（在此之前不可用）、<strong>iat</strong>（发布时间）、<strong>jti</strong>（JWT ID用于标识该JWT）。</li>
 <li><a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc7519#section-4.2"><strong>公开声明</strong></a>：这些可以由使用 JWT 的人随意定义。但为了避免冲突，它们应该在<a target="_blank" rel="noopener" href="https://www.iana.org/assignments/jwt/jwt.xhtml">IANA JSON Web 令牌注册表</a>中定义，或者定义为包含防冲突命名空间的 URI。</li>
@@ -477,7 +477,7 @@
 
 <p>默认情况下JWT是未加密的，任何人都可以解读其内容，因此不要构建隐私信息字段，存放保密信息，以防止信息泄露。</p>
 <p>然后对有效负载进行<strong>Base64Url</strong>编码以形成 JSON Web 令牌的第二部分。</p>
-<h3 id="3-3-签名"><a href="#3-3-签名" class="headerlink" title="3.3 签名"></a>3.3 签名</h3><p>签名哈希部分是对上面两部分数据签名，通过指定的算法生成哈希，以确保数据不会被篡改。</p>
+<h4 id="3-3-签名"><a href="#3-3-签名" class="headerlink" title="3.3 签名"></a>3.3 签名</h4><p>签名哈希部分是对上面两部分数据签名，通过指定的算法生成哈希，以确保数据不会被篡改。</p>
 <p>首先，需要指定一个密码（secret）。该密码仅仅为保存在服务器中，并且不能向用户公开。然后，使用标头中指定的签名算法（默认情况下为HMAC SHA256）根据以下公式生成签名。</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token function">HMACSHA256</span><span class="token punctuation">(</span>
   <span class="token function">base64UrlEncode</span><span class="token punctuation">(</span>header<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"."</span> <span class="token operator">+</span>
@@ -486,10 +486,10 @@
 
 <p>签名用于验证消息在传输过程中没有发生更改，并且在使用私钥签名的令牌的情况下，它还可以验证 JWT 的发送者是否是其所说的人。</p>
 <p>在计算出签名哈希后，JWT头，有效载荷和签名哈希的三个部分组合成一个字符串，每个部分用”.”分隔，就构成整个JWT对象。</p>
-<h3 id="3-4-Base64URL算法"><a href="#3-4-Base64URL算法" class="headerlink" title="3.4 Base64URL算法"></a>3.4 Base64URL算法</h3><p>Base64URL与Base64的区别是在对字符串进行Base64编码之后把其中的’+’换成’-‘，把’/‘换成’_’，把结尾的’=’去掉</p>
+<h4 id="3-4-Base64URL算法"><a href="#3-4-Base64URL算法" class="headerlink" title="3.4 Base64URL算法"></a>3.4 Base64URL算法</h4><p>Base64URL与Base64的区别是在对字符串进行Base64编码之后把其中的’+’换成’-‘，把’/‘换成’_’，把结尾的’=’去掉</p>
 <p>下面显示了一个 JWT，它具有先前的标头和有效负载编码，并且使用密钥进行签名。</p>
 <p><img src="/../image/encoded-jwt3.png" alt="编码 JWT"></p>
-<h1 id="二、JWT声明滥用"><a href="#二、JWT声明滥用" class="headerlink" title="二、JWT声明滥用"></a>二、JWT声明滥用</h1><p>JWT声明滥用指的是对JSON Web Token（JWT）中的声明进行不当或未经授权的操纵。JWT是一种紧凑且自包含的方式，用于在两方之间表示信息。它由头部、有效载荷（声明）和签名组成。</p>
+<h2 id="二、JWT声明滥用"><a href="#二、JWT声明滥用" class="headerlink" title="二、JWT声明滥用"></a>二、JWT声明滥用</h2><p>JWT声明滥用指的是对JSON Web Token（JWT）中的声明进行不当或未经授权的操纵。JWT是一种紧凑且自包含的方式，用于在两方之间表示信息。它由头部、有效载荷（声明）和签名组成。</p>
 <p>JWT声明滥用可以通过不同的方式发生：</p>
 <ul>
 <li><strong>未授权声明</strong>：恶意用户可能试图向JWT添加未授权的声明，以获取他们无权访问的特定功能或资源。例如，普通用户尝试修改他们的JWT以声称自己拥有管理员权限。</li>
@@ -500,7 +500,7 @@
 <li><strong>关键声明操纵</strong>：在某些情况下，”kid”（密钥ID）声明可能会被滥用。攻击者可能试图操纵”kid”声明，使用不同的密钥进行签名验证。</li>
 </ul>
 <p>为了防止JWT声明滥用，实现客户端和服务器端的适当验证和验证机制至关重要。验证声明以确保它们是有效的、经过授权的，并且与用户的上下文相关。此外，始终验证JWT的签名以确保令牌的完整性并防止篡改。遵循JWT实施的最佳实践、安全的密钥管理和定期的密钥轮换也将有助于减轻JWT声明滥用的风险。</p>
-<h2 id="1-alg-none漏洞"><a href="#1-alg-none漏洞" class="headerlink" title="1. alg:none漏洞"></a>1. alg:none漏洞</h2><p>由于头部的alg可以为none，也就是说签名的方式是空的，如果后端开启空加密的话，攻击者就可以随意改身份</p>
+<h3 id="1-alg-none漏洞"><a href="#1-alg-none漏洞" class="headerlink" title="1. alg:none漏洞"></a>1. alg:none漏洞</h3><p>由于头部的alg可以为none，也就是说签名的方式是空的，如果后端开启空加密的话，攻击者就可以随意改身份</p>
 <p>在webgoat靶场中，一道题目要求获取管理员权限重置投票数</p>
 <p><img src="/../image/Snipaste_2024-02-29_14-02-46.png"></p>
 <p>切换用户点击重置投票数按钮后，抓包查看返回信息发现不行</p>
@@ -514,7 +514,7 @@
 <p>Base64编码后为：eyJpYXQiOjE3MTAwNTA4MzEsImFkbWluIjoidHJ1ZSIsInVzZXIiOiJKZXJyeSJ9</p>
 <p>将两部分Base64URL编码后合并再加第三部分为：eyJhbGciOiJub25lIn0.eyJpYXQiOjE3MTAwNTA4MzEsImFkbWluIjoidHJ1ZSIsInVzZXIiOiJKZXJyeSJ9.</p>
 <p><img src="/../image/image-20240229142837001.png" alt="image-20240229142837001"></p>
-<h1 id="三、刷新令牌"><a href="#三、刷新令牌" class="headerlink" title="三、刷新令牌"></a>三、刷新令牌</h1><p>通常有两种类型的令牌：访问令牌和刷新令牌。访问令牌用于对服务器进行API调用。访问令牌的使用寿命有限，这就是刷新令牌的作用所在。一旦访问令牌不再有效，就可以向服务器请求通过提供刷新令牌来获得新的访问令牌。刷新令牌可能会过期，但其使用寿命要长得多。这解决了用户必须使用其凭据再次进行身份验证的问题。</p>
+<h2 id="三、刷新令牌"><a href="#三、刷新令牌" class="headerlink" title="三、刷新令牌"></a>三、刷新令牌</h2><p>通常有两种类型的令牌：访问令牌和刷新令牌。访问令牌用于对服务器进行API调用。访问令牌的使用寿命有限，这就是刷新令牌的作用所在。一旦访问令牌不再有效，就可以向服务器请求通过提供刷新令牌来获得新的访问令牌。刷新令牌可能会过期，但其使用寿命要长得多。这解决了用户必须使用其凭据再次进行身份验证的问题。</p>
 <p>服务器返回的格式可能如下：</p>
 <pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">{</span>
     <span class="token property">"token_type"</span><span class="token operator">:</span><span class="token string">"bearer"</span><span class="token punctuation">,</span>
@@ -536,7 +536,7 @@
 <p><img src="/../image/image-20240301160323385.png" alt="image-20240301160323385"></p>
 <p>最后再以Tom的访问令牌购买商品</p>
 <p><img src="/../image/image-20240301160459466.png" alt="image-20240301160459466"></p>
-<h1 id="四、参考链接"><a href="#四、参考链接" class="headerlink" title="四、参考链接"></a>四、参考链接</h1><p>[1]: <a target="_blank" rel="noopener" href="https://jwt.io/introduction">https://jwt.io/introduction</a>	“Introduction to JSON Web Tokens”<br>[2]: <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/d1644e281250">https://www.jianshu.com/p/d1644e281250</a>	“JWT全面解读、详细使用步骤”</p>
+<h2 id="四、参考链接"><a href="#四、参考链接" class="headerlink" title="四、参考链接"></a>四、参考链接</h2><p>[1]: <a target="_blank" rel="noopener" href="https://jwt.io/introduction">https://jwt.io/introduction</a>	“Introduction to JSON Web Tokens”<br>[2]: <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/d1644e281250">https://www.jianshu.com/p/d1644e281250</a>	“JWT全面解读、详细使用步骤”</p>
 
                 
             </div>
@@ -955,7 +955,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">6.3k</span>
+                        class="white-color">6.2k</span>
             
             
             
