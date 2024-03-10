@@ -5,8 +5,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="2024-3-10力扣刷题记录, Blog Of yvzha0">
-    <meta name="description" content="665. 非递减数列题目要求：给你一个长度为 n 的整数数组 nums ，请你判断在 最多 改变 1 个元素的情况下，该数组能否变成一个非递减数列。
-我们是这样定义一个非递减数列的： 对于数组中任意的 i (0 &amp;lt;= i &amp;lt;= ">
+    <meta name="description" content="453. 最小操作次数使数组元素相等题目要求给你一个长度为 n 的整数数组，每次操作将会使 n - 1 个元素增加 1 。返回让数组所有元素相等的最小操作次数。
+示例 1：
+输入：nums = [1,2,3]
+输出：3
+解释：
+只需要3次操">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -406,14 +410,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    2.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    10 分
                 </div>
                 
 
@@ -436,7 +440,52 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="665-非递减数列"><a href="#665-非递减数列" class="headerlink" title="665. 非递减数列"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/non-decreasing-array/">665. 非递减数列</a></h2><h3 id="题目要求："><a href="#题目要求：" class="headerlink" title="题目要求："></a>题目要求：</h3><p>给你一个长度为 <code>n</code> 的整数数组 <code>nums</code> ，请你判断在 <strong>最多</strong> 改变 <code>1</code> 个元素的情况下，该数组能否变成一个非递减数列。</p>
+                <h2 id="453-最小操作次数使数组元素相等"><a href="#453-最小操作次数使数组元素相等" class="headerlink" title="453. 最小操作次数使数组元素相等"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-moves-to-equal-array-elements/">453. 最小操作次数使数组元素相等</a></h2><h3 id="题目要求"><a href="#题目要求" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你一个长度为 <code>n</code> 的整数数组，每次操作将会使 <code>n - 1</code> 个元素增加 <code>1</code> 。返回让数组所有元素相等的最小操作次数。</p>
+<p><strong>示例 1：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">输入：nums = [1,2,3]
+输出：3
+解释：
+只需要3次操作（注意每次操作会增加两个元素的值）：
+[1,2,3]  =&gt;  [2,3,3]  =&gt;  [3,4,3]  =&gt;  [4,4,4]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>示例 2：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">输入：nums = [1,1,1]
+输出：0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>n == nums.length</code></li>
+<li><code>1 &lt;= nums.length &lt;= 105</code></li>
+<li><code>-109 &lt;= nums[i] &lt;= 109</code></li>
+<li>答案保证符合 <strong>32-bit</strong> 整数</li>
+</ul>
+<h3 id="个人解答"><a href="#个人解答" class="headerlink" title="个人解答"></a>个人解答</h3><ol>
+<li>使 <code>n - 1</code> 个元素增加 <code>1</code>可以等价于使一个元素减少1，这样只需要将每个元素减少到数组中的最小的元素的值即可</li>
+<li>将数组中所有元素都减少到最小元素所花费的步数加起来就是最少的步数</li>
+</ol>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">minMoves</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 步骤1: 找到数组中的最小值</span>
+        <span class="token keyword">int</span> min <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token constant">MAX_VALUE</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> num <span class="token operator">:</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>num <span class="token operator">&lt;</span> min<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                min <span class="token operator">=</span> num<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">// 步骤2: 计算差值并累加</span>
+        <span class="token keyword">int</span> operations <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> num <span class="token operator">:</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            operations <span class="token operator">+=</span> <span class="token punctuation">(</span>num <span class="token operator">-</span> min<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">return</span> operations<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="665-非递减数列"><a href="#665-非递减数列" class="headerlink" title="665. 非递减数列"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/non-decreasing-array/">665. 非递减数列</a></h2><h3 id="题目要求："><a href="#题目要求：" class="headerlink" title="题目要求："></a>题目要求：</h3><p>给你一个长度为 <code>n</code> 的整数数组 <code>nums</code> ，请你判断在 <strong>最多</strong> 改变 <code>1</code> 个元素的情况下，该数组能否变成一个非递减数列。</p>
 <p>我们是这样定义一个非递减数列的： 对于数组中任意的 <code>i</code> <code>(0 &lt;= i &lt;= n-2)</code>，总满足 <code>nums[i] &lt;= nums[i + 1]</code>。</p>
 <p><strong>示例 1:</strong></p>
 <pre class="line-numbers language-none"><code class="language-none">输入: nums = [4,2,3]
@@ -454,7 +503,7 @@
 <li><code>1 &lt;= n &lt;= 104</code></li>
 <li><code>-105 &lt;= nums[i] &lt;= 105</code></li>
 </ul>
-<h3 id="个人解答"><a href="#个人解答" class="headerlink" title="个人解答"></a>个人解答</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<h3 id="个人解答-1"><a href="#个人解答-1" class="headerlink" title="个人解答"></a>个人解答</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">checkPossibility</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
         <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>nums<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
@@ -486,7 +535,7 @@
 <li>如果这时是数组的第一个元素，则操作是将其变得极小或者让nums[1]=nums[0]</li>
 <li>如果不是第一个元素，对当前元素的操作只能是将当前元素变成前一个元素或者将下一个元素变成当前元素，比较i-1个元素和i+1个元素的大小，如果i-1个元素比i+1个元素大的话，只能将下一个元素变成当前元素；反之就只能将当前元素变成前一个元素</li>
 </ol>
-<h2 id="283-移动零"><a href="#283-移动零" class="headerlink" title="283. 移动零"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/move-zeroes/">283. 移动零</a></h2><h3 id="题目要求"><a href="#题目要求" class="headerlink" title="题目要求"></a>题目要求</h3><p>给定一个数组 <code>nums</code>，编写一个函数将所有 <code>0</code> 移动到数组的末尾，同时保持非零元素的相对顺序。</p>
+<h2 id="283-移动零"><a href="#283-移动零" class="headerlink" title="283. 移动零"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/move-zeroes/">283. 移动零</a></h2><h3 id="题目要求-1"><a href="#题目要求-1" class="headerlink" title="题目要求"></a>题目要求</h3><p>给定一个数组 <code>nums</code>，编写一个函数将所有 <code>0</code> 移动到数组的末尾，同时保持非零元素的相对顺序。</p>
 <p><strong>请注意</strong> ，必须在不复制数组的情况下原地对数组进行操作。</p>
 <p><strong>示例 1:</strong></p>
 <pre class="line-numbers language-none"><code class="language-none">输入: nums = [0,1,0,3,12]
@@ -501,7 +550,7 @@
 <li><code>1 &lt;= nums.length &lt;= 104</code></li>
 <li><code>-231 &lt;= nums[i] &lt;= 231 - 1</code></li>
 </ul>
-<h3 id="个人解答-1"><a href="#个人解答-1" class="headerlink" title="个人解答"></a>个人解答</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<h3 id="个人解答-2"><a href="#个人解答-2" class="headerlink" title="个人解答"></a>个人解答</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">moveZeroes</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
         <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
@@ -518,7 +567,7 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="189-轮转数组"><a href="#189-轮转数组" class="headerlink" title="189. 轮转数组"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/rotate-array/">189. 轮转数组</a></h2><h3 id="题目要求-1"><a href="#题目要求-1" class="headerlink" title="题目要求"></a>题目要求</h3><p>给定一个整数数组 <code>nums</code>，将数组中的元素向右轮转 <code>k</code> 个位置，其中 <code>k</code> 是非负数。</p>
+<h2 id="189-轮转数组"><a href="#189-轮转数组" class="headerlink" title="189. 轮转数组"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/rotate-array/">189. 轮转数组</a></h2><h3 id="题目要求-2"><a href="#题目要求-2" class="headerlink" title="题目要求"></a>题目要求</h3><p>给定一个整数数组 <code>nums</code>，将数组中的元素向右轮转 <code>k</code> 个位置，其中 <code>k</code> 是非负数。</p>
 <p><strong>示例 1:</strong></p>
 <pre class="line-numbers language-none"><code class="language-none">输入: nums = [1,2,3,4,5,6,7], k = 3
 输出: [5,6,7,1,2,3,4]
@@ -540,7 +589,7 @@
 <li><code>-231 &lt;= nums[i] &lt;= 231 - 1</code></li>
 <li><code>0 &lt;= k &lt;= 105</code></li>
 </ul>
-<h3 id="个人解答-2"><a href="#个人解答-2" class="headerlink" title="个人解答"></a>个人解答</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<h3 id="个人解答-3"><a href="#个人解答-3" class="headerlink" title="个人解答"></a>个人解答</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">rotate</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> k<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> a <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>nums<span class="token punctuation">.</span>length<span class="token punctuation">]</span><span class="token punctuation">;</span>
         k <span class="token operator">=</span> k<span class="token operator">%</span>nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
@@ -558,7 +607,7 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="396-旋转函数"><a href="#396-旋转函数" class="headerlink" title="396. 旋转函数"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/rotate-function/">396. 旋转函数</a></h2><h3 id="题目要求-2"><a href="#题目要求-2" class="headerlink" title="题目要求"></a>题目要求</h3><p>给定一个长度为 <code>n</code> 的整数数组 <code>nums</code> 。</p>
+<h2 id="396-旋转函数"><a href="#396-旋转函数" class="headerlink" title="396. 旋转函数"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/rotate-function/">396. 旋转函数</a></h2><h3 id="题目要求-3"><a href="#题目要求-3" class="headerlink" title="题目要求"></a>题目要求</h3><p>给定一个长度为 <code>n</code> 的整数数组 <code>nums</code> 。</p>
 <p>假设 <code>arrk</code> 是数组 <code>nums</code> 顺时针旋转 <code>k</code> 个位置后的数组，我们定义 <code>nums</code> 的 <strong>旋转函数</strong> <code>F</code> 为：</p>
 <ul>
 <li><code>F(k) = 0 * arrk[0] + 1 * arrk[1] + ... + (n - 1) * arrk[n - 1]</code></li>
@@ -585,7 +634,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
 <li><code>1 &lt;= n &lt;= 105</code></li>
 <li><code>-100 &lt;= nums[i] &lt;= 100</code></li>
 </ul>
-<h3 id="个人解答-3"><a href="#个人解答-3" class="headerlink" title="个人解答"></a>个人解答</h3><ol>
+<h3 id="个人解答-4"><a href="#个人解答-4" class="headerlink" title="个人解答"></a>个人解答</h3><ol>
 <li><p>设数组nums的元素之和是count，长度为n</p>
 </li>
 <li><p><em>F</em>(0)=0×<em>nums</em>[0]+1×<em>nums</em>[1]+…+(<em>n</em>−1)×<em>nums</em>[<em>n</em>−1]</p>
@@ -615,7 +664,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="645-错误的集合"><a href="#645-错误的集合" class="headerlink" title="645. 错误的集合"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/set-mismatch/">645. 错误的集合</a></h2><h3 id="题目要求-3"><a href="#题目要求-3" class="headerlink" title="题目要求"></a>题目要求</h3><p>集合 <code>s</code> 包含从 <code>1</code> 到 <code>n</code> 的整数。不幸的是，因为数据错误，导致集合里面某一个数字复制了成了集合里面的另外一个数字的值，导致集合 <strong>丢失了一个数字</strong> 并且 <strong>有一个数字重复</strong> 。</p>
+<h2 id="645-错误的集合"><a href="#645-错误的集合" class="headerlink" title="645. 错误的集合"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/set-mismatch/">645. 错误的集合</a></h2><h3 id="题目要求-4"><a href="#题目要求-4" class="headerlink" title="题目要求"></a>题目要求</h3><p>集合 <code>s</code> 包含从 <code>1</code> 到 <code>n</code> 的整数。不幸的是，因为数据错误，导致集合里面某一个数字复制了成了集合里面的另外一个数字的值，导致集合 <strong>丢失了一个数字</strong> 并且 <strong>有一个数字重复</strong> 。</p>
 <p>给定一个数组 <code>nums</code> 代表了集合 <code>S</code> 发生错误后的结果。</p>
 <p>请你找出重复出现的整数，再找到丢失的整数，将它们以数组的形式返回。</p>
 <p><strong>示例 1：</strong></p>
@@ -631,7 +680,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
 <li><code>2 &lt;= nums.length &lt;= 104</code></li>
 <li><code>1 &lt;= nums[i] &lt;= 104</code></li>
 </ul>
-<h3 id="个人解答-4"><a href="#个人解答-4" class="headerlink" title="个人解答"></a>个人解答</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<h3 id="个人解答-5"><a href="#个人解答-5" class="headerlink" title="个人解答"></a>个人解答</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">findErrorNums</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> result <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
         <span class="token keyword">int</span> len <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
@@ -650,6 +699,73 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
         <span class="token keyword">return</span> result<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="1991-找到数组的中间位置"><a href="#1991-找到数组的中间位置" class="headerlink" title="1991. 找到数组的中间位置"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-the-middle-index-in-array/">1991. 找到数组的中间位置</a></h2><h3 id="题目要求-5"><a href="#题目要求-5" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> ，请你找到 <strong>最左边</strong> 的中间位置 <code>middleIndex</code> （也就是所有可能中间位置下标最小的一个）。</p>
+<p>中间位置 <code>middleIndex</code> 是满足 <code>nums[0] + nums[1] + ... + nums[middleIndex-1] == nums[middleIndex+1] + nums[middleIndex+2] + ... + nums[nums.length-1]</code> 的数组下标。</p>
+<p>如果 <code>middleIndex == 0</code> ，左边部分的和定义为 <code>0</code> 。类似的，如果 <code>middleIndex == nums.length - 1</code> ，右边部分的和定义为 <code>0</code> 。</p>
+<p>请你返回满足上述条件 <strong>最左边</strong> 的 <code>middleIndex</code> ，如果不存在这样的中间位置，请你返回 <code>-1</code> 。</p>
+<p><strong>示例 1：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">输入：nums = [2,3,-1,8,4]
+输出：3
+解释：
+下标 3 之前的数字和为：2 + 3 + -1 = 4
+下标 3 之后的数字和为：4 = 4<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>示例 2：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">输入：nums = [1,-1,4]
+输出：2
+解释：
+下标 2 之前的数字和为：1 + -1 = 0
+下标 2 之后的数字和为：0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>示例 3：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">输入：nums = [2,5]
+输出：-1
+解释：
+不存在符合要求的 middleIndex 。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>示例 4：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">输入：nums = [1]
+输出：0
+解释：
+下标 0 之前的数字和为：0
+下标 0 之后的数字和为：0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= nums.length &lt;= 100</code></li>
+<li><code>-1000 &lt;= nums[i] &lt;= 1000</code></li>
+</ul>
+<h3 id="个人解答-6"><a href="#个人解答-6" class="headerlink" title="个人解答"></a>个人解答</h3><ol>
+<li>用num_l和num_r表示左右元素的和</li>
+<li>先算出当下标为0时的右侧元素的和，即从num[1]到nums[n]的和，此时的左侧元素的和为0</li>
+<li>从下标为0的元素开始遍历，判断左右元素的和是否相等，若相等则当前下标就是中间位置，若不相等则看下一个位置，同时左右元素的和也做变换</li>
+<li>如果直到最后一个元素都不相等，就返回-1</li>
+</ol>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">findMiddleIndex</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> len <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+        <span class="token keyword">int</span> sum_l <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> sum_r <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            sum_r <span class="token operator">+=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>sum_l <span class="token operator">==</span> sum_r<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">return</span> i<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>i <span class="token operator">==</span> len<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            sum_l <span class="token operator">+=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            sum_r <span class="token operator">-=</span> nums<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
 
 
 
@@ -1089,7 +1205,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">8k</span>
+                        class="white-color">8.8k</span>
             
             
             
