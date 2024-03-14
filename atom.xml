@@ -6,7 +6,7 @@
   <link href="https://yvzha0.github.io/atom.xml" rel="self"/>
   
   <link href="https://yvzha0.github.io/"/>
-  <updated>2024-03-13T16:05:16.324Z</updated>
+  <updated>2024-03-14T08:15:58.020Z</updated>
   <id>https://yvzha0.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2024-3-14力扣刷题记录</title>
+    <link href="https://yvzha0.github.io/2024/03/14/2024-3-14-li-kou-shua-ti-ji-lu/"/>
+    <id>https://yvzha0.github.io/2024/03/14/2024-3-14-li-kou-shua-ti-ji-lu/</id>
+    <published>2024-03-14T05:34:01.000Z</published>
+    <updated>2024-03-14T08:15:58.020Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;118-杨辉三角&quot;&gt;&lt;a href=&quot;#118-杨辉三角&quot; class=&quot;headerlink&quot; title=&quot;118. 杨辉三角&quot;&gt;&lt;/a&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="力扣刷题记录" scheme="https://yvzha0.github.io/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    
+    
+    <category term="算法学习" scheme="https://yvzha0.github.io/tags/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>2024-3-13力扣刷题记录</title>
