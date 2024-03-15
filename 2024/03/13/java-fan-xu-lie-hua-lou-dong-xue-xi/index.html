@@ -55,9 +55,9 @@ Java中的API实现:
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Blog Of yvzha0" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Blog Of yvzha0" type="application/atom+xml">
 </head>
 
 
@@ -405,21 +405,21 @@ Java中的API实现:
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-03-14
+                    2024-03-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    7 分
                 </div>
                 
 
@@ -595,7 +595,33 @@ oos<span class="token punctuation">.</span><span class="token function">flush</s
 
 <p>将这个XML替换上面的XML，执行结果如下</p>
 <p><img src="/../image/image-20240314203101901.png" alt="image-20240314203101901"></p>
-<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p>[1]: <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_61553520/article/details/130842975">https://blog.csdn.net/qq_61553520/article/details/130842975</a>	“Java 反序列化漏洞”<br>[2]: <a target="_blank" rel="noopener" href="https://blog.csdn.net/bobo_milk/article/details/128098492">https://blog.csdn.net/bobo_milk/article/details/128098492</a>	“Web安全–反序列化漏洞（java篇）”</p>
+<h2 id="二、Java系统命令执行"><a href="#二、Java系统命令执行" class="headerlink" title="二、Java系统命令执行"></a>二、Java系统命令执行</h2><p>要想通过反序列化漏洞扩大影响，要了解Java命令执行的内容</p>
+<h3 id="2-1-两个关键的类"><a href="#2-1-两个关键的类" class="headerlink" title="2.1 两个关键的类"></a>2.1 两个关键的类</h3><h4 id="2-1-1-java-lang-Runtime"><a href="#2-1-1-java-lang-Runtime" class="headerlink" title="2.1.1 java.lang.Runtime"></a>2.1.1 java.lang.Runtime</h4><p>Runtime类封装了运行时的环境。每个 Java 应用程序都有一个 Runtime 类实例，使应用程序能够与其运行的环境相连接。</p>
+<p>一般不能实例化一个Runtime对象，应用程序也不能创建自己的 Runtime 类实例，但可以通过 getRuntime 方法获取当前Runtime运行时对象的引用。</p>
+<p>一旦得到了一个当前的Runtime对象的引用，就可以调用Runtime对象的方法去控制Java虚拟机的状态和行为。</p>
+<p>一般写法：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//弹出计算器</span>
+<span class="token class-name">Runtime</span> runtime <span class="token operator">=</span> <span class="token class-name">Runtime</span><span class="token punctuation">.</span><span class="token function">getRuntime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Process</span> start <span class="token operator">=</span> runtime<span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token string">"calc"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//生成回显，比如运行ipconfig就需要</span>
+<span class="token class-name">InputStream</span> inputStream <span class="token operator">=</span> start<span class="token punctuation">.</span><span class="token function">getInputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> res <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token number">1024</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+inputStream<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="2-1-2-java-lang-ProcessBuilder"><a href="#2-1-2-java-lang-ProcessBuilder" class="headerlink" title="2.1.2 java.lang.ProcessBuilder"></a>2.1.2 java.lang.ProcessBuilder</h4><p> ProcessBuilder类是J2SE 1.5在java.lang中新添加的一个新类，此类用于创建操作系统进程，它提供一种启动和管理进程（也就是应用程序）的方法。在J2SE 1.5之前，都是由Process类处来实现进程的控制管理。每个 ProcessBuilder 实例管理一个进程属性集。它的start() 方法利用这些属性创建一个新的 Process 实例。start() 方法可以从同一实例重复调用，以利用相同的或相关的属性创建新的子进程。</p>
+<p>一般写法：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">ProcessBuilder</span> processBuilder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ProcessBuilder</span><span class="token punctuation">(</span><span class="token string">"calc"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Process</span> start <span class="token operator">=</span> processBuilder<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token class-name">InputStream</span> inputStream <span class="token operator">=</span> start<span class="token punctuation">.</span><span class="token function">getInputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> res <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token number">1024</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+inputStream<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p>[1]: <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_61553520/article/details/130842975">https://blog.csdn.net/qq_61553520/article/details/130842975</a>	“Java 反序列化漏洞”<br>[2]: <a target="_blank" rel="noopener" href="https://blog.csdn.net/bobo_milk/article/details/128098492">https://blog.csdn.net/bobo_milk/article/details/128098492</a>	“Web安全–反序列化漏洞（java篇）”<br>[3]: <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42514777/article/details/114439492">https://blog.csdn.net/weixin_42514777/article/details/114439492</a>	“java lang runtime_深入研究java.lang.Runtime类”<br>[4]: <a target="_blank" rel="noopener" href="https://blog.csdn.net/chenthe1/article/details/131241341">https://blog.csdn.net/chenthe1/article/details/131241341</a>	“ProcessBuilder类的介绍及使用”</p>
 
                 
             </div>
@@ -1030,7 +1056,7 @@ oos<span class="token punctuation">.</span><span class="token function">flush</s
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">16.1k</span>
+                        class="white-color">17.6k</span>
             
             
             
