@@ -6,7 +6,7 @@
   <link href="https://yvzha0.github.io/atom.xml" rel="self"/>
   
   <link href="https://yvzha0.github.io/"/>
-  <updated>2024-03-18T02:26:23.303Z</updated>
+  <updated>2024-03-18T14:43:26.047Z</updated>
   <id>https://yvzha0.github.io/</id>
   
   <author>
@@ -17,18 +17,66 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>计算机网络基础</title>
+    <link href="https://yvzha0.github.io/2024/03/18/ji-suan-ji-wang-luo-ji-chu/"/>
+    <id>https://yvzha0.github.io/2024/03/18/ji-suan-ji-wang-luo-ji-chu/</id>
+    <published>2024-03-18T06:14:27.000Z</published>
+    <updated>2024-03-18T14:43:26.047Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;一、概述&quot;&gt;&lt;a href=&quot;#一、概述&quot; class=&quot;headerlink&quot; title=&quot;一、概述&quot;&gt;&lt;/a&gt;一、概述&lt;/h2&gt;&lt;h3 id=&quot;1-1-电路交换与分组交换&quot;&gt;&lt;a href=&quot;#1-1-电路交换与分组交换&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="计算机基础" scheme="https://yvzha0.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>算法基础</title>
+    <link href="https://yvzha0.github.io/2024/03/18/suan-fa-ji-chu/"/>
+    <id>https://yvzha0.github.io/2024/03/18/suan-fa-ji-chu/</id>
+    <published>2024-03-18T05:31:24.000Z</published>
+    <updated>2024-03-18T05:50:28.323Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;排序&quot;&gt;&lt;a href=&quot;#排序&quot; class=&quot;headerlink&quot; title=&quot;排序&quot;&gt;&lt;/a&gt;排序&lt;/h2&gt;&lt;h3 id=&quot;插入类&quot;&gt;&lt;a href=&quot;#插入类&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="计算机基础" scheme="https://yvzha0.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="算法学习" scheme="https://yvzha0.github.io/tags/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>力扣刷题记录——链表篇</title>
     <link href="https://yvzha0.github.io/2024/03/18/li-kou-shua-ti-ji-lu-lian-biao-pian/"/>
     <id>https://yvzha0.github.io/2024/03/18/li-kou-shua-ti-ji-lu-lian-biao-pian/</id>
     <published>2024-03-18T01:46:06.000Z</published>
-    <updated>2024-03-18T02:26:23.303Z</updated>
+    <updated>2024-03-18T16:30:32.868Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;707-设计链表&quot;&gt;&lt;a href=&quot;#707-设计链表&quot; class=&quot;headerlink&quot; title=&quot;707. 设计链表&quot;&gt;&lt;/a&gt;&lt;a</summary>
+    <summary type="html">&lt;h1 id=&quot;2024-3-18&quot;&gt;&lt;a href=&quot;#2024-3-18&quot; class=&quot;headerlink&quot; title=&quot;2024-3-18&quot;&gt;&lt;/a&gt;2024-3-18&lt;/h1&gt;&lt;h2 id=&quot;707-设计链表&quot;&gt;&lt;a href=&quot;#707-设计链表&quot;</summary>
         
       
     
