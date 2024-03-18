@@ -4,12 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="2024-3-12力扣刷题记录, Blog Of yvzha0">
-    <meta name="description" content="485. 最大连续 1 的个数题目要求给定一个二进制数组 nums ， 计算其中最大连续 1 的个数。
-示例 1：
-输入：nums = [1,1,0,1,1,1]
-输出：3
-解释：开头的两位和最后的三位都是连续 1 ，所以最大连续 1 的个">
+    <meta name="keywords" content="力扣刷题记录——链表篇, Blog Of yvzha0">
+    <meta name="description" content="707. 设计链表题目要求你可以选择使用单链表或者双链表，设计并实现自己的链表。
+单链表中的节点应该具备两个属性：val 和 next 。val 是当前节点的值，next 是指向下一个节点的指针/引用。
+如果是双向链表，则还需要属性 pre">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>2024-3-12力扣刷题记录 | Blog Of yvzha0</title>
+    <title>力扣刷题记录——链表篇 | Blog Of yvzha0</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -341,12 +339,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">2024-3-12力扣刷题记录</h1>
+                    <h1 class="description center-align post-title">力扣刷题记录——链表篇</h1>
                 </div>
             </div>
         </div>
@@ -395,28 +393,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-03-12
+                    2024-03-18
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-03-12
+                    2024-03-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    6 分
                 </div>
                 
 
@@ -439,133 +437,242 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="485-最大连续-1-的个数"><a href="#485-最大连续-1-的个数" class="headerlink" title="485. 最大连续 1 的个数"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/max-consecutive-ones/">485. 最大连续 1 的个数</a></h2><h3 id="题目要求"><a href="#题目要求" class="headerlink" title="题目要求"></a>题目要求</h3><p>给定一个二进制数组 <code>nums</code> ， 计算其中最大连续 <code>1</code> 的个数。</p>
-<p><strong>示例 1：</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">输入：nums = [1,1,0,1,1,1]
-输出：3
-解释：开头的两位和最后的三位都是连续 1 ，所以最大连续 1 的个数是 3.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+                <h2 id="707-设计链表"><a href="#707-设计链表" class="headerlink" title="707. 设计链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/design-linked-list/">707. 设计链表</a></h2><h3 id="题目要求"><a href="#题目要求" class="headerlink" title="题目要求"></a>题目要求</h3><p>你可以选择使用单链表或者双链表，设计并实现自己的链表。</p>
+<p>单链表中的节点应该具备两个属性：<code>val</code> 和 <code>next</code> 。<code>val</code> 是当前节点的值，<code>next</code> 是指向下一个节点的指针/引用。</p>
+<p>如果是双向链表，则还需要属性 <code>prev</code> 以指示链表中的上一个节点。假设链表中的所有节点下标从 <strong>0</strong> 开始。</p>
+<p>实现 <code>MyLinkedList</code> 类：</p>
+<ul>
+<li><code>MyLinkedList()</code> 初始化 <code>MyLinkedList</code> 对象。</li>
+<li><code>int get(int index)</code> 获取链表中下标为 <code>index</code> 的节点的值。如果下标无效，则返回 <code>-1</code> 。</li>
+<li><code>void addAtHead(int val)</code> 将一个值为 <code>val</code> 的节点插入到链表中第一个元素之前。在插入完成后，新节点会成为链表的第一个节点。</li>
+<li><code>void addAtTail(int val)</code> 将一个值为 <code>val</code> 的节点追加到链表中作为链表的最后一个元素。</li>
+<li><code>void addAtIndex(int index, int val)</code> 将一个值为 <code>val</code> 的节点插入到链表中下标为 <code>index</code> 的节点之前。如果 <code>index</code> 等于链表的长度，那么该节点会被追加到链表的末尾。如果 <code>index</code> 比长度更大，该节点将 <strong>不会插入</strong> 到链表中。</li>
+<li><code>void deleteAtIndex(int index)</code> 如果下标有效，则删除链表中下标为 <code>index</code> 的节点。</li>
+</ul>
+<p><strong>示例：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">输入
+["MyLinkedList", "addAtHead", "addAtTail", "addAtIndex", "get", "deleteAtIndex", "get"]
+[[], [1], [3], [1, 2], [1], [1], [1]]
+输出
+[null, null, null, null, 2, null, 3]
 
-<p><strong>示例 2:</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">输入：nums = [1,0,1,1,0,1]
-输出：2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+解释
+MyLinkedList myLinkedList = new MyLinkedList();
+myLinkedList.addAtHead(1);
+myLinkedList.addAtTail(3);
+myLinkedList.addAtIndex(1, 2);    // 链表变为 1-&gt;2-&gt;3
+myLinkedList.get(1);              // 返回 2
+myLinkedList.deleteAtIndex(1);    // 现在，链表变为 1-&gt;3
+myLinkedList.get(1);              // 返回 3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>提示：</strong></p>
 <ul>
-<li><code>1 &lt;= nums.length &lt;= 105</code></li>
-<li><code>nums[i]</code> 不是 <code>0</code> 就是 <code>1</code>.</li>
+<li><code>0 &lt;= index, val &lt;= 1000</code></li>
+<li>请不要使用内置的 LinkedList 库。</li>
+<li>调用 <code>get</code>、<code>addAtHead</code>、<code>addAtTail</code>、<code>addAtIndex</code> 和 <code>deleteAtIndex</code> 的次数不超过 <code>2000</code> 。</li>
 </ul>
-<h3 id="个人解答"><a href="#个人解答" class="headerlink" title="个人解答"></a>个人解答</h3><p>遍历数组，记录连续出现1的个数和最大连续出现1的个数，如果遇到0，就去比较哪个大，并且根据结果修改最大值，最后返回max和temp的最大值，因为有可能到末尾也是1。</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">findMaxConsecutiveOnes</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        
-        <span class="token keyword">int</span> max<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>temp<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-                temp<span class="token operator">++</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
-                max <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>max<span class="token punctuation">,</span>temp<span class="token punctuation">)</span><span class="token punctuation">;</span>
-                temp<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span>  <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>max<span class="token punctuation">,</span>temp<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="个人解答"><a href="#个人解答" class="headerlink" title="个人解答"></a>个人解答</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">MyLinkedList</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> length<span class="token punctuation">;</span>
+    <span class="token class-name">ListNode</span> head<span class="token punctuation">;</span>
 
-<h2 id="495-提莫攻击"><a href="#495-提莫攻击" class="headerlink" title="495. 提莫攻击"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/teemo-attacking/">495. 提莫攻击</a></h2><h3 id="题目要求-1"><a href="#题目要求-1" class="headerlink" title="题目要求"></a>题目要求</h3><p>在《英雄联盟》的世界中，有一个叫 “提莫” 的英雄。他的攻击可以让敌方英雄艾希（编者注：寒冰射手）进入中毒状态。</p>
-<p>当提莫攻击艾希，艾希的中毒状态正好持续 <code>duration</code> 秒。</p>
-<p>正式地讲，提莫在 <code>t</code> 发起攻击意味着艾希在时间区间 <code>[t, t + duration - 1]</code>（含 <code>t</code> 和 <code>t + duration - 1</code>）处于中毒状态。如果提莫在中毒影响结束 <strong>前</strong> 再次攻击，中毒状态计时器将会 <strong>重置</strong> ，在新的攻击之后，中毒影响将会在 <code>duration</code> 秒后结束。</p>
-<p>给你一个 <strong>非递减</strong> 的整数数组 <code>timeSeries</code> ，其中 <code>timeSeries[i]</code> 表示提莫在 <code>timeSeries[i]</code> 秒时对艾希发起攻击，以及一个表示中毒持续时间的整数 <code>duration</code> 。</p>
-<p>返回艾希处于中毒状态的 <strong>总</strong> 秒数。</p>
+    <span class="token keyword">public</span> <span class="token class-name">MyLinkedList</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        length <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        head <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+
+
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>index <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> index <span class="token operator">&gt;=</span> length<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token class-name">ListNode</span> cur <span class="token operator">=</span> head<span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>index<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            cur <span class="token operator">=</span> cur<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> cur<span class="token punctuation">.</span>val<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">addAtHead</span><span class="token punctuation">(</span><span class="token keyword">int</span> val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">ListNode</span> newHead <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ListNode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        newHead<span class="token punctuation">.</span>val <span class="token operator">=</span> val<span class="token punctuation">;</span>
+        newHead<span class="token punctuation">.</span>next <span class="token operator">=</span> head<span class="token punctuation">;</span>
+        head <span class="token operator">=</span> newHead<span class="token punctuation">;</span>
+        length<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">addAtTail</span><span class="token punctuation">(</span><span class="token keyword">int</span> val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>length <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">addAtHead</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token class-name">ListNode</span> tail <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ListNode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        tail<span class="token punctuation">.</span>val <span class="token operator">=</span> val<span class="token punctuation">;</span>
+        tail<span class="token punctuation">.</span>next <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token class-name">ListNode</span> cur <span class="token operator">=</span> head<span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>cur<span class="token punctuation">.</span>next <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            cur <span class="token operator">=</span> cur<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        cur<span class="token punctuation">.</span>next <span class="token operator">=</span> tail<span class="token punctuation">;</span>
+        length<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">addAtIndex</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">,</span> <span class="token keyword">int</span> val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>index <span class="token operator">&lt;=</span> length<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>head <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token class-name">ListNode</span> a <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ListNode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                a<span class="token punctuation">.</span>val <span class="token operator">=</span> val<span class="token punctuation">;</span>
+                head <span class="token operator">=</span> a<span class="token punctuation">;</span>
+                length<span class="token operator">++</span><span class="token punctuation">;</span>
+                <span class="token keyword">return</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>index <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token function">addAtHead</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">return</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token class-name">ListNode</span> a <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ListNode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            a<span class="token punctuation">.</span>val <span class="token operator">=</span> val<span class="token punctuation">;</span>
+            <span class="token class-name">ListNode</span> cur <span class="token operator">=</span> head<span class="token punctuation">;</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>index<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                cur <span class="token operator">=</span> cur<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            a<span class="token punctuation">.</span>next <span class="token operator">=</span> cur<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+            cur<span class="token punctuation">.</span>next <span class="token operator">=</span> a<span class="token punctuation">;</span>
+            length<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">deleteAtIndex</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>index <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            head <span class="token operator">=</span> head<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+            length<span class="token operator">--</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>index <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> index <span class="token operator">&lt;</span> length<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token class-name">ListNode</span> cur <span class="token operator">=</span> head<span class="token punctuation">;</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>index<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                cur <span class="token operator">=</span> cur<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            cur<span class="token punctuation">.</span>next <span class="token operator">=</span> cur<span class="token punctuation">.</span>next<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+            length<span class="token operator">--</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">ListNode</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> val<span class="token punctuation">;</span>
+    <span class="token class-name">ListNode</span> next<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token class-name">ListNode</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="203-移除链表元素"><a href="#203-移除链表元素" class="headerlink" title="203. 移除链表元素"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-linked-list-elements/">203. 移除链表元素</a></h2><h3 id="题目要求-1"><a href="#题目要求-1" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你一个链表的头节点 <code>head</code> 和一个整数 <code>val</code> ，请你删除链表中所有满足 <code>Node.val == val</code> 的节点，并返回 <strong>新的头节点</strong> 。</p>
 <p><strong>示例 1：</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">输入：timeSeries = [1,4], duration = 2
-输出：4
-解释：提莫攻击对艾希的影响如下：
-- 第 1 秒，提莫攻击艾希并使其立即中毒。中毒状态会维持 2 秒，即第 1 秒和第 2 秒。
-- 第 4 秒，提莫再次攻击艾希，艾希中毒状态又持续 2 秒，即第 4 秒和第 5 秒。
-艾希在第 1、2、4、5 秒处于中毒状态，所以总中毒秒数是 4 。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://assets.leetcode.com/uploads/2021/03/06/removelinked-list.jpg" alt="img"></p>
+<pre class="line-numbers language-none"><code class="language-none">输入：head = [1,2,6,3,4,5,6], val = 6
+输出：[1,2,3,4,5]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p><strong>示例 2：</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">输入：timeSeries = [1,2], duration = 2
-输出：3
-解释：提莫攻击对艾希的影响如下：
-- 第 1 秒，提莫攻击艾希并使其立即中毒。中毒状态会维持 2 秒，即第 1 秒和第 2 秒。
-- 第 2 秒，提莫再次攻击艾希，并重置中毒计时器，艾希中毒状态需要持续 2 秒，即第 2 秒和第 3 秒。
-艾希在第 1、2、3 秒处于中毒状态，所以总中毒秒数是 3 。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">输入：head = [], val = 1
+输出：[]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><strong>示例 3：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">输入：head = [7,7,7,7], val = 7
+输出：[]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p><strong>提示：</strong></p>
 <ul>
-<li><code>1 &lt;= timeSeries.length &lt;= 104</code></li>
-<li><code>0 &lt;= timeSeries[i], duration &lt;= 107</code></li>
-<li><code>timeSeries</code> 按 <strong>非递减</strong> 顺序排列</li>
+<li>列表中的节点数目在范围 <code>[0, 104]</code> 内</li>
+<li><code>1 &lt;= Node.val &lt;= 50</code></li>
+<li><code>0 &lt;= val &lt;= 50</code></li>
 </ul>
 <h3 id="个人解答-1"><a href="#个人解答-1" class="headerlink" title="个人解答"></a>个人解答</h3><ol>
-<li>记录当前中毒结束的时间；</li>
-<li>如果受到攻击的时间大于等于中毒结束的时间，那么中毒持续时间就可以加duration；</li>
-<li>如果受到攻击的时间小于中毒结束的时间，那么中毒持续时间可以加的就是这次结束时间减去上次结束时间。</li>
+<li>先把头结点为val的全删掉</li>
+<li>然后顺着去删除</li>
 </ol>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">findPoisonedDuration</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> timeSeries<span class="token punctuation">,</span> <span class="token keyword">int</span> duration<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> len <span class="token operator">=</span> timeSeries<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
-        <span class="token keyword">int</span> sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span>timeSeries<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&gt;=</span> a<span class="token punctuation">)</span><span class="token punctuation">{</span>
-                sum <span class="token operator">+=</span> duration<span class="token punctuation">;</span>
-                a <span class="token operator">=</span> timeSeries<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">+</span>duration<span class="token punctuation">;</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */</span>
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token class-name">ListNode</span> <span class="token function">removeElements</span><span class="token punctuation">(</span><span class="token class-name">ListNode</span> head<span class="token punctuation">,</span> <span class="token keyword">int</span> val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>head <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> head<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>head<span class="token punctuation">.</span>val <span class="token operator">==</span> val<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            head <span class="token operator">=</span> head<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>head <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> head<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token class-name">ListNode</span> cur <span class="token operator">=</span> head<span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>cur<span class="token punctuation">.</span>next <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>cur<span class="token punctuation">.</span>next<span class="token punctuation">.</span>val <span class="token operator">==</span> val<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                cur<span class="token punctuation">.</span>next <span class="token operator">=</span> cur<span class="token punctuation">.</span>next<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
             <span class="token punctuation">}</span>
             <span class="token keyword">else</span><span class="token punctuation">{</span>
-                sum <span class="token operator">+=</span> timeSeries<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">+</span>duration<span class="token operator">-</span>a<span class="token punctuation">;</span>
-                a <span class="token operator">=</span> timeSeries<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> duration<span class="token punctuation">;</span>
+                cur <span class="token operator">=</span> cur<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> sum<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+        <span class="token keyword">return</span> head<span class="token punctuation">;</span>
 
-<h2 id="56-合并区间"><a href="#56-合并区间" class="headerlink" title="56. 合并区间"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/merge-intervals/">56. 合并区间</a></h2><h3 id="题目要求-2"><a href="#题目要求-2" class="headerlink" title="题目要求"></a>题目要求</h3><p>以数组 <code>intervals</code> 表示若干个区间的集合，其中单个区间为 <code>intervals[i] = [starti, endi]</code> 。请你合并所有重叠的区间，并返回 <em>一个不重叠的区间数组，该数组需恰好覆盖输入中的所有区间</em> 。</p>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="237-删除链表中的节点"><a href="#237-删除链表中的节点" class="headerlink" title="237. 删除链表中的节点"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/delete-node-in-a-linked-list/">237. 删除链表中的节点</a></h2><h3 id="题目要求-2"><a href="#题目要求-2" class="headerlink" title="题目要求"></a>题目要求</h3><p>有一个单链表的 <code>head</code>，我们想删除它其中的一个节点 <code>node</code>。</p>
+<p>给你一个需要删除的节点 <code>node</code> 。你将 <strong>无法访问</strong> 第一个节点 <code>head</code>。</p>
+<p>链表的所有值都是 <strong>唯一的</strong>，并且保证给定的节点 <code>node</code> 不是链表中的最后一个节点。</p>
+<p>删除给定的节点。注意，删除节点并不是指从内存中删除它。这里的意思是：</p>
+<ul>
+<li>给定节点的值不应该存在于链表中。</li>
+<li>链表中的节点数应该减少 1。</li>
+<li><code>node</code> 前面的所有值顺序相同。</li>
+<li><code>node</code> 后面的所有值顺序相同。</li>
+</ul>
+<p><strong>自定义测试：</strong></p>
+<ul>
+<li>对于输入，你应该提供整个链表 <code>head</code> 和要给出的节点 <code>node</code>。<code>node</code> 不应该是链表的最后一个节点，而应该是链表中的一个实际节点。</li>
+<li>我们将构建链表，并将节点传递给你的函数。</li>
+<li>输出将是调用你函数后的整个链表。</li>
+</ul>
 <p><strong>示例 1：</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">输入：intervals = [[1,3],[2,6],[8,10],[15,18]]
-输出：[[1,6],[8,10],[15,18]]
-解释：区间 [1,3] 和 [2,6] 重叠, 将它们合并为 [1,6].<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://assets.leetcode.com/uploads/2020/09/01/node1.jpg" alt="img"></p>
+<pre class="line-numbers language-none"><code class="language-none">输入：head = [4,5,1,9], node = 5
+输出：[4,1,9]
+解释：指定链表中值为 5 的第二个节点，那么在调用了你的函数之后，该链表应变为 4 -&gt; 1 -&gt; 9<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>示例 2：</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">输入：intervals = [[1,4],[4,5]]
-输出：[[1,5]]
-解释：区间 [1,4] 和 [4,5] 可被视为重叠区间。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://assets.leetcode.com/uploads/2020/09/01/node2.jpg" alt="img"></p>
+<pre class="line-numbers language-none"><code class="language-none">输入：head = [4,5,1,9], node = 1
+输出：[4,5,9]
+解释：指定链表中值为 1 的第三个节点，那么在调用了你的函数之后，该链表应变为 4 -&gt; 5 -&gt; 9<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>提示：</strong></p>
 <ul>
-<li><code>1 &lt;= intervals.length &lt;= 104</code></li>
-<li><code>intervals[i].length == 2</code></li>
-<li><code>0 &lt;= starti &lt;= endi &lt;= 104</code></li>
+<li>链表中节点的数目范围是 <code>[2, 1000]</code></li>
+<li><code>-1000 &lt;= Node.val &lt;= 1000</code></li>
+<li>链表中每个节点的值都是 <strong>唯一</strong> 的</li>
+<li>需要删除的节点 <code>node</code> 是 <strong>链表中的节点</strong> ，且 <strong>不是末尾节点</strong></li>
 </ul>
-<h3 id="个人解答-2"><a href="#个人解答-2" class="headerlink" title="个人解答"></a>个人解答</h3><ol>
-<li>将数组中的区间按照左边界升序排序</li>
-<li>把右边界大于第二个的左边界的区间合并，一直到最后</li>
-</ol>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">ArrayList</span></span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Arrays</span></span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Comparator</span></span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">List</span></span><span class="token punctuation">;</span>
-
+<h3 id="个人解答-2"><a href="#个人解答-2" class="headerlink" title="个人解答"></a>个人解答</h3><p>把要删除的节点变成下一个节点即可</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */</span>
 <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">merge</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> intervals<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>intervals<span class="token punctuation">.</span>length <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>intervals<span class="token punctuation">,</span> <span class="token punctuation">(</span>interval1<span class="token punctuation">,</span> interval2<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> interval1<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">-</span> interval2<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token class-name">List</span><span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span> merged <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> interval <span class="token operator">:</span> intervals<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">int</span> <span class="token class-name">L</span> <span class="token operator">=</span> interval<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token class-name">R</span> <span class="token operator">=</span> interval<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>merged<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">||</span> merged<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>merged<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">&lt;</span> <span class="token class-name">L</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                merged<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">{</span><span class="token class-name">L</span><span class="token punctuation">,</span> <span class="token class-name">R</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-                merged<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>merged<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>merged<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>merged<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token class-name">R</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> merged<span class="token punctuation">.</span><span class="token function">toArray</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>merged<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">deleteNode</span><span class="token punctuation">(</span><span class="token class-name">ListNode</span> node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        node<span class="token punctuation">.</span>val <span class="token operator">=</span> node<span class="token punctuation">.</span>next<span class="token punctuation">.</span>val<span class="token punctuation">;</span>
+        node<span class="token punctuation">.</span>next <span class="token operator">=</span> node<span class="token punctuation">.</span>next<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 
@@ -593,7 +700,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://yvzha0.github.io/2024/03/12/2024-3-12-li-kou-shua-ti-ji-lu/">https://yvzha0.github.io/2024/03/12/2024-3-12-li-kou-shua-ti-ji-lu/</a>
+                    <a href="https://yvzha0.github.io/2024/03/18/li-kou-shua-ti-ji-lu-lian-biao-pian/">https://yvzha0.github.io/2024/03/18/li-kou-shua-ti-ji-lu-lian-biao-pian/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -711,9 +818,60 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2024/03/18/li-kou-shua-ti-ji-lu-lian-biao-pian/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="力扣刷题记录——链表篇">
+                        
+                        <span class="card-title">力扣刷题记录——链表篇</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-18
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" class="post-category">
+                                    力扣刷题记录
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">算法学习</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2024/03/13/java-fan-xu-lie-hua-lou-dong-xue-xi/">
                     <div class="card-image">
@@ -731,9 +889,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-03-13
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-13
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -755,55 +913,6 @@
                     
                     <a href="/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/">
                         <span class="chip bg-color">反序列化</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2024/03/11/2024-3-11-li-kou-shua-ti-ji-lu/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="2024-3-11力扣刷题记录">
-                        
-                        <span class="card-title">2024-3-11力扣刷题记录</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-11
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" class="post-category">
-                                    力扣刷题记录
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">算法学习</span>
                     </a>
                     
                 </div>

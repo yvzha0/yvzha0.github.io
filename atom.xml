@@ -6,7 +6,7 @@
   <link href="https://yvzha0.github.io/atom.xml" rel="self"/>
   
   <link href="https://yvzha0.github.io/"/>
-  <updated>2024-03-18T02:08:57.732Z</updated>
+  <updated>2024-03-18T02:26:23.303Z</updated>
   <id>https://yvzha0.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>2024-3-18力扣刷题记录</title>
-    <link href="https://yvzha0.github.io/2024/03/18/2024-3-18-li-kou-shua-ti-ji-lu/"/>
-    <id>https://yvzha0.github.io/2024/03/18/2024-3-18-li-kou-shua-ti-ji-lu/</id>
+    <title>力扣刷题记录——链表篇</title>
+    <link href="https://yvzha0.github.io/2024/03/18/li-kou-shua-ti-ji-lu-lian-biao-pian/"/>
+    <id>https://yvzha0.github.io/2024/03/18/li-kou-shua-ti-ji-lu-lian-biao-pian/</id>
     <published>2024-03-18T01:46:06.000Z</published>
-    <updated>2024-03-18T02:08:57.732Z</updated>
+    <updated>2024-03-18T02:26:23.303Z</updated>
     
     
       
@@ -29,131 +29,6 @@
         
         
     <summary type="html">&lt;h2 id=&quot;707-设计链表&quot;&gt;&lt;a href=&quot;#707-设计链表&quot; class=&quot;headerlink&quot; title=&quot;707. 设计链表&quot;&gt;&lt;/a&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="力扣刷题记录" scheme="https://yvzha0.github.io/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
-    
-    
-    <category term="算法学习" scheme="https://yvzha0.github.io/tags/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2024-3-17力扣刷题记录</title>
-    <link href="https://yvzha0.github.io/2024/03/17/2024-3-17-li-kou-shua-ti-ji-lu/"/>
-    <id>https://yvzha0.github.io/2024/03/17/2024-3-17-li-kou-shua-ti-ji-lu/</id>
-    <published>2024-03-17T04:21:19.000Z</published>
-    <updated>2024-03-17T04:58:57.133Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;289-生命游戏&quot;&gt;&lt;a href=&quot;#289-生命游戏&quot; class=&quot;headerlink&quot; title=&quot;289. 生命游戏&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode.cn/problems/game-of-life/&quot;&gt;289.</summary>
-        
-      
-    
-    
-    
-    <category term="力扣刷题记录" scheme="https://yvzha0.github.io/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
-    
-    
-    <category term="算法学习" scheme="https://yvzha0.github.io/tags/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2024-3-16力扣刷题记录</title>
-    <link href="https://yvzha0.github.io/2024/03/16/2024-3-16-li-kou-shua-ti-ji-lu/"/>
-    <id>https://yvzha0.github.io/2024/03/16/2024-3-16-li-kou-shua-ti-ji-lu/</id>
-    <published>2024-03-16T03:40:31.000Z</published>
-    <updated>2024-03-16T04:02:13.995Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;59-螺旋矩阵-II&quot;&gt;&lt;a href=&quot;#59-螺旋矩阵-II&quot; class=&quot;headerlink&quot; title=&quot;59. 螺旋矩阵 II&quot;&gt;&lt;/a&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="力扣刷题记录" scheme="https://yvzha0.github.io/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
-    
-    
-    <category term="算法学习" scheme="https://yvzha0.github.io/tags/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2024-3-15力扣刷题记录</title>
-    <link href="https://yvzha0.github.io/2024/03/15/2024-3-15-li-kou-shua-ti-ji-lu/"/>
-    <id>https://yvzha0.github.io/2024/03/15/2024-3-15-li-kou-shua-ti-ji-lu/</id>
-    <published>2024-03-15T07:00:09.000Z</published>
-    <updated>2024-03-15T08:50:09.444Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;598-区间加法-II&quot;&gt;&lt;a href=&quot;#598-区间加法-II&quot; class=&quot;headerlink&quot; title=&quot;598. 区间加法 II&quot;&gt;&lt;/a&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="力扣刷题记录" scheme="https://yvzha0.github.io/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
-    
-    
-    <category term="算法学习" scheme="https://yvzha0.github.io/tags/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2024-3-14力扣刷题记录</title>
-    <link href="https://yvzha0.github.io/2024/03/14/2024-3-14-li-kou-shua-ti-ji-lu/"/>
-    <id>https://yvzha0.github.io/2024/03/14/2024-3-14-li-kou-shua-ti-ji-lu/</id>
-    <published>2024-03-14T05:34:01.000Z</published>
-    <updated>2024-03-14T08:15:58.020Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;118-杨辉三角&quot;&gt;&lt;a href=&quot;#118-杨辉三角&quot; class=&quot;headerlink&quot; title=&quot;118. 杨辉三角&quot;&gt;&lt;/a&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="力扣刷题记录" scheme="https://yvzha0.github.io/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
-    
-    
-    <category term="算法学习" scheme="https://yvzha0.github.io/tags/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2024-3-13力扣刷题记录</title>
-    <link href="https://yvzha0.github.io/2024/03/13/2024-3-13-li-kou-shua-ti-ji-lu/"/>
-    <id>https://yvzha0.github.io/2024/03/13/2024-3-13-li-kou-shua-ti-ji-lu/</id>
-    <published>2024-03-13T14:21:37.000Z</published>
-    <updated>2024-03-13T16:05:16.324Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;414-第三大的数&quot;&gt;&lt;a href=&quot;#414-第三大的数&quot; class=&quot;headerlink&quot; title=&quot;414. 第三大的数&quot;&gt;&lt;/a&gt;&lt;a</summary>
         
       
     
@@ -194,68 +69,18 @@
   </entry>
   
   <entry>
-    <title>2024-3-12力扣刷题记录</title>
-    <link href="https://yvzha0.github.io/2024/03/12/2024-3-12-li-kou-shua-ti-ji-lu/"/>
-    <id>https://yvzha0.github.io/2024/03/12/2024-3-12-li-kou-shua-ti-ji-lu/</id>
-    <published>2024-03-12T11:07:05.000Z</published>
-    <updated>2024-03-12T15:58:57.588Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;485-最大连续-1-的个数&quot;&gt;&lt;a href=&quot;#485-最大连续-1-的个数&quot; class=&quot;headerlink&quot; title=&quot;485. 最大连续 1 的个数&quot;&gt;&lt;/a&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="力扣刷题记录" scheme="https://yvzha0.github.io/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
-    
-    
-    <category term="算法学习" scheme="https://yvzha0.github.io/tags/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2024-3-11力扣刷题记录</title>
-    <link href="https://yvzha0.github.io/2024/03/11/2024-3-11-li-kou-shua-ti-ji-lu/"/>
-    <id>https://yvzha0.github.io/2024/03/11/2024-3-11-li-kou-shua-ti-ji-lu/</id>
-    <published>2024-03-11T02:02:59.000Z</published>
-    <updated>2024-03-12T10:11:56.261Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;697-数组的度&quot;&gt;&lt;a href=&quot;#697-数组的度&quot; class=&quot;headerlink&quot; title=&quot;697. 数组的度&quot;&gt;&lt;/a&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="力扣刷题记录" scheme="https://yvzha0.github.io/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
-    
-    
-    <category term="算法学习" scheme="https://yvzha0.github.io/tags/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2024-3-10力扣刷题记录</title>
-    <link href="https://yvzha0.github.io/2024/03/10/2024-3-10-li-kou-shua-ti-ji-lu/"/>
-    <id>https://yvzha0.github.io/2024/03/10/2024-3-10-li-kou-shua-ti-ji-lu/</id>
+    <title>力扣刷题记录——数组篇</title>
+    <link href="https://yvzha0.github.io/2024/03/10/li-kou-shua-ti-ji-lu-shu-zu-pian/"/>
+    <id>https://yvzha0.github.io/2024/03/10/li-kou-shua-ti-ji-lu-shu-zu-pian/</id>
     <published>2024-03-10T06:52:42.000Z</published>
-    <updated>2024-03-10T11:35:13.366Z</updated>
+    <updated>2024-03-18T02:25:30.970Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;453-最小操作次数使数组元素相等&quot;&gt;&lt;a href=&quot;#453-最小操作次数使数组元素相等&quot; class=&quot;headerlink&quot; title=&quot;453. 最小操作次数使数组元素相等&quot;&gt;&lt;/a&gt;&lt;a</summary>
+    <summary type="html">&lt;h1 id=&quot;2024-3-10&quot;&gt;&lt;a href=&quot;#2024-3-10&quot; class=&quot;headerlink&quot; title=&quot;2024-3-10&quot;&gt;&lt;/a&gt;2024-3-10&lt;/h1&gt;&lt;h2 id=&quot;453-最小操作次数使数组元素相等&quot;&gt;&lt;a</summary>
         
       
     
