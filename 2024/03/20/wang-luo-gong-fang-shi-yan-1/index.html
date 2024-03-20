@@ -4,10 +4,16 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="本人搭建个人博客过程及遇到的问题, Blog Of yvzha0">
-    <meta name="description" content="一、前言我在搭建这个博客时，前前后后花费了近一天的时间，中间还放弃了一次，其中遇到了许多问题，所以写下这篇文章来记录一下。
-二、准备工作Git 官网Hexo 官网Node.js 官网Github 官网域名(可选)
-三、博客环境搭建1. 安装">
+    <meta name="keywords" content="Blog Of yvzha0">
+    <meta name="description" content="title: 网络攻防实验1：域名信息收集工具date: 2023-09-5 20:41:23categories: 网络攻防实验tags: 网络攻防
+
+算法学习
+
+
+    实验1：域名信息收集工具
+
+
+实验环境IntelliJ IDEA">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +25,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>本人搭建个人博客过程及遇到的问题 | Blog Of yvzha0</title>
+    <title>Blog Of yvzha0</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -339,12 +345,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">本人搭建个人博客过程及遇到的问题</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -373,15 +379,6 @@
                 </div>
                 <div class="col s5 right-align">
                     
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%89%8D%E8%A8%80/" class="post-category">
-                                搭建博客前言
-                            </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
 
@@ -389,28 +386,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-01-24
+                    2024-03-20
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-03-03
+                    2024-03-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    908
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    6 分
                 </div>
                 
 
@@ -433,90 +430,154 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p>我在搭建这个博客时，前前后后花费了近一天的时间，中间还放弃了一次，其中遇到了许多问题，所以写下这篇文章来记录一下。</p>
-<h2 id="二、准备工作"><a href="#二、准备工作" class="headerlink" title="二、准备工作"></a>二、准备工作</h2><p><strong>Git <a target="_blank" rel="noopener" href="https://git-scm.com/downloads">官网</a></strong><br><strong>Hexo <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">官网</a></strong><br><strong>Node.js <a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/">官网</a></strong><br><strong>Github <a target="_blank" rel="noopener" href="https://github.com/">官网</a></strong><br><strong>域名(可选)</strong></p>
-<h2 id="三、博客环境搭建"><a href="#三、博客环境搭建" class="headerlink" title="三、博客环境搭建"></a>三、博客环境搭建</h2><h3 id="1-安装Git和Node-js"><a href="#1-安装Git和Node-js" class="headerlink" title="1. 安装Git和Node.js"></a>1. 安装Git和Node.js</h3><p>可以参考如下文章</p>
-<p><strong><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/137448719">Git安装教程</a></strong><br><strong><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/137445273">Nodejs安装</a></strong></p>
-<h3 id="2-安装Hexo"><a href="#2-安装Hexo" class="headerlink" title="2. 安装Hexo"></a>2. 安装Hexo</h3><ol>
-<li><p>在你的博客存放目录下右击鼠标，选择<strong>Open Git Bash here</strong>,打开Git命令行</p>
-<p><img src="/../image/image-20240124221659266.png" alt="image-20240124221659266"></p>
-<p><img src="/../image/image-20240124221844205.png" alt="image-20240124221844205"></p>
-</li>
-<li><p>输入以下命令下载Hexo</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-cli <span class="token parameter variable">-g</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li><p>输入以下命令查看Hexo版本信息来确认是否安装成功</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo <span class="token parameter variable">-v</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
-<p><img src="/../image/image-20240124222128867.png" alt="image-20240124222128867"></p>
-</li>
-<li><p>执行hexo init来初始化，初始化后会多出一些文件</p>
-</li>
-<li><p>执行hexo g生成html页面</p>
-</li>
-<li><p>使用hexo s启动服务，可以看到博客的页面，服务默认在4000端口，如果不满意，可以使用hexo server -p 1234来指定端口</p>
-</li>
-</ol>
-<h3 id="3-将博客部署到github远程仓库"><a href="#3-将博客部署到github远程仓库" class="headerlink" title="3. 将博客部署到github远程仓库"></a>3. 将博客部署到github远程仓库</h3><ol>
-<li><p>登录Github新建一个仓库，仓库名必须为你的<code>Github用户名.github.io</code></p>
-</li>
-<li><p>回到Git Bash中，配置Github账户信息（用户名和邮箱都替换成你自己Github上的）</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config <span class="token parameter variable">--global</span> user.name <span class="token string">"用户名"</span>
-<span class="token function">git</span> config <span class="token parameter variable">--global</span> user.email <span class="token string">"邮箱"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-</li>
-<li><p>生成ssh</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ssh-keygen <span class="token parameter variable">-t</span> rsa <span class="token parameter variable">-C</span> <span class="token string">"你的Github邮箱"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li><p>然后按Git Bash给出的路径找到<code>id_rsa.pub</code>文件，并复制其中的内容</p>
-</li>
-<li><p>在github的设置中找到SSH and GPG keys,点击New SSH Key，在key中填入刚才复制的公钥。</p>
-<p><img src="/../image/image-20240124223131119.png" alt="image-20240124223131119"></p>
-<p><img src="/../image/image-20240124223243461.png" alt="image-20240124223243461"></p>
-</li>
-<li><p>打开配置文件_config.yml，找到下图所示地方修改为自己的仓库地址</p>
-<p><img src="/../image/image-20240124223718648.png" alt="image-20240124223718648"></p>
-<p><img src="/../image/image-20240124223825653.png" alt="image-20240124223825653"></p>
-</li>
-<li><p>执行如下命令将项目提交到仓库</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git <span class="token parameter variable">--save</span>  <span class="token comment">#安装部署工具</span>
-hexo clean                            <span class="token comment">#清除缓存       可缩写hexo c</span>
-hexo generate                         <span class="token comment">#生成静态文件    可缩写hexo g</span>
-hexo deploy                           <span class="token comment">#部署到Github   可缩写hexo d</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>如果提交失败，可能是我遇到的问题，解决方法如下</p>
+                <p>title: 网络攻防实验1：域名信息收集工具<br>date: 2023-09-5 20:41:23<br>categories: 网络攻防实验<br>tags: 网络攻防</p>
 <ul>
-<li><p>首先测试SSH连接，这里我连接失败,报错ssh: connect to host github.com port 22: Connection timed out</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ssh</span> <span class="token parameter variable">-T</span> git@github.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li><p>在存放公钥私钥(id_rsa和id_rsa.pub)的文件里，新建config文本，内容如下：</p>
-<pre class="line-numbers language-none"><code class="language-none">Host github.com
-User 注册github的邮箱
-Hostname ssh.github.com
-PreferredAuthentications publickey
-IdentityFile ~/.ssh/id_rsa
-Port 443<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>之后再测试SSH连接成功，然后重新提交到仓库即可</p>
-<p><img src="/../image/image-20240124224642665.png" alt="image-20240124224642665"></p>
-</li>
+<li>算法学习</li>
 </ul>
+<div align="center">
+    <font size="6">实验1：域名信息收集工具</font>
+</div>
+
+<h3 id="实验环境"><a href="#实验环境" class="headerlink" title="实验环境"></a>实验环境</h3><p>IntelliJ IDEA 2022.2.5</p>
+<p>python 3.11.4</p>
+<h3 id="实验步骤"><a href="#实验步骤" class="headerlink" title="实验步骤"></a>实验步骤</h3><ol>
+<li><p>模仿给定代码在百度搜索domain:qq.com获得有效头部消息及url地址<img src="C:\Users\14665\Desktop\Snipaste_2023-09-05_20-01-30.png" alt="Snipaste_2023-09-05_20-01-30"></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">hearders <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'user-agent'</span><span class="token punctuation">:</span><span class="token string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36'</span><span class="token punctuation">,</span>
+    <span class="token string">'accept'</span><span class="token punctuation">:</span><span class="token string">'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'</span><span class="token punctuation">,</span>
+    <span class="token string">'Referer'</span><span class="token punctuation">:</span><span class="token string">"https://www.baidu.com/"</span><span class="token punctuation">,</span>
+    <span class="token string">'cookie'</span><span class="token punctuation">:</span><span class="token string">'MUID=15F7A3347F9B66091BBBAC017EB56733'</span>
+<span class="token punctuation">}</span>
+
+url <span class="token operator">=</span> https<span class="token punctuation">:</span><span class="token operator">//</span>www<span class="token punctuation">.</span>baidu<span class="token punctuation">.</span>com<span class="token operator">/</span>s?wd<span class="token operator">=</span>domain<span class="token operator">%</span>3Aqq<span class="token punctuation">.</span>com<span class="token operator">&amp;</span>rsv_spt<span class="token operator">=</span><span class="token number">1</span><span class="token operator">&amp;</span>rsv_iqid<span class="token operator">=</span><span class="token number">0xe30d4f810000a68b</span><span class="token operator">&amp;</span>issp<span class="token operator">=</span><span class="token number">1</span><span class="token operator">&amp;</span>f<span class="token operator">=</span><span class="token number">8</span><span class="token operator">&amp;</span>rsv_bp<span class="token operator">=</span><span class="token number">1</span><span class="token operator">&amp;</span>rsv_idx<span class="token operator">=</span><span class="token number">2</span><span class="token operator">&amp;</span>ie<span class="token operator">=</span>utf<span class="token operator">-</span><span class="token number">8</span><span class="token operator">&amp;</span>rqlang<span class="token operator">=</span>cn<span class="token operator">&amp;</span>tn<span class="token operator">=</span>baiduhome_pg<span class="token operator">&amp;</span>rsv_enter<span class="token operator">=</span><span class="token number">1</span><span class="token operator">&amp;</span>rsv_dl<span class="token operator">=</span>tb<span class="token operator">&amp;</span>oq<span class="token operator">=</span>md<span class="token operator">%</span><span class="token number">25E6</span><span class="token operator">%</span>25A0<span class="token operator">%</span><span class="token number">2587</span><span class="token operator">%</span><span class="token number">25E9</span><span class="token operator">%</span>25A2<span class="token operator">%</span><span class="token number">2598</span><span class="token operator">%</span><span class="token number">25E5</span><span class="token operator">%</span>25B1<span class="token operator">%</span><span class="token number">2585</span><span class="token operator">%</span><span class="token number">25E4</span><span class="token operator">%</span>25B8<span class="token operator">%</span>25AD<span class="token operator">&amp;</span>rsv_btype<span class="token operator">=</span>t<span class="token operator">&amp;</span>inputT<span class="token operator">=</span><span class="token number">7872</span><span class="token operator">&amp;</span>rsv_t<span class="token operator">=</span>2860zrGbcycHSq1eY<span class="token operator">%</span>2BoQy2JT4AENbnpQtpi<span class="token operator">%</span>2BPP4Hb0gDsnpesekor2G0tcX4xSBtjMAe<span class="token operator">&amp;</span>rsv_pq<span class="token operator">=</span>9e665119000434fe<span class="token operator">&amp;</span>rsv_sug3<span class="token operator">=</span><span class="token number">33</span><span class="token operator">&amp;</span>rsv_sug1<span class="token operator">=</span><span class="token number">28</span><span class="token operator">&amp;</span>rsv_sug7<span class="token operator">=</span><span class="token number">100</span><span class="token operator">&amp;</span>rsv_sug2<span class="token operator">=</span><span class="token number">0</span><span class="token operator">&amp;</span>rsv_sug4<span class="token operator">=</span><span class="token number">7872</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>确定百度搜索引擎得到的url的元素位置，发现在h3处，修改代码</p>
+<p><img src="C:\Users\14665\AppData\Roaming\Typora\typora-user-images\image-20230905200544524.png" alt="image-20230905200544524"></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token operator">=</span>url<span class="token punctuation">,</span>headers<span class="token operator">=</span>hearders<span class="token punctuation">)</span>
+soup <span class="token operator">=</span> BeautifulSoup<span class="token punctuation">(</span>response<span class="token punctuation">.</span>content<span class="token punctuation">,</span><span class="token string">'html.parser'</span><span class="token punctuation">)</span>
+job_bt <span class="token operator">=</span> soup<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span><span class="token string">'h3'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>复用原来的代码，但是发现百度的url是跳转链接，我通过如下代码的到真实url</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">for</span> i <span class="token keyword">in</span> job_bt<span class="token punctuation">:</span>
+	link0 <span class="token operator">=</span> i<span class="token punctuation">.</span>a<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'href'</span><span class="token punctuation">)</span>            <span class="token comment">#循环获取‘href’的内容</span>
+    link<span class="token operator">=</span>urllib<span class="token punctuation">.</span>request<span class="token punctuation">.</span>urlopen<span class="token punctuation">(</span>link0<span class="token punctuation">)</span><span class="token punctuation">.</span>geturl<span class="token punctuation">(</span><span class="token punctuation">)</span>		<span class="token comment">#打开跳转链接到目标地址再获取当前的url</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>得到url后用给的代码输出，保存到列表</p>
 </li>
 </ol>
-<h2 id="四、博客主题切换"><a href="#四、博客主题切换" class="headerlink" title="四、博客主题切换"></a>四、博客主题切换</h2><p>自己可以去Hexo官网选择自己心仪的主题，这里以我使用的为例</p>
-<h3 id="1-主题下载与切换"><a href="#1-主题下载与切换" class="headerlink" title="1. 主题下载与切换"></a>1. 主题下载与切换</h3><p><a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery/releases/tag/v2.0.0">点击</a>下载并且解压到themes目录里面</p>
-<p>或者通过Git拉取</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/blinkfox/hexo-theme-matery.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="扩展功能"><a href="#扩展功能" class="headerlink" title="扩展功能"></a>扩展功能</h3><ol>
+<li><p>获取标题，并把url和标题放在一个字典里面再存到列表，最后存入json文件</p>
+<p>我发现标题就在h2下的a里面，代码如下：</p>
+</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">for</span> i <span class="token keyword">in</span> job_bt<span class="token punctuation">:</span>
+        link0 <span class="token operator">=</span> i<span class="token punctuation">.</span>a<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'href'</span><span class="token punctuation">)</span>            <span class="token comment">#循环获取‘href’的内容</span>
+        title <span class="token operator">=</span> i<span class="token punctuation">.</span>a<span class="token punctuation">.</span>text       <span class="token comment">#循环获取标题</span>
+        link<span class="token operator">=</span>urllib<span class="token punctuation">.</span>request<span class="token punctuation">.</span>urlopen<span class="token punctuation">(</span>link0<span class="token punctuation">)</span><span class="token punctuation">.</span>geturl<span class="token punctuation">(</span><span class="token punctuation">)</span>		<span class="token comment">#获取真实域名</span>
+        <span class="token comment">#urlparse是一个解析url的工具，scheme获取url的协议名，netloc获取url的网络位置</span>
+        domain <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>urlparse<span class="token punctuation">(</span>link<span class="token punctuation">)</span><span class="token punctuation">.</span>scheme <span class="token operator">+</span> <span class="token string">"://"</span> <span class="token operator">+</span> urlparse<span class="token punctuation">(</span>link<span class="token punctuation">)</span><span class="token punctuation">.</span>netloc<span class="token punctuation">)</span>
+        subUrl <span class="token operator">=</span> <span class="token punctuation">{</span>
+            <span class="token string">"url"</span><span class="token punctuation">:</span>domain<span class="token punctuation">,</span>
+            <span class="token string">"title"</span><span class="token punctuation">:</span>title
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>subUrl <span class="token keyword">in</span> Subdomain<span class="token punctuation">)</span><span class="token punctuation">:</span>      <span class="token comment">#如果解析后的domain存在于Subdomain中则跳过，否则将domain存入子域名表中</span>
+            <span class="token keyword">pass</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            Subdomain<span class="token punctuation">.</span>append<span class="token punctuation">(</span>subUrl<span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>subUrl<span class="token punctuation">)</span>
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">,</span>encoding<span class="token operator">=</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+        json<span class="token punctuation">.</span>dump<span class="token punctuation">(</span>Subdomain<span class="token punctuation">,</span> f<span class="token punctuation">,</span>ensure_ascii<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>修改 Hexo 根目录下的 <code>_config.yml</code> 的 <code>theme</code> 的值：<code>theme: hexo-theme-matery</code></p>
-<h4 id="1-1-config-yml-文件的其它修改建议"><a href="#1-1-config-yml-文件的其它修改建议" class="headerlink" title="1.1 _config.yml 文件的其它修改建议:"></a><code>1.1 _config.yml</code> 文件的其它修改建议:</h4><ul>
-<li>请修改 <code>_config.yml</code> 的 <code>url</code> 的值为你的网站主 <code>URL</code>（如：<code>http://xxx.github.io</code>）。</li>
-<li>建议修改两个 <code>per_page</code> 的分页条数值为 <code>6</code> 的倍数，如：<code>12</code>、<code>18</code> 等，这样文章列表在各个屏幕下都能较好的显示。</li>
-<li>如果你是中文用户，则建议修改 <code>language</code> 的值为 <code>zh-CN</code>。</li>
-</ul>
-<h3 id="2-主题的配置"><a href="#2-主题的配置" class="headerlink" title="2. 主题的配置"></a>2. 主题的配置</h3><p>参考<a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md">官方文档</a>或者此<a target="_blank" rel="noopener" href="https://blog.csdn.net/guixinchn/article/details/108152957">博客</a></p>
-<h2 id="五、参考链接"><a href="#五、参考链接" class="headerlink" title="五、参考链接"></a>五、参考链接</h2><p>[1]: <a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery/tree/develop">https://github.com/blinkfox/hexo-theme-matery/tree/develop</a>	“hexo-theme-matery官方文档”<br>[2]: <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44732432/article/details/124714408">https://blog.csdn.net/qq_44732432/article/details/124714408</a>	“使用Hexo搭建博客并部署到Github”<br>[3]: <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_48927364/article/details/123405585">https://blog.csdn.net/weixin_48927364/article/details/123405585</a>	“【Hexo】部署博客到Github失败的解决方案”<br>[4]: <a target="_blank" rel="noopener" href="https://www.cnblogs.com/Lutheran/p/15915295.html">https://www.cnblogs.com/Lutheran/p/15915295.html</a>	“github连接报错”<br>[5]: <a target="_blank" rel="noopener" href="https://blog.csdn.net/guixinchn/article/details/108152957">https://blog.csdn.net/guixinchn/article/details/108152957</a>	“Hexo-matery主题美化”<br>[6]: <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/137476045">https://zhuanlan.zhihu.com/p/137476045</a>	“Hexo搭建个人博客-并部署到Github上托管(Windows)”</p>
+<ol start="2">
+<li><p>爬取多页内容</p>
+<p>跳转到第二页时我发现url变得有些不同，pn后面可以传参数跳转页面，后面冗余的一些东西也可以去掉，代码如下：<img src="C:\Users\14665\AppData\Roaming\Typora\typora-user-images\image-20230905202200073.png" alt="image-20230905202200073"></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">for</span> page <span class="token keyword">in</span> tqdm<span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>     <span class="token comment">#控制爬取的页数</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span>
+    url <span class="token operator">=</span> <span class="token string">"https://www.baidu.com/s?wd=site%3Aqq.com&amp;pn="</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>page<span class="token operator">*</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"&amp;oq=site%3Aqq.com"</span>
+    baidu_search<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+    sleep<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ol>
+<h3 id="遇到的问题和一些有趣结果"><a href="#遇到的问题和一些有趣结果" class="headerlink" title="遇到的问题和一些有趣结果"></a>遇到的问题和一些有趣结果</h3><ol>
+<li><p>爬取到的域名有的是baidu.com,zhihu.com等等，我把domain:qq.com改为site:qq.com后少了很多但还是有，于是我过滤了一下</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">if</span> <span class="token punctuation">(</span>subUrl <span class="token keyword">in</span> Subdomain<span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token punctuation">(</span><span class="token string">"qq"</span> <span class="token keyword">not</span> <span class="token keyword">in</span> domain<span class="token punctuation">)</span> <span class="token punctuation">:</span>      <span class="token comment">#如果解析后的domain存在于Subdomain中则跳过，否则将domain存入子域名表中</span>
+	<span class="token keyword">pass</span>
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    Subdomain<span class="token punctuation">.</span>append<span class="token punctuation">(</span>subUrl<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>subUrl<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>把数据存成字典后发现得到的结果url有重复的，发现if条件判断出了问题，修改如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">#遍历Subdomain中的每个字典，并检查subUrl["url"]是否在该字典中。如果存在任何一个匹配的字典，any()函数将返回True，否则返回False
+if (any(subUrl["url"] in line.values() for line in Subdomain)) | ("qq" not in domain) :              #如果解析后的domain存在于Subdomain中则跳过，否则将domain存入子域名表中
+    pass
+else:
+    Subdomain.append(subUrl)
+    print(subUrl)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>在结果中发现有趣的现象，game.qq.com对应的标题是腾讯招聘</p>
+<p><img src="C:\Users\14665\AppData\Roaming\Typora\typora-user-images\image-20230905203620636.png" alt="image-20230905203620636"></p>
+<p>debug后我找到了可能得原因：</p>
+<p><img src="C:\Users\14665\Desktop\Snipaste_2023-09-05_13-33-20.png" alt="Snipaste_2023-09-05_13-33-20"></p>
+<p>爬取到的url打开获取到的网页链接是在game.qq.com/hr下的，所以出现这种结果</p>
+</li>
+</ol>
+<h3 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h3><p><img src="C:\Users\14665\AppData\Roaming\Typora\typora-user-images\image-20230905210507353.png" alt="image-20230905210507353"></p>
+<p><img src="C:\Users\14665\AppData\Roaming\Typora\typora-user-images\image-20230905211825469.png" alt="image-20230905211825469"></p>
+<h3 id="最终代码"><a href="#最终代码" class="headerlink" title="最终代码"></a>最终代码</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> urllib<span class="token punctuation">.</span>request
+<span class="token keyword">import</span> json
+<span class="token keyword">from</span> time <span class="token keyword">import</span> sleep
+
+<span class="token keyword">from</span> tqdm <span class="token keyword">import</span> tqdm
+<span class="token keyword">from</span> urllib<span class="token punctuation">.</span>parse <span class="token keyword">import</span> urlparse
+
+<span class="token keyword">import</span> requests
+<span class="token keyword">from</span> bs4 <span class="token keyword">import</span> BeautifulSoup
+
+Subdomain <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+filename <span class="token operator">=</span> <span class="token string">'url.json'</span>
+hearders <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'user-agent'</span><span class="token punctuation">:</span><span class="token string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36'</span><span class="token punctuation">,</span>
+    <span class="token string">'accept'</span><span class="token punctuation">:</span><span class="token string">'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'</span><span class="token punctuation">,</span>
+    <span class="token string">'Referer'</span><span class="token punctuation">:</span><span class="token string">"https://www.baidu.com/"</span><span class="token punctuation">,</span>
+    <span class="token string">'cookie'</span><span class="token punctuation">:</span><span class="token string">'MUID=15F7A3347F9B66091BBBAC017EB56733'</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">def</span> <span class="token function">baidu_search</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token operator">=</span>url<span class="token punctuation">,</span>headers<span class="token operator">=</span>hearders<span class="token punctuation">)</span>
+    soup <span class="token operator">=</span> BeautifulSoup<span class="token punctuation">(</span>response<span class="token punctuation">.</span>content<span class="token punctuation">,</span><span class="token string">'html.parser'</span><span class="token punctuation">)</span>
+    job_bt <span class="token operator">=</span> soup<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span><span class="token string">'h3'</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> job_bt<span class="token punctuation">:</span>
+        link0 <span class="token operator">=</span> i<span class="token punctuation">.</span>a<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'href'</span><span class="token punctuation">)</span>            <span class="token comment">#循环获取‘href’的内容</span>
+        title <span class="token operator">=</span> i<span class="token punctuation">.</span>a<span class="token punctuation">.</span>text       <span class="token comment">#循环获取标题</span>
+        <span class="token keyword">try</span><span class="token punctuation">:</span>
+            link<span class="token operator">=</span>urllib<span class="token punctuation">.</span>request<span class="token punctuation">.</span>urlopen<span class="token punctuation">(</span>link0<span class="token punctuation">)</span><span class="token punctuation">.</span>geturl<span class="token punctuation">(</span><span class="token punctuation">)</span>     <span class="token comment">#真实子域名</span>
+        <span class="token keyword">except</span><span class="token punctuation">:</span>
+            <span class="token keyword">continue</span>
+        <span class="token comment">#urlparse是一个解析url的工具，scheme获取url的协议名，netloc获取url的网络位置</span>
+        domain <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>urlparse<span class="token punctuation">(</span>link<span class="token punctuation">)</span><span class="token punctuation">.</span>scheme <span class="token operator">+</span> <span class="token string">"://"</span> <span class="token operator">+</span> urlparse<span class="token punctuation">(</span>link<span class="token punctuation">)</span><span class="token punctuation">.</span>netloc<span class="token punctuation">)</span>
+        subUrl <span class="token operator">=</span> <span class="token punctuation">{</span>
+            <span class="token string">"url"</span><span class="token punctuation">:</span>domain<span class="token punctuation">,</span>
+            <span class="token string">"title"</span><span class="token punctuation">:</span>title
+        <span class="token punctuation">}</span>
+        <span class="token comment">#遍历Subdomain中的每个字典，并检查subUrl["url"]是否在该字典中。如果存在任何一个匹配的字典，any()函数将返回True，否则返回False</span>
+        <span class="token comment">#排除掉爬到的非qq.com</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token builtin">any</span><span class="token punctuation">(</span>subUrl<span class="token punctuation">[</span><span class="token string">"url"</span><span class="token punctuation">]</span> <span class="token keyword">in</span> line<span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">for</span> line <span class="token keyword">in</span> Subdomain<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token punctuation">(</span><span class="token string">"qq"</span> <span class="token keyword">not</span> <span class="token keyword">in</span> domain<span class="token punctuation">)</span> <span class="token punctuation">:</span>              <span class="token comment">#如果解析后的domain存在于Subdomain中则跳过，否则将domain存入子域名表中</span>
+            <span class="token keyword">pass</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            Subdomain<span class="token punctuation">.</span>append<span class="token punctuation">(</span>subUrl<span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>subUrl<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> page <span class="token keyword">in</span> tqdm<span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>     <span class="token comment">#控制爬取的页数</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span>
+        url <span class="token operator">=</span> <span class="token string">"https://www.baidu.com/s?wd=site%3Aqq.com&amp;pn="</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>page<span class="token operator">*</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"&amp;oq=site%3Aqq.com"</span>
+        baidu_search<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+        sleep<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
+    main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">,</span>encoding<span class="token operator">=</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+        json<span class="token punctuation">.</span>dump<span class="token punctuation">(</span>Subdomain<span class="token punctuation">,</span> f<span class="token punctuation">,</span>ensure_ascii<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
                 
             </div>
@@ -533,7 +594,7 @@ Port 443<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">赵宇</a>
+                    <a href="/about" rel="external nofollow noreferrer">大佬带带我</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -543,7 +604,7 @@ Port 443<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://yvzha0.github.io/2024/01/24/ben-ren-da-jian-ge-ren-bo-ke-guo-cheng-ji-yu-dao-de-wen-ti/">https://yvzha0.github.io/2024/01/24/ben-ren-da-jian-ge-ren-bo-ke-guo-cheng-ji-yu-dao-de-wen-ti/</a>
+                    <a href="https://yvzha0.github.io/2024/03/20/wang-luo-gong-fang-shi-yan-1/">https://yvzha0.github.io/2024/03/20/wang-luo-gong-fang-shi-yan-1/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -556,7 +617,7 @@ Port 443<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">赵宇</a>
+                    <a href="/about" target="_blank">大佬带带我</a>
                     !
                 </span>
             </div>
@@ -657,66 +718,18 @@ Port 443<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2024/02/28/jwt-token/">
+                <a href="/2024/03/20/wang-luo-gong-fang-shi-yan-1/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="JWT Token">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">JWT Token</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-02-28
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    网络攻防学习
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/JWT/">
-                        <span class="chip bg-color">JWT</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2024/01/24/md5-peng-zhuang-xue-xi/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="MD5碰撞学习">
-                        
-                        <span class="card-title">MD5碰撞学习</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -727,14 +740,52 @@ Port 443<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            大佬带带我
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2024/03/19/ji-suan-ji-wang-luo-ji-chu-zhi-ying-yong-ceng/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="计算机网络基础之应用层">
+                        
+                        <span class="card-title">计算机网络基础之应用层</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-19
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    网络攻防学习
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    计算机基础
                                 </a>
                             
                             
@@ -744,12 +795,8 @@ Port 443<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/MD5/">
-                        <span class="chip bg-color">MD5</span>
-                    </a>
-                    
-                    <a href="/tags/PHP/">
-                        <span class="chip bg-color">PHP</span>
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+                        <span class="chip bg-color">计算机网络</span>
                     </a>
                     
                 </div>
