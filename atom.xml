@@ -6,7 +6,7 @@
   <link href="https://yvzha0.github.io/atom.xml" rel="self"/>
   
   <link href="https://yvzha0.github.io/"/>
-  <updated>2024-03-19T08:03:56.733Z</updated>
+  <updated>2024-03-20T14:57:16.114Z</updated>
   <id>https://yvzha0.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://yvzha0.github.io/2024/03/19/ji-suan-ji-wang-luo-ji-chu-zhi-ying-yong-ceng/"/>
     <id>https://yvzha0.github.io/2024/03/19/ji-suan-ji-wang-luo-ji-chu-zhi-ying-yong-ceng/</id>
     <published>2024-03-19T06:09:59.000Z</published>
-    <updated>2024-03-19T08:03:56.733Z</updated>
+    <updated>2024-03-20T14:57:16.114Z</updated>
     
     
       
@@ -264,6 +264,64 @@
     <category term="MD5" scheme="https://yvzha0.github.io/tags/MD5/"/>
     
     <category term="PHP" scheme="https://yvzha0.github.io/tags/PHP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络攻防实验3：MD5碰撞实验</title>
+    <link href="https://yvzha0.github.io/2023/10/05/wang-luo-gong-fang-shi-yan-3/"/>
+    <id>https://yvzha0.github.io/2023/10/05/wang-luo-gong-fang-shi-yan-3/</id>
+    <published>2023-10-05T13:43:07.000Z</published>
+    <updated>2024-03-20T15:09:01.714Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div align=&quot;center&quot;&gt;
+    &lt;font size=&quot;6&quot;&gt;实验3：MD5碰撞实验&lt;/font&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;实验要求&quot;&gt;&lt;a href=&quot;#实验要求&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="网络攻防实验" scheme="https://yvzha0.github.io/categories/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2%E5%AE%9E%E9%AA%8C/"/>
+    
+    
+    <category term="网络攻防" scheme="https://yvzha0.github.io/tags/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络攻防实验2:端口扫描实验</title>
+    <link href="https://yvzha0.github.io/2023/09/23/wang-luo-gong-fang-shi-yan-2/"/>
+    <id>https://yvzha0.github.io/2023/09/23/wang-luo-gong-fang-shi-yan-2/</id>
+    <published>2023-09-23T13:35:48.000Z</published>
+    <updated>2024-03-20T15:04:39.258Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div align=&quot;center&quot;&gt;
+    &lt;font size=&quot;6&quot;&gt;实验2：端口扫描实验&lt;/font&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;实验要求&quot;&gt;&lt;a href=&quot;#实验要求&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="网络攻防实验" scheme="https://yvzha0.github.io/categories/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2%E5%AE%9E%E9%AA%8C/"/>
+    
+    
+    <category term="网络攻防" scheme="https://yvzha0.github.io/tags/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2/"/>
     
   </entry>
   

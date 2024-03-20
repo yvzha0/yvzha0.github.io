@@ -402,21 +402,21 @@ P2P体系结构：应用程序在间断连接的主机对之间直接通信。
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-03-19
+                    2024-03-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    7.2k
+                    9.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    25 分
+                    35 分
                 </div>
                 
 
@@ -699,8 +699,74 @@ P2P体系结构：应用程序在间断连接的主机对之间直接通信。
 <p>如果用户访问的网站恰好证书过期了，但是用户还要坚持访问时，可能就会遭遇这种攻击。</p>
 <p>很多抓包工具 之所以可以明文看到 HTTPS 数据，工作原理与中间人一致的。我在当时使用BurpSuite抓HTTPS包时就会提示不安全，要把它的证书导入本地才行。</p>
 <h3 id="3-6-HTTP-1-1、HTTP-2、HTTP-3的演变"><a href="#3-6-HTTP-1-1、HTTP-2、HTTP-3的演变" class="headerlink" title="3.6 HTTP/1.1、HTTP/2、HTTP/3的演变"></a>3.6 HTTP/1.1、HTTP/2、HTTP/3的演变</h3><p><img src="/../image/27-HTTP3.png" alt="HTTP/1 ~ HTTP/3"></p>
-<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p>[1]: <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_34709713/article/details/107969525">https://blog.csdn.net/qq_34709713/article/details/107969525</a>	“HTTPS四次握手”<br>[2]: <a target="_blank" rel="noopener" href="https://xiaolincoding.com/network/2_http/http_interview.html">https://xiaolincoding.com/network/2_http/http_interview.html</a>	“图解计算机网络”</p>
-<h3 id="1-5-当键入网址后，到网页显示，其间发生了什么"><a href="#1-5-当键入网址后，到网页显示，其间发生了什么" class="headerlink" title="1.5 当键入网址后，到网页显示，其间发生了什么"></a>1.5 <strong>当键入网址后，到网页显示，其间发生了什么</strong></h3><ol>
+<h2 id="4-应用层协议——电子邮件协议"><a href="#4-应用层协议——电子邮件协议" class="headerlink" title="4. 应用层协议——电子邮件协议"></a>4. 应用层协议——电子邮件协议</h2><p>电子邮件系统主要由三个主要部分组成：<strong>用户代理</strong>、<strong>邮件服务器</strong>、<strong>简单邮件传输协议(SMTP)</strong></p>
+<p>邮件协议包含发送协议和读取协议，发送协议常用 SMTP，读取协议常用 POP3 和 IMAP。</p>
+<h3 id="4-1-SMTP"><a href="#4-1-SMTP" class="headerlink" title="4.1 SMTP"></a>4.1 SMTP</h3><p>SMTP是因特网电子邮件的核心，SMTP 只能发送 ASCII 码，而互联网邮件扩充 MIME 可以发送二进制文件。MIME 并没有改动或者取代 SMTP，而是增加邮件主体的结构，定义了非 ASCII 码的编码规则。SMTP的端口号是25，是持久，有状态的协议</p>
+<h3 id="4-2-POP3"><a href="#4-2-POP3" class="headerlink" title="4.2 POP3"></a>4.2 POP3</h3><p>POP3 的特点是只要用户从服务器上读取了邮件，就把该邮件删除。但最新版本的 POP3 可以不删除邮件。POP3的端口号为110，是无状态的协议。</p>
+<h3 id="4-3-IMAP"><a href="#4-3-IMAP" class="headerlink" title="4.3 IMAP"></a>4.3 IMAP</h3><p>IMAP 协议中客户端和服务器上的邮件保持同步，如果不手动删除邮件，那么服务器上的邮件也不会被删除。IMAP 这种做法可以让用户随时随地去访问服务器上的邮件。IMAP端口号为143，是有状态协议。</p>
+<h2 id="5-应用层协议——DNS"><a href="#5-应用层协议——DNS" class="headerlink" title="5. 应用层协议——DNS"></a>5. 应用层协议——DNS</h2><h3 id="5-1-什么是DNS"><a href="#5-1-什么是DNS" class="headerlink" title="5.1 什么是DNS"></a>5.1 什么是DNS</h3><p>主机的一种标识方法是用主机名，也可以用IP地址来标识。人们喜欢便于记忆的主机名标识方法，而路由器则喜欢IP地址。为了这种将主机名到IP地址的转换，**域名系统(DNS)**就产生了。</p>
+<p>DNS是：一个由分层的DNS服务器实现的分布式数据库，也是一个使得主机能够查询分布式数据库的应用层协议。</p>
+<p>DNS协议运行在UDP协议之上，使用53号端口，但是在两种情况下会使用 TCP 进行传输：</p>
+<ul>
+<li>如果返回的响应超过的 512 字节（UDP 最大只支持 512 字节的数据）。</li>
+<li>区域传送（区域传送是主域名服务器向辅助域名服务器传送变化的那部分数据）。</li>
+</ul>
+<p>域名具有层次结构，从上到下依次为：根域名、顶级域名、二级域名。</p>
+<p><img src="/../image/68747470733a2f2f63732d6e6f7465732d313235363130393739362e636f732e61702d6775616e677a686f752e6d7971636c6f75642e636f6d2f62353465656231362d306230652d343834632d626536322d3330366635376334306437372e6a7067" alt="img"></p>
+<h3 id="5-2-DNS的工作原理"><a href="#5-2-DNS的工作原理" class="headerlink" title="5.2 DNS的工作原理"></a>5.2 DNS的工作原理</h3><p>DNS 协议的工作原理如下：</p>
+<ol>
+<li><p>当用户在浏览器中输入一个域名（比如<a target="_blank" rel="noopener" href="http://www.example.com),浏览器会首先检查本地缓存是否有对应的/">www.example.com），浏览器会首先检查本地缓存是否有对应的</a> IP 地址。如果有且没有过期，浏览器直接使用缓存的 IP 地址。否则，浏览器会向本地 DNS 服务器发送询问请求。</p>
+</li>
+<li><p>本地 DNS 服务器是由互联网服务提供商（ISP）或本地网络管理员配置的。本地 DNS 服务器首先检查自己的缓存，如果有对应的 IP 地址，就返回给浏览器。否则，本地 DNS 服务器会向根 DNS 服务器发送查询请求。</p>
+</li>
+<li><p>根 DNS 服务器是全球分布的一组服务器，它们保存了顶级域名服务器的信息。当根 DNS 服务器收到查询请求时，它会查找到对应的顶级域名服务器的 IP 地址，并将其返回给本地 DNS 服务器。</p>
+</li>
+<li><p>本地 DNS 服务器接收到根 DNS 服务器返回的顶级域名服务器 IP 地址后，再向顶级域名服务器发送查询请求。</p>
+</li>
+<li><p>顶级域名服务器是负责管理特定顶级域名（比如.com、.org、.net 等）的服务器。当顶级域名服务器收到查询请求时，它会返回下一级域名服务器的 IP 地址。</p>
+</li>
+<li><p>这个过程会按照域名的层级结构一级一级地进行，直到最终获取到域名对应的 IP 地址。最后，本地 DNS 服务器将该 IP 地址返回给浏览器，并将其缓存起来以备后续使用。</p>
+</li>
+</ol>
+<h3 id="5-3-DNS查询过程"><a href="#5-3-DNS查询过程" class="headerlink" title="5.3 DNS查询过程"></a>5.3 DNS查询过程</h3><p><strong>迭代查询</strong></p>
+<p>迭代查询是一种从本地 DNS 服务器向根域名服务器发出查询请求的方式。当本地 DNS 服务器向根域名服务器发出查询请求时，根域名服务器会给出查询结果或者告诉本地 DNS 服务器下一步应该向哪个服务器进行查询。本地 DNS 服务器会根据根域名服务器给出的提示，向指定的域名服务器发出查询请求。迭代查询的查询过程是一层一层地向上迭代，直到找到所需的域名对应的 IP 地址。</p>
+<p><img src="/../image/image-20240320215400093.png" alt="image-20240320215400093"></p>
+<p><strong>递归查询</strong></p>
+<p>递归查询和迭代查询的区别在于递归查询需要 DNS 服务器向其他 DNS 服务器发送多次查询请求，直到找到所需的 IP 地址为止。而迭代查询则是本地 DNS 服务器向根域名服务器发送单个查询请求，根域名服务器会给出查询结果或者告诉本地 DNS 服务器下一步应该向哪个服务器进行查询。</p>
+<p><img src="/../image/image-20240320215610922.png" alt="image-20240320215610922"></p>
+<h3 id="5-4-DNS记录"><a href="#5-4-DNS记录" class="headerlink" title="5.4 DNS记录"></a>5.4 DNS记录</h3><p>共同实现DNS分布式数据库的所有DNS服务器存储了<strong>资源记录</strong>(Resource Record，RR)，RR提供了主机名到IP地址的映射。每个DNS回答报文包含了一条或多条资源记录。资源记录是一个包含了下列字段的4元组:<br><strong>(Name, Value, Type, TTL)</strong><br>TTL是该记录的生存时问，它决定了资源记录应当从缓存中删除的时间。在下面给出的记录例子中，我们忽略掉TTL字段。Name和Value 的意义取决于 Type:</p>
+<ul>
+<li>如果Type=A，则对该主机名而言Name是主机名，Value是该主机名对应的IP地址。因此，一条类型为A的资源记录提供了标准的主机名到IP地址的映射。例如**(relay1.bar.foo.com，145.37.93.126，A)**就是一条类型 A的记录。</li>
+<li>如果Type=NS，则对该域中的主机而言Name是域(如foo.com)，而 Value 是一个知道如何获得该域中主机IP地址的权威DNS服务器的主机名。这个记录用于沿着查询链来路由DNS查询。例如**(foo.com，dns.foo.com，NS)**就是一条类型为NS的记录。</li>
+<li>如果Type=CNAME，则Value是主机别名Name对应的规范主机名。该记录能够向查询的主机提供一个主机名对应的规范主机名，例如**(foo.com，relay1.bar.foo.com，CNAME)**就是一条CNAME类型的记录。</li>
+<li>如果Type=MX，则Value是一个别名为Name的邮件服务器的规范主机名。举例来说，**(foo.com，mail.bar.foo.com，MX)**就是一条MX记录。MX记录允许邮件服务器主机名具有简单的别名。值得注意的是，通过使用MX记录，一个公司的邮件服务器和其他服务器(如它的Web服务器)可以使用相同的别名。为了获得邮件服务器的规范主机名，DNS客户应当请求一条MX记录;而为了获得其他服务器的规范主机名，DNS客户应当请求CNAME记录。</li>
+</ul>
+<h2 id="6-文件传输协议-FTP"><a href="#6-文件传输协议-FTP" class="headerlink" title="6. 文件传输协议(FTP)"></a>6. 文件传输协议(FTP)</h2><p>FTP 使用 TCP 进行连接，它需要两个连接来传送一个文件：</p>
+<ul>
+<li>控制连接：服务器打开端口号 21 等待客户端的连接，客户端主动建立连接后，使用这个连接将客户端的命令传送给服务器，并传回服务器的应答。</li>
+<li>数据连接：用来传送一个文件数据。</li>
+</ul>
+<p>根据数据连接是否是服务器端主动建立，FTP 有主动和被动两种模式：</p>
+<ul>
+<li>主动模式：服务器端主动建立数据连接，其中服务器端的端口号为 20，客户端的端口号随机，但是必须大于 1024，因为 0~1023 是熟知端口号。</li>
+</ul>
+<p><img src="/../image/68747470733a2f2f63732d6e6f7465732d313235363130393739362e636f732e61702d6775616e677a686f752e6d7971636c6f75642e636f6d2f30336634373934302d333834332d346235312d396534322d3564636166663434383538622e6a7067" alt="img"></p>
+<ul>
+<li>被动模式：客户端主动建立数据连接，其中客户端的端口号由客户端自己指定，服务器端的端口号随机。</li>
+</ul>
+<p>[<img src="/../image/68747470733a2f2f63732d6e6f7465732d313235363130393739362e636f732e61702d6775616e677a686f752e6d7971636c6f75642e636f6d2f62653563326336312d383664322d346462612d613238392d6234386561323332313964652e6a7067" alt="img"></p>
+<p>主动模式要求客户端开放端口号给服务器端，需要去配置客户端的防火墙。被动模式只需要服务器端开放端口号即可，无需客户端配置防火墙。但是被动模式会导致服务器端的安全性减弱，因为开放了过多的端口号。</p>
+<h2 id="7-动态主机配置协议-DHCP"><a href="#7-动态主机配置协议-DHCP" class="headerlink" title="7. 动态主机配置协议(DHCP)"></a>7. 动态主机配置协议(DHCP)</h2><p>DHCP (Dynamic Host Configuration Protocol) 提供了即插即用的连网方式，用户不再需要手动配置 IP 地址等信息。</p>
+<p>DHCP 配置的内容不仅是 IP 地址，还包括子网掩码、网关 IP 地址。</p>
+<p>DHCP 工作过程如下：</p>
+<ol>
+<li><strong>DHCP服务器发现</strong>：客户端发送 Discover 报文，该报文的目的地址为 255.255.255.255:67，源地址为 0.0.0.0:68，被放入 UDP 中，该报文被广播到同一个子网的所有主机上。如果客户端和 DHCP 服务器不在同一个子网，就需要使用中继代理。</li>
+<li><strong>DHCP服务器提供</strong>：DHCP 服务器收到 Discover 报文之后，发送 Offer 报文给客户端，该报文向该子网的所有节点广播，该报文包含了客户端所需要的信息。因为客户端可能收到多个 DHCP 服务器提供的信息，因此客户端需要进行选择。</li>
+<li><strong>DHCP请求</strong>：客户端从服务器中选择一个，发送 Request 报文给该 DHCP 服务器，回显配置的参数。</li>
+<li><strong>DHCP ACK</strong>：DHCP 服务器发送 ACK 报文，表示客户端此时可以使用提供给它的信息。</li>
+</ol>
+<p>[<img src="/../image/68747470733a2f2f63732d6e6f7465732d313235363130393739362e636f732e61702d6775616e677a686f752e6d7971636c6f75642e636f6d2f32333231396534632d396663302d343035312d623333612d3262643935626630353461622e6a7067" alt="img"></p>
+<h2 id="8-当键入网址后，到网页显示，其间发生了什么"><a href="#8-当键入网址后，到网页显示，其间发生了什么" class="headerlink" title="8. 当键入网址后，到网页显示，其间发生了什么"></a>8. 当键入网址后，到网页显示，其间发生了什么</h2><ol>
 <li><p>浏览器做的第一步工作是<strong>解析 URL</strong></p>
 <p><img src="/../image/3.jpg" alt="URL 解析"></p>
 <p>当没有路径名时，就代表访问根目录下事先设置的<strong>默认文件</strong>，也就是 <code>/index.html</code> 或者 <code>/default.html</code> 这些文件，这样就不会发生混乱了。</p>
@@ -710,7 +776,28 @@ P2P体系结构：应用程序在间断连接的主机对之间直接通信。
 </li>
 <li><p><strong>向DNS服务器查询服务器域名对应的 IP 地址</strong></p>
 </li>
+<li><p>根据IP地址和端口号，TCP对数据进行封装，分割，建立连接发送数据</p>
+<p><img src="/../image/13.jpg" alt="TCP 层报文"></p>
+</li>
+<li><p>IP再根据ip地址，对数据进行封装，交给链路层</p>
+<p><img src="/../image/17.jpg" alt="IP 层报文"></p>
+</li>
+<li><p>通过ARP协议找到路由器的MAC地址，然后根据源MAC和目标MAC地址，对数据再次封装进行传输</p>
+<p><img src="/../image/21.jpg" alt="MAC 层报文"></p>
+</li>
+<li><p>数据包经网卡将<strong>数字信息转换为电信号</strong>，在线路上传输。</p>
+<p>网卡驱动获取网络包之后，会将其<strong>复制</strong>到网卡内的缓存区中，接着会在其<strong>开头加上报头和起始帧分界符，在末尾加上用于检测错误的帧校验序列</strong>。</p>
+<p><img src="/../image/%E6%95%B0%E6%8D%AE%E5%8C%85.drawio.png" alt="数据包"></p>
+</li>
+<li><p>数据包经交换机转发到路由器，<strong>交换机解封装后，根据 MAC 地址表查找 MAC 地址，然后将信号发送到相应的端口</strong>。</p>
+</li>
+<li><p>路由器接收到数据包，解封装之后根据<strong>路由表</strong>查询转发目标，再由相应的端口作为发送方将以太网包发送出去。</p>
+</li>
+<li><p>服务器接收到数据之后解封装验证后做出回应，经过上述过程到达用户主机，显示网页。</p>
+</li>
 </ol>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p>[1]: <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_34709713/article/details/107969525">https://blog.csdn.net/qq_34709713/article/details/107969525</a>	“HTTPS四次握手”<br>[2]: <a target="_blank" rel="noopener" href="https://xiaolincoding.com/network/2_http/http_interview.html">https://xiaolincoding.com/network/2_http/http_interview.html</a>	“图解计算机网络”</p>
+<p>3. </p>
 
                 
             </div>
@@ -1143,7 +1230,7 @@ P2P体系结构：应用程序在间断连接的主机对之间直接通信。
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">36.5k</span>
+                        class="white-color">41.3k</span>
             
             
             
