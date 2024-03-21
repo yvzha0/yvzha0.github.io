@@ -96,7 +96,7 @@
     <link href="https://yvzha0.github.io/2024/03/18/li-kou-shua-ti-ji-lu-lian-biao-pian/"/>
     <id>https://yvzha0.github.io/2024/03/18/li-kou-shua-ti-ji-lu-lian-biao-pian/</id>
     <published>2024-03-18T01:46:06.000Z</published>
-    <updated>2024-03-20T05:46:17.471Z</updated>
+    <updated>2024-03-21T02:45:28.889Z</updated>
     
     
       
@@ -238,6 +238,93 @@
     
     
     <category term="博客搭建" scheme="https://yvzha0.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络攻防实验6：环境变量与set-uid实验</title>
+    <link href="https://yvzha0.github.io/2023/10/23/shi-yan-6/"/>
+    <id>https://yvzha0.github.io/2023/10/23/shi-yan-6/</id>
+    <published>2023-10-23T08:15:10.228Z</published>
+    <updated>2024-03-21T04:24:29.218Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div align=&quot;center&quot;&gt;
+    &lt;font size=&quot;6&quot;&gt;实验6：环境变量与set-uid实验&lt;/font&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;一、实验要求&quot;&gt;&lt;a href=&quot;#一、实验要求&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="网络攻防实验" scheme="https://yvzha0.github.io/categories/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2%E5%AE%9E%E9%AA%8C/"/>
+    
+    
+    <category term="网络攻防" scheme="https://yvzha0.github.io/tags/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络攻防实验5：shellcode编写实验</title>
+    <link href="https://yvzha0.github.io/2023/10/17/wang-luo-gong-fang-shi-yan-5/"/>
+    <id>https://yvzha0.github.io/2023/10/17/wang-luo-gong-fang-shi-yan-5/</id>
+    <published>2023-10-17T14:57:49.000Z</published>
+    <updated>2024-03-21T03:10:29.049Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div align=&quot;center&quot;&gt;
+    &lt;font size=&quot;6&quot;&gt;实验5：shellcode编写实验&lt;/font&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;一、实验要求&quot;&gt;&lt;a href=&quot;#一、实验要求&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="网络攻防实验" scheme="https://yvzha0.github.io/categories/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2%E5%AE%9E%E9%AA%8C/"/>
+    
+    
+    <category term="网络攻防" scheme="https://yvzha0.github.io/tags/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络攻防实验4：缓冲区溢出攻击实验</title>
+    <link href="https://yvzha0.github.io/2023/10/09/wang-luo-gong-fang-shi-yan-4/"/>
+    <id>https://yvzha0.github.io/2023/10/09/wang-luo-gong-fang-shi-yan-4/</id>
+    <published>2023-10-09T09:11:38.000Z</published>
+    <updated>2024-03-21T02:52:25.432Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div align=&quot;center&quot;&gt;
+    &lt;font size=&quot;6&quot;&gt;实验4：缓冲区溢出攻击实验&lt;/font&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;一、实验要求&quot;&gt;&lt;a href=&quot;#一、实验要求&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="网络攻防实验" scheme="https://yvzha0.github.io/categories/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2%E5%AE%9E%E9%AA%8C/"/>
+    
+    
+    <category term="网络攻防" scheme="https://yvzha0.github.io/tags/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2/"/>
     
   </entry>
   
