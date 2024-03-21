@@ -6,7 +6,7 @@
   <link href="https://yvzha0.github.io/atom.xml" rel="self"/>
   
   <link href="https://yvzha0.github.io/"/>
-  <updated>2024-03-20T14:57:16.114Z</updated>
+  <updated>2024-03-21T04:37:29.729Z</updated>
   <id>https://yvzha0.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://yvzha0.github.io/2024/03/19/ji-suan-ji-wang-luo-ji-chu-zhi-ying-yong-ceng/"/>
     <id>https://yvzha0.github.io/2024/03/19/ji-suan-ji-wang-luo-ji-chu-zhi-ying-yong-ceng/</id>
     <published>2024-03-19T06:09:59.000Z</published>
-    <updated>2024-03-20T14:57:16.114Z</updated>
+    <updated>2024-03-21T04:37:29.729Z</updated>
     
     
       
@@ -243,8 +243,8 @@
   
   <entry>
     <title>网络攻防实验6：环境变量与set-uid实验</title>
-    <link href="https://yvzha0.github.io/2023/10/23/shi-yan-6/"/>
-    <id>https://yvzha0.github.io/2023/10/23/shi-yan-6/</id>
+    <link href="https://yvzha0.github.io/2023/10/23/wang-luo-gong-fang-shi-yan-6/"/>
+    <id>https://yvzha0.github.io/2023/10/23/wang-luo-gong-fang-shi-yan-6/</id>
     <published>2023-10-23T08:15:10.228Z</published>
     <updated>2024-03-21T04:24:29.218Z</updated>
     
@@ -391,7 +391,7 @@
     <link href="https://yvzha0.github.io/2023/09/05/wang-luo-gong-fang-shi-yan-1/"/>
     <id>https://yvzha0.github.io/2023/09/05/wang-luo-gong-fang-shi-yan-1/</id>
     <published>2023-09-05T12:41:23.000Z</published>
-    <updated>2024-03-20T11:25:32.877Z</updated>
+    <updated>2024-03-21T04:30:34.463Z</updated>
     
     
       
@@ -401,10 +401,9 @@
     <summary type="html">&lt;div align=&quot;center&quot;&gt;
     &lt;font size=&quot;6&quot;&gt;实验1：域名信息收集工具&lt;/font&gt;
 &lt;/div&gt;
-### 实验要求
 
-&lt;p&gt;实现如下功能：&lt;/p&gt;
-&lt;p&gt;a)</summary>
+
+&lt;h3 id=&quot;实验要求&quot;&gt;&lt;a href=&quot;#实验要求&quot; class=&quot;headerlink&quot;</summary>
         
       
     
