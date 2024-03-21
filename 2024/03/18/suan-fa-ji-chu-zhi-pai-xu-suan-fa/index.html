@@ -409,14 +409,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.6k
+                    3.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    10 分
+                    14 分
                 </div>
                 
 
@@ -527,7 +527,6 @@
 <span class="token keyword">void</span> <span class="token function">bubbleSort</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">int</span> n <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
     <span class="token keyword">int</span> flag <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token comment">//最多进行n-1趟</span>
     <span class="token keyword">while</span><span class="token punctuation">(</span>n <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> flag <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
         flag <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
         <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
@@ -540,7 +539,7 @@
             n<span class="token operator">--</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>时间复杂度</strong>：O(n^2)</p>
 <p><strong>空间复杂度</strong>：O(1)</p>
@@ -679,7 +678,112 @@
 
 <p><strong>时间复杂度</strong>：O(nlog2n)</p>
 <p><strong>空间复杂度</strong>：O(1)</p>
-<h2 id="4-归并类"><a href="#4-归并类" class="headerlink" title="4. 归并类"></a>4. 归并类</h2><h3 id="4-1-归并排序"><a href="#4-1-归并排序" class="headerlink" title="4.1 归并排序"></a>4.1 归并排序</h3><h2 id="5-分配类"><a href="#5-分配类" class="headerlink" title="5. 分配类"></a>5. 分配类</h2><h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p>[1]: <a target="_blank" rel="noopener" href="https://www.hello-algo.com/chapter_sorting/">https://www.hello-algo.com/chapter_sorting/</a>	“Hello 算法 第 11 章   排序”</p>
+<h2 id="4-归并类"><a href="#4-归并类" class="headerlink" title="4. 归并类"></a>4. 归并类</h2><h3 id="4-1-归并排序"><a href="#4-1-归并排序" class="headerlink" title="4.1 归并排序"></a>4.1 归并排序</h3><p><strong>归并排序</strong>就是将两个或两个以上的有序表合并成一个有序表的过程。将两个有序表合并成一个有序表的过程称为<strong>2-路归并</strong>，这里记录最简单的2-路归并。</p>
+<p>归并排序算法的思想是：假设初始序列含有n个记录，则可以将其看成n个有序的子序列，每个子序列的长度为1，然后两两归并，直到得到一个长度为n的有序序列为止。</p>
+<p><img src="/../image/merge_sort_overview.png" alt="归并排序的划分与合并阶段"></p>
+<h4 id="相邻两个有序子序列的归并"><a href="#相邻两个有序子序列的归并" class="headerlink" title="相邻两个有序子序列的归并"></a>相邻两个有序子序列的归并</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">void</span> <span class="token class-name">Merge</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span><span class="token keyword">int</span> left<span class="token punctuation">,</span> <span class="token keyword">int</span> mid<span class="token punctuation">,</span> <span class="token keyword">int</span> right<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">// 左子数组区间为 [left, mid], 右子数组区间为 [mid+1, right]</span>
+    <span class="token comment">// 创建一个临时数组 tmp ，用于存放合并后的结果</span>
+    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> tmp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>right <span class="token operator">-</span> left <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token comment">// 初始化左子数组和右子数组的起始索引</span>
+    <span class="token keyword">int</span> i <span class="token operator">=</span> left<span class="token punctuation">,</span> j <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> k <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token comment">// 当左右子数组都还有元素时，进行比较并将较小的元素复制到临时数组中</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;=</span> mid <span class="token operator">&amp;&amp;</span> j <span class="token operator">&lt;=</span> right<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span>
+            tmp<span class="token punctuation">[</span>k<span class="token operator">++</span><span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token operator">++</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">else</span>
+            tmp<span class="token punctuation">[</span>k<span class="token operator">++</span><span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>j<span class="token operator">++</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 将左子数组和右子数组的剩余元素复制到临时数组中</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;=</span> mid<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        tmp<span class="token punctuation">[</span>k<span class="token operator">++</span><span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token operator">++</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>j <span class="token operator">&lt;=</span> right<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        tmp<span class="token punctuation">[</span>k<span class="token operator">++</span><span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>j<span class="token operator">++</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 将临时数组 tmp 中的元素复制回原数组 nums 的对应区间</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>k <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> k <span class="token operator">&lt;</span> tmp<span class="token punctuation">.</span>length<span class="token punctuation">;</span> k<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        nums<span class="token punctuation">[</span>left <span class="token operator">+</span> k<span class="token punctuation">]</span> <span class="token operator">=</span> tmp<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h4><ol>
+<li>计算数组中点 <code>mid</code> ，递归划分左子数组（区间 <code>[left, mid]</code> ）和右子数组（区间 <code>[mid + 1, right]</code> ）。</li>
+<li>递归执行步骤 <code>1.</code> ，直至子数组区间长度为 1 时终止。</li>
+</ol>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/* 归并排序 */</span>
+<span class="token keyword">void</span> <span class="token function">mergeSort</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> left<span class="token punctuation">,</span> <span class="token keyword">int</span> right<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 终止条件</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>left <span class="token operator">&gt;=</span> right<span class="token punctuation">)</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span> <span class="token comment">// 当子数组长度为 1 时终止递归</span>
+    <span class="token comment">// 划分阶段</span>
+    <span class="token keyword">int</span> mid <span class="token operator">=</span> <span class="token punctuation">(</span>left <span class="token operator">+</span> right<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span> <span class="token comment">// 计算中点</span>
+    <span class="token function">mergeSort</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> left<span class="token punctuation">,</span> mid<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 递归左子数组</span>
+    <span class="token function">mergeSort</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> right<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 递归右子数组</span>
+    <span class="token comment">// 合并阶段</span>
+    <span class="token class-name">Merge</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> left<span class="token punctuation">,</span> mid<span class="token punctuation">,</span> right<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>时间复杂度</strong>：O(nlog2n)</p>
+<p><strong>空间复杂度</strong>：O(n)</p>
+<h2 id="5-分配类"><a href="#5-分配类" class="headerlink" title="5. 分配类"></a>5. 分配类</h2><h3 id="5-1-基数排序"><a href="#5-1-基数排序" class="headerlink" title="5.1 基数排序"></a>5.1 基数排序</h3><p><strong>算法流程</strong></p>
+<ol>
+<li>初始化位数 n=1 。</li>
+<li>对学号的第 n 位执行“计数排序”。完成后，数据会根据第 n 位从小到大排序。</li>
+<li>将 n 增加 1 ，然后返回步骤 <code>2.</code> 继续迭代，直到所有位都排序完成后结束。</li>
+</ol>
+<p><img src="/../image/radix_sort_overview.png" alt="基数排序算法流程"></p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/* 获取元素 num 的第 k 位，其中 exp = 10^(k-1) */</span>
+<span class="token keyword">int</span> <span class="token function">digit</span><span class="token punctuation">(</span><span class="token keyword">int</span> num<span class="token punctuation">,</span> <span class="token keyword">int</span> exp<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 传入 exp 而非 k 可以避免在此重复执行昂贵的次方计算</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>num <span class="token operator">/</span> exp<span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* 计数排序（根据 nums 第 k 位排序） */</span>
+<span class="token keyword">void</span> <span class="token function">countingSortDigit</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> exp<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 十进制的位范围为 0~9 ，因此需要长度为 10 的桶数组</span>
+    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> counter <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> n <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+    <span class="token comment">// 统计 0~9 各数字的出现次数</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> d <span class="token operator">=</span> <span class="token function">digit</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> exp<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 获取 nums[i] 第 k 位，记为 d</span>
+        counter<span class="token punctuation">[</span>d<span class="token punctuation">]</span><span class="token operator">++</span><span class="token punctuation">;</span>                <span class="token comment">// 统计数字 d 的出现次数</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 求前缀和，将“出现个数”转换为“数组索引”</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        counter<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+=</span> counter<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 倒序遍历，根据桶内统计结果，将各元素填入 res</span>
+    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> res <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&gt;=</span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> d <span class="token operator">=</span> <span class="token function">digit</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> exp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> j <span class="token operator">=</span> counter<span class="token punctuation">[</span>d<span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">// 获取 d 在数组中的索引 j</span>
+        res<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>       <span class="token comment">// 将当前元素填入索引 j</span>
+        counter<span class="token punctuation">[</span>d<span class="token punctuation">]</span><span class="token operator">--</span><span class="token punctuation">;</span>           <span class="token comment">// 将 d 的数量减 1</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 使用结果覆盖原数组 nums</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> res<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* 基数排序 */</span>
+<span class="token keyword">void</span> <span class="token function">radixSort</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 获取数组的最大元素，用于判断最大位数</span>
+    <span class="token keyword">int</span> m <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token constant">MIN_VALUE</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> num <span class="token operator">:</span> nums<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>num <span class="token operator">&gt;</span> m<span class="token punctuation">)</span>
+            m <span class="token operator">=</span> num<span class="token punctuation">;</span>
+    <span class="token comment">// 按照从低位到高位的顺序遍历</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> exp <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> exp <span class="token operator">&lt;=</span> m<span class="token punctuation">;</span> exp <span class="token operator">*=</span> <span class="token number">10</span><span class="token punctuation">)</span>
+        <span class="token comment">// 对数组元素的第 k 位执行计数排序</span>
+        <span class="token comment">// k = 1 -&gt; exp = 1</span>
+        <span class="token comment">// k = 2 -&gt; exp = 10</span>
+        <span class="token comment">// 即 exp = 10^(k-1)</span>
+        <span class="token function">countingSortDigit</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> exp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="/../image/image-20240321133211778.png" alt="image-20240321133211778"></p>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p>[1]: <a target="_blank" rel="noopener" href="https://www.hello-algo.com/chapter_sorting/">https://www.hello-algo.com/chapter_sorting/</a>	“Hello 算法 第 11 章   排序”</p>
 
                 
             </div>
@@ -1110,7 +1214,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">46.1k</span>
+                        class="white-color">47k</span>
             
             
             
