@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="力扣刷题记录——哈希表篇(更新中), Blog Of yvzha0">
+    <meta name="keywords" content="力扣刷题记录——哈希表篇, Blog Of yvzha0">
     <meta name="description" content="2024-3-25706. 设计哈希映射题目要求不使用任何内建的哈希表库设计一个哈希映射（HashMap）。
 实现 MyHashMap 类：
 
@@ -21,7 +21,7 @@ void put(int key, int valu">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>力扣刷题记录——哈希表篇(更新中) | Blog Of yvzha0</title>
+    <title>力扣刷题记录——哈希表篇 | Blog Of yvzha0</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -56,9 +56,9 @@ void put(int key, int valu">
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Blog Of yvzha0" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Blog Of yvzha0" type="application/atom+xml">
 </head>
 
 
@@ -341,12 +341,12 @@ void put(int key, int valu">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">力扣刷题记录——哈希表篇(更新中)</h1>
+                    <h1 class="description center-align post-title">力扣刷题记录——哈希表篇</h1>
                 </div>
             </div>
         </div>
@@ -406,21 +406,21 @@ void put(int key, int valu">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-03-29
+                    2024-03-31
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    7.4k
+                    8.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    33 分
+                    38 分
                 </div>
                 
 
@@ -1438,7 +1438,153 @@ class Node {
 
 
 
-<h1 id="2024-3-30"><a href="#2024-3-30" class="headerlink" title="2024-3-30"></a>2024-3-30</h1><h2 id="560-和为-K-的子数组"><a href="#560-和为-K-的子数组" class="headerlink" title="560. 和为 K 的子数组"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/subarray-sum-equals-k/">560. 和为 K 的子数组</a></h2><h2 id="523-连续的子数组和"><a href="#523-连续的子数组和" class="headerlink" title="523. 连续的子数组和"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/continuous-subarray-sum/">523. 连续的子数组和</a></h2><h2 id="525-连续数组"><a href="#525-连续数组" class="headerlink" title="525. 连续数组"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/contiguous-array/">525. 连续数组</a></h2>
+<h1 id="2024-3-30"><a href="#2024-3-30" class="headerlink" title="2024-3-30"></a>2024-3-30</h1><h2 id="560-和为-K-的子数组"><a href="#560-和为-K-的子数组" class="headerlink" title="560. 和为 K 的子数组"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/subarray-sum-equals-k/">560. 和为 K 的子数组</a></h2><h3 id="题目要求-16"><a href="#题目要求-16" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你一个整数数组 <code>nums</code> 和一个整数 <code>k</code> ，请你统计并返回 <em>该数组中和为 <code>k</code> 的子数组的个数</em> 。</p>
+<p>子数组是数组中元素的连续非空序列。</p>
+<p><strong>示例 1：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">输入：nums = [1,1,1], k = 2
+输出：2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><strong>示例 2：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">输入：nums = [1,2,3], k = 3
+输出：2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= nums.length &lt;= 2 * 104</code></li>
+<li><code>-1000 &lt;= nums[i] &lt;= 1000</code></li>
+<li><code>-107 &lt;= k &lt;= 107</code></li>
+</ul>
+<h3 id="个人解答-16"><a href="#个人解答-16" class="headerlink" title="个人解答"></a>个人解答</h3><ol>
+<li>求出前缀和数组pre</li>
+<li>由于[i,j]区间的和为pre[j+1]-pre[i],所以只要找到pre[j+1]-pre[i]=k的区间</li>
+<li>用哈希表储存前缀和出现的次数，如果存在当前前缀和-k在哈希表中，说明找到了区间，结果加前缀和出现的次数</li>
+<li>最后返回结果</li>
+</ol>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">subarraySum</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> k<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> pre <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token class-name">HashMap</span> <span class="token generics"><span class="token punctuation">&lt;</span> <span class="token class-name">Integer</span><span class="token punctuation">,</span> <span class="token class-name">Integer</span> <span class="token punctuation">&gt;</span></span> mp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span> <span class="token generics"><span class="token punctuation">&lt;</span> <span class="token punctuation">&gt;</span></span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        mp<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            pre <span class="token operator">+=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>mp<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span>pre <span class="token operator">-</span> k<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                count <span class="token operator">+=</span> mp<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>pre <span class="token operator">-</span> k<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            mp<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>pre<span class="token punctuation">,</span> mp<span class="token punctuation">.</span><span class="token function">getOrDefault</span><span class="token punctuation">(</span>pre<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> count<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="523-连续的子数组和"><a href="#523-连续的子数组和" class="headerlink" title="523. 连续的子数组和"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/continuous-subarray-sum/">523. 连续的子数组和</a></h2><h3 id="题目要求-17"><a href="#题目要求-17" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你一个整数数组 <code>nums</code> 和一个整数 <code>k</code> ，编写一个函数来判断该数组是否含有同时满足下述条件的连续子数组：</p>
+<ul>
+<li>子数组大小 <strong>至少为 2</strong> ，且</li>
+<li>子数组元素总和为 <code>k</code> 的倍数。</li>
+</ul>
+<p>如果存在，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
+<p>如果存在一个整数 <code>n</code> ，令整数 <code>x</code> 符合 <code>x = n * k</code> ，则称 <code>x</code> 是 <code>k</code> 的一个倍数。<code>0</code> 始终视为 <code>k</code> 的一个倍数。</p>
+<p><strong>示例 1：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">输入：nums = [23,2,4,6,7], k = 6
+输出：true
+解释：[2,4] 是一个大小为 2 的子数组，并且和为 6 。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>示例 2：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">输入：nums = [23,2,6,4,7], k = 6
+输出：true
+解释：[23, 2, 6, 4, 7] 是大小为 5 的子数组，并且和为 42 。 
+42 是 6 的倍数，因为 42 = 7 * 6 且 7 是一个整数。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>示例 3：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">输入：nums = [23,2,6,4,7], k = 13
+输出：false<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= nums.length &lt;= 105</code></li>
+<li><code>0 &lt;= nums[i] &lt;= 109</code></li>
+<li><code>0 &lt;= sum(nums[i]) &lt;= 231 - 1</code></li>
+<li><code>1 &lt;= k &lt;= 231 - 1</code></li>
+</ul>
+<h3 id="个人解答-17"><a href="#个人解答-17" class="headerlink" title="个人解答"></a>个人解答</h3><ol>
+<li>和上一题类似，由于[i,j]区间的和为pre[j+1]-pre[i],所以只要找到(pre[j+1]-pre[i])%k=0的区间,即pre[j+1]%k=pre[i]%k</li>
+<li>所以我们把前缀和%k之后的值和对应的位置存入哈希表</li>
+<li>判断当前pre%k在不在哈希表中，如果在，并且两个索引之间的距离大于1，说明存在这样的子数组</li>
+<li>如果都不在，或者索引之间的距离小于等于1，说明不存在这样的子数组</li>
+</ol>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">checkSubarraySum</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> k<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">.</span>length<span class="token operator">&lt;</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>k <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">int</span> pre <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token class-name">HashMap</span> <span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">,</span> <span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> mp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span> <span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        mp<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            pre <span class="token operator">+=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>mp<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span>pre<span class="token operator">%</span>k<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> i<span class="token operator">-</span>mp<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>pre<span class="token operator">%</span>k<span class="token punctuation">)</span><span class="token operator">&gt;</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>mp<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span>pre<span class="token operator">%</span>k<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                mp<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>pre<span class="token operator">%</span>k<span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="525-连续数组"><a href="#525-连续数组" class="headerlink" title="525. 连续数组"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/contiguous-array/">525. 连续数组</a></h2><h3 id="题目要求-18"><a href="#题目要求-18" class="headerlink" title="题目要求"></a>题目要求</h3><p>给定一个二进制数组 <code>nums</code> , 找到含有相同数量的 <code>0</code> 和 <code>1</code> 的最长连续子数组，并返回该子数组的长度。</p>
+<p><strong>示例 1:</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">输入: nums = [0,1]
+输出: 2
+说明: [0, 1] 是具有相同数量 0 和 1 的最长连续子数组。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>示例 2:</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">输入: nums = [0,1,0]
+输出: 2
+说明: [0, 1] (或 [1, 0]) 是具有相同数量0和1的最长连续子数组。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= nums.length &lt;= 105</code></li>
+<li><code>nums[i]</code> 不是 <code>0</code> 就是 <code>1</code></li>
+</ul>
+<h3 id="个人解答-18"><a href="#个人解答-18" class="headerlink" title="个人解答"></a>个人解答</h3><ol>
+<li>把nums中的0看成-1，这样子数组中0和1的数量相同可以等价为子数组的和为0</li>
+<li>求出数组的前缀和和对应的下标，存入哈希表中</li>
+<li>如果当前的pre在哈希表中的话，当前下标减去哈希表中存的下标就是子数组的长度</li>
+<li>返回最大的长度</li>
+</ol>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">findMaxLength</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> len <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+        <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">,</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> max <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> pre <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                pre<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span><span class="token punctuation">{</span>
+                pre<span class="token operator">--</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>map<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span>pre<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                max <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>max<span class="token punctuation">,</span>i<span class="token operator">-</span>map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>pre<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span><span class="token punctuation">{</span>
+                map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>pre<span class="token punctuation">,</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> max<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
                 
             </div>
             <hr/>
@@ -1595,9 +1741,9 @@ class Node {
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="力扣刷题记录——哈希表篇(更新中)">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="力扣刷题记录——哈希表篇">
                         
-                        <span class="card-title">力扣刷题记录——哈希表篇(更新中)</span>
+                        <span class="card-title">力扣刷题记录——哈希表篇</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1878,7 +2024,7 @@ class Node {
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">60.5k</span>
+                        class="white-color">62.1k</span>
             
             
             
