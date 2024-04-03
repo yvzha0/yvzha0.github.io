@@ -8,8 +8,8 @@
     <meta name="description" content="1. 网络应用体系结构客户-服务器(CS)体系结构：有一个总是打开的主机，称为服务器，它服务于来自许多其他称为客户的主机的请求。
 
 P2P体系结构：应用程序在间断连接的主机对之间直接通信。
-
-2. 进程间的通信进程通过一个称为套接字的软件接">
+!
+2. 进程间的通信进程通过一个称为套接字的软件">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -56,9 +56,9 @@ P2P体系结构：应用程序在间断连接的主机对之间直接通信。
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0">
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Blog Of yvzha0" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="Blog Of yvzha0" type="application/atom+xml">
 </head>
 
 
@@ -402,21 +402,21 @@ P2P体系结构：应用程序在间断连接的主机对之间直接通信。
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-03-21
+                    2024-04-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    9.9k
+                    10.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    35 分
+                    37 分
                 </div>
                 
 
@@ -440,12 +440,12 @@ P2P体系结构：应用程序在间断连接的主机对之间直接通信。
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="1-网络应用体系结构"><a href="#1-网络应用体系结构" class="headerlink" title="1. 网络应用体系结构"></a>1. 网络应用体系结构</h2><p><strong>客户-服务器(CS)体系结构</strong>：有一个总是打开的主机，称为服务器，它服务于来自许多其他称为客户的主机的请求。</p>
-<p><img src="/../image/image-20240319091333190.png" alt="image-20240319091333190"></p>
+<p><img src="/../image/image-20240403164009283.png" alt="image-20240403164009283"></p>
 <p><strong>P2P体系结构</strong>：应用程序在间断连接的主机对之间直接通信。</p>
-<p><img src="/../image/image-20240319091547597.png" alt="image-20240319091547597"></p>
+<p>!<img src="/../image/image-20240403164036499.png" alt="image-20240403164036499"></p>
 <h2 id="2-进程间的通信"><a href="#2-进程间的通信" class="headerlink" title="2. 进程间的通信"></a>2. 进程间的通信</h2><p>进程通过一个称为<strong>套接字</strong>的软件接口向网络发送报文和接受报文，从一个进程向另一个进程发送报文必须经过网络。</p>
 <p><strong>套接字</strong>是同一台主机内应用层与传输层之间的接口，由于该套接字是建立网络应用程序的可编程接口，因此套接字也称为应用程序与网络之间的<strong>应用编程接口</strong>。应用程序开发者可以控制套接字在应用层端的一切，但是对该套接字的传输层端几乎没有控制权。</p>
-<p><img src="/../image/image-20240319092720664.png" alt="image-20240319092720664"></p>
+<p><img src="/../image/image-20240403164259492.png" alt="image-20240403164259492"></p>
 <h2 id="3-应用层协议——HTTP"><a href="#3-应用层协议——HTTP" class="headerlink" title="3. 应用层协议——HTTP"></a>3. 应用层协议——HTTP</h2><h3 id="3-1-HTTP基本概念"><a href="#3-1-HTTP基本概念" class="headerlink" title="3.1 HTTP基本概念"></a>3.1 HTTP基本概念</h3><h4 id="3-1-1-什么是HTTP"><a href="#3-1-1-什么是HTTP" class="headerlink" title="3.1.1 什么是HTTP"></a>3.1.1 什么是HTTP</h4><p><strong>HTTP</strong> 是超文本传输协议，也就是<strong>H</strong>yper<strong>T</strong>ext <strong>T</strong>ransfer <strong>P</strong>rotocol。<strong>HTTP 是一个在计算机世界里专门在「两点」之间「传输」文字、图片、音频、视频等「超文本」数据的「约定和规范」。</strong>HTTP使用TCP作为它的支撑运输协议。因为HTTP服务器不保存关于客户的任何信息，所以HTTP是一个无状态协议。</p>
 <p><img src="/../image/4.jpg" alt="HTTP 的消息格式"></p>
 <h4 id="3-1-2-HTTP常见的状态码"><a href="#3-1-2-HTTP常见的状态码" class="headerlink" title="3.1.2 HTTP常见的状态码"></a>3.1.2 HTTP常见的状态码</h4><p><code>1xx</code> 类状态码属于<strong>提示信息</strong>，是协议处理中的一种中间状态，实际用到的比较少。</p>
@@ -699,6 +699,37 @@ P2P体系结构：应用程序在间断连接的主机对之间直接通信。
 <p>如果用户访问的网站恰好证书过期了，但是用户还要坚持访问时，可能就会遭遇这种攻击。</p>
 <p>很多抓包工具 之所以可以明文看到 HTTPS 数据，工作原理与中间人一致的。我在当时使用BurpSuite抓HTTPS包时就会提示不安全，要把它的证书导入本地才行。</p>
 <h3 id="3-6-HTTP-1-1、HTTP-2、HTTP-3的演变"><a href="#3-6-HTTP-1-1、HTTP-2、HTTP-3的演变" class="headerlink" title="3.6 HTTP/1.1、HTTP/2、HTTP/3的演变"></a>3.6 HTTP/1.1、HTTP/2、HTTP/3的演变</h3><p><img src="/../image/27-HTTP3.png" alt="HTTP/1 ~ HTTP/3"></p>
+<h4 id="3-6-1-HTTP-1-1"><a href="#3-6-1-HTTP-1-1" class="headerlink" title="3.6.1 HTTP/1.1"></a>3.6.1 HTTP/1.1</h4><p>HTTP/1.1 相比 HTTP/1.0 性能上的改进：</p>
+<ul>
+<li>使用长连接的方式改善了 HTTP/1.0 短连接造成的性能开销。</li>
+<li>支持管道（pipeline）网络传输，只要第一个请求发出去了，不必等其回来，就可以发第二个请求出去，可以减少整体的响应时间。</li>
+</ul>
+<p>但 HTTP/1.1 还是有性能瓶颈：</p>
+<ul>
+<li>请求 / 响应头部（Header）未经压缩就发送，首部信息越多延迟越大。只能压缩 <code>Body</code> 的部分；</li>
+<li>发送冗长的首部。每次互相发送相同的首部造成的浪费较多；</li>
+<li>服务器是按请求的顺序响应的，如果服务器响应慢，会招致客户端一直请求不到数据，也就是队头阻塞；</li>
+<li>没有请求优先级控制；</li>
+<li>请求只能从客户端开始，服务器只能被动响应。</li>
+</ul>
+<h4 id="3-6-2-HTTP-2"><a href="#3-6-2-HTTP-2" class="headerlink" title="3.6.2 HTTP/2"></a>3.6.2 HTTP/2</h4><p>HTTP/2 相比 HTTP/1.1 性能上的改进：</p>
+<ul>
+<li>头部压缩</li>
+<li>二进制格式</li>
+<li>并发传输</li>
+<li>服务器主动推送资源</li>
+</ul>
+<p>HTTP/2 通过 Stream 的并发能力，解决了 HTTP/1 队头阻塞的问题，看似很完美了，但是 HTTP/2 还是存在“队头阻塞”的问题，只不过问题不是在 HTTP 这一层面，而是在 TCP 这一层。</p>
+<p><strong>HTTP/2 是基于 TCP 协议来传输数据的，TCP 是字节流协议，TCP 层必须保证收到的字节数据是完整且连续的，这样内核才会将缓冲区里的数据返回给 HTTP 应用，那么当「前 1 个字节数据」没有到达时，后收到的字节数据只能存放在内核缓冲区里，只有等到这 1 个字节数据到达时，HTTP/2 应用层才能从内核中拿到数据，这就是 HTTP/2 队头阻塞问题。</strong></p>
+<p><img src="/../image/http2%E9%98%BB%E5%A1%9E.jpeg" alt="img"></p>
+<h4 id="3-6-3-HTTP-3"><a href="#3-6-3-HTTP-3" class="headerlink" title="3.6.3 HTTP/3"></a>3.6.3 HTTP/3</h4><p><strong>HTTP/3 把 HTTP 下层的 TCP 协议改成了 UDP！</strong></p>
+<p>UDP 发送是不管顺序，也不管丢包的，所以不会出现像 HTTP/2 队头阻塞的问题。UDP 是不可靠传输的，但基于 UDP 的 <strong>QUIC 协议</strong> 可以实现类似 TCP 的可靠性传输。</p>
+<p>QUIC 有以下 3 个特点。</p>
+<ul>
+<li>无队头阻塞</li>
+<li>更快的连接建立</li>
+<li>连接迁移</li>
+</ul>
 <h2 id="4-应用层协议——电子邮件协议"><a href="#4-应用层协议——电子邮件协议" class="headerlink" title="4. 应用层协议——电子邮件协议"></a>4. 应用层协议——电子邮件协议</h2><p>电子邮件系统主要由三个主要部分组成：<strong>用户代理</strong>、<strong>邮件服务器</strong>、<strong>简单邮件传输协议(SMTP)</strong></p>
 <p>邮件协议包含发送协议和读取协议，发送协议常用 SMTP，读取协议常用 POP3 和 IMAP。</p>
 <h3 id="4-1-SMTP"><a href="#4-1-SMTP" class="headerlink" title="4.1 SMTP"></a>4.1 SMTP</h3><p>SMTP是因特网电子邮件的核心，SMTP 只能发送 ASCII 码，而互联网邮件扩充 MIME 可以发送二进制文件。MIME 并没有改动或者取代 SMTP，而是增加邮件主体的结构，定义了非 ASCII 码的编码规则。SMTP的端口号是25，是持久，有状态的协议</p>
@@ -730,10 +761,10 @@ P2P体系结构：应用程序在间断连接的主机对之间直接通信。
 </ol>
 <h3 id="5-3-DNS查询过程"><a href="#5-3-DNS查询过程" class="headerlink" title="5.3 DNS查询过程"></a>5.3 DNS查询过程</h3><p><strong>迭代查询</strong></p>
 <p>迭代查询是一种从本地 DNS 服务器向根域名服务器发出查询请求的方式。当本地 DNS 服务器向根域名服务器发出查询请求时，根域名服务器会给出查询结果或者告诉本地 DNS 服务器下一步应该向哪个服务器进行查询。本地 DNS 服务器会根据根域名服务器给出的提示，向指定的域名服务器发出查询请求。迭代查询的查询过程是一层一层地向上迭代，直到找到所需的域名对应的 IP 地址。</p>
-<p><img src="/../image/image-20240320215400093.png" alt="image-20240320215400093"></p>
+<p><img src="/../image/image-20240403164629014.png" alt="image-20240403164629014"></p>
 <p><strong>递归查询</strong></p>
 <p>递归查询和迭代查询的区别在于递归查询需要 DNS 服务器向其他 DNS 服务器发送多次查询请求，直到找到所需的 IP 地址为止。而迭代查询则是本地 DNS 服务器向根域名服务器发送单个查询请求，根域名服务器会给出查询结果或者告诉本地 DNS 服务器下一步应该向哪个服务器进行查询。</p>
-<p><img src="/../image/image-20240320215610922.png" alt="image-20240320215610922"></p>
+<p><img src="/../image/image-20240403164710410.png" alt="image-20240403164710410"></p>
 <h3 id="5-4-DNS记录"><a href="#5-4-DNS记录" class="headerlink" title="5.4 DNS记录"></a>5.4 DNS记录</h3><p>共同实现DNS分布式数据库的所有DNS服务器存储了<strong>资源记录</strong>(Resource Record，RR)，RR提供了主机名到IP地址的映射。每个DNS回答报文包含了一条或多条资源记录。资源记录是一个包含了下列字段的4元组:<br><strong>(Name, Value, Type, TTL)</strong><br>TTL是该记录的生存时问，它决定了资源记录应当从缓存中删除的时间。在下面给出的记录例子中，我们忽略掉TTL字段。Name和Value 的意义取决于 Type:</p>
 <ul>
 <li>如果Type=A，则对该主机名而言Name是主机名，Value是该主机名对应的IP地址。因此，一条类型为A的资源记录提供了标准的主机名到IP地址的映射。例如**(relay1.bar.foo.com，145.37.93.126，A)**就是一条类型 A的记录。</li>
@@ -1231,7 +1262,7 @@ P2P体系结构：应用程序在间断连接的主机对之间直接通信。
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">63.6k</span>
+                        class="white-color">68.4k</span>
             
             
             

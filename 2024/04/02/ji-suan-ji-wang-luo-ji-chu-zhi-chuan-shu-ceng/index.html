@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="分类: 力扣刷题记录, Blog Of yvzha0">
-    <meta name="description" content="记录个人的学习成长之路">
+    <meta name="keywords" content="计算机网络基础之传输层（学习中）, Blog Of yvzha0">
+    <meta name="description" content="1. TCP与UDP特点
+用户数据报协议 UDP（User Datagram Protocol）是无连接的，尽最大可能交付，没有拥塞控制，面向报文（对于应用程序传下来的报文不合并也不拆分，只是添加 UDP 首部），支持一对一、一对多、多对一">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>分类: 力扣刷题记录 | Blog Of yvzha0</title>
+    <title>计算机网络基础之传输层（学习中） | Blog Of yvzha0</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -333,346 +334,551 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">计算机网络基础之传输层（学习中）</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
     <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                世界很暗，但是你来了
-                
-            </div>
-
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="/libs/typed/typed.js"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            
-                                "从来没有真正的绝境, 只有心灵的迷途",
-                            
-                                "Never really desperate, only the lost of the soul",
-                            
-                        ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
-<script>
-    
-      var bannerUrl = "/medias/featureimages/" + Math.floor(Math.random() * 24) + '.jpg';
-    
-    $('.bg-cover.about-cover').css('background-image', 'url(' + bannerUrl + ')');
-
-</script>
-
-
-    </div>
-</div>
-
-<main class="content">
-
-    
-
-<div id="category-cloud" class="container chip-container">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
     <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+                                <span class="chip bg-color">计算机网络</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" class="post-category">
+                                计算机基础
+                            </a>
+                        
+                    </div>
+                    
+                </div>
             </div>
-            <div class="tag-chips">
+
+            <div class="post-info">
                 
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2024-04-02
+                </div>
                 
+
                 
-                <a href="/categories/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2%E5%AD%A6%E4%B9%A0/" title="网络攻防学习: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F9EBEA;">网络攻防学习
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2024-04-03
+                </div>
                 
+
                 
-                <a href="/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%89%8D%E8%A8%80/" title="搭建博客前言: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F5EEF8;">搭建博客前言
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    884
+                </div>
                 
+
                 
-                <a href="/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" title="力扣刷题记录: 4">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            style="background-color: #D5F5E3;">力扣刷题记录
-                        <span class="tag-length">4</span>
-                    </span>
-                </a>
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    3 分
+                </div>
                 
+
                 
-                <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" title="计算机基础: 4">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #E8F8F5;">计算机基础
-                        <span class="tag-length">4</span>
-                    </span>
-                </a>
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="1-TCP与UDP特点"><a href="#1-TCP与UDP特点" class="headerlink" title="1. TCP与UDP特点"></a>1. TCP与UDP特点</h2><ul>
+<li>用户数据报协议 UDP（User Datagram Protocol）是无连接的，尽最大可能交付，没有拥塞控制，面向报文（对于应用程序传下来的报文不合并也不拆分，只是添加 UDP 首部），支持一对一、一对多、多对一和多对多的交互通信。一个UDP套接字由一个二元组来进行标识，该二元组包括一个<strong>目的IP地址</strong>和一个<strong>目的端口号</strong>.</li>
+<li>传输控制协议 TCP（Transmission Control Protocol）是面向连接的，提供可靠交付，有流量控制，拥塞控制，提供全双工通信，面向字节流（把应用层传下来的报文看成字节流，把字节流组织成大小不等的数据块），每一条 TCP 连接只能是点对点的（一对一）。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">应用</th>
+<th align="center">应用层协议</th>
+<th align="center">下面的运输协议</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">电子邮件</td>
+<td align="center">SMTP</td>
+<td align="center">TCP</td>
+</tr>
+<tr>
+<td align="center">远程终端访问</td>
+<td align="center">Telnet</td>
+<td align="center">TCP</td>
+</tr>
+<tr>
+<td align="center">安全远程终端访问</td>
+<td align="center">SSH</td>
+<td align="center">TCP</td>
+</tr>
+<tr>
+<td align="center">Web</td>
+<td align="center">HTTP</td>
+<td align="center">TCP</td>
+</tr>
+<tr>
+<td align="center">文件传输</td>
+<td align="center">FTP</td>
+<td align="center">TCP</td>
+</tr>
+<tr>
+<td align="center">远程文件服务器</td>
+<td align="center">NFS</td>
+<td align="center">通常为UDP</td>
+</tr>
+<tr>
+<td align="center">流式多媒体</td>
+<td align="center">通常专用</td>
+<td align="center">UDP或TCP</td>
+</tr>
+<tr>
+<td align="center">因特网电话</td>
+<td align="center">通常专用</td>
+<td align="center">UDP或TCP</td>
+</tr>
+<tr>
+<td align="center">网络管理</td>
+<td align="center">SNMP</td>
+<td align="center">通常为UDP</td>
+</tr>
+<tr>
+<td align="center">名字转换</td>
+<td align="center">DNS</td>
+<td align="center">通常为UDP</td>
+</tr>
+</tbody></table>
+<h2 id="2-无连接运输：UDP"><a href="#2-无连接运输：UDP" class="headerlink" title="2. 无连接运输：UDP"></a>2. 无连接运输：UDP</h2><h3 id="2-1-UDP的优点"><a href="#2-1-UDP的优点" class="headerlink" title="2.1 UDP的优点"></a>2.1 UDP的优点</h3><ul>
+<li><p>关于发送什么数据以及何时发送的应用层控制更为精细</p>
+<p>使用UDP的时候，应用程序只需要将数据交给UDP，然后UDP将其打包进报文段，然后传递给网络层，不管数据能不能到达，UDP依然会发送没有发送的数据，而TCP不同，TCP有一个数据重传机制，当客户端的TCP未收到目的主机的确认报文段或者发送时间超时的时候，TCP会重新发送报文段，而中间的等待过程可能会很漫长。TCP还有一个拥塞控制机制，当源和目的主机之间的一条或多条链路变得极度拥塞的时候，TCP就会遏制运输层TCP发送方，来解决拥塞情况.</p>
+</li>
+<li><p>无需连接建立</p>
+<p>UDP发送数据的时候不经过任何准备，直接将数据打包进报文段然后传递给网络层即可，而TCP需要和目的主机间建立连接，即三次握手，UDP少去了建立连接的时延。</p>
+</li>
+<li><p>无连接状态</p>
+<p>TCP在端系统中需要维护连接状态，因为TCP需要提供可靠的数据传输服务和拥塞控制服务，而UDP不需要维护连接状态，所以说，有些应用程序使用UDP一般能支持更多的在线用户.</p>
+</li>
+<li><p>分组首部开销小</p>
+<p>TCP每个报文段含有20字节的首部开销，而UDP只有8字节的首部开销.</p>
+</li>
+</ul>
+<h3 id="2-2-UDP报文段结构"><a href="#2-2-UDP报文段结构" class="headerlink" title="2.2 UDP报文段结构"></a>2.2 UDP报文段结构</h3><p><img src="/../image/format,png-20230309230439961.png" alt="UDP 头部格式"></p>
+<p>UDP首部只有4个字段，每个字段由两个字节组成，一共8个字节。</p>
+<p>通过端口号可以使目的主机执行多路分解功能，即将数据交给相应的进程</p>
+<p>长度字段指示了在UDP报文段中的字节数(首部加数据)</p>
+<p>校验和用来供接收方检查该报文段是否出现差错，算法：将UDP报文段中的所有16比特字的和进行反码，求和时遇到的溢出都回卷。</p>
+<p>虽然UDP提供差错检验，但它对差错恢复无能为力。UDP的某种实现只是丢弃受损的报文段</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2>
                 
-                
-                <a href="/categories/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2%E5%AE%9E%E9%AA%8C/" title="网络攻防实验: 6">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #FEF9E7;">网络攻防实验
-                        <span class="tag-length">6</span>
-                    </span>
-                </a>
-                
-                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">大佬带带我</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://yvzha0.github.io/2024/04/02/ji-suan-ji-wang-luo-ji-chu-zhi-chuan-shu-ceng/">https://yvzha0.github.io/2024/04/02/ji-suan-ji-wang-luo-ji-chu-zhi-chuan-shu-ceng/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">大佬带带我</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+                                    <span class="chip bg-color">计算机网络</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
 
     
 
-    <article id="articles" class="container articles">
-        <div class="row tags-posts">
-            
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2024/03/31/li-kou-shua-ti-ji-lu-zhan-yu-dui-lie-pian/">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="力扣刷题记录——栈与队列篇(更新中)">
-                            
-                            <span class="card-title">力扣刷题记录——栈与队列篇(更新中)</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                2024-3.31232. 用栈实现队列题目要求请你仅使用两个栈实现先入先出队列。队列应当支持一般队列支持的所有操作（push、pop、peek、empty）：
-实现 MyQueue 类：
+    
 
-void push(int x) 将元素 x 推
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2024/04/02/ji-suan-ji-wang-luo-ji-chu-zhi-chuan-shu-ceng/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="计算机网络基础之传输层（学习中）">
+                        
+                        <span class="card-title">计算机网络基础之传输层（学习中）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
                             
-                        </div>
-                        <div class="publish-info">
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-02
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    计算机基础
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+                        <span class="chip bg-color">计算机网络</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2024/03/31/li-kou-shua-ti-ji-lu-zhan-yu-dui-lie-pian/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="力扣刷题记录——栈与队列篇(更新中)">
+                        
+                        <span class="card-title">力扣刷题记录——栈与队列篇(更新中)</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2024-03-31
                             </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" class="post-category">
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" class="post-category">
                                     力扣刷题记录
                                 </a>
-                                
-                                
-                            </span>
-                        </div>
+                            
+                            
+                        </span>
                     </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/">
-                            <span class="chip bg-color">算法学习</span>
-                        </a>
-                        
-                        <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">
-                            <span class="chip bg-color">哈希表</span>
-                        </a>
-                        
-                    </div>
-                    
                 </div>
-            </div>
-            
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2024/03/25/li-kou-shua-ti-ji-lu-ha-xi-biao-pian/">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="力扣刷题记录——哈希表篇">
-                            
-                            <span class="card-title">力扣刷题记录——哈希表篇</span>
-                        </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">算法学习</span>
                     </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                2024-3-25706. 设计哈希映射题目要求不使用任何内建的哈希表库设计一个哈希映射（HashMap）。
-实现 MyHashMap 类：
-
-MyHashMap() 用空映射初始化对象
-void put(int key, int valu
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-25
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" class="post-category">
-                                    力扣刷题记录
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
                     
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/">
-                            <span class="chip bg-color">算法学习</span>
-                        </a>
-                        
-                        <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">
-                            <span class="chip bg-color">哈希表</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2024/03/18/li-kou-shua-ti-ji-lu-lian-biao-pian/">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="力扣刷题记录——链表篇">
-                            
-                            <span class="card-title">力扣刷题记录——链表篇</span>
-                        </div>
+                    <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">
+                        <span class="chip bg-color">哈希表</span>
                     </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                2024-3-18707. 设计链表题目要求你可以选择使用单链表或者双链表，设计并实现自己的链表。
-单链表中的节点应该具备两个属性：val 和 next 。val 是当前节点的值，next 是指向下一个节点的指针/引用。
-如果是双向链表，则
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-18
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" class="post-category">
-                                    力扣刷题记录
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/">
-                            <span class="chip bg-color">算法学习</span>
-                        </a>
-                        
-                        <a href="/tags/%E9%93%BE%E8%A1%A8/">
-                            <span class="chip bg-color">链表</span>
-                        </a>
-                        
-                    </div>
                     
                 </div>
+                
             </div>
-            
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2024/03/10/li-kou-shua-ti-ji-lu-shu-zu-pian/">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="力扣刷题记录——数组篇">
-                            
-                            <span class="card-title">力扣刷题记录——数组篇</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                2024-3-10453. 最小操作次数使数组元素相等题目要求给你一个长度为 n 的整数数组，每次操作将会使 n - 1 个元素增加 1 。返回让数组所有元素相等的最小操作次数。
-示例 1：
-输入：nums = [1,2,3]
-输出：3
-解
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-10
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" class="post-category">
-                                    力扣刷题记录
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/">
-                            <span class="chip bg-color">算法学习</span>
-                        </a>
-                        
-                        <a href="/tags/%E6%95%B0%E7%BB%84/">
-                            <span class="chip bg-color">数组</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
         </div>
-    </article>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
 </main>
 
 

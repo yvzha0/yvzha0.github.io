@@ -6,7 +6,7 @@
   <link href="https://yvzha0.github.io/atom.xml" rel="self"/>
   
   <link href="https://yvzha0.github.io/"/>
-  <updated>2024-03-31T08:15:52.891Z</updated>
+  <updated>2024-04-03T09:29:25.407Z</updated>
   <id>https://yvzha0.github.io/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>计算机网络基础之传输层（学习中）</title>
+    <link href="https://yvzha0.github.io/2024/04/02/ji-suan-ji-wang-luo-ji-chu-zhi-chuan-shu-ceng/"/>
+    <id>https://yvzha0.github.io/2024/04/02/ji-suan-ji-wang-luo-ji-chu-zhi-chuan-shu-ceng/</id>
+    <published>2024-04-02T14:56:00.000Z</published>
+    <updated>2024-04-03T09:29:25.407Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-TCP与UDP特点&quot;&gt;&lt;a href=&quot;#1-TCP与UDP特点&quot; class=&quot;headerlink&quot; title=&quot;1. TCP与UDP特点&quot;&gt;&lt;/a&gt;1. TCP与UDP特点&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;用户数据报协议 UDP（User Datagram</summary>
+        
+      
+    
+    
+    
+    <category term="计算机基础" scheme="https://yvzha0.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="计算机网络" scheme="https://yvzha0.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>力扣刷题记录——栈与队列篇(更新中)</title>
     <link href="https://yvzha0.github.io/2024/03/31/li-kou-shua-ti-ji-lu-zhan-yu-dui-lie-pian/"/>
     <id>https://yvzha0.github.io/2024/03/31/li-kou-shua-ti-ji-lu-zhan-yu-dui-lie-pian/</id>
     <published>2024-03-31T04:52:36.000Z</published>
-    <updated>2024-03-31T08:15:52.891Z</updated>
+    <updated>2024-04-03T07:53:44.193Z</updated>
     
     
       
@@ -75,7 +101,7 @@
     <link href="https://yvzha0.github.io/2024/03/19/ji-suan-ji-wang-luo-ji-chu-zhi-ying-yong-ceng/"/>
     <id>https://yvzha0.github.io/2024/03/19/ji-suan-ji-wang-luo-ji-chu-zhi-ying-yong-ceng/</id>
     <published>2024-03-19T06:09:59.000Z</published>
-    <updated>2024-03-21T04:37:29.729Z</updated>
+    <updated>2024-04-03T08:47:25.001Z</updated>
     
     
       
