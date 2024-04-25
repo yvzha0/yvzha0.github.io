@@ -5,11 +5,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="力扣刷题记录——数组篇, Blog Of yvzha0">
-    <meta name="description" content="2024-3-10453. 最小操作次数使数组元素相等题目要求给你一个长度为 n 的整数数组，每次操作将会使 n - 1 个元素增加 1 。返回让数组所有元素相等的最小操作次数。
+    <meta name="description" content="2024-3-10数组的改变、移动453. 最小操作次数使数组元素相等题目要求给你一个长度为 n 的整数数组，每次操作将会使 n - 1 个元素增加 1 。返回让数组所有元素相等的最小操作次数。
 示例 1：
-输入：nums = [1,2,3]
-输出：3
-解">
+输入：nums = [1,2,3">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -406,7 +404,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-03-26
+                    2024-04-25
                 </div>
                 
 
@@ -443,7 +441,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="2024-3-10"><a href="#2024-3-10" class="headerlink" title="2024-3-10"></a>2024-3-10</h1><h2 id="453-最小操作次数使数组元素相等"><a href="#453-最小操作次数使数组元素相等" class="headerlink" title="453. 最小操作次数使数组元素相等"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-moves-to-equal-array-elements/">453. 最小操作次数使数组元素相等</a></h2><h3 id="题目要求"><a href="#题目要求" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你一个长度为 <code>n</code> 的整数数组，每次操作将会使 <code>n - 1</code> 个元素增加 <code>1</code> 。返回让数组所有元素相等的最小操作次数。</p>
+                <h1 id="2024-3-10"><a href="#2024-3-10" class="headerlink" title="2024-3-10"></a>2024-3-10</h1><h2 id="数组的改变、移动"><a href="#数组的改变、移动" class="headerlink" title="数组的改变、移动"></a>数组的改变、移动</h2><h3 id="453-最小操作次数使数组元素相等"><a href="#453-最小操作次数使数组元素相等" class="headerlink" title="453. 最小操作次数使数组元素相等"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-moves-to-equal-array-elements/">453. 最小操作次数使数组元素相等</a></h3><h4 id="题目要求"><a href="#题目要求" class="headerlink" title="题目要求"></a>题目要求</h4><p>给你一个长度为 <code>n</code> 的整数数组，每次操作将会使 <code>n - 1</code> 个元素增加 <code>1</code> 。返回让数组所有元素相等的最小操作次数。</p>
 <p><strong>示例 1：</strong></p>
 <pre class="line-numbers language-none"><code class="language-none">输入：nums = [1,2,3]
 输出：3
@@ -462,7 +460,7 @@
 <li><code>-109 &lt;= nums[i] &lt;= 109</code></li>
 <li>答案保证符合 <strong>32-bit</strong> 整数</li>
 </ul>
-<h3 id="个人解答"><a href="#个人解答" class="headerlink" title="个人解答"></a>个人解答</h3><ol>
+<h4 id="个人解答"><a href="#个人解答" class="headerlink" title="个人解答"></a>个人解答</h4><ol>
 <li>使 <code>n - 1</code> 个元素增加 <code>1</code>可以等价于使一个元素减少1，这样只需要将每个元素减少到数组中的最小的元素的值即可</li>
 <li>将数组中所有元素都减少到最小元素所花费的步数加起来就是最少的步数</li>
 </ol>
@@ -488,7 +486,7 @@
 
 
 
-<h2 id="665-非递减数列"><a href="#665-非递减数列" class="headerlink" title="665. 非递减数列"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/non-decreasing-array/">665. 非递减数列</a></h2><h3 id="题目要求："><a href="#题目要求：" class="headerlink" title="题目要求："></a>题目要求：</h3><p>给你一个长度为 <code>n</code> 的整数数组 <code>nums</code> ，请你判断在 <strong>最多</strong> 改变 <code>1</code> 个元素的情况下，该数组能否变成一个非递减数列。</p>
+<h3 id="665-非递减数列"><a href="#665-非递减数列" class="headerlink" title="665. 非递减数列"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/non-decreasing-array/">665. 非递减数列</a></h3><h4 id="题目要求："><a href="#题目要求：" class="headerlink" title="题目要求："></a>题目要求：</h4><p>给你一个长度为 <code>n</code> 的整数数组 <code>nums</code> ，请你判断在 <strong>最多</strong> 改变 <code>1</code> 个元素的情况下，该数组能否变成一个非递减数列。</p>
 <p>我们是这样定义一个非递减数列的： 对于数组中任意的 <code>i</code> <code>(0 &lt;= i &lt;= n-2)</code>，总满足 <code>nums[i] &lt;= nums[i + 1]</code>。</p>
 <p><strong>示例 1:</strong></p>
 <pre class="line-numbers language-none"><code class="language-none">输入: nums = [4,2,3]
@@ -506,7 +504,7 @@
 <li><code>1 &lt;= n &lt;= 104</code></li>
 <li><code>-105 &lt;= nums[i] &lt;= 105</code></li>
 </ul>
-<h3 id="个人解答-1"><a href="#个人解答-1" class="headerlink" title="个人解答"></a>个人解答</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<h4 id="个人解答-1"><a href="#个人解答-1" class="headerlink" title="个人解答"></a>个人解答</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">checkPossibility</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
         <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>nums<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
@@ -538,7 +536,7 @@
 <li>如果这时是数组的第一个元素，则操作是将其变得极小或者让nums[1]=nums[0]</li>
 <li>如果不是第一个元素，对当前元素的操作只能是将当前元素变成前一个元素或者将下一个元素变成当前元素，比较i-1个元素和i+1个元素的大小，如果i-1个元素比i+1个元素大的话，只能将下一个元素变成当前元素；反之就只能将当前元素变成前一个元素</li>
 </ol>
-<h2 id="283-移动零"><a href="#283-移动零" class="headerlink" title="283. 移动零"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/move-zeroes/">283. 移动零</a></h2><h3 id="题目要求-1"><a href="#题目要求-1" class="headerlink" title="题目要求"></a>题目要求</h3><p>给定一个数组 <code>nums</code>，编写一个函数将所有 <code>0</code> 移动到数组的末尾，同时保持非零元素的相对顺序。</p>
+<h3 id="283-移动零"><a href="#283-移动零" class="headerlink" title="283. 移动零"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/move-zeroes/">283. 移动零</a></h3><h4 id="题目要求-1"><a href="#题目要求-1" class="headerlink" title="题目要求"></a>题目要求</h4><p>给定一个数组 <code>nums</code>，编写一个函数将所有 <code>0</code> 移动到数组的末尾，同时保持非零元素的相对顺序。</p>
 <p><strong>请注意</strong> ，必须在不复制数组的情况下原地对数组进行操作。</p>
 <p><strong>示例 1:</strong></p>
 <pre class="line-numbers language-none"><code class="language-none">输入: nums = [0,1,0,3,12]
@@ -553,7 +551,7 @@
 <li><code>1 &lt;= nums.length &lt;= 104</code></li>
 <li><code>-231 &lt;= nums[i] &lt;= 231 - 1</code></li>
 </ul>
-<h3 id="个人解答-2"><a href="#个人解答-2" class="headerlink" title="个人解答"></a>个人解答</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<h4 id="个人解答-2"><a href="#个人解答-2" class="headerlink" title="个人解答"></a>个人解答</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">moveZeroes</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
         <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
@@ -570,7 +568,7 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="189-轮转数组"><a href="#189-轮转数组" class="headerlink" title="189. 轮转数组"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/rotate-array/">189. 轮转数组</a></h2><h3 id="题目要求-2"><a href="#题目要求-2" class="headerlink" title="题目要求"></a>题目要求</h3><p>给定一个整数数组 <code>nums</code>，将数组中的元素向右轮转 <code>k</code> 个位置，其中 <code>k</code> 是非负数。</p>
+<h2 id="数组的旋转"><a href="#数组的旋转" class="headerlink" title="数组的旋转"></a>数组的旋转</h2><h3 id="189-轮转数组"><a href="#189-轮转数组" class="headerlink" title="189. 轮转数组"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/rotate-array/">189. 轮转数组</a></h3><h4 id="题目要求-2"><a href="#题目要求-2" class="headerlink" title="题目要求"></a>题目要求</h4><p>给定一个整数数组 <code>nums</code>，将数组中的元素向右轮转 <code>k</code> 个位置，其中 <code>k</code> 是非负数。</p>
 <p><strong>示例 1:</strong></p>
 <pre class="line-numbers language-none"><code class="language-none">输入: nums = [1,2,3,4,5,6,7], k = 3
 输出: [5,6,7,1,2,3,4]
@@ -592,7 +590,7 @@
 <li><code>-231 &lt;= nums[i] &lt;= 231 - 1</code></li>
 <li><code>0 &lt;= k &lt;= 105</code></li>
 </ul>
-<h3 id="个人解答-3"><a href="#个人解答-3" class="headerlink" title="个人解答"></a>个人解答</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<h4 id="个人解答-3"><a href="#个人解答-3" class="headerlink" title="个人解答"></a>个人解答</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">rotate</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> k<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> a <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>nums<span class="token punctuation">.</span>length<span class="token punctuation">]</span><span class="token punctuation">;</span>
         k <span class="token operator">=</span> k<span class="token operator">%</span>nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
@@ -610,7 +608,7 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="396-旋转函数"><a href="#396-旋转函数" class="headerlink" title="396. 旋转函数"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/rotate-function/">396. 旋转函数</a></h2><h3 id="题目要求-3"><a href="#题目要求-3" class="headerlink" title="题目要求"></a>题目要求</h3><p>给定一个长度为 <code>n</code> 的整数数组 <code>nums</code> 。</p>
+<h3 id="396-旋转函数"><a href="#396-旋转函数" class="headerlink" title="396. 旋转函数"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/rotate-function/">396. 旋转函数</a></h3><h4 id="题目要求-3"><a href="#题目要求-3" class="headerlink" title="题目要求"></a>题目要求</h4><p>给定一个长度为 <code>n</code> 的整数数组 <code>nums</code> 。</p>
 <p>假设 <code>arrk</code> 是数组 <code>nums</code> 顺时针旋转 <code>k</code> 个位置后的数组，我们定义 <code>nums</code> 的 <strong>旋转函数</strong> <code>F</code> 为：</p>
 <ul>
 <li><code>F(k) = 0 * arrk[0] + 1 * arrk[1] + ... + (n - 1) * arrk[n - 1]</code></li>
@@ -637,7 +635,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
 <li><code>1 &lt;= n &lt;= 105</code></li>
 <li><code>-100 &lt;= nums[i] &lt;= 100</code></li>
 </ul>
-<h3 id="个人解答-4"><a href="#个人解答-4" class="headerlink" title="个人解答"></a>个人解答</h3><ol>
+<h4 id="个人解答-4"><a href="#个人解答-4" class="headerlink" title="个人解答"></a>个人解答</h4><ol>
 <li><p>设数组nums的元素之和是count，长度为n</p>
 </li>
 <li><p><em>F</em>(0)=0×<em>nums</em>[0]+1×<em>nums</em>[1]+…+(<em>n</em>−1)×<em>nums</em>[<em>n</em>−1]</p>
@@ -667,7 +665,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="645-错误的集合"><a href="#645-错误的集合" class="headerlink" title="645. 错误的集合"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/set-mismatch/">645. 错误的集合</a></h2><h3 id="题目要求-4"><a href="#题目要求-4" class="headerlink" title="题目要求"></a>题目要求</h3><p>集合 <code>s</code> 包含从 <code>1</code> 到 <code>n</code> 的整数。不幸的是，因为数据错误，导致集合里面某一个数字复制了成了集合里面的另外一个数字的值，导致集合 <strong>丢失了一个数字</strong> 并且 <strong>有一个数字重复</strong> 。</p>
+<h2 id="统计数组中的元素"><a href="#统计数组中的元素" class="headerlink" title="统计数组中的元素"></a>统计数组中的元素</h2><h3 id="645-错误的集合"><a href="#645-错误的集合" class="headerlink" title="645. 错误的集合"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/set-mismatch/">645. 错误的集合</a></h3><h4 id="题目要求-4"><a href="#题目要求-4" class="headerlink" title="题目要求"></a>题目要求</h4><p>集合 <code>s</code> 包含从 <code>1</code> 到 <code>n</code> 的整数。不幸的是，因为数据错误，导致集合里面某一个数字复制了成了集合里面的另外一个数字的值，导致集合 <strong>丢失了一个数字</strong> 并且 <strong>有一个数字重复</strong> 。</p>
 <p>给定一个数组 <code>nums</code> 代表了集合 <code>S</code> 发生错误后的结果。</p>
 <p>请你找出重复出现的整数，再找到丢失的整数，将它们以数组的形式返回。</p>
 <p><strong>示例 1：</strong></p>
@@ -683,7 +681,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
 <li><code>2 &lt;= nums.length &lt;= 104</code></li>
 <li><code>1 &lt;= nums[i] &lt;= 104</code></li>
 </ul>
-<h3 id="个人解答-5"><a href="#个人解答-5" class="headerlink" title="个人解答"></a>个人解答</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<h4 id="个人解答-5"><a href="#个人解答-5" class="headerlink" title="个人解答"></a>个人解答</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">findErrorNums</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> result <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
         <span class="token keyword">int</span> len <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
@@ -703,7 +701,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="1991-找到数组的中间位置"><a href="#1991-找到数组的中间位置" class="headerlink" title="1991. 找到数组的中间位置"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-the-middle-index-in-array/">1991. 找到数组的中间位置</a></h2><h3 id="题目要求-5"><a href="#题目要求-5" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> ，请你找到 <strong>最左边</strong> 的中间位置 <code>middleIndex</code> （也就是所有可能中间位置下标最小的一个）。</p>
+<h3 id="1991-找到数组的中间位置"><a href="#1991-找到数组的中间位置" class="headerlink" title="1991. 找到数组的中间位置"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-the-middle-index-in-array/">1991. 找到数组的中间位置</a></h3><h4 id="题目要求-5"><a href="#题目要求-5" class="headerlink" title="题目要求"></a>题目要求</h4><p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> ，请你找到 <strong>最左边</strong> 的中间位置 <code>middleIndex</code> （也就是所有可能中间位置下标最小的一个）。</p>
 <p>中间位置 <code>middleIndex</code> 是满足 <code>nums[0] + nums[1] + ... + nums[middleIndex-1] == nums[middleIndex+1] + nums[middleIndex+2] + ... + nums[nums.length-1]</code> 的数组下标。</p>
 <p>如果 <code>middleIndex == 0</code> ，左边部分的和定义为 <code>0</code> 。类似的，如果 <code>middleIndex == nums.length - 1</code> ，右边部分的和定义为 <code>0</code> 。</p>
 <p>请你返回满足上述条件 <strong>最左边</strong> 的 <code>middleIndex</code> ，如果不存在这样的中间位置，请你返回 <code>-1</code> 。</p>
@@ -739,7 +737,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
 <li><code>1 &lt;= nums.length &lt;= 100</code></li>
 <li><code>-1000 &lt;= nums[i] &lt;= 1000</code></li>
 </ul>
-<h3 id="个人解答-6"><a href="#个人解答-6" class="headerlink" title="个人解答"></a>个人解答</h3><ol>
+<h4 id="个人解答-6"><a href="#个人解答-6" class="headerlink" title="个人解答"></a>个人解答</h4><ol>
 <li>用num_l和num_r表示左右元素的和</li>
 <li>先算出当下标为0时的右侧元素的和，即从num[1]到nums[n]的和，此时的左侧元素的和为0</li>
 <li>从下标为0的元素开始遍历，判断左右元素的和是否相等，若相等则当前下标就是中间位置，若不相等则看下一个位置，同时左右元素的和也做变换</li>
@@ -768,7 +766,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="2024-3-11"><a href="#2024-3-11" class="headerlink" title="2024-3-11"></a>2024-3-11</h1><h2 id="697-数组的度"><a href="#697-数组的度" class="headerlink" title="697. 数组的度"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/degree-of-an-array/">697. 数组的度</a></h2><h3 id="题目要求-6"><a href="#题目要求-6" class="headerlink" title="题目要求"></a>题目要求</h3><p>给定一个非空且只包含非负数的整数数组 <code>nums</code>，数组的 <strong>度</strong> 的定义是指数组里任一元素出现频数的最大值。</p>
+<h1 id="2024-3-11"><a href="#2024-3-11" class="headerlink" title="2024-3-11"></a>2024-3-11</h1><h3 id="697-数组的度"><a href="#697-数组的度" class="headerlink" title="697. 数组的度"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/degree-of-an-array/">697. 数组的度</a></h3><h4 id="题目要求-6"><a href="#题目要求-6" class="headerlink" title="题目要求"></a>题目要求</h4><p>给定一个非空且只包含非负数的整数数组 <code>nums</code>，数组的 <strong>度</strong> 的定义是指数组里任一元素出现频数的最大值。</p>
 <p>你的任务是在 <code>nums</code> 中找到与 <code>nums</code> 拥有相同大小的度的最短连续子数组，返回其长度。</p>
 <p><strong>示例 1：</strong></p>
 <pre class="line-numbers language-none"><code class="language-none">输入：nums = [1,2,2,3,1]
@@ -791,7 +789,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
 <li><code>nums.length</code> 在 <code>1</code> 到 <code>50,000</code> 范围内。</li>
 <li><code>nums[i]</code> 是一个在 <code>0</code> 到 <code>49,999</code> 范围内的整数。</li>
 </ul>
-<h3 id="个人解答-7"><a href="#个人解答-7" class="headerlink" title="个人解答"></a>个人解答</h3><ol>
+<h4 id="个人解答-7"><a href="#个人解答-7" class="headerlink" title="个人解答"></a>个人解答</h4><ol>
 <li><strong>计算原数组的度</strong>：通过计算每个元素在数组中出现的次数，找出出现频率最高的一个或多个元素。数组的“度”就是这个最高的频率。可以用哈希表来记录。</li>
 <li><strong>找到具有相同度的最短子数组</strong>：对于每一个出现频率最高的元素，我们找到它在原数组中的第一次出现和最后一次出现的位置。这些位置之间的子数组即包含了与原数组相同的度。我们需要找到长度最短的这样的子数组。</li>
 </ol>
@@ -827,7 +825,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="448-找到所有数组中消失的数字"><a href="#448-找到所有数组中消失的数字" class="headerlink" title="448. 找到所有数组中消失的数字"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-all-numbers-disappeared-in-an-array/">448. 找到所有数组中消失的数字</a></h2><h3 id="题目要求-7"><a href="#题目要求-7" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你一个含 <code>n</code> 个整数的数组 <code>nums</code> ，其中 <code>nums[i]</code> 在区间 <code>[1, n]</code> 内。请你找出所有在 <code>[1, n]</code> 范围内但没有出现在 <code>nums</code> 中的数字，并以数组的形式返回结果。</p>
+<h3 id="448-找到所有数组中消失的数字"><a href="#448-找到所有数组中消失的数字" class="headerlink" title="448. 找到所有数组中消失的数字"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-all-numbers-disappeared-in-an-array/">448. 找到所有数组中消失的数字</a></h3><h4 id="题目要求-7"><a href="#题目要求-7" class="headerlink" title="题目要求"></a>题目要求</h4><p>给你一个含 <code>n</code> 个整数的数组 <code>nums</code> ，其中 <code>nums[i]</code> 在区间 <code>[1, n]</code> 内。请你找出所有在 <code>[1, n]</code> 范围内但没有出现在 <code>nums</code> 中的数字，并以数组的形式返回结果。</p>
 <p><strong>示例 1：</strong></p>
 <pre class="line-numbers language-none"><code class="language-none">输入：nums = [4,3,2,7,8,2,3,1]
 输出：[5,6]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
@@ -843,7 +841,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
 <li><code>1 &lt;= nums[i] &lt;= n</code></li>
 </ul>
 <p><strong>进阶：</strong>你能在不使用额外空间且时间复杂度为 <code>O(n)</code> 的情况下解决这个问题吗? 你可以假定返回的数组不算在额外空间内。</p>
-<h3 id="个人解答-8"><a href="#个人解答-8" class="headerlink" title="个人解答"></a>个人解答</h3><ol>
+<h4 id="个人解答-8"><a href="#个人解答-8" class="headerlink" title="个人解答"></a>个人解答</h4><ol>
 <li>首先遍历数组，把当前元素放到对应位置，比如nums[0]为7，那么应该放到第七个位置，也就是下标为6的位置</li>
 <li>把两个元素交换，然后再判断是否需要换位置，直到元素和当前位置对应或者对应位置元素已对应，就到下个位置</li>
 <li>这样到最后就应该把元素和位置对应了起来，找出不对应的位置即可</li>
@@ -874,7 +872,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="官方解答"><a href="#官方解答" class="headerlink" title="官方解答"></a>官方解答</h3><p>官方用了当前的数组充当哈希表，把元素的对应位置的值加n，最后元素小于n的位置就是答案</p>
+<h4 id="官方解答"><a href="#官方解答" class="headerlink" title="官方解答"></a>官方解答</h4><p>官方用了当前的数组充当哈希表，把元素的对应位置的值加n，最后元素小于n的位置就是答案</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> <span class="token function">findDisappearedNumbers</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">int</span> n <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
@@ -897,7 +895,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
 来源：力扣（<span class="token class-name">LeetCode</span>）
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="442-数组中重复的数据"><a href="#442-数组中重复的数据" class="headerlink" title="442. 数组中重复的数据"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-all-duplicates-in-an-array/">442. 数组中重复的数据</a></h2><h3 id="题目要求-8"><a href="#题目要求-8" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你一个长度为 <code>n</code> 的整数数组 <code>nums</code> ，其中 <code>nums</code> 的所有整数都在范围 <code>[1, n]</code> 内，且每个整数出现 <strong>一次</strong> 或 <strong>两次</strong> 。请你找出所有出现 <strong>两次</strong> 的整数，并以数组形式返回。</p>
+<h3 id="442-数组中重复的数据"><a href="#442-数组中重复的数据" class="headerlink" title="442. 数组中重复的数据"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-all-duplicates-in-an-array/">442. 数组中重复的数据</a></h3><h4 id="题目要求-8"><a href="#题目要求-8" class="headerlink" title="题目要求"></a>题目要求</h4><p>给你一个长度为 <code>n</code> 的整数数组 <code>nums</code> ，其中 <code>nums</code> 的所有整数都在范围 <code>[1, n]</code> 内，且每个整数出现 <strong>一次</strong> 或 <strong>两次</strong> 。请你找出所有出现 <strong>两次</strong> 的整数，并以数组形式返回。</p>
 <p>你必须设计并实现一个时间复杂度为 <code>O(n)</code> 且仅使用常量额外空间的算法解决此问题。</p>
 <p><strong>示例 1：</strong></p>
 <pre class="line-numbers language-none"><code class="language-none">输入：nums = [4,3,2,7,8,2,3,1]
@@ -918,7 +916,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
 <li><code>1 &lt;= nums[i] &lt;= n</code></li>
 <li><code>nums</code> 中的每个元素出现 <strong>一次</strong> 或 <strong>两次</strong></li>
 </ul>
-<h3 id="个人解答-9"><a href="#个人解答-9" class="headerlink" title="个人解答"></a>个人解答</h3><p>和上一道题类似，用当前的数组充当哈希表，元素出现一次就把元素的对应位置的值加n，最后元素大于2n的位置就是答案</p>
+<h4 id="个人解答-9"><a href="#个人解答-9" class="headerlink" title="个人解答"></a>个人解答</h4><p>和上一道题类似，用当前的数组充当哈希表，元素出现一次就把元素的对应位置的值加n，最后元素大于2n的位置就是答案</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> <span class="token function">findDuplicates</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> result <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -939,7 +937,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="41-缺失的第一个正数"><a href="#41-缺失的第一个正数" class="headerlink" title="41. 缺失的第一个正数"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/first-missing-positive/">41. 缺失的第一个正数</a></h2><h3 id="题目要求-9"><a href="#题目要求-9" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你一个未排序的整数数组 <code>nums</code> ，请你找出其中没有出现的最小的正整数。</p>
+<h3 id="41-缺失的第一个正数"><a href="#41-缺失的第一个正数" class="headerlink" title="41. 缺失的第一个正数"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/first-missing-positive/">41. 缺失的第一个正数</a></h3><h4 id="题目要求-9"><a href="#题目要求-9" class="headerlink" title="题目要求"></a>题目要求</h4><p>给你一个未排序的整数数组 <code>nums</code> ，请你找出其中没有出现的最小的正整数。</p>
 <p>请你实现时间复杂度为 <code>O(n)</code> 并且只使用常数级别额外空间的解决方案。</p>
 <p><strong>示例 1：</strong></p>
 <pre class="line-numbers language-none"><code class="language-none">输入：nums = [1,2,0]
@@ -961,7 +959,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
 <li><code>1 &lt;= nums.length &lt;= 105</code></li>
 <li><code>-231 &lt;= nums[i] &lt;= 231 - 1</code></li>
 </ul>
-<h3 id="个人解答-10"><a href="#个人解答-10" class="headerlink" title="个人解答"></a>个人解答</h3><p>思路类似于上面448题我的思路，把元素放到对应的位置，如果比n大或者小于等于0，就跳过，然后返回不对应的位置即可，如果都对应就返回最后一个元素加一</p>
+<h4 id="个人解答-10"><a href="#个人解答-10" class="headerlink" title="个人解答"></a>个人解答</h4><p>思路类似于上面448题我的思路，把元素放到对应的位置，如果比n大或者小于等于0，就跳过，然后返回不对应的位置即可，如果都对应就返回最后一个元素加一</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">HashMap</span></span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Map</span></span><span class="token punctuation">;</span>
 
@@ -2493,7 +2491,7 @@ numMatrix.sumRegion(1, 2, 2, 4); // return 12 (蓝色矩形框的元素总和)<s
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">89.4k</span>
+                        class="white-color">98.5k</span>
             
             
             
