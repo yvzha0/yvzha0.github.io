@@ -985,7 +985,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="2024-3-12"><a href="#2024-3-12" class="headerlink" title="2024-3-12"></a>2024-3-12</h1><h2 id="485-最大连续-1-的个数"><a href="#485-最大连续-1-的个数" class="headerlink" title="485. 最大连续 1 的个数"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/max-consecutive-ones/">485. 最大连续 1 的个数</a></h2><h3 id="题目要求-10"><a href="#题目要求-10" class="headerlink" title="题目要求"></a>题目要求</h3><p>给定一个二进制数组 <code>nums</code> ， 计算其中最大连续 <code>1</code> 的个数。</p>
+<h1 id="2024-3-12"><a href="#2024-3-12" class="headerlink" title="2024-3-12"></a>2024-3-12</h1><h2 id="数组的遍历"><a href="#数组的遍历" class="headerlink" title="数组的遍历"></a>数组的遍历</h2><h3 id="485-最大连续-1-的个数"><a href="#485-最大连续-1-的个数" class="headerlink" title="485. 最大连续 1 的个数"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/max-consecutive-ones/">485. 最大连续 1 的个数</a></h3><h4 id="题目要求-10"><a href="#题目要求-10" class="headerlink" title="题目要求"></a>题目要求</h4><p>给定一个二进制数组 <code>nums</code> ， 计算其中最大连续 <code>1</code> 的个数。</p>
 <p><strong>示例 1：</strong></p>
 <pre class="line-numbers language-none"><code class="language-none">输入：nums = [1,1,0,1,1,1]
 输出：3
@@ -1000,7 +1000,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
 <li><code>1 &lt;= nums.length &lt;= 105</code></li>
 <li><code>nums[i]</code> 不是 <code>0</code> 就是 <code>1</code>.</li>
 </ul>
-<h3 id="个人解答-11"><a href="#个人解答-11" class="headerlink" title="个人解答"></a>个人解答</h3><p>遍历数组，记录连续出现1的个数和最大连续出现1的个数，如果遇到0，就去比较哪个大，并且根据结果修改最大值，最后返回max和temp的最大值，因为有可能到末尾也是1。</p>
+<h4 id="个人解答-11"><a href="#个人解答-11" class="headerlink" title="个人解答"></a>个人解答</h4><p>遍历数组，记录连续出现1的个数和最大连续出现1的个数，如果遇到0，就去比较哪个大，并且根据结果修改最大值，最后返回max和temp的最大值，因为有可能到末尾也是1。</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">findMaxConsecutiveOnes</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         
@@ -1017,7 +1017,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="495-提莫攻击"><a href="#495-提莫攻击" class="headerlink" title="495. 提莫攻击"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/teemo-attacking/">495. 提莫攻击</a></h2><h3 id="题目要求-11"><a href="#题目要求-11" class="headerlink" title="题目要求"></a>题目要求</h3><p>在《英雄联盟》的世界中，有一个叫 “提莫” 的英雄。他的攻击可以让敌方英雄艾希（编者注：寒冰射手）进入中毒状态。</p>
+<h3 id="495-提莫攻击"><a href="#495-提莫攻击" class="headerlink" title="495. 提莫攻击"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/teemo-attacking/">495. 提莫攻击</a></h3><h4 id="题目要求-11"><a href="#题目要求-11" class="headerlink" title="题目要求"></a>题目要求</h4><p>在《英雄联盟》的世界中，有一个叫 “提莫” 的英雄。他的攻击可以让敌方英雄艾希（编者注：寒冰射手）进入中毒状态。</p>
 <p>当提莫攻击艾希，艾希的中毒状态正好持续 <code>duration</code> 秒。</p>
 <p>正式地讲，提莫在 <code>t</code> 发起攻击意味着艾希在时间区间 <code>[t, t + duration - 1]</code>（含 <code>t</code> 和 <code>t + duration - 1</code>）处于中毒状态。如果提莫在中毒影响结束 <strong>前</strong> 再次攻击，中毒状态计时器将会 <strong>重置</strong> ，在新的攻击之后，中毒影响将会在 <code>duration</code> 秒后结束。</p>
 <p>给你一个 <strong>非递减</strong> 的整数数组 <code>timeSeries</code> ，其中 <code>timeSeries[i]</code> 表示提莫在 <code>timeSeries[i]</code> 秒时对艾希发起攻击，以及一个表示中毒持续时间的整数 <code>duration</code> 。</p>
@@ -1044,7 +1044,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
 <li><code>0 &lt;= timeSeries[i], duration &lt;= 107</code></li>
 <li><code>timeSeries</code> 按 <strong>非递减</strong> 顺序排列</li>
 </ul>
-<h3 id="个人解答-12"><a href="#个人解答-12" class="headerlink" title="个人解答"></a>个人解答</h3><ol>
+<h4 id="个人解答-12"><a href="#个人解答-12" class="headerlink" title="个人解答"></a>个人解答</h4><ol>
 <li>记录当前中毒结束的时间；</li>
 <li>如果受到攻击的时间大于等于中毒结束的时间，那么中毒持续时间就可以加duration；</li>
 <li>如果受到攻击的时间小于中毒结束的时间，那么中毒持续时间可以加的就是这次结束时间减去上次结束时间。</li>
@@ -1068,7 +1068,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="56-合并区间"><a href="#56-合并区间" class="headerlink" title="56. 合并区间"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/merge-intervals/">56. 合并区间</a></h2><h3 id="题目要求-12"><a href="#题目要求-12" class="headerlink" title="题目要求"></a>题目要求</h3><p>以数组 <code>intervals</code> 表示若干个区间的集合，其中单个区间为 <code>intervals[i] = [starti, endi]</code> 。请你合并所有重叠的区间，并返回 <em>一个不重叠的区间数组，该数组需恰好覆盖输入中的所有区间</em> 。</p>
+<h3 id="56-合并区间"><a href="#56-合并区间" class="headerlink" title="56. 合并区间"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/merge-intervals/">56. 合并区间</a></h3><h4 id="题目要求-12"><a href="#题目要求-12" class="headerlink" title="题目要求"></a>题目要求</h4><p>以数组 <code>intervals</code> 表示若干个区间的集合，其中单个区间为 <code>intervals[i] = [starti, endi]</code> 。请你合并所有重叠的区间，并返回 <em>一个不重叠的区间数组，该数组需恰好覆盖输入中的所有区间</em> 。</p>
 <p><strong>示例 1：</strong></p>
 <pre class="line-numbers language-none"><code class="language-none">输入：intervals = [[1,3],[2,6],[8,10],[15,18]]
 输出：[[1,6],[8,10],[15,18]]
@@ -1085,7 +1085,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
 <li><code>intervals[i].length == 2</code></li>
 <li><code>0 &lt;= starti &lt;= endi &lt;= 104</code></li>
 </ul>
-<h3 id="个人解答-13"><a href="#个人解答-13" class="headerlink" title="个人解答"></a>个人解答</h3><ol>
+<h4 id="个人解答-13"><a href="#个人解答-13" class="headerlink" title="个人解答"></a>个人解答</h4><ol>
 <li>将数组中的区间按照左边界升序排序</li>
 <li>把右边界大于第二个的左边界的区间合并，一直到最后</li>
 </ol>
@@ -1113,7 +1113,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="2024-3-13"><a href="#2024-3-13" class="headerlink" title="2024-3-13"></a>2024-3-13</h1><h2 id="414-第三大的数"><a href="#414-第三大的数" class="headerlink" title="414. 第三大的数"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/third-maximum-number/">414. 第三大的数</a></h2><h3 id="题目要求-13"><a href="#题目要求-13" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你一个非空数组，返回此数组中 <strong>第三大的数</strong> 。如果不存在，则返回数组中最大的数。</p>
+<h1 id="2024-3-13"><a href="#2024-3-13" class="headerlink" title="2024-3-13"></a>2024-3-13</h1><h3 id="414-第三大的数"><a href="#414-第三大的数" class="headerlink" title="414. 第三大的数"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/third-maximum-number/">414. 第三大的数</a></h3><h4 id="题目要求-13"><a href="#题目要求-13" class="headerlink" title="题目要求"></a>题目要求</h4><p>给你一个非空数组，返回此数组中 <strong>第三大的数</strong> 。如果不存在，则返回数组中最大的数。</p>
 <p><strong>示例 1：</strong></p>
 <pre class="line-numbers language-none"><code class="language-none">输入：[3, 2, 1]
 输出：1
@@ -1136,7 +1136,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
 <li><code>-231 &lt;= nums[i] &lt;= 231 - 1</code></li>
 </ul>
 <p><strong>进阶：</strong>你能设计一个时间复杂度 <code>O(n)</code> 的解决方案吗？</p>
-<h3 id="个人解答-14"><a href="#个人解答-14" class="headerlink" title="个人解答"></a>个人解答</h3><ol>
+<h4 id="个人解答-14"><a href="#个人解答-14" class="headerlink" title="个人解答"></a>个人解答</h4><ol>
 <li>设置3个极小数存储最大值，第二大值和第三大值，这里要用long而不是int，因为有输入刚好第三大值等于int类型的极小值。</li>
 <li>遍历数组，如果数组中当前元素大于最大值，就把三个数依次改变，第一个改成当前元素，第二个改成第一个，第三个改成第二个</li>
 <li>依次类推，如果数组中当前元素小于最大值，大于第二大值，就改变后两个，如果数组当前元素小于第二大值，大于第三大值，就改变第三个</li>
@@ -1168,7 +1168,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="628-三个数的最大乘积"><a href="#628-三个数的最大乘积" class="headerlink" title="628. 三个数的最大乘积"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/maximum-product-of-three-numbers/">628. 三个数的最大乘积</a></h2><h3 id="题目要求-14"><a href="#题目要求-14" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你一个整型数组 <code>nums</code> ，在数组中找出由三个数组成的最大乘积，并输出这个乘积。</p>
+<h3 id="628-三个数的最大乘积"><a href="#628-三个数的最大乘积" class="headerlink" title="628. 三个数的最大乘积"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/maximum-product-of-three-numbers/">628. 三个数的最大乘积</a></h3><h4 id="题目要求-14"><a href="#题目要求-14" class="headerlink" title="题目要求"></a>题目要求</h4><p>给你一个整型数组 <code>nums</code> ，在数组中找出由三个数组成的最大乘积，并输出这个乘积。</p>
 <p><strong>示例 1：</strong></p>
 <pre class="line-numbers language-none"><code class="language-none">输入：nums = [1,2,3]
 输出：6<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
@@ -1186,7 +1186,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
 <li><code>3 &lt;= nums.length &lt;= 104</code></li>
 <li><code>-1000 &lt;= nums[i] &lt;= 1000</code></li>
 </ul>
-<h3 id="个人解答-15"><a href="#个人解答-15" class="headerlink" title="个人解答"></a>个人解答</h3><ol>
+<h4 id="个人解答-15"><a href="#个人解答-15" class="headerlink" title="个人解答"></a>个人解答</h4><ol>
 <li>先将数组进行排序，判断是否为全正或全负，如果是的话，最大乘积就是最大的三个的乘积，这个结果是很显然的</li>
 <li>如果不是，选出最大的三个的乘积和最小的两个和最大的一个的乘积，最大的一个就是结果</li>
 </ol>
@@ -1203,7 +1203,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="2024-3-14"><a href="#2024-3-14" class="headerlink" title="2024-3-14"></a>2024-3-14</h1><h2 id="118-杨辉三角"><a href="#118-杨辉三角" class="headerlink" title="118. 杨辉三角"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/pascals-triangle/">118. 杨辉三角</a></h2><h3 id="题目要求-15"><a href="#题目要求-15" class="headerlink" title="题目要求"></a>题目要求</h3><p>给定一个非负整数 <em><code>numRows</code>，</em>生成「杨辉三角」的前 <em><code>numRows</code></em> 行。</p>
+<h1 id="2024-3-14"><a href="#2024-3-14" class="headerlink" title="2024-3-14"></a>2024-3-14</h1><h2 id="二维数组及滚动数组"><a href="#二维数组及滚动数组" class="headerlink" title="二维数组及滚动数组"></a>二维数组及滚动数组</h2><h3 id="118-杨辉三角"><a href="#118-杨辉三角" class="headerlink" title="118. 杨辉三角"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/pascals-triangle/">118. 杨辉三角</a></h3><h4 id="题目要求-15"><a href="#题目要求-15" class="headerlink" title="题目要求"></a>题目要求</h4><p>给定一个非负整数 <em><code>numRows</code>，</em>生成「杨辉三角」的前 <em><code>numRows</code></em> 行。</p>
 <p>在「杨辉三角」中，每个数是它左上方和右上方的数的和。</p>
 <p><img src="https://pic.leetcode-cn.com/1626927345-DZmfxB-PascalTriangleAnimated2.gif" alt="img"></p>
 <p><strong>示例 1:</strong></p>
@@ -1218,7 +1218,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
 <ul>
 <li><code>1 &lt;= numRows &lt;= 30</code></li>
 </ul>
-<h3 id="个人解答-16"><a href="#个人解答-16" class="headerlink" title="个人解答"></a>个人解答</h3><h4 id="解法一"><a href="#解法一" class="headerlink" title="解法一"></a>解法一</h4><p>一行一行计算杨辉三角，根据左上方和右上方的和计算当前值</p>
+<h4 id="个人解答-16"><a href="#个人解答-16" class="headerlink" title="个人解答"></a>个人解答</h4><h5 id="解法一"><a href="#解法一" class="headerlink" title="解法一"></a>解法一</h5><p>一行一行计算杨辉三角，根据左上方和右上方的和计算当前值</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> <span class="token function">generate</span><span class="token punctuation">(</span><span class="token keyword">int</span> numRows<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token comment">//返回杨辉三角的前numRows行</span>
@@ -1248,7 +1248,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="解法二"><a href="#解法二" class="headerlink" title="解法二"></a>解法二</h4><p>根据数学公式，第n行的第m个数(从0开始)可以表示为组合数C(n,m)，而且由于前半部分和后半部分相同，所以只需要计算前半部分</p>
+<h5 id="解法二"><a href="#解法二" class="headerlink" title="解法二"></a>解法二</h5><p>根据数学公式，第n行的第m个数(从0开始)可以表示为组合数C(n,m)，而且由于前半部分和后半部分相同，所以只需要计算前半部分</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> <span class="token function">generate</span><span class="token punctuation">(</span><span class="token keyword">int</span> numRows<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> result <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1280,7 +1280,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="119-杨辉三角-II"><a href="#119-杨辉三角-II" class="headerlink" title="119. 杨辉三角 II"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/pascals-triangle-ii/">119. 杨辉三角 II</a></h2><h3 id="题目要求-16"><a href="#题目要求-16" class="headerlink" title="题目要求"></a>题目要求</h3><p>给定一个非负索引 <code>rowIndex</code>，返回「杨辉三角」的第 <code>rowIndex</code> 行。</p>
+<h3 id="119-杨辉三角-II"><a href="#119-杨辉三角-II" class="headerlink" title="119. 杨辉三角 II"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/pascals-triangle-ii/">119. 杨辉三角 II</a></h3><h4 id="题目要求-16"><a href="#题目要求-16" class="headerlink" title="题目要求"></a>题目要求</h4><p>给定一个非负索引 <code>rowIndex</code>，返回「杨辉三角」的第 <code>rowIndex</code> 行。</p>
 <p>在「杨辉三角」中，每个数是它左上方和右上方的数的和。</p>
 <p><img src="https://pic.leetcode-cn.com/1626927345-DZmfxB-PascalTriangleAnimated2.gif" alt="img"></p>
 <p><strong>示例 1:</strong></p>
@@ -1299,7 +1299,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
 <ul>
 <li><code>0 &lt;= rowIndex &lt;= 33</code></li>
 </ul>
-<h3 id="个人解答-17"><a href="#个人解答-17" class="headerlink" title="个人解答"></a>个人解答</h3><p>直接用上一题中的公式</p>
+<h4 id="个人解答-17"><a href="#个人解答-17" class="headerlink" title="个人解答"></a>个人解答</h4><p>直接用上一题中的公式</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> <span class="token function">getRow</span><span class="token punctuation">(</span><span class="token keyword">int</span> rowIndex<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> result <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1322,7 +1322,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="661-图片平滑器"><a href="#661-图片平滑器" class="headerlink" title="661. 图片平滑器"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/image-smoother/">661. 图片平滑器</a></h2><h3 id="题目要求-17"><a href="#题目要求-17" class="headerlink" title="题目要求"></a>题目要求</h3><p><strong>图像平滑器</strong> 是大小为 <code>3 x 3</code> 的过滤器，用于对图像的每个单元格平滑处理，平滑处理后单元格的值为该单元格的平均灰度。</p>
+<h3 id="661-图片平滑器"><a href="#661-图片平滑器" class="headerlink" title="661. 图片平滑器"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/image-smoother/">661. 图片平滑器</a></h3><h4 id="题目要求-17"><a href="#题目要求-17" class="headerlink" title="题目要求"></a>题目要求</h4><p><strong>图像平滑器</strong> 是大小为 <code>3 x 3</code> 的过滤器，用于对图像的每个单元格平滑处理，平滑处理后单元格的值为该单元格的平均灰度。</p>
 <p>每个单元格的 <strong>平均灰度</strong> 定义为：该单元格自身及其周围的 8 个单元格的平均值，结果需向下取整。（即，需要计算蓝色平滑器中 9 个单元格的平均值）。</p>
 <p>如果一个单元格周围存在单元格缺失的情况，则计算平均灰度时不考虑缺失的单元格（即，需要计算红色平滑器中 4 个单元格的平均值）。</p>
 <p><img src="https://assets.leetcode.com/uploads/2021/05/03/smoother-grid.jpg" alt="img"></p>
@@ -1352,7 +1352,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
 <li><code>1 &lt;= m, n &lt;= 200</code></li>
 <li><code>0 &lt;= img[i][j] &lt;= 255</code></li>
 </ul>
-<h3 id="个人解答-18"><a href="#个人解答-18" class="headerlink" title="个人解答"></a>个人解答</h3><ol>
+<h4 id="个人解答-18"><a href="#个人解答-18" class="headerlink" title="个人解答"></a>个人解答</h4><ol>
 <li>遍历数组，判断是否为边界，如果是就把周围有的加起来</li>
 <li>否则就把周围9个全加起来</li>
 <li>还要判断是否只有一行和一列</li>
@@ -1434,7 +1434,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="2024-3-15"><a href="#2024-3-15" class="headerlink" title="2024-3-15"></a>2024-3-15</h1><h2 id="598-区间加法-II"><a href="#598-区间加法-II" class="headerlink" title="598. 区间加法 II"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/range-addition-ii/">598. 区间加法 II</a></h2><h3 id="题目要求-18"><a href="#题目要求-18" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你一个 <code>m x n</code> 的矩阵 <code>M</code> 和一个操作数组 <code>op</code> 。矩阵初始化时所有的单元格都为 <code>0</code> 。<code>ops[i] = [ai, bi]</code> 意味着当所有的 <code>0 &lt;= x &lt; ai</code> 和 <code>0 &lt;= y &lt; bi</code> 时， <code>M[x][y]</code> 应该加 1。</p>
+<h1 id="2024-3-15"><a href="#2024-3-15" class="headerlink" title="2024-3-15"></a>2024-3-15</h1><h3 id="598-区间加法-II"><a href="#598-区间加法-II" class="headerlink" title="598. 区间加法 II"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/range-addition-ii/">598. 区间加法 II</a></h3><h4 id="题目要求-18"><a href="#题目要求-18" class="headerlink" title="题目要求"></a>题目要求</h4><p>给你一个 <code>m x n</code> 的矩阵 <code>M</code> 和一个操作数组 <code>op</code> 。矩阵初始化时所有的单元格都为 <code>0</code> 。<code>ops[i] = [ai, bi]</code> 意味着当所有的 <code>0 &lt;= x &lt; ai</code> 和 <code>0 &lt;= y &lt; bi</code> 时， <code>M[x][y]</code> 应该加 1。</p>
 <p>在 <em>执行完所有操作后</em> ，计算并返回 <em>矩阵中最大整数的个数</em> 。</p>
 <p><strong>示例 1:</strong></p>
 <p><img src="https://assets.leetcode.com/uploads/2020/10/02/ex1.jpg" alt="img"></p>
@@ -1458,7 +1458,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
 <li><code>1 &lt;= ai &lt;= m</code></li>
 <li><code>1 &lt;= bi &lt;= n</code></li>
 </ul>
-<h3 id="个人解答-19"><a href="#个人解答-19" class="headerlink" title="个人解答"></a>个人解答</h3><ol>
+<h4 id="个人解答-19"><a href="#个人解答-19" class="headerlink" title="个人解答"></a>个人解答</h4><ol>
 <li>最终操作的次数是ops.length，在操作次数大于0时，最大整数等于操作次数，只要找到等于操作次数的元素的个数即可，如果操作次数为0，结果就是m*n</li>
 <li>只要求出所有操作范围的交集就可以了</li>
 </ol>
@@ -1476,7 +1476,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="419-甲板上的战舰"><a href="#419-甲板上的战舰" class="headerlink" title="419. 甲板上的战舰"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/battleships-in-a-board/">419. 甲板上的战舰</a></h2><h3 id="题目要求-19"><a href="#题目要求-19" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你一个大小为 <code>m x n</code> 的矩阵 <code>board</code> 表示甲板，其中，每个单元格可以是一艘战舰 <code>'X'</code> 或者是一个空位 <code>'.'</code> ，返回在甲板 <code>board</code> 上放置的 <strong>战舰</strong> 的数量。</p>
+<h3 id="419-甲板上的战舰"><a href="#419-甲板上的战舰" class="headerlink" title="419. 甲板上的战舰"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/battleships-in-a-board/">419. 甲板上的战舰</a></h3><h4 id="题目要求-19"><a href="#题目要求-19" class="headerlink" title="题目要求"></a>题目要求</h4><p>给你一个大小为 <code>m x n</code> 的矩阵 <code>board</code> 表示甲板，其中，每个单元格可以是一艘战舰 <code>'X'</code> 或者是一个空位 <code>'.'</code> ，返回在甲板 <code>board</code> 上放置的 <strong>战舰</strong> 的数量。</p>
 <p><strong>战舰</strong> 只能水平或者垂直放置在 <code>board</code> 上。换句话说，战舰只能按 <code>1 x k</code>（<code>1</code> 行，<code>k</code> 列）或 <code>k x 1</code>（<code>k</code> 行，<code>1</code> 列）的形状建造，其中 <code>k</code> 可以是任意大小。两艘战舰之间至少有一个水平或垂直的空位分隔 （即没有相邻的战舰）。</p>
 <p><strong>示例 1：</strong></p>
 <p><img src="https://assets.leetcode.com/uploads/2021/04/10/battelship-grid.jpg" alt="img"></p>
@@ -1494,7 +1494,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
 <li><code>1 &lt;= m, n &lt;= 200</code></li>
 <li><code>board[i][j]</code> 是 <code>'.'</code> 或 <code>'X'</code></li>
 </ul>
-<h3 id="个人解答-20"><a href="#个人解答-20" class="headerlink" title="个人解答"></a>个人解答</h3><ol>
+<h4 id="个人解答-20"><a href="#个人解答-20" class="headerlink" title="个人解答"></a>个人解答</h4><ol>
 <li>遍历整个数组，判断当前位置是否为’X’，如果是的话，因为两个战舰不相邻，就把它右侧和下侧挨着的元素为’X’的设为非’X’，代表这个战舰被统计了</li>
 <li>这里我写了两个递归函数在当前元素的右方和下方的相邻元素中改变值</li>
 </ol>
@@ -1532,7 +1532,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="54-螺旋矩阵"><a href="#54-螺旋矩阵" class="headerlink" title="54. 螺旋矩阵"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/spiral-matrix/">54. 螺旋矩阵</a></h2><h3 id="题目要求-20"><a href="#题目要求-20" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你一个 <code>m</code> 行 <code>n</code> 列的矩阵 <code>matrix</code> ，请按照 <strong>顺时针螺旋顺序</strong> ，返回矩阵中的所有元素。</p>
+<h2 id="特定顺序遍历二维数组"><a href="#特定顺序遍历二维数组" class="headerlink" title="特定顺序遍历二维数组"></a>特定顺序遍历二维数组</h2><h3 id="54-螺旋矩阵"><a href="#54-螺旋矩阵" class="headerlink" title="54. 螺旋矩阵"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/spiral-matrix/">54. 螺旋矩阵</a></h3><h4 id="题目要求-20"><a href="#题目要求-20" class="headerlink" title="题目要求"></a>题目要求</h4><p>给你一个 <code>m</code> 行 <code>n</code> 列的矩阵 <code>matrix</code> ，请按照 <strong>顺时针螺旋顺序</strong> ，返回矩阵中的所有元素。</p>
 <p><strong>示例 1：</strong></p>
 <p><img src="https://assets.leetcode.com/uploads/2020/11/13/spiral1.jpg" alt="img"></p>
 <pre class="line-numbers language-none"><code class="language-none">输入：matrix = [[1,2,3],[4,5,6],[7,8,9]]
@@ -1550,7 +1550,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
 <li><code>1 &lt;= m, n &lt;= 10</code></li>
 <li><code>-100 &lt;= matrix[i][j] &lt;= 100</code></li>
 </ul>
-<h3 id="个人解答-21"><a href="#个人解答-21" class="headerlink" title="个人解答"></a>个人解答</h3><ol>
+<h4 id="个人解答-21"><a href="#个人解答-21" class="headerlink" title="个人解答"></a>个人解答</h4><ol>
 <li>使用递归函数来遍历最外层，然后把内层在进行递归</li>
 <li>如果外层为空或者只有一个元素或者只有一行或一列都单独考虑</li>
 </ol>
@@ -1615,7 +1615,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="2024-3-16"><a href="#2024-3-16" class="headerlink" title="2024-3-16"></a>2024-3-16</h1><h2 id="59-螺旋矩阵-II"><a href="#59-螺旋矩阵-II" class="headerlink" title="59. 螺旋矩阵 II"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/spiral-matrix-ii/">59. 螺旋矩阵 II</a></h2><h3 id="题目要求-21"><a href="#题目要求-21" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你一个正整数 <code>n</code> ，生成一个包含 <code>1</code> 到 <code>n2</code> 所有元素，且元素按顺时针顺序螺旋排列的 <code>n x n</code> 正方形矩阵 <code>matrix</code> 。</p>
+<h1 id="2024-3-16"><a href="#2024-3-16" class="headerlink" title="2024-3-16"></a>2024-3-16</h1><h3 id="59-螺旋矩阵-II"><a href="#59-螺旋矩阵-II" class="headerlink" title="59. 螺旋矩阵 II"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/spiral-matrix-ii/">59. 螺旋矩阵 II</a></h3><h4 id="题目要求-21"><a href="#题目要求-21" class="headerlink" title="题目要求"></a>题目要求</h4><p>给你一个正整数 <code>n</code> ，生成一个包含 <code>1</code> 到 <code>n2</code> 所有元素，且元素按顺时针顺序螺旋排列的 <code>n x n</code> 正方形矩阵 <code>matrix</code> 。</p>
 <p><strong>示例 1：</strong></p>
 <p><img src="https://assets.leetcode.com/uploads/2020/11/13/spiraln.jpg" alt="img"></p>
 <pre class="line-numbers language-none"><code class="language-none">输入：n = 3
@@ -1629,7 +1629,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
 <ul>
 <li><code>1 &lt;= n &lt;= 20</code></li>
 </ul>
-<h3 id="个人解答-22"><a href="#个人解答-22" class="headerlink" title="个人解答"></a>个人解答</h3><p>递归写入</p>
+<h4 id="个人解答-22"><a href="#个人解答-22" class="headerlink" title="个人解答"></a>个人解答</h4><p>递归写入</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">generateMatrix</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> a <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
@@ -1666,7 +1666,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="498-对角线遍历"><a href="#498-对角线遍历" class="headerlink" title="498. 对角线遍历"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/diagonal-traverse/">498. 对角线遍历</a></h2><h3 id="题目要求-22"><a href="#题目要求-22" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你一个大小为 <code>m x n</code> 的矩阵 <code>mat</code> ，请以对角线遍历的顺序，用一个数组返回这个矩阵中的所有元素。</p>
+<h3 id="498-对角线遍历"><a href="#498-对角线遍历" class="headerlink" title="498. 对角线遍历"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/diagonal-traverse/">498. 对角线遍历</a></h3><h4 id="题目要求-22"><a href="#题目要求-22" class="headerlink" title="题目要求"></a>题目要求</h4><p>给你一个大小为 <code>m x n</code> 的矩阵 <code>mat</code> ，请以对角线遍历的顺序，用一个数组返回这个矩阵中的所有元素。</p>
 <p><strong>示例 1：</strong></p>
 <p><img src="https://assets.leetcode.com/uploads/2021/04/10/diag1-grid.jpg" alt="img"></p>
 <pre class="line-numbers language-none"><code class="language-none">输入：mat = [[1,2,3],[4,5,6],[7,8,9]]
@@ -1684,7 +1684,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
 <li><code>1 &lt;= m * n &lt;= 104</code></li>
 <li><code>-105 &lt;= mat[i][j] &lt;= 105</code></li>
 </ul>
-<h3 id="个人解答-23"><a href="#个人解答-23" class="headerlink" title="个人解答"></a>个人解答</h3><p>直接模拟</p>
+<h4 id="个人解答-23"><a href="#个人解答-23" class="headerlink" title="个人解答"></a>个人解答</h4><p>直接模拟</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">findDiagonalOrder</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> mat<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">int</span> m <span class="token operator">=</span> mat<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
@@ -1715,7 +1715,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
         <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">mapToInt</span><span class="token punctuation">(</span>i<span class="token operator">-&gt;</span>i<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="566-重塑矩阵"><a href="#566-重塑矩阵" class="headerlink" title="566. 重塑矩阵"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reshape-the-matrix/">566. 重塑矩阵</a></h2><h3 id="题目要求-23"><a href="#题目要求-23" class="headerlink" title="题目要求"></a>题目要求</h3><p>在 MATLAB 中，有一个非常有用的函数 <code>reshape</code> ，它可以将一个 <code>m x n</code> 矩阵重塑为另一个大小不同（<code>r x c</code>）的新矩阵，但保留其原始数据。</p>
+<h2 id="二维数组变换"><a href="#二维数组变换" class="headerlink" title="二维数组变换"></a>二维数组变换</h2><h3 id="566-重塑矩阵"><a href="#566-重塑矩阵" class="headerlink" title="566. 重塑矩阵"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reshape-the-matrix/">566. 重塑矩阵</a></h3><h4 id="题目要求-23"><a href="#题目要求-23" class="headerlink" title="题目要求"></a>题目要求</h4><p>在 MATLAB 中，有一个非常有用的函数 <code>reshape</code> ，它可以将一个 <code>m x n</code> 矩阵重塑为另一个大小不同（<code>r x c</code>）的新矩阵，但保留其原始数据。</p>
 <p>给你一个由二维数组 <code>mat</code> 表示的 <code>m x n</code> 矩阵，以及两个正整数 <code>r</code> 和 <code>c</code> ，分别表示想要的重构的矩阵的行数和列数。</p>
 <p>重构后的矩阵需要将原始矩阵的所有元素以相同的 <strong>行遍历顺序</strong> 填充。</p>
 <p>如果具有给定参数的 <code>reshape</code> 操作是可行且合理的，则输出新的重塑矩阵；否则，输出原始矩阵。</p>
@@ -1737,7 +1737,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
 <li><code>-1000 &lt;= mat[i][j] &lt;= 1000</code></li>
 <li><code>1 &lt;= r, c &lt;= 300</code></li>
 </ul>
-<h3 id="个人解答-24"><a href="#个人解答-24" class="headerlink" title="个人解答"></a>个人解答</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<h4 id="个人解答-24"><a href="#个人解答-24" class="headerlink" title="个人解答"></a>个人解答</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">matrixReshape</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> mat<span class="token punctuation">,</span> <span class="token keyword">int</span> r<span class="token punctuation">,</span> <span class="token keyword">int</span> c<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">int</span> m <span class="token operator">=</span> mat<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
         <span class="token keyword">int</span> n <span class="token operator">=</span> mat<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>
@@ -1768,7 +1768,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="48-旋转图像"><a href="#48-旋转图像" class="headerlink" title="48. 旋转图像"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/rotate-image/">48. 旋转图像</a></h2><h3 id="题目要求-24"><a href="#题目要求-24" class="headerlink" title="题目要求"></a>题目要求</h3><p>给定一个 <em>n</em> × <em>n</em> 的二维矩阵 <code>matrix</code> 表示一个图像。请你将图像顺时针旋转 90 度。</p>
+<h3 id="48-旋转图像"><a href="#48-旋转图像" class="headerlink" title="48. 旋转图像"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/rotate-image/">48. 旋转图像</a></h3><h4 id="题目要求-24"><a href="#题目要求-24" class="headerlink" title="题目要求"></a>题目要求</h4><p>给定一个 <em>n</em> × <em>n</em> 的二维矩阵 <code>matrix</code> 表示一个图像。请你将图像顺时针旋转 90 度。</p>
 <p>你必须在**<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95"> 原地</a>** 旋转图像，这意味着你需要直接修改输入的二维矩阵。<strong>请不要</strong> 使用另一个矩阵来旋转图像。</p>
 <p><strong>示例 1：</strong></p>
 <p><img src="https://assets.leetcode.com/uploads/2020/08/28/mat1.jpg" alt="img"></p>
@@ -1786,7 +1786,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
 <li><code>1 &lt;= n &lt;= 20</code></li>
 <li><code>-1000 &lt;= matrix[i][j] &lt;= 1000</code></li>
 </ul>
-<h3 id="个人解答-25"><a href="#个人解答-25" class="headerlink" title="个人解答"></a>个人解答</h3><p>我没有实现原地旋转，用了辅助数组</p>
+<h4 id="个人解答-25"><a href="#个人解答-25" class="headerlink" title="个人解答"></a>个人解答</h4><p>我没有实现原地旋转，用了辅助数组</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">rotate</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> matrix<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">int</span> len <span class="token operator">=</span> matrix<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
@@ -1804,7 +1804,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="73-矩阵置零"><a href="#73-矩阵置零" class="headerlink" title="73. 矩阵置零"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/set-matrix-zeroes/">73. 矩阵置零</a></h2><h3 id="题目要求-25"><a href="#题目要求-25" class="headerlink" title="题目要求"></a>题目要求</h3><p>给定一个 <code>*m* x *n*</code> 的矩阵，如果一个元素为 <strong>0</strong> ，则将其所在行和列的所有元素都设为 <strong>0</strong> 。请使用 <strong><a target="_blank" rel="noopener" href="http://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95">原地</a></strong> 算法<strong>。</strong></p>
+<h3 id="73-矩阵置零"><a href="#73-矩阵置零" class="headerlink" title="73. 矩阵置零"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/set-matrix-zeroes/">73. 矩阵置零</a></h3><h4 id="题目要求-25"><a href="#题目要求-25" class="headerlink" title="题目要求"></a>题目要求</h4><p>给定一个 <code>*m* x *n*</code> 的矩阵，如果一个元素为 <strong>0</strong> ，则将其所在行和列的所有元素都设为 <strong>0</strong> 。请使用 <strong><a target="_blank" rel="noopener" href="http://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95">原地</a></strong> 算法<strong>。</strong></p>
 <p><strong>示例 1：</strong></p>
 <p><img src="https://assets.leetcode.com/uploads/2020/08/17/mat1.jpg" alt="img"></p>
 <pre class="line-numbers language-none"><code class="language-none">输入：matrix = [[1,1,1],[1,0,1],[1,1,1]]
@@ -1828,7 +1828,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
 <li>一个简单的改进方案是使用 <code>O(*m* + *n*)</code> 的额外空间，但这仍然不是最好的解决方案。</li>
 <li>你能想出一个仅使用常量空间的解决方案吗？</li>
 </ul>
-<h3 id="个人解答-26"><a href="#个人解答-26" class="headerlink" title="个人解答"></a>个人解答</h3><p>用两个列表来存储哪一行和那一列存在0，然后把这些行和列置0</p>
+<h4 id="个人解答-26"><a href="#个人解答-26" class="headerlink" title="个人解答"></a>个人解答</h4><p>用两个列表来存储哪一行和那一列存在0，然后把这些行和列置0</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setZeroes</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> matrix<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">int</span> len_row <span class="token operator">=</span> matrix<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
@@ -1856,7 +1856,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="2024-3-17"><a href="#2024-3-17" class="headerlink" title="2024-3-17"></a>2024-3-17</h1><h2 id="289-生命游戏"><a href="#289-生命游戏" class="headerlink" title="289. 生命游戏"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/game-of-life/">289. 生命游戏</a></h2><h3 id="题目要求-26"><a href="#题目要求-26" class="headerlink" title="题目要求"></a>题目要求</h3><p>根据 <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%94%9F%E5%91%BD%E6%B8%B8%E6%88%8F/2926434?fr=aladdin">百度百科</a> ， <strong>生命游戏</strong> ，简称为 <strong>生命</strong> ，是英国数学家约翰·何顿·康威在 1970 年发明的细胞自动机。</p>
+<h1 id="2024-3-17"><a href="#2024-3-17" class="headerlink" title="2024-3-17"></a>2024-3-17</h1><h3 id="289-生命游戏"><a href="#289-生命游戏" class="headerlink" title="289. 生命游戏"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/game-of-life/">289. 生命游戏</a></h3><h4 id="题目要求-26"><a href="#题目要求-26" class="headerlink" title="题目要求"></a>题目要求</h4><p>根据 <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%94%9F%E5%91%BD%E6%B8%B8%E6%88%8F/2926434?fr=aladdin">百度百科</a> ， <strong>生命游戏</strong> ，简称为 <strong>生命</strong> ，是英国数学家约翰·何顿·康威在 1970 年发明的细胞自动机。</p>
 <p>给定一个包含 <code>m × n</code> 个格子的面板，每一个格子都可以看成是一个细胞。每个细胞都具有一个初始状态： <code>1</code> 即为 <strong>活细胞</strong> （live），或 <code>0</code> 即为 <strong>死细胞</strong> （dead）。每个细胞与其八个相邻位置（水平，垂直，对角线）的细胞都遵循以下四条生存定律：</p>
 <ol>
 <li>如果活细胞周围八个位置的活细胞数少于两个，则该位置活细胞死亡；</li>
@@ -1882,7 +1882,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
 <li><code>1 &lt;= m, n &lt;= 25</code></li>
 <li><code>board[i][j]</code> 为 <code>0</code> 或 <code>1</code></li>
 </ul>
-<h3 id="个人解答-27"><a href="#个人解答-27" class="headerlink" title="个人解答"></a>个人解答</h3><p>将每个细胞周围的细胞状态加起来，也就是判断周围存活细胞的个数，再根据规则判断。</p>
+<h4 id="个人解答-27"><a href="#个人解答-27" class="headerlink" title="个人解答"></a>个人解答</h4><p>将每个细胞周围的细胞状态加起来，也就是判断周围存活细胞的个数，再根据规则判断。</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">gameOfLife</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> board<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">int</span> m <span class="token operator">=</span> board<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
@@ -1920,7 +1920,7 @@ F(3) = (0 * 3) + (1 * 2) + (2 * 6) + (3 * 4) = 0 + 2 + 12 + 12 = 26
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="303-区域和检索-数组不可变"><a href="#303-区域和检索-数组不可变" class="headerlink" title="303. 区域和检索 - 数组不可变"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/range-sum-query-immutable/">303. 区域和检索 - 数组不可变</a></h2><h3 id="题目要求-27"><a href="#题目要求-27" class="headerlink" title="题目要求"></a>题目要求</h3><p>给定一个整数数组  <code>nums</code>，处理以下类型的多个查询:</p>
+<h2 id="前缀和数组"><a href="#前缀和数组" class="headerlink" title="前缀和数组"></a>前缀和数组</h2><h3 id="303-区域和检索-数组不可变"><a href="#303-区域和检索-数组不可变" class="headerlink" title="303. 区域和检索 - 数组不可变"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/range-sum-query-immutable/">303. 区域和检索 - 数组不可变</a></h3><h4 id="题目要求-27"><a href="#题目要求-27" class="headerlink" title="题目要求"></a>题目要求</h4><p>给定一个整数数组  <code>nums</code>，处理以下类型的多个查询:</p>
 <ol>
 <li>计算索引 <code>left</code> 和 <code>right</code> （包含 <code>left</code> 和 <code>right</code>）之间的 <code>nums</code> 元素的 <strong>和</strong> ，其中 <code>left &lt;= right</code></li>
 </ol>
@@ -1949,7 +1949,7 @@ numArray.sumRange(0, 5); // return -3 ((-2) + 0 + 3 + (-5) + 2 + (-1))<span aria
 <li><code>0 &lt;= i &lt;= j &lt; nums.length</code></li>
 <li>最多调用 <code>104</code> 次 <code>sumRange</code> 方法</li>
 </ul>
-<h3 id="个人解答-28"><a href="#个人解答-28" class="headerlink" title="个人解答"></a>个人解答</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">NumArray</span> <span class="token punctuation">{</span>
+<h4 id="个人解答-28"><a href="#个人解答-28" class="headerlink" title="个人解答"></a>个人解答</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">NumArray</span> <span class="token punctuation">{</span>
     <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> sums<span class="token punctuation">;</span>
 
     <span class="token keyword">public</span> <span class="token class-name">NumArray</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -1966,7 +1966,7 @@ numArray.sumRange(0, 5); // return -3 ((-2) + 0 + 3 + (-5) + 2 + (-1))<span aria
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="304-二维区域和检索-矩阵不可变"><a href="#304-二维区域和检索-矩阵不可变" class="headerlink" title="304. 二维区域和检索 - 矩阵不可变"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/range-sum-query-2d-immutable/">304. 二维区域和检索 - 矩阵不可变</a></h2><h3 id="题目要求-28"><a href="#题目要求-28" class="headerlink" title="题目要求"></a>题目要求</h3><p>给定一个二维矩阵 <code>matrix</code>，以下类型的多个请求：</p>
+<h3 id="304-二维区域和检索-矩阵不可变"><a href="#304-二维区域和检索-矩阵不可变" class="headerlink" title="304. 二维区域和检索 - 矩阵不可变"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/range-sum-query-2d-immutable/">304. 二维区域和检索 - 矩阵不可变</a></h3><h4 id="题目要求-28"><a href="#题目要求-28" class="headerlink" title="题目要求"></a>题目要求</h4><p>给定一个二维矩阵 <code>matrix</code>，以下类型的多个请求：</p>
 <ul>
 <li>计算其子矩形范围内元素的总和，该子矩阵的 <strong>左上角</strong> 为 <code>(row1, col1)</code> ，<strong>右下角</strong> 为 <code>(row2, col2)</code> 。</li>
 </ul>
@@ -1999,7 +1999,7 @@ numMatrix.sumRegion(1, 2, 2, 4); // return 12 (蓝色矩形框的元素总和)<s
 <li><code>0 &lt;= col1 &lt;= col2 &lt; n</code></li>
 <li>最多调用 <code>104</code> 次 <code>sumRegion</code> 方法</li>
 </ul>
-<h3 id="个人解答-29"><a href="#个人解答-29" class="headerlink" title="个人解答"></a>个人解答</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">NumMatrix</span> <span class="token punctuation">{</span>
+<h4 id="个人解答-29"><a href="#个人解答-29" class="headerlink" title="个人解答"></a>个人解答</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">NumMatrix</span> <span class="token punctuation">{</span>
     <span class="token keyword">int</span> sums<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 
     <span class="token keyword">public</span> <span class="token class-name">NumMatrix</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> matrix<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -2018,7 +2018,7 @@ numMatrix.sumRegion(1, 2, 2, 4); // return 12 (蓝色矩形框的元素总和)<s
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="238-除自身以外数组的乘积"><a href="#238-除自身以外数组的乘积" class="headerlink" title="238. 除自身以外数组的乘积"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/product-of-array-except-self/">238. 除自身以外数组的乘积</a></h2><h3 id="题目要求-29"><a href="#题目要求-29" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你一个整数数组 <code>nums</code>，返回 <em>数组 <code>answer</code> ，其中 <code>answer[i]</code> 等于 <code>nums</code> 中除 <code>nums[i]</code> 之外其余各元素的乘积</em> 。</p>
+<h3 id="238-除自身以外数组的乘积"><a href="#238-除自身以外数组的乘积" class="headerlink" title="238. 除自身以外数组的乘积"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/product-of-array-except-self/">238. 除自身以外数组的乘积</a></h3><h4 id="题目要求-29"><a href="#题目要求-29" class="headerlink" title="题目要求"></a>题目要求</h4><p>给你一个整数数组 <code>nums</code>，返回 <em>数组 <code>answer</code> ，其中 <code>answer[i]</code> 等于 <code>nums</code> 中除 <code>nums[i]</code> 之外其余各元素的乘积</em> 。</p>
 <p>题目数据 <strong>保证</strong> 数组 <code>nums</code>之中任意元素的全部前缀元素和后缀的乘积都在 <strong>32 位</strong> 整数范围内。</p>
 <p>请 <strong>不要使用除法，</strong>且在 <code>O(*n*)</code> 时间复杂度内完成此题。</p>
 <p><strong>示例 1:</strong></p>
@@ -2035,7 +2035,7 @@ numMatrix.sumRegion(1, 2, 2, 4); // return 12 (蓝色矩形框的元素总和)<s
 <li><code>-30 &lt;= nums[i] &lt;= 30</code></li>
 <li><strong>保证</strong> 数组 <code>nums</code>之中任意元素的全部前缀元素和后缀的乘积都在 <strong>32 位</strong> 整数范围内</li>
 </ul>
-<h3 id="个人解答-30"><a href="#个人解答-30" class="headerlink" title="个人解答"></a>个人解答</h3><p>算出每个位置的前缀乘和后缀乘，然后再乘在一起即可</p>
+<h4 id="个人解答-30"><a href="#个人解答-30" class="headerlink" title="个人解答"></a>个人解答</h4><p>算出每个位置的前缀乘和后缀乘，然后再乘在一起即可</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">productExceptSelf</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">int</span> len <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
@@ -2491,7 +2491,7 @@ numMatrix.sumRegion(1, 2, 2, 4); // return 12 (蓝色矩形框的元素总和)<s
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">98.5k</span>
+                        class="white-color">98.6k</span>
             
             
             
