@@ -5,9 +5,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="力扣刷题记录——链表篇, Blog Of yvzha0">
-    <meta name="description" content="2024-3-18707. 设计链表题目要求你可以选择使用单链表或者双链表，设计并实现自己的链表。
+    <meta name="description" content="2024-3-18移除与插入链表元素707. 设计链表题目要求你可以选择使用单链表或者双链表，设计并实现自己的链表。
 单链表中的节点应该具备两个属性：val 和 next 。val 是当前节点的值，next 是指向下一个节点的指针/引用。
-如果是双向链表，则">
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -404,7 +404,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-04-15
+                    2024-04-25
                 </div>
                 
 
@@ -441,7 +441,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="2024-3-18"><a href="#2024-3-18" class="headerlink" title="2024-3-18"></a>2024-3-18</h1><h2 id="707-设计链表"><a href="#707-设计链表" class="headerlink" title="707. 设计链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/design-linked-list/">707. 设计链表</a></h2><h3 id="题目要求"><a href="#题目要求" class="headerlink" title="题目要求"></a>题目要求</h3><p>你可以选择使用单链表或者双链表，设计并实现自己的链表。</p>
+                <h1 id="2024-3-18"><a href="#2024-3-18" class="headerlink" title="2024-3-18"></a>2024-3-18</h1><h2 id="移除与插入链表元素"><a href="#移除与插入链表元素" class="headerlink" title="移除与插入链表元素"></a>移除与插入链表元素</h2><h3 id="707-设计链表"><a href="#707-设计链表" class="headerlink" title="707. 设计链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/design-linked-list/">707. 设计链表</a></h3><h4 id="题目要求"><a href="#题目要求" class="headerlink" title="题目要求"></a>题目要求</h4><p>你可以选择使用单链表或者双链表，设计并实现自己的链表。</p>
 <p>单链表中的节点应该具备两个属性：<code>val</code> 和 <code>next</code> 。<code>val</code> 是当前节点的值，<code>next</code> 是指向下一个节点的指针/引用。</p>
 <p>如果是双向链表，则还需要属性 <code>prev</code> 以指示链表中的上一个节点。假设链表中的所有节点下标从 <strong>0</strong> 开始。</p>
 <p>实现 <code>MyLinkedList</code> 类：</p>
@@ -475,7 +475,7 @@ myLinkedList.get(1);              // 返回 3<span aria-hidden="true" class="lin
 <li>请不要使用内置的 LinkedList 库。</li>
 <li>调用 <code>get</code>、<code>addAtHead</code>、<code>addAtTail</code>、<code>addAtIndex</code> 和 <code>deleteAtIndex</code> 的次数不超过 <code>2000</code> 。</li>
 </ul>
-<h3 id="个人解答"><a href="#个人解答" class="headerlink" title="个人解答"></a>个人解答</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">MyLinkedList</span> <span class="token punctuation">{</span>
+<h4 id="个人解答"><a href="#个人解答" class="headerlink" title="个人解答"></a>个人解答</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">MyLinkedList</span> <span class="token punctuation">{</span>
     <span class="token keyword">int</span> length<span class="token punctuation">;</span>
     <span class="token class-name">ListNode</span> head<span class="token punctuation">;</span>
 
@@ -568,7 +568,7 @@ myLinkedList.get(1);              // 返回 3<span aria-hidden="true" class="lin
     <span class="token keyword">public</span> <span class="token class-name">ListNode</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="203-移除链表元素"><a href="#203-移除链表元素" class="headerlink" title="203. 移除链表元素"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-linked-list-elements/">203. 移除链表元素</a></h2><h3 id="题目要求-1"><a href="#题目要求-1" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你一个链表的头节点 <code>head</code> 和一个整数 <code>val</code> ，请你删除链表中所有满足 <code>Node.val == val</code> 的节点，并返回 <strong>新的头节点</strong> 。</p>
+<h3 id="203-移除链表元素"><a href="#203-移除链表元素" class="headerlink" title="203. 移除链表元素"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-linked-list-elements/">203. 移除链表元素</a></h3><h4 id="题目要求-1"><a href="#题目要求-1" class="headerlink" title="题目要求"></a>题目要求</h4><p>给你一个链表的头节点 <code>head</code> 和一个整数 <code>val</code> ，请你删除链表中所有满足 <code>Node.val == val</code> 的节点，并返回 <strong>新的头节点</strong> 。</p>
 <p><strong>示例 1：</strong></p>
 <p><img src="/../image/removelinked-list.jpg" alt="img"></p>
 <pre class="line-numbers language-none"><code class="language-none">输入：head = [1,2,6,3,4,5,6], val = 6
@@ -588,7 +588,7 @@ myLinkedList.get(1);              // 返回 3<span aria-hidden="true" class="lin
 <li><code>1 &lt;= Node.val &lt;= 50</code></li>
 <li><code>0 &lt;= val &lt;= 50</code></li>
 </ul>
-<h3 id="个人解答-1"><a href="#个人解答-1" class="headerlink" title="个人解答"></a>个人解答</h3><ol>
+<h4 id="个人解答-1"><a href="#个人解答-1" class="headerlink" title="个人解答"></a>个人解答</h4><ol>
 <li>先把头结点为val的全删掉</li>
 <li>然后顺着去删除</li>
 </ol>
@@ -627,7 +627,7 @@ myLinkedList.get(1);              // 返回 3<span aria-hidden="true" class="lin
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="237-删除链表中的节点"><a href="#237-删除链表中的节点" class="headerlink" title="237. 删除链表中的节点"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/delete-node-in-a-linked-list/">237. 删除链表中的节点</a></h2><h3 id="题目要求-2"><a href="#题目要求-2" class="headerlink" title="题目要求"></a>题目要求</h3><p>有一个单链表的 <code>head</code>，我们想删除它其中的一个节点 <code>node</code>。</p>
+<h3 id="237-删除链表中的节点"><a href="#237-删除链表中的节点" class="headerlink" title="237. 删除链表中的节点"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/delete-node-in-a-linked-list/">237. 删除链表中的节点</a></h3><h4 id="题目要求-2"><a href="#题目要求-2" class="headerlink" title="题目要求"></a>题目要求</h4><p>有一个单链表的 <code>head</code>，我们想删除它其中的一个节点 <code>node</code>。</p>
 <p>给你一个需要删除的节点 <code>node</code> 。你将 <strong>无法访问</strong> 第一个节点 <code>head</code>。</p>
 <p>链表的所有值都是 <strong>唯一的</strong>，并且保证给定的节点 <code>node</code> 不是链表中的最后一个节点。</p>
 <p>删除给定的节点。注意，删除节点并不是指从内存中删除它。这里的意思是：</p>
@@ -662,7 +662,7 @@ myLinkedList.get(1);              // 返回 3<span aria-hidden="true" class="lin
 <li>链表中每个节点的值都是 <strong>唯一</strong> 的</li>
 <li>需要删除的节点 <code>node</code> 是 <strong>链表中的节点</strong> ，且 <strong>不是末尾节点</strong></li>
 </ul>
-<h3 id="个人解答-2"><a href="#个人解答-2" class="headerlink" title="个人解答"></a>个人解答</h3><p>把要删除的节点变成下一个节点即可</p>
+<h4 id="个人解答-2"><a href="#个人解答-2" class="headerlink" title="个人解答"></a>个人解答</h4><p>把要删除的节点变成下一个节点即可</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -678,7 +678,7 @@ myLinkedList.get(1);              // 返回 3<span aria-hidden="true" class="lin
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="2024-3-19"><a href="#2024-3-19" class="headerlink" title="2024-3-19"></a>2024-3-19</h1><h2 id="19-删除链表的倒数第-N-个结点"><a href="#19-删除链表的倒数第-N-个结点" class="headerlink" title="19. 删除链表的倒数第 N 个结点"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-nth-node-from-end-of-list/">19. 删除链表的倒数第 N 个结点</a></h2><h3 id="题目要求-3"><a href="#题目要求-3" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你一个链表，删除链表的倒数第 <code>n</code> 个结点，并且返回链表的头结点。</p>
+<h1 id="2024-3-19"><a href="#2024-3-19" class="headerlink" title="2024-3-19"></a>2024-3-19</h1><h3 id="19-删除链表的倒数第-N-个结点"><a href="#19-删除链表的倒数第-N-个结点" class="headerlink" title="19. 删除链表的倒数第 N 个结点"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-nth-node-from-end-of-list/">19. 删除链表的倒数第 N 个结点</a></h3><h4 id="题目要求-3"><a href="#题目要求-3" class="headerlink" title="题目要求"></a>题目要求</h4><p>给你一个链表，删除链表的倒数第 <code>n</code> 个结点，并且返回链表的头结点。</p>
 <p><strong>示例 1：</strong></p>
 <p><img src="/../image/remove_ex1.jpg" alt="img"></p>
 <pre class="line-numbers language-none"><code class="language-none">输入：head = [1,2,3,4,5], n = 2
@@ -700,7 +700,7 @@ myLinkedList.get(1);              // 返回 3<span aria-hidden="true" class="lin
 <li><code>1 &lt;= n &lt;= sz</code></li>
 </ul>
 <p><strong>进阶：</strong>你能尝试使用一趟扫描实现吗？</p>
-<h3 id="个人解答-3"><a href="#个人解答-3" class="headerlink" title="个人解答"></a>个人解答</h3><ol>
+<h4 id="个人解答-3"><a href="#个人解答-3" class="headerlink" title="个人解答"></a>个人解答</h4><ol>
 <li>假设链表的长度为len，则删除倒数第n个节点等价于删除正数第len-n+1个节点</li>
 <li>所以我们要找到第len-n个节点，让它指向下一个的下一个</li>
 <li>设两个节点都为head，让其中一个节点走n步，为第n+1个节点，这时到最后一个节点还差len-n-1步，此时让另一个节点同时开始走，这时两个节点同时到达最后一个节点和第len-n个节点</li>
@@ -737,7 +737,7 @@ myLinkedList.get(1);              // 返回 3<span aria-hidden="true" class="lin
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="83-删除排序链表中的重复元素"><a href="#83-删除排序链表中的重复元素" class="headerlink" title="83. 删除排序链表中的重复元素"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-duplicates-from-sorted-list/">83. 删除排序链表中的重复元素</a></h2><h3 id="题目要求-4"><a href="#题目要求-4" class="headerlink" title="题目要求"></a>题目要求</h3><p>给定一个已排序的链表的头 <code>head</code> ， <em>删除所有重复的元素，使每个元素只出现一次</em> 。返回 <em>已排序的链表</em> 。</p>
+<h3 id="83-删除排序链表中的重复元素"><a href="#83-删除排序链表中的重复元素" class="headerlink" title="83. 删除排序链表中的重复元素"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-duplicates-from-sorted-list/">83. 删除排序链表中的重复元素</a></h3><h4 id="题目要求-4"><a href="#题目要求-4" class="headerlink" title="题目要求"></a>题目要求</h4><p>给定一个已排序的链表的头 <code>head</code> ， <em>删除所有重复的元素，使每个元素只出现一次</em> 。返回 <em>已排序的链表</em> 。</p>
 <p><strong>示例 1：</strong></p>
 <p><img src="/../image/list1.jpg" alt="img"></p>
 <pre class="line-numbers language-none"><code class="language-none">输入：head = [1,1,2]
@@ -754,7 +754,7 @@ myLinkedList.get(1);              // 返回 3<span aria-hidden="true" class="lin
 <li><code>-100 &lt;= Node.val &lt;= 100</code></li>
 <li>题目数据保证链表已经按升序 <strong>排列</strong></li>
 </ul>
-<h3 id="个人解答-4"><a href="#个人解答-4" class="headerlink" title="个人解答"></a>个人解答</h3><p>一次遍历，把当前节点后面的值等于当前节点的值的节点都删掉</p>
+<h4 id="个人解答-4"><a href="#个人解答-4" class="headerlink" title="个人解答"></a>个人解答</h4><p>一次遍历，把当前节点后面的值等于当前节点的值的节点都删掉</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -783,7 +783,7 @@ myLinkedList.get(1);              // 返回 3<span aria-hidden="true" class="lin
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="82-删除排序链表中的重复元素-II"><a href="#82-删除排序链表中的重复元素-II" class="headerlink" title="82. 删除排序链表中的重复元素 II"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-duplicates-from-sorted-list-ii/">82. 删除排序链表中的重复元素 II</a></h2><h3 id="题目要求-5"><a href="#题目要求-5" class="headerlink" title="题目要求"></a>题目要求</h3><p>给定一个已排序的链表的头 <code>head</code> ， <em>删除原始链表中所有重复数字的节点，只留下不同的数字</em> 。返回 <em>已排序的链表</em> 。</p>
+<h3 id="82-删除排序链表中的重复元素-II"><a href="#82-删除排序链表中的重复元素-II" class="headerlink" title="82. 删除排序链表中的重复元素 II"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-duplicates-from-sorted-list-ii/">82. 删除排序链表中的重复元素 II</a></h3><h4 id="题目要求-5"><a href="#题目要求-5" class="headerlink" title="题目要求"></a>题目要求</h4><p>给定一个已排序的链表的头 <code>head</code> ， <em>删除原始链表中所有重复数字的节点，只留下不同的数字</em> 。返回 <em>已排序的链表</em> 。</p>
 <p><strong>示例 1：</strong></p>
 <p><img src="https://assets.leetcode.com/uploads/2021/01/04/linkedlist1.jpg" alt="img"></p>
 <pre class="line-numbers language-none"><code class="language-none">输入：head = [1,2,3,3,4,4,5]
@@ -800,7 +800,7 @@ myLinkedList.get(1);              // 返回 3<span aria-hidden="true" class="lin
 <li><code>-100 &lt;= Node.val &lt;= 100</code></li>
 <li>题目数据保证链表已经按升序 <strong>排列</strong></li>
 </ul>
-<h3 id="个人解答-5"><a href="#个人解答-5" class="headerlink" title="个人解答"></a>个人解答</h3><p>定义一个节点dummy指向head，循环判断dummy的下个和下下个节点的值是否相同，如果相同，就记录下这个值，循环删除后面等于这个值的节点。</p>
+<h4 id="个人解答-5"><a href="#个人解答-5" class="headerlink" title="个人解答"></a>个人解答</h4><p>定义一个节点dummy指向head，循环判断dummy的下个和下下个节点的值是否相同，如果相同，就记录下这个值，循环删除后面等于这个值的节点。</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -830,7 +830,7 @@ myLinkedList.get(1);              // 返回 3<span aria-hidden="true" class="lin
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="2024-3-20"><a href="#2024-3-20" class="headerlink" title="2024-3-20"></a>2024-3-20</h1><h2 id="430-扁平化多级双向链表"><a href="#430-扁平化多级双向链表" class="headerlink" title="430. 扁平化多级双向链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/flatten-a-multilevel-doubly-linked-list/">430. 扁平化多级双向链表</a></h2><h3 id="题目要求-6"><a href="#题目要求-6" class="headerlink" title="题目要求"></a>题目要求</h3><p>你会得到一个双链表，其中包含的节点有一个下一个指针、一个前一个指针和一个额外的 <strong>子指针</strong> 。这个子指针可能指向一个单独的双向链表，也包含这些特殊的节点。这些子列表可以有一个或多个自己的子列表，以此类推，以生成如下面的示例所示的 <strong>多层数据结构</strong> 。</p>
+<h1 id="2024-3-20"><a href="#2024-3-20" class="headerlink" title="2024-3-20"></a>2024-3-20</h1><h2 id="链表的遍历"><a href="#链表的遍历" class="headerlink" title="链表的遍历"></a>链表的遍历</h2><h3 id="430-扁平化多级双向链表"><a href="#430-扁平化多级双向链表" class="headerlink" title="430. 扁平化多级双向链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/flatten-a-multilevel-doubly-linked-list/">430. 扁平化多级双向链表</a></h3><h4 id="题目要求-6"><a href="#题目要求-6" class="headerlink" title="题目要求"></a>题目要求</h4><p>你会得到一个双链表，其中包含的节点有一个下一个指针、一个前一个指针和一个额外的 <strong>子指针</strong> 。这个子指针可能指向一个单独的双向链表，也包含这些特殊的节点。这些子列表可以有一个或多个自己的子列表，以此类推，以生成如下面的示例所示的 <strong>多层数据结构</strong> 。</p>
 <p>给定链表的头节点 head ，将链表 <strong>扁平化</strong> ，以便所有节点都出现在单层双链表中。让 <code>curr</code> 是一个带有子列表的节点。子列表中的节点应该出现在<strong>扁平化列表</strong>中的 <code>curr</code> <strong>之后</strong> 和 <code>curr.next</code> <strong>之前</strong> 。</p>
 <p>返回 <em>扁平列表的 <code>head</code> 。列表中的节点必须将其 <strong>所有</strong> 子指针设置为 <code>null</code> 。</em></p>
 <p><strong>示例 1：</strong></p>
@@ -857,7 +857,7 @@ myLinkedList.get(1);              // 返回 3<span aria-hidden="true" class="lin
 <li>节点数目不超过 <code>1000</code></li>
 <li><code>1 &lt;= Node.val &lt;= 105</code></li>
 </ul>
-<h3 id="个人解答-6"><a href="#个人解答-6" class="headerlink" title="个人解答"></a>个人解答</h3><p>递归获取子列表的头结点和尾结点，然后和上面的连接起来</p>
+<h4 id="个人解答-6"><a href="#个人解答-6" class="headerlink" title="个人解答"></a>个人解答</h4><p>递归获取子列表的头结点和尾结点，然后和上面的连接起来</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/*
 // Definition for a Node.
 class Node {
@@ -900,7 +900,7 @@ class Node {
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="114-二叉树展开为链表"><a href="#114-二叉树展开为链表" class="headerlink" title="114. 二叉树展开为链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/flatten-binary-tree-to-linked-list/">114. 二叉树展开为链表</a></h2><h3 id="题目要求-7"><a href="#题目要求-7" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你二叉树的根结点 <code>root</code> ，请你将它展开为一个单链表：</p>
+<h3 id="114-二叉树展开为链表"><a href="#114-二叉树展开为链表" class="headerlink" title="114. 二叉树展开为链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/flatten-binary-tree-to-linked-list/">114. 二叉树展开为链表</a></h3><h4 id="题目要求-7"><a href="#题目要求-7" class="headerlink" title="题目要求"></a>题目要求</h4><p>给你二叉树的根结点 <code>root</code> ，请你将它展开为一个单链表：</p>
 <ul>
 <li>展开后的单链表应该同样使用 <code>TreeNode</code> ，其中 <code>right</code> 子指针指向链表中下一个结点，而左子指针始终为 <code>null</code> 。</li>
 <li>展开后的单链表应该与二叉树 <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%85%88%E5%BA%8F%E9%81%8D%E5%8E%86/6442839?fr=aladdin"><strong>先序遍历</strong></a> 顺序相同。</li>
@@ -923,7 +923,7 @@ class Node {
 <li>树中结点数在范围 <code>[0, 2000]</code> 内</li>
 <li><code>-100 &lt;= Node.val &lt;= 100</code></li>
 </ul>
-<h3 id="个人解答-7"><a href="#个人解答-7" class="headerlink" title="个人解答"></a>个人解答</h3><p>递归展开左子树和右子树，然后连接起来</p>
+<h4 id="个人解答-7"><a href="#个人解答-7" class="headerlink" title="个人解答"></a>个人解答</h4><p>递归展开左子树和右子树，然后连接起来</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -959,7 +959,7 @@ class Node {
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="61-旋转链表"><a href="#61-旋转链表" class="headerlink" title="61. 旋转链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/rotate-list/">61. 旋转链表</a></h2><h3 id="题目要求-8"><a href="#题目要求-8" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你一个链表的头节点 <code>head</code> ，旋转链表，将链表每个节点向右移动 <code>k</code> 个位置。</p>
+<h2 id="链表的旋转与反转"><a href="#链表的旋转与反转" class="headerlink" title="链表的旋转与反转"></a>链表的旋转与反转</h2><h3 id="61-旋转链表"><a href="#61-旋转链表" class="headerlink" title="61. 旋转链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/rotate-list/">61. 旋转链表</a></h3><h4 id="题目要求-8"><a href="#题目要求-8" class="headerlink" title="题目要求"></a>题目要求</h4><p>给你一个链表的头节点 <code>head</code> ，旋转链表，将链表每个节点向右移动 <code>k</code> 个位置。</p>
 <p><strong>示例 1：</strong></p>
 <p><img src="https://assets.leetcode.com/uploads/2020/11/13/rotate1.jpg" alt="img"></p>
 <pre class="line-numbers language-none"><code class="language-none">输入：head = [1,2,3,4,5], k = 2
@@ -976,7 +976,7 @@ class Node {
 <li><code>-100 &lt;= Node.val &lt;= 100</code></li>
 <li><code>0 &lt;= k &lt;= 2 * 109</code></li>
 </ul>
-<h3 id="个人解答-8"><a href="#个人解答-8" class="headerlink" title="个人解答"></a>个人解答</h3><ol>
+<h4 id="个人解答-8"><a href="#个人解答-8" class="headerlink" title="个人解答"></a>个人解答</h4><ol>
 <li>统计链表的长度len，找到最后一个链表节点，对k取模运算以保证移动次数小于len</li>
 <li>移动k次后，倒数第k个节点为头结点，倒数第k-1个节点为尾结点，我们只需要找到倒数第k-1个节点即可</li>
 <li>倒数第k-1个节点就是正数第len-k个节点</li>
@@ -1016,7 +1016,7 @@ class Node {
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="2024-3-21"><a href="#2024-3-21" class="headerlink" title="2024-3-21"></a>2024-3-21</h1><h2 id="24-两两交换链表中的节点"><a href="#24-两两交换链表中的节点" class="headerlink" title="24. 两两交换链表中的节点"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/swap-nodes-in-pairs/">24. 两两交换链表中的节点</a></h2><h3 id="题目要求-9"><a href="#题目要求-9" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你一个链表，两两交换其中相邻的节点，并返回交换后链表的头节点。你必须在不修改节点内部的值的情况下完成本题（即，只能进行节点交换）。</p>
+<h1 id="2024-3-21"><a href="#2024-3-21" class="headerlink" title="2024-3-21"></a>2024-3-21</h1><h3 id="24-两两交换链表中的节点"><a href="#24-两两交换链表中的节点" class="headerlink" title="24. 两两交换链表中的节点"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/swap-nodes-in-pairs/">24. 两两交换链表中的节点</a></h3><h4 id="题目要求-9"><a href="#题目要求-9" class="headerlink" title="题目要求"></a>题目要求</h4><p>给你一个链表，两两交换其中相邻的节点，并返回交换后链表的头节点。你必须在不修改节点内部的值的情况下完成本题（即，只能进行节点交换）。</p>
 <p><strong>示例 1：</strong></p>
 <p><img src="https://assets.leetcode.com/uploads/2020/10/03/swap_ex1.jpg" alt="img"></p>
 <pre class="line-numbers language-none"><code class="language-none">输入：head = [1,2,3,4]
@@ -1035,7 +1035,7 @@ class Node {
 <li>链表中节点的数目在范围 <code>[0, 100]</code> 内</li>
 <li><code>0 &lt;= Node.val &lt;= 100</code></li>
 </ul>
-<h3 id="个人解答-9"><a href="#个人解答-9" class="headerlink" title="个人解答"></a>个人解答</h3><ol>
+<h4 id="个人解答-9"><a href="#个人解答-9" class="headerlink" title="个人解答"></a>个人解答</h4><ol>
 <li>如果链表为空或只有一个节点，直接返回即可</li>
 <li>定义一个指向头结点的节点，来标记交换位置后的头结点</li>
 <li>遍历链表，交换两个位置后，记住后一个节点，以便在后面交换后还能连接上</li>
@@ -1073,7 +1073,7 @@ class Node {
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="206-反转链表"><a href="#206-反转链表" class="headerlink" title="206. 反转链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-linked-list/">206. 反转链表</a></h2><h3 id="题目要求-10"><a href="#题目要求-10" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你单链表的头节点 <code>head</code> ，请你反转链表，并返回反转后的链表。</p>
+<h3 id="206-反转链表"><a href="#206-反转链表" class="headerlink" title="206. 反转链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-linked-list/">206. 反转链表</a></h3><h4 id="题目要求-10"><a href="#题目要求-10" class="headerlink" title="题目要求"></a>题目要求</h4><p>给你单链表的头节点 <code>head</code> ，请你反转链表，并返回反转后的链表。</p>
 <p><strong>示例 1：</strong></p>
 <p><img src="https://assets.leetcode.com/uploads/2021/02/19/rev1ex1.jpg" alt="img"></p>
 <pre class="line-numbers language-none"><code class="language-none">输入：head = [1,2,3,4,5]
@@ -1094,7 +1094,7 @@ class Node {
 <li><code>-5000 &lt;= Node.val &lt;= 5000</code></li>
 </ul>
 <p><strong>进阶：</strong>链表可以选用迭代或递归方式完成反转。你能否用两种方法解决这道题？</p>
-<h3 id="个人解答-10"><a href="#个人解答-10" class="headerlink" title="个人解答"></a>个人解答</h3><h4 id="方法一：递归"><a href="#方法一：递归" class="headerlink" title="方法一：递归"></a>方法一：递归</h4><ol>
+<h4 id="个人解答-10"><a href="#个人解答-10" class="headerlink" title="个人解答"></a>个人解答</h4><h5 id="方法一：递归"><a href="#方法一：递归" class="headerlink" title="方法一：递归"></a>方法一：递归</h5><ol>
 <li>先找到最后一个节点作为最后返回的节点</li>
 <li>让下一个节点指向上一个节点，递归进行</li>
 <li>这种方法和用栈是差不多的</li>
@@ -1130,7 +1130,7 @@ class Node {
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="方法二：迭代"><a href="#方法二：迭代" class="headerlink" title="方法二：迭代"></a>方法二：迭代</h4><p>遍历链表，记录当前节点的前一个和后一个，然后当前节点指向前一个，再让前一个等于当前，当前等于后一个</p>
+<h5 id="方法二：迭代"><a href="#方法二：迭代" class="headerlink" title="方法二：迭代"></a>方法二：迭代</h5><p>遍历链表，记录当前节点的前一个和后一个，然后当前节点指向前一个，再让前一个等于当前，当前等于后一个</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -1160,7 +1160,7 @@ class Node {
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="92-反转链表-II"><a href="#92-反转链表-II" class="headerlink" title="92. 反转链表 II"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-linked-list-ii/">92. 反转链表 II</a></h2><h3 id="题目要求-11"><a href="#题目要求-11" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你单链表的头指针 <code>head</code> 和两个整数 <code>left</code> 和 <code>right</code> ，其中 <code>left &lt;= right</code> 。请你反转从位置 <code>left</code> 到位置 <code>right</code> 的链表节点，返回 <strong>反转后的链表</strong> 。</p>
+<h3 id="92-反转链表-II"><a href="#92-反转链表-II" class="headerlink" title="92. 反转链表 II"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-linked-list-ii/">92. 反转链表 II</a></h3><h4 id="题目要求-11"><a href="#题目要求-11" class="headerlink" title="题目要求"></a>题目要求</h4><p>给你单链表的头指针 <code>head</code> 和两个整数 <code>left</code> 和 <code>right</code> ，其中 <code>left &lt;= right</code> 。请你反转从位置 <code>left</code> 到位置 <code>right</code> 的链表节点，返回 <strong>反转后的链表</strong> 。</p>
 <p><strong>示例 1：</strong></p>
 <p><img src="https://assets.leetcode.com/uploads/2021/02/19/rev2ex2.jpg" alt="img"></p>
 <pre class="line-numbers language-none"><code class="language-none">输入：head = [1,2,3,4,5], left = 2, right = 4
@@ -1178,7 +1178,7 @@ class Node {
 <li><code>1 &lt;= left &lt;= right &lt;= n</code></li>
 </ul>
 <p><strong>进阶：</strong> 你可以使用一趟扫描完成反转吗？</p>
-<h3 id="个人解答-11"><a href="#个人解答-11" class="headerlink" title="个人解答"></a>个人解答</h3><ol>
+<h4 id="个人解答-11"><a href="#个人解答-11" class="headerlink" title="个人解答"></a>个人解答</h4><ol>
 <li>找到要反转的区间的前一个和后一个节点</li>
 <li>然后把前一个的下一个指向翻转后的头结点</li>
 <li>让原来的头结点指向下一个节点</li>
@@ -1228,7 +1228,7 @@ class Node {
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="2024-3-22"><a href="#2024-3-22" class="headerlink" title="2024-3-22"></a>2024-3-22</h1><h2 id="25-K-个一组翻转链表"><a href="#25-K-个一组翻转链表" class="headerlink" title="25. K 个一组翻转链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-nodes-in-k-group/">25. K 个一组翻转链表</a></h2><h3 id="题目要求-12"><a href="#题目要求-12" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你链表的头节点 <code>head</code> ，每 <code>k</code> 个节点一组进行翻转，请你返回修改后的链表。</p>
+<h1 id="2024-3-22"><a href="#2024-3-22" class="headerlink" title="2024-3-22"></a>2024-3-22</h1><h3 id="25-K-个一组翻转链表"><a href="#25-K-个一组翻转链表" class="headerlink" title="25. K 个一组翻转链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-nodes-in-k-group/">25. K 个一组翻转链表</a></h3><h4 id="题目要求-12"><a href="#题目要求-12" class="headerlink" title="题目要求"></a>题目要求</h4><p>给你链表的头节点 <code>head</code> ，每 <code>k</code> 个节点一组进行翻转，请你返回修改后的链表。</p>
 <p><code>k</code> 是一个正整数，它的值小于或等于链表的长度。如果节点总数不是 <code>k</code> 的整数倍，那么请将最后剩余的节点保持原有顺序。</p>
 <p>你不能只是单纯的改变节点内部的值，而是需要实际进行节点交换。</p>
 <p><strong>示例 1：</strong></p>
@@ -1248,7 +1248,7 @@ class Node {
 <li><code>0 &lt;= Node.val &lt;= 1000</code></li>
 </ul>
 <p><strong>进阶：</strong>你可以设计一个只用 <code>O(1)</code> 额外内存空间的算法解决此问题吗？</p>
-<h3 id="个人解答-12"><a href="#个人解答-12" class="headerlink" title="个人解答"></a>个人解答</h3><ol>
+<h4 id="个人解答-12"><a href="#个人解答-12" class="headerlink" title="个人解答"></a>个人解答</h4><ol>
 <li>每次保存要反转的链表的前一个节点和后一个节点</li>
 <li>对链表进行n/k次反转，每次都把反转的链表和之前保存额节点连接起来</li>
 </ol>
@@ -1307,7 +1307,7 @@ class Node {
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="2-两数相加"><a href="#2-两数相加" class="headerlink" title="2. 两数相加"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/add-two-numbers/">2. 两数相加</a></h2><h3 id="题目要求-13"><a href="#题目要求-13" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你两个 <strong>非空</strong> 的链表，表示两个非负的整数。它们每位数字都是按照 <strong>逆序</strong> 的方式存储的，并且每个节点只能存储 <strong>一位</strong> 数字。</p>
+<h2 id="链表高精度加法"><a href="#链表高精度加法" class="headerlink" title="链表高精度加法"></a>链表高精度加法</h2><h3 id="2-两数相加"><a href="#2-两数相加" class="headerlink" title="2. 两数相加"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/add-two-numbers/">2. 两数相加</a></h3><h4 id="题目要求-13"><a href="#题目要求-13" class="headerlink" title="题目要求"></a>题目要求</h4><p>给你两个 <strong>非空</strong> 的链表，表示两个非负的整数。它们每位数字都是按照 <strong>逆序</strong> 的方式存储的，并且每个节点只能存储 <strong>一位</strong> 数字。</p>
 <p>请你将两个数相加，并以相同形式返回一个表示和的链表。</p>
 <p>你可以假设除了数字 0 之外，这两个数都不会以 0 开头。</p>
 <p><strong>示例 1：</strong></p>
@@ -1330,7 +1330,7 @@ class Node {
 <li><code>0 &lt;= Node.val &lt;= 9</code></li>
 <li>题目数据保证列表表示的数字不含前导零</li>
 </ul>
-<h3 id="个人解答-13"><a href="#个人解答-13" class="headerlink" title="个人解答"></a>个人解答</h3><ol>
+<h4 id="个人解答-13"><a href="#个人解答-13" class="headerlink" title="个人解答"></a>个人解答</h4><ol>
 <li>每次把两个链表对应的值加一起，保存进位</li>
 <li>在一个为空时，另一个继续和进位相加，直到没有进位</li>
 <li>如果进位来自最后一个，还要在最后新增一个节点</li>
@@ -1397,7 +1397,7 @@ class Node {
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="445-两数相加-II"><a href="#445-两数相加-II" class="headerlink" title="445. 两数相加 II"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/add-two-numbers-ii/">445. 两数相加 II</a></h2><h3 id="题目要求-14"><a href="#题目要求-14" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你两个 <strong>非空</strong> 链表来代表两个非负整数。数字最高位位于链表开始位置。它们的每个节点只存储一位数字。将这两数相加会返回一个新的链表。</p>
+<h3 id="445-两数相加-II"><a href="#445-两数相加-II" class="headerlink" title="445. 两数相加 II"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/add-two-numbers-ii/">445. 两数相加 II</a></h3><h4 id="题目要求-14"><a href="#题目要求-14" class="headerlink" title="题目要求"></a>题目要求</h4><p>给你两个 <strong>非空</strong> 链表来代表两个非负整数。数字最高位位于链表开始位置。它们的每个节点只存储一位数字。将这两数相加会返回一个新的链表。</p>
 <p>你可以假设除了数字 0 之外，这两个数字都不会以零开头。</p>
 <p><strong>示例1：</strong></p>
 <p><img src="https://pic.leetcode-cn.com/1626420025-fZfzMX-image.png" alt="img"></p>
@@ -1419,7 +1419,7 @@ class Node {
 <li>输入数据保证链表代表的数字无前导 0</li>
 </ul>
 <p><strong>进阶：</strong>如果输入链表不能翻转该如何解决？</p>
-<h3 id="个人解答-14"><a href="#个人解答-14" class="headerlink" title="个人解答"></a>个人解答</h3><p>反转两个链表，再把两个链表相加，再反转，直接用上面的代码即可</p>
+<h4 id="个人解答-14"><a href="#个人解答-14" class="headerlink" title="个人解答"></a>个人解答</h4><p>反转两个链表，再把两个链表相加，再反转，直接用上面的代码即可</p>
 <pre class="line-numbers language-none"><code class="language-none">/**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -1505,7 +1505,7 @@ class Solution {
     }
 }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="2024-3-23"><a href="#2024-3-23" class="headerlink" title="2024-3-23"></a>2024-3-23</h1><h2 id="21-合并两个有序链表"><a href="#21-合并两个有序链表" class="headerlink" title="21. 合并两个有序链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/merge-two-sorted-lists/">21. 合并两个有序链表</a></h2><h3 id="题目要求-15"><a href="#题目要求-15" class="headerlink" title="题目要求"></a>题目要求</h3><p>将两个升序链表合并为一个新的 <strong>升序</strong> 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。 </p>
+<h1 id="2024-3-23"><a href="#2024-3-23" class="headerlink" title="2024-3-23"></a>2024-3-23</h1><h2 id="链表的合并"><a href="#链表的合并" class="headerlink" title="链表的合并"></a>链表的合并</h2><h3 id="21-合并两个有序链表"><a href="#21-合并两个有序链表" class="headerlink" title="21. 合并两个有序链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/merge-two-sorted-lists/">21. 合并两个有序链表</a></h3><h4 id="题目要求-15"><a href="#题目要求-15" class="headerlink" title="题目要求"></a>题目要求</h4><p>将两个升序链表合并为一个新的 <strong>升序</strong> 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。 </p>
 <p><strong>示例 1：</strong></p>
 <p><img src="https://assets.leetcode.com/uploads/2020/10/03/merge_ex1.jpg" alt="img"></p>
 <pre class="line-numbers language-none"><code class="language-none">输入：l1 = [1,2,4], l2 = [1,3,4]
@@ -1525,7 +1525,7 @@ class Solution {
 <li><code>-100 &lt;= Node.val &lt;= 100</code></li>
 <li><code>l1</code> 和 <code>l2</code> 均按 <strong>非递减顺序</strong> 排列</li>
 </ul>
-<h3 id="个人解答-15"><a href="#个人解答-15" class="headerlink" title="个人解答"></a>个人解答</h3><p>依次把两个链表中较小的节点加到新的链表中，最后再把不空的链表连接在新链表后边</p>
+<h4 id="个人解答-15"><a href="#个人解答-15" class="headerlink" title="个人解答"></a>个人解答</h4><p>依次把两个链表中较小的节点加到新的链表中，最后再把不空的链表连接在新链表后边</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -1561,7 +1561,7 @@ class Solution {
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="23-合并-K-个升序链表"><a href="#23-合并-K-个升序链表" class="headerlink" title="23. 合并 K 个升序链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/merge-k-sorted-lists/">23. 合并 K 个升序链表</a></h2><h3 id="题目要求-16"><a href="#题目要求-16" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你一个链表数组，每个链表都已经按升序排列。</p>
+<h3 id="23-合并-K-个升序链表"><a href="#23-合并-K-个升序链表" class="headerlink" title="23. 合并 K 个升序链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/merge-k-sorted-lists/">23. 合并 K 个升序链表</a></h3><h4 id="题目要求-16"><a href="#题目要求-16" class="headerlink" title="题目要求"></a>题目要求</h4><p>给你一个链表数组，每个链表都已经按升序排列。</p>
 <p>请你将所有链表合并到一个升序链表中，返回合并后的链表。</p>
 <p><strong>示例 1：</strong></p>
 <pre class="line-numbers language-none"><code class="language-none">输入：lists = [[1,4,5],[1,3,4],[2,6]]
@@ -1592,7 +1592,7 @@ class Solution {
 <li><code>lists[i]</code> 按 <strong>升序</strong> 排列</li>
 <li><code>lists[i].length</code> 的总和不超过 <code>10^4</code></li>
 </ul>
-<h3 id="个人解答-16"><a href="#个人解答-16" class="headerlink" title="个人解答"></a>个人解答</h3><h4 id="方法一-依次合并"><a href="#方法一-依次合并" class="headerlink" title="方法一 依次合并"></a>方法一 依次合并</h4><p>将链表依次合并</p>
+<h4 id="个人解答-16"><a href="#个人解答-16" class="headerlink" title="个人解答"></a>个人解答</h4><h5 id="方法一-依次合并"><a href="#方法一-依次合并" class="headerlink" title="方法一 依次合并"></a>方法一 依次合并</h5><p>将链表依次合并</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -1636,7 +1636,7 @@ class Solution {
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="方法二-优先队列"><a href="#方法二-优先队列" class="headerlink" title="方法二 优先队列"></a>方法二 优先队列</h4><ol>
+<h5 id="方法二-优先队列"><a href="#方法二-优先队列" class="headerlink" title="方法二 优先队列"></a>方法二 优先队列</h5><ol>
 <li>使用优先队列存储每个链表的头结点</li>
 <li>然后把最小的结点作为新的链表的新的节点</li>
 <li>然后把当前节点的下一个节点入队(如果有的话)</li>
@@ -1683,9 +1683,7 @@ class Solution {
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-
-
-<h2 id="86-分隔链表"><a href="#86-分隔链表" class="headerlink" title="86. 分隔链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/partition-list/">86. 分隔链表</a></h2><h3 id="题目要求-17"><a href="#题目要求-17" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你一个链表的头节点 <code>head</code> 和一个特定值 <code>x</code> ，请你对链表进行分隔，使得所有 <strong>小于</strong> <code>x</code> 的节点都出现在 <strong>大于或等于</strong> <code>x</code> 的节点之前。</p>
+<h2 id="链表中的双指针技巧"><a href="#链表中的双指针技巧" class="headerlink" title="链表中的双指针技巧"></a>链表中的双指针技巧</h2><h3 id="86-分隔链表"><a href="#86-分隔链表" class="headerlink" title="86. 分隔链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/partition-list/">86. 分隔链表</a></h3><h4 id="题目要求-17"><a href="#题目要求-17" class="headerlink" title="题目要求"></a>题目要求</h4><p>给你一个链表的头节点 <code>head</code> 和一个特定值 <code>x</code> ，请你对链表进行分隔，使得所有 <strong>小于</strong> <code>x</code> 的节点都出现在 <strong>大于或等于</strong> <code>x</code> 的节点之前。</p>
 <p>你应当 <strong>保留</strong> 两个分区中每个节点的初始相对位置。</p>
 <p><strong>示例 1：</strong></p>
 <p><img src="https://assets.leetcode.com/uploads/2021/01/04/partition.jpg" alt="img"></p>
@@ -1702,7 +1700,7 @@ class Solution {
 <li><code>-100 &lt;= Node.val &lt;= 100</code></li>
 <li><code>-200 &lt;= x &lt;= 200</code></li>
 </ul>
-<h3 id="个人解答-17"><a href="#个人解答-17" class="headerlink" title="个人解答"></a>个人解答</h3><ol>
+<h4 id="个人解答-17"><a href="#个人解答-17" class="headerlink" title="个人解答"></a>个人解答</h4><ol>
 <li>把第一个出现的值比x大或等于x的节点记录下来，几位first，把它之前的一个节点也记下来，记为firstBefore</li>
 <li>依次把值比x小的节点插入到firstBefore和first之间即可</li>
 </ol>
@@ -1753,7 +1751,7 @@ class Solution {
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="2024-3-24"><a href="#2024-3-24" class="headerlink" title="2024-3-24"></a>2024-3-24</h1><h2 id="141-环形链表"><a href="#141-环形链表" class="headerlink" title="141. 环形链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/linked-list-cycle/">141. 环形链表</a></h2><h3 id="题目要求-18"><a href="#题目要求-18" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你一个链表的头节点 <code>head</code> ，判断链表中是否有环。</p>
+<h1 id="2024-3-24"><a href="#2024-3-24" class="headerlink" title="2024-3-24"></a>2024-3-24</h1><h3 id="141-环形链表"><a href="#141-环形链表" class="headerlink" title="141. 环形链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/linked-list-cycle/">141. 环形链表</a></h3><h4 id="题目要求-18"><a href="#题目要求-18" class="headerlink" title="题目要求"></a>题目要求</h4><p>给你一个链表的头节点 <code>head</code> ，判断链表中是否有环。</p>
 <p>如果链表中有某个节点，可以通过连续跟踪 <code>next</code> 指针再次到达，则链表中存在环。 为了表示给定链表中的环，评测系统内部使用整数 <code>pos</code> 来表示链表尾连接到链表中的位置（索引从 0 开始）。<strong>注意：<code>pos</code> 不作为参数进行传递</strong> 。仅仅是为了标识链表的实际情况。</p>
 <p><em>如果链表中存在环</em> ，则返回 <code>true</code> 。 否则，返回 <code>false</code> 。</p>
 <p><strong>示例 1：</strong></p>
@@ -1781,7 +1779,7 @@ class Solution {
 <li><code>pos</code> 为 <code>-1</code> 或者链表中的一个 <strong>有效索引</strong> 。</li>
 </ul>
 <p><strong>进阶：</strong>你能用 <code>O(1)</code>（即，常量）内存解决此问题吗？</p>
-<h3 id="个人解答-18"><a href="#个人解答-18" class="headerlink" title="个人解答"></a>个人解答</h3><ol>
+<h4 id="个人解答-18"><a href="#个人解答-18" class="headerlink" title="个人解答"></a>个人解答</h4><ol>
 <li>设置一个快指针和慢指针，快指针一次走两步，慢指针一次走一步</li>
 <li>如果有环，快慢指针一定会相遇，否则就没有环</li>
 </ol>
@@ -1813,7 +1811,7 @@ class Solution {
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="142-环形链表-II"><a href="#142-环形链表-II" class="headerlink" title="142. 环形链表 II"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/linked-list-cycle-ii/">142. 环形链表 II</a></h2><h3 id="题目要求-19"><a href="#题目要求-19" class="headerlink" title="题目要求"></a>题目要求</h3><p>给定一个链表的头节点  <code>head</code> ，返回链表开始入环的第一个节点。 <em>如果链表无环，则返回 <code>null</code>。</em></p>
+<h3 id="142-环形链表-II"><a href="#142-环形链表-II" class="headerlink" title="142. 环形链表 II"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/linked-list-cycle-ii/">142. 环形链表 II</a></h3><h4 id="题目要求-19"><a href="#题目要求-19" class="headerlink" title="题目要求"></a>题目要求</h4><p>给定一个链表的头节点  <code>head</code> ，返回链表开始入环的第一个节点。 <em>如果链表无环，则返回 <code>null</code>。</em></p>
 <p>如果链表中有某个节点，可以通过连续跟踪 <code>next</code> 指针再次到达，则链表中存在环。 为了表示给定链表中的环，评测系统内部使用整数 <code>pos</code> 来表示链表尾连接到链表中的位置（<strong>索引从 0 开始</strong>）。如果 <code>pos</code> 是 <code>-1</code>，则在该链表中没有环。<strong>注意：<code>pos</code> 不作为参数进行传递</strong>，仅仅是为了标识链表的实际情况。</p>
 <p><strong>不允许修改</strong> 链表。</p>
 <p><strong>示例 1：</strong></p>
@@ -1841,7 +1839,7 @@ class Solution {
 <li><code>pos</code> 的值为 <code>-1</code> 或者链表中的一个有效索引</li>
 </ul>
 <p><strong>进阶：</strong>你是否可以使用 <code>O(1)</code> 空间解决此题？</p>
-<h3 id="个人解答-19"><a href="#个人解答-19" class="headerlink" title="个人解答"></a>个人解答</h3><p>哈希表，如果表中不存在节点，就往后，如果存在，就是入环的节点</p>
+<h4 id="个人解答-19"><a href="#个人解答-19" class="headerlink" title="个人解答"></a>个人解答</h4><p>哈希表，如果表中不存在节点，就往后，如果存在，就是入环的节点</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
  * Definition for singly-linked list.
  * class ListNode {
@@ -1867,7 +1865,7 @@ class Solution {
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="官方解答"><a href="#官方解答" class="headerlink" title="官方解答"></a>官方解答</h3><p>使用两个指针，fast与 slow。它们起始都位于链表的头部。随后，slow 指针每次向后移动一个位置，而 fast指针向后移动两个位置。如果链表中存在环，则 fast指针最终将再次与 slow指针在环中相遇。</p>
+<h4 id="官方解答"><a href="#官方解答" class="headerlink" title="官方解答"></a>官方解答</h4><p>使用两个指针，fast与 slow。它们起始都位于链表的头部。随后，slow 指针每次向后移动一个位置，而 fast指针向后移动两个位置。如果链表中存在环，则 fast指针最终将再次与 slow指针在环中相遇。</p>
 <p>如下图所示，设链表中环外部分的长度为 a。slow指针进入环后，又走了 b 的距离与 fast 相遇。此时，fast 指针已经走完了环的 n 圈，因此它走过的总距离为 a+n(b+c)+b=a+(n+1)b+nc。</p>
 <p><img src="https://assets.leetcode-cn.com/solution-static/142/142_fig1.png" alt="fig1"></p>
 <p>根据题意，任意时刻，fast 指针走过的距离都为 slow 指针的 2 倍。因此，我们有<br>$$<br>a+(n+1)b+nc=2(a+b)  ⟹  a=c+(n−1)(b+c)<br>$$<br>有了 a=c+(n−1)(b+c)的等量关系，我们会发现：从相遇点到入环点的距离加上 n−1 圈的环长，恰好等于从链表头部到入环点的距离。</p>
@@ -1905,7 +1903,7 @@ class Solution {
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="876-链表的中间结点"><a href="#876-链表的中间结点" class="headerlink" title="876. 链表的中间结点"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/middle-of-the-linked-list/">876. 链表的中间结点</a></h2><h3 id="题目要求-20"><a href="#题目要求-20" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你单链表的头结点 <code>head</code> ，请你找出并返回链表的中间结点。</p>
+<h3 id="876-链表的中间结点"><a href="#876-链表的中间结点" class="headerlink" title="876. 链表的中间结点"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/middle-of-the-linked-list/">876. 链表的中间结点</a></h3><h4 id="题目要求-20"><a href="#题目要求-20" class="headerlink" title="题目要求"></a>题目要求</h4><p>给你单链表的头结点 <code>head</code> ，请你找出并返回链表的中间结点。</p>
 <p>如果有两个中间结点，则返回第二个中间结点。</p>
 <p><strong>示例 1：</strong></p>
 <p><img src="https://assets.leetcode.com/uploads/2021/07/23/lc-midlist1.jpg" alt="img"></p>
@@ -1924,7 +1922,7 @@ class Solution {
 <li>链表的结点数范围是 <code>[1, 100]</code></li>
 <li><code>1 &lt;= Node.val &lt;= 100</code></li>
 </ul>
-<h3 id="个人解答-20"><a href="#个人解答-20" class="headerlink" title="个人解答"></a>个人解答</h3><h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><p>求出链表的长度，遍历长度的一半的链表</p>
+<h4 id="个人解答-20"><a href="#个人解答-20" class="headerlink" title="个人解答"></a>个人解答</h4><h5 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h5><p>求出链表的长度，遍历长度的一半的链表</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -1956,7 +1954,7 @@ class Solution {
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h4><p>快慢指针，快指针一次移动两步，慢指针一次移动一步，在快指针移动到末尾时，慢指针刚好到中间</p>
+<h5 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h5><p>快慢指针，快指针一次移动两步，慢指针一次移动一步，在快指针移动到末尾时，慢指针刚好到中间</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -1981,7 +1979,7 @@ class Solution {
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="143-重排链表"><a href="#143-重排链表" class="headerlink" title="143. 重排链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reorder-list/">143. 重排链表</a></h2><h3 id="题目要求-21"><a href="#题目要求-21" class="headerlink" title="题目要求"></a>题目要求</h3><p>给定一个单链表 <code>L</code> 的头节点 <code>head</code> ，单链表 <code>L</code> 表示为：</p>
+<h3 id="143-重排链表"><a href="#143-重排链表" class="headerlink" title="143. 重排链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reorder-list/">143. 重排链表</a></h3><h4 id="题目要求-21"><a href="#题目要求-21" class="headerlink" title="题目要求"></a>题目要求</h4><p>给定一个单链表 <code>L</code> 的头节点 <code>head</code> ，单链表 <code>L</code> 表示为：</p>
 <pre class="line-numbers language-none"><code class="language-none">L0 → L1 → … → Ln - 1 → Ln<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>请将其重新排列后变为：</p>
@@ -2003,7 +2001,7 @@ class Solution {
 <li>链表的长度范围为 <code>[1, 5 * 104]</code></li>
 <li><code>1 &lt;= node.val &lt;= 1000</code></li>
 </ul>
-<h3 id="个人解答-21"><a href="#个人解答-21" class="headerlink" title="个人解答"></a>个人解答</h3><p>使用线性表存储链表的每个节点，然后重新构建链表</p>
+<h4 id="个人解答-21"><a href="#个人解答-21" class="headerlink" title="个人解答"></a>个人解答</h4><p>使用线性表存储链表的每个节点，然后重新构建链表</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -2034,7 +2032,7 @@ class Solution {
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="官方解答-1"><a href="#官方解答-1" class="headerlink" title="官方解答"></a>官方解答</h3><p>注意到目标链表即为将原链表的左半端和反转后的右半端合并后的结果。</p>
+<h4 id="官方解答-1"><a href="#官方解答-1" class="headerlink" title="官方解答"></a>官方解答</h4><p>注意到目标链表即为将原链表的左半端和反转后的右半端合并后的结果。</p>
 <p>这样我们的任务即可划分为三步：</p>
 <ol>
 <li><p>找到原链表的中点（参考「876. 链表的中间结点」）。</p>
@@ -2113,7 +2111,7 @@ class Solution {
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="160-相交链表"><a href="#160-相交链表" class="headerlink" title="160. 相交链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/intersection-of-two-linked-lists/">160. 相交链表</a></h2><h3 id="题目要求-22"><a href="#题目要求-22" class="headerlink" title="题目要求"></a>题目要求</h3><p>给你两个单链表的头节点 <code>headA</code> 和 <code>headB</code> ，请你找出并返回两个单链表相交的起始节点。如果两个链表不存在相交节点，返回 <code>null</code> 。</p>
+<h3 id="160-相交链表"><a href="#160-相交链表" class="headerlink" title="160. 相交链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/intersection-of-two-linked-lists/">160. 相交链表</a></h3><h4 id="题目要求-22"><a href="#题目要求-22" class="headerlink" title="题目要求"></a>题目要求</h4><p>给你两个单链表的头节点 <code>headA</code> 和 <code>headB</code> ，请你找出并返回两个单链表相交的起始节点。如果两个链表不存在相交节点，返回 <code>null</code> 。</p>
 <p>图示两个链表在节点 <code>c1</code> 开始相交<strong>：</strong></p>
 <p><a target="_blank" rel="noopener" href="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/14/160_statement.png"><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/14/160_statement.png" alt="img"></a></p>
 <p>题目数据 <strong>保证</strong> 整个链式结构中不存在环。</p>
@@ -2165,7 +2163,7 @@ class Solution {
 <li>如果 <code>listA</code> 和 <code>listB</code> 有交点，<code>intersectVal == listA[skipA] == listB[skipB]</code></li>
 </ul>
 <p><strong>进阶：</strong>你能否设计一个时间复杂度 <code>O(m + n)</code> 、仅用 <code>O(1)</code> 内存的解决方案？</p>
-<h3 id="个人解答-22"><a href="#个人解答-22" class="headerlink" title="个人解答"></a>个人解答</h3><p>使用哈希表，先遍历headA，把它的每个节点加到哈希表中，再遍历headB，第一个在哈希表中的就是要返回的</p>
+<h4 id="个人解答-22"><a href="#个人解答-22" class="headerlink" title="个人解答"></a>个人解答</h4><p>使用哈希表，先遍历headA，把它的每个节点加到哈希表中，再遍历headB，第一个在哈希表中的就是要返回的</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -2196,7 +2194,7 @@ class Solution {
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="官方解答-2"><a href="#官方解答-2" class="headerlink" title="官方解答"></a>官方解答</h3><p>使用双指针的方法，可以将空间复杂度降至 O(1)。</p>
+<h4 id="官方解答-2"><a href="#官方解答-2" class="headerlink" title="官方解答"></a>官方解答</h4><p>使用双指针的方法，可以将空间复杂度降至 O(1)。</p>
 <p>只有当链表 headA 和 headB 都不为空时，两个链表才可能相交。因此首先判断链表 headA 和 headB 是否为空，如果其中至少有一个链表为空，则两个链表一定不相交，返回 null。</p>
 <p>当链表 headA 和 headB 都不为空时，创建两个指针 pA 和 pB，初始时分别指向两个链表的头节点 headA 和 headB，然后将两个指针依次遍历两个链表的每个节点。具体做法如下：</p>
 <ul>
@@ -2227,6 +2225,20 @@ class Solution {
 <li><p>如果 m≠n，则由于两个链表没有公共节点，两个指针也不会同时到达两个链表的尾节点，因此两个指针都会遍历完两个链表，在指针 pA 移动了 m+n 次、指针 pB 移动了 n+m 次之后，两个指针会同时变成空值 null，此时返回 null。</p>
 </li>
 </ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token class-name">ListNode</span> <span class="token function">getIntersectionNode</span><span class="token punctuation">(</span><span class="token class-name">ListNode</span> headA<span class="token punctuation">,</span> <span class="token class-name">ListNode</span> headB<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>headA <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span> headB <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token class-name">ListNode</span> pA <span class="token operator">=</span> headA<span class="token punctuation">,</span> pB <span class="token operator">=</span> headB<span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>pA <span class="token operator">!=</span> pB<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            pA <span class="token operator">=</span> pA <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">?</span> headB <span class="token operator">:</span> pA<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+            pB <span class="token operator">=</span> pB <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">?</span> headA <span class="token operator">:</span> pB<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> pA<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
                 
             </div>
@@ -2665,7 +2677,7 @@ class Solution {
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">98.6k</span>
+                        class="white-color">98.7k</span>
             
             
             
