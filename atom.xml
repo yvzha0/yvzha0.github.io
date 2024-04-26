@@ -6,7 +6,7 @@
   <link href="https://yvzha0.github.io/atom.xml" rel="self"/>
   
   <link href="https://yvzha0.github.io/"/>
-  <updated>2024-04-24T09:27:20.363Z</updated>
+  <updated>2024-04-26T10:55:32.190Z</updated>
   <id>https://yvzha0.github.io/</id>
   
   <author>
@@ -17,18 +17,45 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>力扣刷题记录——数与位篇(学习中)</title>
+    <link href="https://yvzha0.github.io/2024/04/26/li-kou-shua-ti-ji-lu-shu-yu-wei-pian/"/>
+    <id>https://yvzha0.github.io/2024/04/26/li-kou-shua-ti-ji-lu-shu-yu-wei-pian/</id>
+    <published>2024-04-26T09:37:18.000Z</published>
+    <updated>2024-04-26T10:55:32.190Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;2024-4-26&quot;&gt;&lt;a href=&quot;#2024-4-26&quot; class=&quot;headerlink&quot; title=&quot;2024-4-26&quot;&gt;&lt;/a&gt;2024-4-26&lt;/h1&gt;&lt;h2 id=&quot;进制转换&quot;&gt;&lt;a href=&quot;#进制转换&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="力扣刷题记录" scheme="https://yvzha0.github.io/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    
+    
+    <category term="算法学习" scheme="https://yvzha0.github.io/tags/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="数与位" scheme="https://yvzha0.github.io/tags/%E6%95%B0%E4%B8%8E%E4%BD%8D/"/>
+    
+  </entry>
+  
+  <entry>
     <title>力扣刷题记录——字符串篇(学习中)</title>
     <link href="https://yvzha0.github.io/2024/04/09/li-kou-shua-ti-ji-lu-zi-fu-chuan-pian/"/>
     <id>https://yvzha0.github.io/2024/04/09/li-kou-shua-ti-ji-lu-zi-fu-chuan-pian/</id>
     <published>2024-04-09T03:22:39.000Z</published>
-    <updated>2024-04-24T09:27:20.363Z</updated>
+    <updated>2024-04-26T09:35:52.600Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;2024-4-09&quot;&gt;&lt;a href=&quot;#2024-4-09&quot; class=&quot;headerlink&quot; title=&quot;2024-4-09&quot;&gt;&lt;/a&gt;2024-4-09&lt;/h1&gt;&lt;h2 id=&quot;520-检测大写字母&quot;&gt;&lt;a href=&quot;#520-检测大写字母&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;2024-4-09&quot;&gt;&lt;a href=&quot;#2024-4-09&quot; class=&quot;headerlink&quot; title=&quot;2024-4-09&quot;&gt;&lt;/a&gt;2024-4-09&lt;/h1&gt;&lt;h2 id=&quot;字符&quot;&gt;&lt;a href=&quot;#字符&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -74,14 +101,14 @@
     <link href="https://yvzha0.github.io/2024/03/31/li-kou-shua-ti-ji-lu-zhan-yu-dui-lie-pian/"/>
     <id>https://yvzha0.github.io/2024/03/31/li-kou-shua-ti-ji-lu-zhan-yu-dui-lie-pian/</id>
     <published>2024-03-31T04:52:36.000Z</published>
-    <updated>2024-04-09T03:23:30.791Z</updated>
+    <updated>2024-04-25T05:00:30.697Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;2024-3-31&quot;&gt;&lt;a href=&quot;#2024-3-31&quot; class=&quot;headerlink&quot; title=&quot;2024-3.31&quot;&gt;&lt;/a&gt;2024-3.31&lt;/h1&gt;&lt;h2 id=&quot;232-用栈实现队列&quot;&gt;&lt;a href=&quot;#232-用栈实现队列&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;2024-3-31&quot;&gt;&lt;a href=&quot;#2024-3-31&quot; class=&quot;headerlink&quot; title=&quot;2024-3.31&quot;&gt;&lt;/a&gt;2024-3.31&lt;/h1&gt;&lt;h2 id=&quot;栈的实现&quot;&gt;&lt;a href=&quot;#栈的实现&quot;</summary>
         
       
     
@@ -101,14 +128,14 @@
     <link href="https://yvzha0.github.io/2024/03/25/li-kou-shua-ti-ji-lu-ha-xi-biao-pian/"/>
     <id>https://yvzha0.github.io/2024/03/25/li-kou-shua-ti-ji-lu-ha-xi-biao-pian/</id>
     <published>2024-03-25T01:44:27.000Z</published>
-    <updated>2024-03-31T04:50:55.154Z</updated>
+    <updated>2024-04-25T04:53:47.770Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;2024-3-25&quot;&gt;&lt;a href=&quot;#2024-3-25&quot; class=&quot;headerlink&quot; title=&quot;2024-3-25&quot;&gt;&lt;/a&gt;2024-3-25&lt;/h1&gt;&lt;h2 id=&quot;706-设计哈希映射&quot;&gt;&lt;a href=&quot;#706-设计哈希映射&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;2024-3-25&quot;&gt;&lt;a href=&quot;#2024-3-25&quot; class=&quot;headerlink&quot; title=&quot;2024-3-25&quot;&gt;&lt;/a&gt;2024-3-25&lt;/h1&gt;&lt;h2 id=&quot;哈希表的查找、插入及删除&quot;&gt;&lt;a</summary>
         
       
     
