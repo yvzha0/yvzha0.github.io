@@ -4,8 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JWT Token, Blog Of yvzha0">
-    <meta name="description" content="一、介绍1. 什么是JSON Web令牌JSON Web Token (JWT) 是一种开放标准 ( RFC 7519 )，它定义了一种紧凑且独立的方式，用于在各方之间以 JSON 对象的形式安全地传输信息。该信息可以被验证和信任，因为它是">
+    <meta name="keywords" content="力扣刷题记录——递归篇, Blog Of yvzha0">
+    <meta name="description" content="2024-5-04二叉树相关问题100. 相同的树题目要求给你两棵二叉树的根节点 p 和 q ，编写一个函数来检验这两棵树是否相同。
+如果两个树在结构上相同，并且节点具有相同的值，则认为它们是相同的。
+示例 1：
+
+输入：p = [1,2,">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +21,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JWT Token | Blog Of yvzha0</title>
+    <title>力扣刷题记录——递归篇 | Blog Of yvzha0</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -337,12 +341,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JWT Token</h1>
+                    <h1 class="description center-align post-title">力扣刷题记录——递归篇</h1>
                 </div>
             </div>
         </div>
@@ -366,8 +370,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/JWT/">
-                                <span class="chip bg-color">JWT</span>
+                            <a href="/tags/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">算法学习</span>
+                            </a>
+                        
+                            <a href="/tags/%E9%80%92%E5%BD%92/">
+                                <span class="chip bg-color">递归</span>
                             </a>
                         
                     </div>
@@ -378,8 +386,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                网络攻防学习
+                            <a href="/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" class="post-category">
+                                力扣刷题记录
                             </a>
                         
                     </div>
@@ -391,28 +399,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-02-28
+                    2024-05-04
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-03-03
+                    2024-05-04
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.6k
+                    696
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    3 分
                 </div>
                 
 
@@ -435,108 +443,153 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h2><h3 id="1-什么是JSON-Web令牌"><a href="#1-什么是JSON-Web令牌" class="headerlink" title="1. 什么是JSON Web令牌"></a>1. 什么是JSON Web令牌</h3><p>JSON Web Token (JWT) 是一种开放标准 ( <a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc7519">RFC 7519</a> )，它定义了一种紧凑且独立的方式，用于在各方之间以 JSON 对象的形式安全地传输信息。该信息可以被验证和信任，因为它是经过数字签名的。JWT 可以使用密钥（使用<strong>HMAC算法）或使用RSA</strong>或<strong>ECDSA</strong>的公钥/私钥对其进行签名。</p>
-<p>认证过程：</p>
-<p><img src="/../image/webp" alt="JWT的认证过程"></p>
-<p>标头的内容应如下所示：</p>
-<pre class="line-numbers language-http" data-language="http"><code class="language-http"><span class="token header"><span class="token header-name keyword">Authorization</span><span class="token punctuation">:</span> <span class="token header-value">Bearer &lt;token&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h1 id="2024-5-04"><a href="#2024-5-04" class="headerlink" title="2024-5-04"></a>2024-5-04</h1><h2 id="二叉树相关问题"><a href="#二叉树相关问题" class="headerlink" title="二叉树相关问题"></a>二叉树相关问题</h2><h3 id="100-相同的树"><a href="#100-相同的树" class="headerlink" title="100. 相同的树"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/same-tree/">100. 相同的树</a></h3><h4 id="题目要求"><a href="#题目要求" class="headerlink" title="题目要求"></a>题目要求</h4><p>给你两棵二叉树的根节点 <code>p</code> 和 <code>q</code> ，编写一个函数来检验这两棵树是否相同。</p>
+<p>如果两个树在结构上相同，并且节点具有相同的值，则认为它们是相同的。</p>
+<p><strong>示例 1：</strong></p>
+<p><img src="https://assets.leetcode.com/uploads/2020/12/20/ex1.jpg" alt="img"></p>
+<pre class="line-numbers language-none"><code class="language-none">输入：p = [1,2,3], q = [1,2,3]
+输出：true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<h3 id="2-JSON-Web令牌使用场景"><a href="#2-JSON-Web令牌使用场景" class="headerlink" title="2. JSON Web令牌使用场景"></a>2. JSON Web令牌使用场景</h3><ul>
-<li><strong>授权</strong>：这是使用 JWT 最常见的场景。用户登录后，每个后续请求都将包含 JWT，从而允许用户访问该令牌允许的路由、服务和资源。单点登录是当今广泛使用 JWT 的一项功能，因为它的开销很小并且能够轻松地跨不同域使用。</li>
-<li><strong>信息交换</strong>：JSON Web 令牌是在各方之间安全传输信息的好方法。因为 JWT 可以进行签名（例如，使用公钥/私钥对），所以可以确定发送者就是他们所说的人。此外，由于签名是使用标头和有效负载计算的，因此还可以验证内容是否未被篡改。</li>
-</ul>
-<h3 id="3-JSON-Web令牌的结构"><a href="#3-JSON-Web令牌的结构" class="headerlink" title="3. JSON Web令牌的结构"></a>3. JSON Web令牌的结构</h3><p>JSON Web 令牌由用点 (.)分隔的三个部分组成，它们是：</p>
+<p><strong>示例 2：</strong></p>
+<p><img src="https://assets.leetcode.com/uploads/2020/12/20/ex2.jpg" alt="img"></p>
+<pre class="line-numbers language-none"><code class="language-none">输入：p = [1,2], q = [1,null,2]
+输出：false<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><strong>示例 3：</strong></p>
+<p><img src="https://assets.leetcode.com/uploads/2020/12/20/ex3.jpg" alt="img"></p>
+<pre class="line-numbers language-none"><code class="language-none">输入：p = [1,2,1], q = [1,1,2]
+输出：false<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><strong>提示：</strong></p>
 <ul>
-<li>标头</li>
-<li>有效载荷</li>
-<li>签名</li>
+<li>两棵树上的节点数目都在范围 <code>[0, 100]</code> 内</li>
 </ul>
-<p>因此，JWT 通常如下所示。</p>
-<pre class="line-numbers language-none"><code class="language-none">xxxxx.yyyyy.zzzzz<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="个人解答"><a href="#个人解答" class="headerlink" title="个人解答"></a>个人解答</h4><ol>
+<li>递归比较两个树的左子树和右子树是否相同</li>
+<li>如果两个树都是空的，返回true</li>
+<li>如果有一个是空的，另一个不是，或两个树的节点的值不同，返回false</li>
+</ol>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */</span>
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isSameTree</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span> p<span class="token punctuation">,</span> <span class="token class-name">TreeNode</span> q<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>p <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> q <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>p <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span> q <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span> p<span class="token punctuation">.</span>val <span class="token operator">!=</span> q<span class="token punctuation">.</span>val<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token function">isSameTree</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>left<span class="token punctuation">,</span>q<span class="token punctuation">.</span>left<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token function">isSameTree</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>right<span class="token punctuation">,</span>q<span class="token punctuation">.</span>right<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="3-1-标头"><a href="#3-1-标头" class="headerlink" title="3.1 标头"></a>3.1 标头</h4><p>标头通常由两部分组成：令牌的类型（JWT）和所使用的签名算法（例如 HMAC SHA256 或 RSA，可以为none）。</p>
-<p>例如：</p>
-<pre class="line-numbers language-none"><code class="language-none">{
-  "alg": "HS256",
-  "typ": "JWT"
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="226-翻转二叉树"><a href="#226-翻转二叉树" class="headerlink" title="226. 翻转二叉树"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/invert-binary-tree/">226. 翻转二叉树</a></h3><h4 id="题目要求-1"><a href="#题目要求-1" class="headerlink" title="题目要求"></a>题目要求</h4><p>给你一棵二叉树的根节点 <code>root</code> ，翻转这棵二叉树，并返回其根节点。</p>
+<p><strong>示例 1：</strong></p>
+<p><img src="https://assets.leetcode.com/uploads/2021/03/14/invert1-tree.jpg" alt="img"></p>
+<pre class="line-numbers language-none"><code class="language-none">输入：root = [4,2,7,1,3,6,9]
+输出：[4,7,2,9,6,3,1]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p>然后，对该 JSON 进行<strong>Base64Url</strong>编码以形成 JWT 的第一部分。</p>
-<h4 id="3-2-有效载荷"><a href="#3-2-有效载荷" class="headerlink" title="3.2 有效载荷"></a>3.2 有效载荷</h4><p>有效载荷部分，是JWT的主体内容部分，其中包含声明，也是一个JSON对象。 JWT指定七个默认字段供选择。声明是关于实体（通常是用户）和附加数据的声明。申明分为三种类型：注册申明、公开申明和私人申明。</p>
+<p><strong>示例 2：</strong></p>
+<p><img src="https://assets.leetcode.com/uploads/2021/03/14/invert2-tree.jpg" alt="img"></p>
+<pre class="line-numbers language-none"><code class="language-none">输入：root = [2,1,3]
+输出：[2,3,1]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><strong>示例 3：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">输入：root = []
+输出：[]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><strong>提示：</strong></p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc7519#section-4.1"><strong>注册声明</strong></a>：这些是一组预定义的声明，不是强制性的，而是推荐的，以提供一组有用的、可互操作的声明。其中一些是： <strong>iss</strong>（发行者）、 <strong>exp</strong>（到期时间）、 <strong>sub</strong>（主题）、 <strong>aud</strong>（受众）、<strong>nbf</strong>（在此之前不可用）、<strong>iat</strong>（发布时间）、<strong>jti</strong>（JWT ID用于标识该JWT）。</li>
-<li><a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc7519#section-4.2"><strong>公开声明</strong></a>：这些可以由使用 JWT 的人随意定义。但为了避免冲突，它们应该在<a target="_blank" rel="noopener" href="https://www.iana.org/assignments/jwt/jwt.xhtml">IANA JSON Web 令牌注册表</a>中定义，或者定义为包含防冲突命名空间的 URI。</li>
-<li><a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc7519#section-4.3"><strong>私人声明</strong></a>：这些是为在同意使用它们的各方之间共享信息而创建的自定义声明，既不是注册声明也不是公开声明。</li>
+<li>树中节点数目范围在 <code>[0, 100]</code> 内</li>
+<li><code>-100 &lt;= Node.val &lt;= 100</code></li>
 </ul>
-<p>示例：</p>
-<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">{</span>
-  <span class="token property">"sub"</span><span class="token operator">:</span> <span class="token string">"1234567890"</span><span class="token punctuation">,</span>
-  <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"John Doe"</span><span class="token punctuation">,</span>
-  <span class="token property">"admin"</span><span class="token operator">:</span> <span class="token boolean">true</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="个人解答-1"><a href="#个人解答-1" class="headerlink" title="个人解答"></a>个人解答</h4><p>递归交换当前节点的左右子树，直到当前节点为空</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */</span>
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token class-name">TreeNode</span> <span class="token function">invertTree</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span> root<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>root <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
 
-<p>默认情况下JWT是未加密的，任何人都可以解读其内容，因此不要构建隐私信息字段，存放保密信息，以防止信息泄露。</p>
-<p>然后对有效负载进行<strong>Base64Url</strong>编码以形成 JSON Web 令牌的第二部分。</p>
-<h4 id="3-3-签名"><a href="#3-3-签名" class="headerlink" title="3.3 签名"></a>3.3 签名</h4><p>签名哈希部分是对上面两部分数据签名，通过指定的算法生成哈希，以确保数据不会被篡改。</p>
-<p>首先，需要指定一个密码（secret）。该密码仅仅为保存在服务器中，并且不能向用户公开。然后，使用标头中指定的签名算法（默认情况下为HMAC SHA256）根据以下公式生成签名。</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token function">HMACSHA256</span><span class="token punctuation">(</span>
-  <span class="token function">base64UrlEncode</span><span class="token punctuation">(</span>header<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"."</span> <span class="token operator">+</span>
-  <span class="token function">base64UrlEncode</span><span class="token punctuation">(</span>payload<span class="token punctuation">)</span><span class="token punctuation">,</span>
-  secret<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+        <span class="token function">invertTree</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">invertTree</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<p>签名用于验证消息在传输过程中没有发生更改，并且在使用私钥签名的令牌的情况下，它还可以验证 JWT 的发送者是否是其所说的人。</p>
-<p>在计算出签名哈希后，JWT头，有效载荷和签名哈希的三个部分组合成一个字符串，每个部分用”.”分隔，就构成整个JWT对象。</p>
-<h4 id="3-4-Base64URL算法"><a href="#3-4-Base64URL算法" class="headerlink" title="3.4 Base64URL算法"></a>3.4 Base64URL算法</h4><p>Base64URL与Base64的区别是在对字符串进行Base64编码之后把其中的’+’换成’-‘，把’/‘换成’_’，把结尾的’=’去掉</p>
-<p>下面显示了一个 JWT，它具有先前的标头和有效负载编码，并且使用密钥进行签名。</p>
-<p><img src="/../image/encoded-jwt3.png" alt="编码 JWT"></p>
-<h2 id="二、JWT声明滥用"><a href="#二、JWT声明滥用" class="headerlink" title="二、JWT声明滥用"></a>二、JWT声明滥用</h2><p>JWT声明滥用指的是对JSON Web Token（JWT）中的声明进行不当或未经授权的操纵。JWT是一种紧凑且自包含的方式，用于在两方之间表示信息。它由头部、有效载荷（声明）和签名组成。</p>
-<p>JWT声明滥用可以通过不同的方式发生：</p>
+        <span class="token class-name">TreeNode</span> a <span class="token operator">=</span> root<span class="token punctuation">.</span>left<span class="token punctuation">;</span>
+        root<span class="token punctuation">.</span>left <span class="token operator">=</span> root<span class="token punctuation">.</span>right<span class="token punctuation">;</span>
+        root<span class="token punctuation">.</span>right <span class="token operator">=</span> a<span class="token punctuation">;</span>
+
+        <span class="token keyword">return</span> root<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="104-二叉树的最大深度"><a href="#104-二叉树的最大深度" class="headerlink" title="104. 二叉树的最大深度"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/maximum-depth-of-binary-tree/">104. 二叉树的最大深度</a></h3><h4 id="题目要求-2"><a href="#题目要求-2" class="headerlink" title="题目要求"></a>题目要求</h4><p>给定一个二叉树 <code>root</code> ，返回其最大深度。</p>
+<p>二叉树的 <strong>最大深度</strong> 是指从根节点到最远叶子节点的最长路径上的节点数。</p>
+<p><strong>示例 1：</strong></p>
+<p><img src="https://assets.leetcode.com/uploads/2020/11/26/tmp-tree.jpg" alt="img"></p>
+<pre class="line-numbers language-none"><code class="language-none">输入：root = [3,9,20,null,null,15,7]
+输出：3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><strong>示例 2：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">输入：root = [1,null,2]
+输出：2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><strong>提示：</strong></p>
 <ul>
-<li><strong>未授权声明</strong>：恶意用户可能试图向JWT添加未授权的声明，以获取他们无权访问的特定功能或资源。例如，普通用户尝试修改他们的JWT以声称自己拥有管理员权限。</li>
-<li><strong>篡改声明</strong>：攻击者可能试图修改JWT中现有声明的值，以操纵自己的身份或更改其权限。例如，更改”user_id”声明以冒充不同的用户。</li>
-<li><strong>过多声明</strong>：攻击者可能试图在JWT中包含许多不必要或虚假的声明，以增加令牌的大小并可能破坏系统的性能或引起其他问题。</li>
-<li><strong>过期或修改过期声明</strong>：如果攻击者能够修改”exp”声明以延长令牌的过期时间，他们可以有效地获得超出其预期会话的访问权限。</li>
-<li><strong>重放攻击</strong>：攻击者可能试图重用旧会话中的有效JWT，以冒充原始用户或利用限时功能。</li>
-<li><strong>关键声明操纵</strong>：在某些情况下，”kid”（密钥ID）声明可能会被滥用。攻击者可能试图操纵”kid”声明，使用不同的密钥进行签名验证。</li>
+<li>树中节点的数量在 <code>[0, 10^4]</code> 区间内。</li>
+<li><code>-100 &lt;= Node.val &lt;= 100</code></li>
 </ul>
-<p>为了防止JWT声明滥用，实现客户端和服务器端的适当验证和验证机制至关重要。验证声明以确保它们是有效的、经过授权的，并且与用户的上下文相关。此外，始终验证JWT的签名以确保令牌的完整性并防止篡改。遵循JWT实施的最佳实践、安全的密钥管理和定期的密钥轮换也将有助于减轻JWT声明滥用的风险。</p>
-<h3 id="1-alg-none漏洞"><a href="#1-alg-none漏洞" class="headerlink" title="1. alg:none漏洞"></a>1. alg:none漏洞</h3><p>由于头部的alg可以为none，也就是说签名的方式是空的，如果后端开启空加密的话，攻击者就可以随意改身份</p>
-<p>在webgoat靶场中，一道题目要求获取管理员权限重置投票数</p>
-<p><img src="/../image/Snipaste_2024-02-29_14-02-46.png"></p>
-<p>切换用户点击重置投票数按钮后，抓包查看返回信息发现不行</p>
-<p><img src="/../image/image-20240229140749980.png" alt="image-20240229140749980"></p>
-<p>将抓到的包中的JWT信息放到<a target="_blank" rel="noopener" href="https://jwt.io/#debugger-io">这个网站</a>查看信息</p>
-<p><img src="/../image/image-20240229141134153.png" alt="image-20240229141134153"></p>
-<p>我们可以尝试将admin的false改为ture，但是改了之后签名我们无法修改正确，但是因为alg的值是可以为none的，这时也就是不加密签名，签名的值就可以留空。我们就可以攻击成功，使用<a target="_blank" rel="noopener" href="http://www.hiencode.com/base64.html">这个网站</a>对我们修改的内容进行编码</p>
-<p>头部：{ “alg”: “none”}</p>
-<p>Base64编码后为：eyJhbGciOiJub25lIn0=</p>
-<p>有效载荷：{“iat”:1710050831,”admin”:”true”,”user”:”Jerry”}</p>
-<p>Base64编码后为：eyJpYXQiOjE3MTAwNTA4MzEsImFkbWluIjoidHJ1ZSIsInVzZXIiOiJKZXJyeSJ9</p>
-<p>将两部分Base64URL编码后合并再加第三部分为：eyJhbGciOiJub25lIn0.eyJpYXQiOjE3MTAwNTA4MzEsImFkbWluIjoidHJ1ZSIsInVzZXIiOiJKZXJyeSJ9.</p>
-<p><img src="/../image/image-20240229142837001.png" alt="image-20240229142837001"></p>
-<h2 id="三、刷新令牌"><a href="#三、刷新令牌" class="headerlink" title="三、刷新令牌"></a>三、刷新令牌</h2><p>通常有两种类型的令牌：访问令牌和刷新令牌。访问令牌用于对服务器进行API调用。访问令牌的使用寿命有限，这就是刷新令牌的作用所在。一旦访问令牌不再有效，就可以向服务器请求通过提供刷新令牌来获得新的访问令牌。刷新令牌可能会过期，但其使用寿命要长得多。这解决了用户必须使用其凭据再次进行身份验证的问题。</p>
-<p>服务器返回的格式可能如下：</p>
-<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">{</span>
-    <span class="token property">"token_type"</span><span class="token operator">:</span><span class="token string">"bearer"</span><span class="token punctuation">,</span>
-    <span class="token property">"access_token"</span><span class="token operator">:</span><span class="token string">"XXXX.YYYY.ZZZZ"</span><span class="token punctuation">,</span>
-    <span class="token property">"expires_in"</span><span class="token operator">:</span><span class="token number">10</span><span class="token punctuation">,</span>
-    <span class="token property">"refresh_token"</span><span class="token operator">:</span><span class="token string">"4a9a0b1eac1a34201b3c5659944e8b7"</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="个人解答-2"><a href="#个人解答-2" class="headerlink" title="个人解答"></a>个人解答</h4><p>递归计算当前节点的左子树和右子树的深度，当前二叉树的深度就是最大的加一，在节点为空时返回0</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */</span>
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">maxDepth</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span> root<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>root <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token function">maxDepth</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token function">maxDepth</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>刷新令牌是一个随机字符串，服务器可以跟踪它（在内存或数据库中），以便将刷新令牌与授予刷新令牌的用户相匹配。因此，在这种情况下，无论何时访问令牌仍然有效，我们都可以称之为“无状态”会话，服务器端都没有设置用户会话的负担，令牌是自包含的。当访问令牌不再有效时，服务器需要查询存储的刷新令牌，以确保该令牌不会以任何方式被阻止。</p>
-<p>每当攻击者持有访问令牌时，该令牌仅在一定时间内有效（例如10分钟）。然后，攻击者需要刷新令牌来获取新的访问令牌。这就是为什么刷新令牌需要更好的保护。服务器完成所有验证后，必须向客户端返回一个新的刷新令牌和一个新访问令牌。客户端可以使用新的访问令牌来进行API调用。</p>
-<p>无论选择何种解决方案，都应在服务器端存储足够的信息，以验证用户是否仍然可信。你可以考虑很多事情，比如存储ip地址，跟踪刷新令牌的使用次数（在访问令牌的有效时间窗口中多次使用刷新令牌可能表明有奇怪的行为，你可以撤销所有令牌，让用户再次进行身份验证）。还要跟踪哪个访问令牌属于哪个刷新令牌，否则攻击者可能会使用攻击者的刷新令牌为其他用户获取新的访问令牌。</p>
-<p>下面是一个没有把刷新令牌和对应的访问令牌对应起来的例子：</p>
-<p>实验要求我们以Tom的身份结账</p>
-<p><img src="/../image/Snipaste_2024-03-01_15-57-29.png"></p>
-<p>查看日志可以发现Tom以前使用过的访问令牌，同时我们知道Jerry的账号和密码，可以重新登录获取刷新令牌</p>
-<p><img src="/../image/image-20240301155958601.png" alt="image-20240301155958601"></p>
-<p><img src="/../image/image-20240301160109799.png" alt="image-20240301160109799"></p>
-<p>将过期的Tom的访问令牌和Jerry的新的刷新令牌结合获取新的访问令牌</p>
-<p><img src="/../image/image-20240301160323385.png" alt="image-20240301160323385"></p>
-<p>最后再以Tom的访问令牌购买商品</p>
-<p><img src="/../image/image-20240301160459466.png" alt="image-20240301160459466"></p>
-<h2 id="四、参考链接"><a href="#四、参考链接" class="headerlink" title="四、参考链接"></a>四、参考链接</h2><p>[1]: <a target="_blank" rel="noopener" href="https://jwt.io/introduction">https://jwt.io/introduction</a>	“Introduction to JSON Web Tokens”<br>[2]: <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/d1644e281250">https://www.jianshu.com/p/d1644e281250</a>	“JWT全面解读、详细使用步骤”</p>
 
                 
             </div>
@@ -553,7 +606,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">赵宇</a>
+                    <a href="/about" rel="external nofollow noreferrer">大佬带带我</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -563,7 +616,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://yvzha0.github.io/2024/02/28/jwt-token/">https://yvzha0.github.io/2024/02/28/jwt-token/</a>
+                    <a href="https://yvzha0.github.io/2024/05/04/li-kou-shua-ti-ji-lu-di-gui-pian/">https://yvzha0.github.io/2024/05/04/li-kou-shua-ti-ji-lu-di-gui-pian/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -576,7 +629,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">赵宇</a>
+                    <a href="/about" target="_blank">大佬带带我</a>
                     !
                 </span>
             </div>
@@ -601,8 +654,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/JWT/">
-                                    <span class="chip bg-color">JWT</span>
+                                <a href="/tags/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">算法学习</span>
+                                </a>
+                            
+                                <a href="/tags/%E9%80%92%E5%BD%92/">
+                                    <span class="chip bg-color">递归</span>
                                 </a>
                             
                         </div>
@@ -681,17 +738,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2024/03/03/sbs-shu-ju-ge-shi/">
+                <a href="/2024/05/04/li-kou-shua-ti-ji-lu-di-gui-pian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="SBS数据格式">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="力扣刷题记录——递归篇">
                         
-                        <span class="card-title">SBS数据格式</span>
+                        <span class="card-title">力扣刷题记录——递归篇</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -701,22 +759,31 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-03-03
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-05-04
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            大佬带带我
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" class="post-category">
+                                    力扣刷题记录
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E4%BF%A1%E5%AE%89%E8%B5%9B%E9%A1%B9%E7%9B%AE/">
-                        <span class="chip bg-color">信安赛项目</span>
+                    <a href="/tags/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">算法学习</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%80%92%E5%BD%92/">
+                        <span class="chip bg-color">递归</span>
                     </a>
                     
                 </div>
@@ -730,13 +797,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/01/24/ben-ren-da-jian-ge-ren-bo-ke-guo-cheng-ji-yu-dao-de-wen-ti/">
+                <a href="/2024/04/26/li-kou-shua-ti-ji-lu-shu-yu-wei-pian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="本人搭建个人博客过程及遇到的问题">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="力扣刷题记录——数与位篇">
                         
-                        <span class="card-title">本人搭建个人博客过程及遇到的问题</span>
+                        <span class="card-title">力扣刷题记录——数与位篇</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -747,14 +814,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-26
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%89%8D%E8%A8%80/" class="post-category">
-                                    搭建博客前言
+                            <a href="/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" class="post-category">
+                                    力扣刷题记录
                                 </a>
                             
                             
@@ -764,8 +831,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
-                        <span class="chip bg-color">博客搭建</span>
+                    <a href="/tags/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">算法学习</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E4%B8%8E%E4%BD%8D/">
+                        <span class="chip bg-color">数与位</span>
                     </a>
                     
                 </div>
