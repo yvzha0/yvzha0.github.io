@@ -6,7 +6,7 @@
   <link href="https://yvzha0.github.io/atom.xml" rel="self"/>
   
   <link href="https://yvzha0.github.io/"/>
-  <updated>2024-05-06T06:57:53.600Z</updated>
+  <updated>2024-03-21T05:36:35.021Z</updated>
   <id>https://yvzha0.github.io/</id>
   
   <author>
@@ -15,217 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>力扣刷题记录——递归篇</title>
-    <link href="https://yvzha0.github.io/2024/05/04/li-kou-shua-ti-ji-lu-di-gui-pian/"/>
-    <id>https://yvzha0.github.io/2024/05/04/li-kou-shua-ti-ji-lu-di-gui-pian/</id>
-    <published>2024-05-04T12:14:09.000Z</published>
-    <updated>2024-05-06T06:57:53.600Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;2024-5-04&quot;&gt;&lt;a href=&quot;#2024-5-04&quot; class=&quot;headerlink&quot; title=&quot;2024-5-04&quot;&gt;&lt;/a&gt;2024-5-04&lt;/h1&gt;&lt;h2 id=&quot;二叉树相关问题&quot;&gt;&lt;a href=&quot;#二叉树相关问题&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="力扣刷题记录" scheme="https://yvzha0.github.io/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
-    
-    
-    <category term="算法学习" scheme="https://yvzha0.github.io/tags/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="递归" scheme="https://yvzha0.github.io/tags/%E9%80%92%E5%BD%92/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣刷题记录——数与位篇</title>
-    <link href="https://yvzha0.github.io/2024/04/26/li-kou-shua-ti-ji-lu-shu-yu-wei-pian/"/>
-    <id>https://yvzha0.github.io/2024/04/26/li-kou-shua-ti-ji-lu-shu-yu-wei-pian/</id>
-    <published>2024-04-26T09:37:18.000Z</published>
-    <updated>2024-05-04T12:14:43.207Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;2024-4-26&quot;&gt;&lt;a href=&quot;#2024-4-26&quot; class=&quot;headerlink&quot; title=&quot;2024-4-26&quot;&gt;&lt;/a&gt;2024-4-26&lt;/h1&gt;&lt;h2 id=&quot;进制转换&quot;&gt;&lt;a href=&quot;#进制转换&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="力扣刷题记录" scheme="https://yvzha0.github.io/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
-    
-    
-    <category term="算法学习" scheme="https://yvzha0.github.io/tags/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="数与位" scheme="https://yvzha0.github.io/tags/%E6%95%B0%E4%B8%8E%E4%BD%8D/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣刷题记录——字符串篇</title>
-    <link href="https://yvzha0.github.io/2024/04/09/li-kou-shua-ti-ji-lu-zi-fu-chuan-pian/"/>
-    <id>https://yvzha0.github.io/2024/04/09/li-kou-shua-ti-ji-lu-zi-fu-chuan-pian/</id>
-    <published>2024-04-09T03:22:39.000Z</published>
-    <updated>2024-05-04T12:14:58.304Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;2024-4-09&quot;&gt;&lt;a href=&quot;#2024-4-09&quot; class=&quot;headerlink&quot; title=&quot;2024-4-09&quot;&gt;&lt;/a&gt;2024-4-09&lt;/h1&gt;&lt;h2 id=&quot;字符&quot;&gt;&lt;a href=&quot;#字符&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="力扣刷题记录" scheme="https://yvzha0.github.io/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
-    
-    
-    <category term="算法学习" scheme="https://yvzha0.github.io/tags/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="字符串" scheme="https://yvzha0.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计算机网络基础之传输层（学习中）</title>
-    <link href="https://yvzha0.github.io/2024/04/02/ji-suan-ji-wang-luo-ji-chu-zhi-chuan-shu-ceng/"/>
-    <id>https://yvzha0.github.io/2024/04/02/ji-suan-ji-wang-luo-ji-chu-zhi-chuan-shu-ceng/</id>
-    <published>2024-04-02T14:56:00.000Z</published>
-    <updated>2024-04-14T12:06:30.619Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;1-TCP与UDP特点&quot;&gt;&lt;a href=&quot;#1-TCP与UDP特点&quot; class=&quot;headerlink&quot; title=&quot;1. TCP与UDP特点&quot;&gt;&lt;/a&gt;1. TCP与UDP特点&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;用户数据报协议 UDP（User Datagram</summary>
-        
-      
-    
-    
-    
-    <category term="计算机基础" scheme="https://yvzha0.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="计算机网络" scheme="https://yvzha0.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣刷题记录——栈与队列篇</title>
-    <link href="https://yvzha0.github.io/2024/03/31/li-kou-shua-ti-ji-lu-zhan-yu-dui-lie-pian/"/>
-    <id>https://yvzha0.github.io/2024/03/31/li-kou-shua-ti-ji-lu-zhan-yu-dui-lie-pian/</id>
-    <published>2024-03-31T04:52:36.000Z</published>
-    <updated>2024-04-25T05:00:30.697Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;2024-3-31&quot;&gt;&lt;a href=&quot;#2024-3-31&quot; class=&quot;headerlink&quot; title=&quot;2024-3.31&quot;&gt;&lt;/a&gt;2024-3.31&lt;/h1&gt;&lt;h2 id=&quot;栈的实现&quot;&gt;&lt;a href=&quot;#栈的实现&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="力扣刷题记录" scheme="https://yvzha0.github.io/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
-    
-    
-    <category term="算法学习" scheme="https://yvzha0.github.io/tags/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="栈与队列" scheme="https://yvzha0.github.io/tags/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣刷题记录——哈希表篇</title>
-    <link href="https://yvzha0.github.io/2024/03/25/li-kou-shua-ti-ji-lu-ha-xi-biao-pian/"/>
-    <id>https://yvzha0.github.io/2024/03/25/li-kou-shua-ti-ji-lu-ha-xi-biao-pian/</id>
-    <published>2024-03-25T01:44:27.000Z</published>
-    <updated>2024-04-25T04:53:47.770Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;2024-3-25&quot;&gt;&lt;a href=&quot;#2024-3-25&quot; class=&quot;headerlink&quot; title=&quot;2024-3-25&quot;&gt;&lt;/a&gt;2024-3-25&lt;/h1&gt;&lt;h2 id=&quot;哈希表的查找、插入及删除&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="力扣刷题记录" scheme="https://yvzha0.github.io/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
-    
-    
-    <category term="算法学习" scheme="https://yvzha0.github.io/tags/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="哈希表" scheme="https://yvzha0.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计算机网络基础之应用层</title>
-    <link href="https://yvzha0.github.io/2024/03/19/ji-suan-ji-wang-luo-ji-chu-zhi-ying-yong-ceng/"/>
-    <id>https://yvzha0.github.io/2024/03/19/ji-suan-ji-wang-luo-ji-chu-zhi-ying-yong-ceng/</id>
-    <published>2024-03-19T06:09:59.000Z</published>
-    <updated>2024-04-03T08:47:25.001Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;1-网络应用体系结构&quot;&gt;&lt;a href=&quot;#1-网络应用体系结构&quot; class=&quot;headerlink&quot; title=&quot;1. 网络应用体系结构&quot;&gt;&lt;/a&gt;1.</summary>
-        
-      
-    
-    
-    
-    <category term="计算机基础" scheme="https://yvzha0.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="计算机网络" scheme="https://yvzha0.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计算机网络基础之概述</title>
-    <link href="https://yvzha0.github.io/2024/03/18/ji-suan-ji-wang-luo-ji-chu-zhi-gai-shu/"/>
-    <id>https://yvzha0.github.io/2024/03/18/ji-suan-ji-wang-luo-ji-chu-zhi-gai-shu/</id>
-    <published>2024-03-18T06:14:27.000Z</published>
-    <updated>2024-03-20T11:28:43.221Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;1-电路交换与分组交换&quot;&gt;&lt;a href=&quot;#1-电路交换与分组交换&quot; class=&quot;headerlink&quot; title=&quot;1. 电路交换与分组交换&quot;&gt;&lt;/a&gt;1.</summary>
-        
-      
-    
-    
-    
-    <category term="计算机基础" scheme="https://yvzha0.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="计算机网络" scheme="https://yvzha0.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
   
   <entry>
     <title>排序算法</title>
@@ -253,33 +42,6 @@
   </entry>
   
   <entry>
-    <title>力扣刷题记录——链表篇</title>
-    <link href="https://yvzha0.github.io/2024/03/18/li-kou-shua-ti-ji-lu-lian-biao-pian/"/>
-    <id>https://yvzha0.github.io/2024/03/18/li-kou-shua-ti-ji-lu-lian-biao-pian/</id>
-    <published>2024-03-18T01:46:06.000Z</published>
-    <updated>2024-04-25T04:46:31.788Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;2024-3-18&quot;&gt;&lt;a href=&quot;#2024-3-18&quot; class=&quot;headerlink&quot; title=&quot;2024-3-18&quot;&gt;&lt;/a&gt;2024-3-18&lt;/h1&gt;&lt;h2 id=&quot;移除与插入链表元素&quot;&gt;&lt;a href=&quot;#移除与插入链表元素&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="力扣刷题记录" scheme="https://yvzha0.github.io/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
-    
-    
-    <category term="算法学习" scheme="https://yvzha0.github.io/tags/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="链表" scheme="https://yvzha0.github.io/tags/%E9%93%BE%E8%A1%A8/"/>
-    
-  </entry>
-  
-  <entry>
     <title>java反序列化漏洞学习</title>
     <link href="https://yvzha0.github.io/2024/03/13/java-fan-xu-lie-hua-lou-dong-xue-xi/"/>
     <id>https://yvzha0.github.io/2024/03/13/java-fan-xu-lie-hua-lou-dong-xue-xi/</id>
@@ -303,33 +65,6 @@
     <category term="java" scheme="https://yvzha0.github.io/tags/java/"/>
     
     <category term="反序列化" scheme="https://yvzha0.github.io/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣刷题记录——数组篇</title>
-    <link href="https://yvzha0.github.io/2024/03/10/li-kou-shua-ti-ji-lu-shu-zu-pian/"/>
-    <id>https://yvzha0.github.io/2024/03/10/li-kou-shua-ti-ji-lu-shu-zu-pian/</id>
-    <published>2024-03-10T06:52:42.000Z</published>
-    <updated>2025-01-15T14:52:52.714Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;2024-3-10&quot;&gt;&lt;a href=&quot;#2024-3-10&quot; class=&quot;headerlink&quot; title=&quot;2024-3-10&quot;&gt;&lt;/a&gt;2024-3-10&lt;/h1&gt;&lt;h2 id=&quot;数组的改变、移动&quot;&gt;&lt;a href=&quot;#数组的改变、移动&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="力扣刷题记录" scheme="https://yvzha0.github.io/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
-    
-    
-    <category term="算法学习" scheme="https://yvzha0.github.io/tags/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="数组" scheme="https://yvzha0.github.io/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
@@ -537,6 +272,36 @@
     <summary type="html">&lt;div align=&quot;center&quot;&gt;
     &lt;font size=&quot;6&quot;&gt;实验2：端口扫描实验&lt;/font&gt;
 &lt;/div&gt;
+
+&lt;h3 id=&quot;实验要求&quot;&gt;&lt;a href=&quot;#实验要求&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="网络攻防实验" scheme="https://yvzha0.github.io/categories/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2%E5%AE%9E%E9%AA%8C/"/>
+    
+    
+    <category term="网络攻防" scheme="https://yvzha0.github.io/tags/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络攻防实验1：域名信息收集工具</title>
+    <link href="https://yvzha0.github.io/2023/09/05/wang-luo-gong-fang-shi-yan-1/"/>
+    <id>https://yvzha0.github.io/2023/09/05/wang-luo-gong-fang-shi-yan-1/</id>
+    <published>2023-09-05T12:41:23.000Z</published>
+    <updated>2024-03-21T04:30:34.463Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div align=&quot;center&quot;&gt;
+    &lt;font size=&quot;6&quot;&gt;实验1：域名信息收集工具&lt;/font&gt;
+&lt;/div&gt;
+
 
 &lt;h3 id=&quot;实验要求&quot;&gt;&lt;a href=&quot;#实验要求&quot; class=&quot;headerlink&quot;</summary>
         
