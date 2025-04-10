@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>lt1-100</title>
+      <link href="/2025/04/10/lt1-100/"/>
+      <url>/2025/04/10/lt1-100/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1-10"><a href="#1-10" class="headerlink" title="1-10"></a>1-10</h1><h2 id="1-两数之和"><a href="#1-两数之和" class="headerlink" title="1. 两数之和"></a><a href="https://leetcode.cn/problems/two-sum/">1. 两数之和</a></h2><ol><li><strong>初始化哈希表</strong>：创建一个哈希表来存储数组元素的值及其对应的索引。</li><li><strong>遍历数组</strong>：逐个访问数组中的元素，索引为<code>i</code>，当前元素值为<code>a = nums[i]</code>。</li><li><strong>计算目标差值</strong>：对于每个元素<code>a</code>，计算需要查找的差值<code>b = target - a</code>。</li><li><strong>查找差值是否存在</strong>：在哈希表中查找<code>b</code>：<ul><li><strong>存在</strong>：返回当前索引<code>i</code>和哈希表中存储的<code>b</code>的索引。</li><li><strong>不存在</strong>：将当前元素<code>a</code>及其索引<code>i</code>存入哈希表，继续检查下一个元素。</li></ul></li></ol><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;vector&gt;#include &lt;unordered_map&gt;using namespace std;class Solution {public:    vector&lt;int&gt; twoSum(vector&lt;int&gt;&amp; nums, int target) {        unordered_map&lt;int,int&gt; umap;        for(int i=0;i&lt;nums.size();i++){            int a = nums[i];            int b = target - a;            if(umap.find(b) != umap.end()){                return {i,umap[b]};            }            umap[a] = i;        }        return {};    }};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="2-两数相加"><a href="#2-两数相加" class="headerlink" title="2. 两数相加"></a><a href="https://leetcode.cn/problems/add-two-numbers/">2. 两数相加</a></h2><ol><li><strong>初始化指针和进位变量：</strong><ul><li><code>cur1</code>、<code>cur2</code>：用于遍历链表 <code>l1</code> 和 <code>l2</code>。</li><li><code>cur</code>：指向当前结果链表的最后一个有效节点。</li><li><code>jinwei</code>：用于记录加法过程中的进位。</li></ul></li><li><strong>同时遍历两个链表：</strong><ul><li>当 <code>cur1</code> 和 <code>cur2</code> 都不为空时，逐位相加。</li><li>把结果更新到 <code>cur1-&gt;val</code> 上，即直接修改 <code>l1</code> 链表。</li><li>记录进位 <code>jinwei</code>。</li><li>如果即将到达末尾，则用 <code>cur</code> 记录当前节点，为后续追加节点做准备。</li></ul></li><li><strong>处理 <code>l1</code> 剩余部分（如果 <code>l1</code> 更长）：</strong><ul><li>如果还有进位，则继续加上当前节点值，并更新。</li><li>否则直接跳出。</li></ul></li><li><strong>处理 <code>l2</code> 剩余部分（如果 <code>l2</code> 更长）：</strong><ul><li>如果还有进位，创建新节点追加到结果链表尾部。</li><li>如果没有进位了，就把 <code>l2</code> 剩下的节点接到结果链表上（复用原链表节点，节省空间）。</li></ul></li><li><strong>处理最后的进位（如果还有）：</strong><ul><li>创建一个新节点存储最后的进位，追加到结果链表末尾。最后返回<code>l1</code>。</li></ul></li></ol><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include "ListNode.h"class Solution {public:    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {        ListNode* cur1 = l1;        ListNode* cur2 = l2;        ListNode* cur;        int jinwei = 0;        while(cur1 != nullptr &amp;&amp; cur2 != nullptr){            int sum = cur1-&gt;val + cur2-&gt;val + jinwei;            cur1-&gt;val = sum % 10;            jinwei = sum / 10;            if(cur1-&gt;next == nullptr || cur2-&gt;next == nullptr){                cur = cur1;            }            cur1 = cur1-&gt;next;            cur2 = cur2-&gt;next;        }        while(cur1 != nullptr){            if(jinwei != 0){                int sum = cur1-&gt;val + jinwei;                cur1-&gt;val = sum % 10;                jinwei = sum / 10;            }else{                break;            }            if(cur1-&gt;next == nullptr){                cur = cur1;            }            cur1 = cur1-&gt;next;        }        while(cur2 != nullptr){            if(jinwei != 0){                int sum = cur2-&gt;val + jinwei;                auto* a = new ListNode(sum % 10);                cur-&gt;next = a;                cur = cur-&gt;next;                jinwei = sum / 10;            }else{                cur-&gt;next = cur2;                break;            }            cur2 = cur2-&gt;next;        }        if(jinwei != 0){            auto* a = new ListNode(jinwei);            cur-&gt;next = a;        }        return l1;    }};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 刷题记录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 刷题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>排序算法</title>
       <link href="/2024/03/18/suan-fa-ji-chu-zhi-pai-xu-suan-fa/"/>
       <url>/2024/03/18/suan-fa-ji-chu-zhi-pai-xu-suan-fa/</url>

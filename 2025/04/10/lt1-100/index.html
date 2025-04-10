@@ -4,12 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="网络攻防实验4：缓冲区溢出攻击实验, Blog Of yvzha0">
-    <meta name="description" content="
-    实验4：缓冲区溢出攻击实验
-
-
-一、实验要求本实验的学习目标是让学生将从课堂上学到的有关缓冲区溢出漏洞的知识进行实践，从而获得有关该漏洞的第一手经验。缓冲区溢出是指程序试图将数据写入预先分配的固定长度缓冲区边界之外的情况。恶意用户">
+    <meta name="keywords" content="lt1-100, Blog Of yvzha0">
+    <meta name="description" content="1-101. 两数之和
+初始化哈希表：创建一个哈希表来存储数组元素的值及其对应的索引。
+遍历数组：逐个访问数组中的元素，索引为i，当前元素值为a = nums[i]。
+计算目标差值：对于每个元素a，计算需要查找的差值b = target -">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +20,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>网络攻防实验4：缓冲区溢出攻击实验 | Blog Of yvzha0</title>
+    <title>lt1-100 | Blog Of yvzha0</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -341,12 +340,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">网络攻防实验4：缓冲区溢出攻击实验</h1>
+                    <h1 class="description center-align post-title">lt1-100</h1>
                 </div>
             </div>
         </div>
@@ -370,8 +369,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2/">
-                                <span class="chip bg-color">网络攻防</span>
+                            <a href="/tags/%E5%88%B7%E9%A2%98/">
+                                <span class="chip bg-color">刷题</span>
                             </a>
                         
                     </div>
@@ -382,8 +381,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2%E5%AE%9E%E9%AA%8C/" class="post-category">
-                                网络攻防实验
+                            <a href="/categories/%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" class="post-category">
+                                刷题记录
                             </a>
                         
                     </div>
@@ -395,28 +394,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-10-09
+                    2025-04-10
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-03-21
+                    2025-04-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    635
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    2 分
                 </div>
                 
 
@@ -439,108 +438,120 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <div align="center">
-    <font size="6">实验4：缓冲区溢出攻击实验</font>
-</div>
+                <h1 id="1-10"><a href="#1-10" class="headerlink" title="1-10"></a>1-10</h1><h2 id="1-两数之和"><a href="#1-两数之和" class="headerlink" title="1. 两数之和"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/two-sum/">1. 两数之和</a></h2><ol>
+<li><strong>初始化哈希表</strong>：创建一个哈希表来存储数组元素的值及其对应的索引。</li>
+<li><strong>遍历数组</strong>：逐个访问数组中的元素，索引为<code>i</code>，当前元素值为<code>a = nums[i]</code>。</li>
+<li><strong>计算目标差值</strong>：对于每个元素<code>a</code>，计算需要查找的差值<code>b = target - a</code>。</li>
+<li><strong>查找差值是否存在</strong>：在哈希表中查找<code>b</code>：<ul>
+<li><strong>存在</strong>：返回当前索引<code>i</code>和哈希表中存储的<code>b</code>的索引。</li>
+<li><strong>不存在</strong>：将当前元素<code>a</code>及其索引<code>i</code>存入哈希表，继续检查下一个元素。</li>
+</ul>
+</li>
+</ol>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;vector&gt;
+#include &lt;unordered_map&gt;
 
-<h2 id="一、实验要求"><a href="#一、实验要求" class="headerlink" title="一、实验要求"></a>一、实验要求</h2><p>本实验的学习目标是让学生将从课堂上学到的有关缓冲区溢出漏洞的知识进行实践，从而获得有关该漏洞的第一手经验。缓冲区溢出是指程序试图将数据写入预先分配的固定长度缓冲区边界之外的情况。恶意用户可利用此漏洞改变程序的流控制，甚至执行任意代码。此漏洞是由于数据存储（如缓冲区）和控件存储（如返回地址）的混合造成的：数据部分的溢出会影响程序的控制流，因为溢出会改变返回地址。</p>
-<p>本实验将提供四台不同的服务器，每台服务器运行一个带有缓冲区溢出漏洞的程序。实验任务是开发一个利用漏洞的程序，并最终获得这些服务器上的root权限。除了进行这些攻击实验之外，还将试验几种针对缓冲区溢出攻击的对策。学生需要评估这些计划是否有效，并解释原因。</p>
-<h2 id="二、实验环境"><a href="#二、实验环境" class="headerlink" title="二、实验环境"></a>二、实验环境</h2><p>VMware</p>
-<p>SEED实验平台</p>
-<h2 id="三、实验步骤及结果"><a href="#三、实验步骤及结果" class="headerlink" title="三、实验步骤及结果"></a>三、实验步骤及结果</h2><h3 id="task1：Get-Familiar-with-the-Shellcode"><a href="#task1：Get-Familiar-with-the-Shellcode" class="headerlink" title="task1：Get Familiar with the Shellcode"></a>task1：Get Familiar with the Shellcode</h3><ol>
-<li><p>修改shellcode_32.py和shellcode_64.py文件，使其可以实现删除文件</p>
-<p><img src="/../image/image-20231010102458474.png" alt="image-20231010102458474"></p>
+using namespace std;
+
+class Solution {
+public:
+    vector&lt;int&gt; twoSum(vector&lt;int&gt;&amp; nums, int target) {
+        unordered_map&lt;int,int&gt; umap;
+        for(int i=0;i&lt;nums.size();i++){
+            int a = nums[i];
+            int b = target - a;
+            if(umap.find(b) != umap.end()){
+                return {i,umap[b]};
+            }
+            umap[a] = i;
+        }
+        return {};
+    }
+};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="2-两数相加"><a href="#2-两数相加" class="headerlink" title="2. 两数相加"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/add-two-numbers/">2. 两数相加</a></h2><ol>
+<li><strong>初始化指针和进位变量：</strong><ul>
+<li><code>cur1</code>、<code>cur2</code>：用于遍历链表 <code>l1</code> 和 <code>l2</code>。</li>
+<li><code>cur</code>：指向当前结果链表的最后一个有效节点。</li>
+<li><code>jinwei</code>：用于记录加法过程中的进位。</li>
+</ul>
 </li>
-<li><p>创建test.txt文件，执行shellcode_32.py和shellcode_64.py，删除文件</p>
-<p><img src="/../image/image-20231011172359395.png" alt="image-20231011172359395"></p>
-<p><img src="/../image/image-20231011172432469.png" alt="image-20231011172432469"></p>
-<p><img src="/../image/image-20231011172721935.png" alt="image-20231011172721935"></p>
-<p><img src="/../image/image-20231011172741234.png" alt="image-20231011172741234"></p>
+<li><strong>同时遍历两个链表：</strong><ul>
+<li>当 <code>cur1</code> 和 <code>cur2</code> 都不为空时，逐位相加。</li>
+<li>把结果更新到 <code>cur1-&gt;val</code> 上，即直接修改 <code>l1</code> 链表。</li>
+<li>记录进位 <code>jinwei</code>。</li>
+<li>如果即将到达末尾，则用 <code>cur</code> 记录当前节点，为后续追加节点做准备。</li>
+</ul>
 </li>
-</ol>
-<h3 id="task2：Level-1-Attack"><a href="#task2：Level-1-Attack" class="headerlink" title="task2：Level-1 Attack"></a>task2：Level-1 Attack</h3><ol>
-<li><p>在目录/Labsetup下打开一个终端，并在该终端开启容器</p>
-<p><img src="/../image/image-20231012170325804.png" alt="image-20231012170325804"></p>
+<li><strong>处理 <code>l1</code> 剩余部分（如果 <code>l1</code> 更长）：</strong><ul>
+<li>如果还有进位，则继续加上当前节点值，并更新。</li>
+<li>否则直接跳出。</li>
+</ul>
 </li>
-<li><p>在目录/Labsetup下再次打开一个终端，向目标服务器发送正常数据hello测试</p>
-<p>输入命令：echo hello | nc 10.9.0.5 9090=&gt;键入：Ctrl+C</p>
-<p><img src="/../image/image-20231010152438394.png" alt="image-20231010152438394"></p>
-<p>发现两次地址不一样，关闭地址随机化（每次关闭虚拟机再开启时都要关闭）：sudo /sbin/sysctl -w kernel.randomize_va_space=0</p>
+<li><strong>处理 <code>l2</code> 剩余部分（如果 <code>l2</code> 更长）：</strong><ul>
+<li>如果还有进位，创建新节点追加到结果链表尾部。</li>
+<li>如果没有进位了，就把 <code>l2</code> 剩下的节点接到结果链表上（复用原链表节点，节省空间）。</li>
+</ul>
 </li>
-<li><p>向服务器发送未修改的py文件，获取ebp和buffer地址</p>
-<p><img src="/../image/image-20231012170430304.png" alt="image-20231012170430304"></p>
-</li>
-<li><p>修改exploit.py文件，把ret修改为shellcode的入口，为ebp+8，把offset设为从buffer到栈里面ret位置的长度，栈从高到下为ret，ebp，…，buffer，所以offset就是ebp的地址+4-buffer的地址</p>
-<p><img src="/../image/image-20231012170116706.png" alt="image-20231012170116706"></p>
-<p><img src="/../image/image-20231012170245291.png" alt="image-20231012170245291"></p>
-</li>
-<li><p>运行exploit，把badfile传到服务器1</p>
-<p><img src="/../image/image-20231011193720889.png" alt="image-20231011193720889"></p>
-<p><img src="/../image/image-20231012170506380.png" alt="image-20231012170506380"></p>
-</li>
-</ol>
-<h3 id="task3：Level-2-Attack"><a href="#task3：Level-2-Attack" class="headerlink" title="task3：Level-2 Attack"></a>task3：Level-2 Attack</h3><ol>
-<li><p>向服务器发送未修改的py文件，获取buffer地址</p>
-<p><img src="/../image/image-20231012170759277.png" alt="image-20231012170759277"></p>
-</li>
-<li><p>由于buffer的长度在100到300之间，且offset是4的倍数，所以可以在100到300之间每隔4字节插入shellcode的入口</p>
-<p><img src="/../image/image-20231012171907286.png" alt="image-20231012171907286"></p>
-</li>
-<li><p>运行exploit，把badfile传到服务器2</p>
-<p><img src="/../image/image-20231012171956728.png" alt="image-20231012171956728"></p>
-<p><img src="/../image/image-20231012172008180.png" alt="image-20231012172008180"></p>
-</li>
-</ol>
-<h3 id="task4：level-3-Attack"><a href="#task4：level-3-Attack" class="headerlink" title="task4：level-3 Attack"></a>task4：level-3 Attack</h3><ol>
-<li><p>向服务器发送未修改的py文件，获取buffer地址</p>
-<p><img src="/../image/image-20231012173155679.png" alt="image-20231012173155679"></p>
-</li>
-<li><p>由于是64位地址格式是0x0000XXXXXXXXXXXX，而strcpy()函数遇到0就截断，而linux是小端存储，所以还把shellcode放在ret上面的时候恰好复制完ret的时候就会截断，不会复制后面的shellcode，于是把shellcode放到ret下面，为了保证不被ret覆盖一部分，所以保险做法是放在buffer的开始处，即start=0。</p>
-<p><img src="/../image/image-20231012175143819.png" alt="image-20231012175143819"></p>
-</li>
-<li><p>运行exploit，把badfile传到服务器3</p>
-<p><img src="/../image/image-20231012175229672.png" alt="image-20231012175229672"></p>
-<p><img src="/../image/image-20231012175246555.png" alt="image-20231012175246555"></p>
+<li><strong>处理最后的进位（如果还有）：</strong><ul>
+<li>创建一个新节点存储最后的进位，追加到结果链表末尾。最后返回<code>l1</code>。</li>
+</ul>
 </li>
 </ol>
-<h3 id="task5：level-4-Attack"><a href="#task5：level-4-Attack" class="headerlink" title="task5：level-4 Attack"></a>task5：level-4 Attack</h3><ol>
-<li><p>向服务器发送未修改的py文件，获取buffer地址</p>
-<p><img src="/../image/image-20231014185646914.png" alt="image-20231014185646914"></p>
-</li>
-<li><p>由于缓冲区大小只有96所以就不能把shellcode放在缓冲区内，而放在ret段后面又会被截断。badfile传进目标程序时已载入数据段，因此尽可能将ret设置大一点，跳转到数据段的shellcode代码部分执行shellcode，根据网上找到的资料：ret=rbp+n，n在1184与1424之间。</p>
-<p><img src="/../image/image-20231014191549602.png" alt="image-20231014191549602"></p>
-</li>
-<li><p>运行exploit，把badfile传到服务器4</p>
-<p><img src="/../image/image-20231014191743332.png" alt="image-20231014191743332"></p>
-<p><img src="/../image/image-20231014191800314.png" alt="image-20231014191800314"></p>
-</li>
-</ol>
-<h3 id="task6：地址随机化"><a href="#task6：地址随机化" class="headerlink" title="task6：地址随机化"></a>task6：地址随机化</h3><ol>
-<li>开启内存地址随机化保护, 并用server-1与server-2上的目标程序进行检验</li>
-</ol>
-<p>   <img src="/../image/image-20231014205925941.png" alt="image-20231014205925941"></p>
-<p>   <img src="/../image/image-20231014205956059.png" alt="image-20231014205956059"></p>
-<ol start="2">
-<li><p>设目标程序为server-1上的，并修改exploit.py文件中的shellcode</p>
-<p><img src="/../image/image-20231014210832598.png" alt="image-20231014210832598"></p>
-</li>
-<li><p>在/Labsetup/attack-code目录下执行exploit.py程序，并另打开一窗口进行监听</p>
-<p><img src="/../image/image-20231014211225899.png" alt="image-20231014211225899"></p>
-</li>
-<li><p>执行brute-force.sh程序，在8702次成功攻击</p>
-<p><img src="/../image/image-20231014211453166.png" alt="image-20231014211453166"></p>
-<p><img src="/../image/image-20231014211717219.png" alt="image-20231014211717219"></p>
-</li>
-</ol>
-<h3 id="Task7：针对缓冲区溢出攻击的其他几个对策"><a href="#Task7：针对缓冲区溢出攻击的其他几个对策" class="headerlink" title="Task7：针对缓冲区溢出攻击的其他几个对策"></a>Task7：针对缓冲区溢出攻击的其他几个对策</h3><ol>
-<li>打开StackGuard保护，并将badfile文件传输到stack-L1文件中，在/Labsetup/serve-code目录下直接执行stack-L1文件</li>
-</ol>
-<p>   <img src="/../image/image-20231014215103527.png" alt="image-20231014215103527"></p>
-<ol start="2">
-<li><p>打开Non-executable Stack（栈堆不可执行）保护</p>
-<p><img src="/../image/image-20231014215602762.png" alt="image-20231014215602762"></p>
-</li>
-</ol>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include "ListNode.h"
+class Solution {
+public:
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        ListNode* cur1 = l1;
+        ListNode* cur2 = l2;
+        ListNode* cur;
+        int jinwei = 0;
+        while(cur1 != nullptr &amp;&amp; cur2 != nullptr){
+            int sum = cur1-&gt;val + cur2-&gt;val + jinwei;
+            cur1-&gt;val = sum % 10;
+            jinwei = sum / 10;
+            if(cur1-&gt;next == nullptr || cur2-&gt;next == nullptr){
+                cur = cur1;
+            }
+            cur1 = cur1-&gt;next;
+            cur2 = cur2-&gt;next;
+        }
+        while(cur1 != nullptr){
+            if(jinwei != 0){
+                int sum = cur1-&gt;val + jinwei;
+                cur1-&gt;val = sum % 10;
+                jinwei = sum / 10;
+            }else{
+                break;
+            }
+            if(cur1-&gt;next == nullptr){
+                cur = cur1;
+            }
+            cur1 = cur1-&gt;next;
+        }
+        while(cur2 != nullptr){
+            if(jinwei != 0){
+                int sum = cur2-&gt;val + jinwei;
+                auto* a = new ListNode(sum % 10);
+                cur-&gt;next = a;
+                cur = cur-&gt;next;
+                jinwei = sum / 10;
+            }else{
+                cur-&gt;next = cur2;
+                break;
+            }
+            cur2 = cur2-&gt;next;
+        }
+        if(jinwei != 0){
+            auto* a = new ListNode(jinwei);
+            cur-&gt;next = a;
+        }
+        return l1;
+    }
+};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
 
                 
             </div>
@@ -567,7 +578,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://yvzha0.github.io/2023/10/09/wang-luo-gong-fang-shi-yan-4/">https://yvzha0.github.io/2023/10/09/wang-luo-gong-fang-shi-yan-4/</a>
+                    <a href="https://yvzha0.github.io/2025/04/10/lt1-100/">https://yvzha0.github.io/2025/04/10/lt1-100/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -605,8 +616,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2/">
-                                    <span class="chip bg-color">网络攻防</span>
+                                <a href="/tags/%E5%88%B7%E9%A2%98/">
+                                    <span class="chip bg-color">刷题</span>
                                 </a>
                             
                         </div>
@@ -685,17 +696,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/10/17/wang-luo-gong-fang-shi-yan-5/">
+                <a href="/2025/04/10/lt1-100/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="网络攻防实验5：shellcode编写实验">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="lt1-100">
                         
-                        <span class="card-title">网络攻防实验5：shellcode编写实验</span>
+                        <span class="card-title">lt1-100</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -705,26 +717,27 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-10-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-04-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2%E5%AE%9E%E9%AA%8C/" class="post-category">
-                                    网络攻防实验
+                            <a href="/categories/%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" class="post-category">
+                                    刷题记录
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2/">
-                        <span class="chip bg-color">网络攻防</span>
+                    <a href="/tags/%E5%88%B7%E9%A2%98/">
+                        <span class="chip bg-color">刷题</span>
                     </a>
                     
                 </div>
@@ -738,13 +751,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/10/05/wang-luo-gong-fang-shi-yan-3/">
+                <a href="/2024/03/18/suan-fa-ji-chu-zhi-pai-xu-suan-fa/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="网络攻防实验3：MD5碰撞实验">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="排序算法">
                         
-                        <span class="card-title">网络攻防实验3：MD5碰撞实验</span>
+                        <span class="card-title">排序算法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -755,14 +768,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-18
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2%E5%AE%9E%E9%AA%8C/" class="post-category">
-                                    网络攻防实验
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    计算机基础
                                 </a>
                             
                             
@@ -772,8 +785,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2/">
-                        <span class="chip bg-color">网络攻防</span>
+                    <a href="/tags/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">算法学习</span>
                     </a>
                     
                 </div>
