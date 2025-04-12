@@ -55,9 +55,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Blog Of yvzha0" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Blog Of yvzha0" type="application/atom+xml">
 </head>
 
 
@@ -408,14 +408,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    929
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    6 分
                 </div>
                 
 
@@ -575,6 +575,110 @@ public:
 <li><strong>更新最大长度：</strong>每次计算完 <code>dp[i]</code> 后，更新 <code>ans = max(ans, dp[i])</code>。</li>
 <li><strong>返回最终结果：</strong>返回最长不重复子串的长度 <code>ans</code>。</li>
 </ol>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;string&gt;
+
+using namespace std;
+
+class Solution {
+public:
+    int lengthOfLongestSubstring(string s) {
+        int length = s.size();
+        if(length == 0){
+            return 0;
+        }
+        int dp[length];
+        dp[0] = 1;
+        int ans = 1;
+        for(int i=1;i&lt;length;i++){
+            bool flag = true;
+            for(int j=i-1;j&gt;=i-dp[i-1];j--){
+                if(s[i] == s[j]){
+                    dp[i] = i - j;
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag){
+                dp[i] = dp[i-1] + 1;
+            }
+            if(dp[i] &gt; ans){
+                ans = dp[i];
+            }
+        }
+        return ans;
+    }
+};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-寻找两个正序数组的中位数"><a href="#4-寻找两个正序数组的中位数" class="headerlink" title="4. 寻找两个正序数组的中位数"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/median-of-two-sorted-arrays/">4. 寻找两个正序数组的中位数</a></h3><ol>
+<li><strong>中位数转为找第 k 小元素的问题：</strong><ul>
+<li>奇数长度：中位数是第 <code>(m + n + 1)/2</code> 个。</li>
+<li>偶数长度：中位数是第 <code>(m+n)/2</code> 和 <code>(m+n)/2 + 1</code> 个数的平均值。</li>
+</ul>
+</li>
+<li><strong>使用二分查找来找第 k 小元素：</strong><ul>
+<li>比较 <code>nums1[k/2 - 1]</code> 和 <code>nums2[k/2 - 1]</code>。</li>
+<li>较小的一侧可以排除掉前 <code>k/2</code> 个元素。</li>
+<li>不断更新 <code>k</code>、起始索引直到找到第 k 小的元素。</li>
+</ul>
+</li>
+<li><strong>终止条件处理：</strong><ul>
+<li>如果某个数组已经遍历完了，直接在另一个数组找。</li>
+<li>如果 <code>k == 1</code>，取两个当前起始位置最小的元素返回。</li>
+</ul>
+</li>
+</ol>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;vector&gt;
+
+using namespace std;
+
+class Solution {
+public:
+    double findMedianSortedArrays(vector&lt;int&gt;&amp; nums1, vector&lt;int&gt;&amp; nums2) {
+        int total = nums1.size() + nums2.size();
+        if (total % 2 == 1) {
+            return getKthElement(nums1, nums2, total / 2 + 1);
+        } else {
+            return (getKthElement(nums1, nums2, total / 2) +
+                    getKthElement(nums1, nums2, total / 2 + 1)) / 2.0;
+        }
+    }
+
+private:
+    static int getKthElement(const vector&lt;int&gt;&amp; nums1, const vector&lt;int&gt;&amp; nums2, int k) {
+        int index1 = 0, index2 = 0;
+        int m = nums1.size(), n = nums2.size();
+
+        while (true) {
+            if (index1 == m) {
+                return nums2[index2 + k - 1];
+            }
+            if (index2 == n) {
+                return nums1[index1 + k - 1];
+            }
+            if (k == 1) {
+                return min(nums1[index1], nums2[index2]);
+            }
+
+            int newIndex1 = min(index1 + k / 2 - 1, m - 1);
+            int newIndex2 = min(index2 + k / 2 - 1, n - 1);
+
+            int pivot1 = nums1[newIndex1];
+            int pivot2 = nums2[newIndex2];
+
+            if (pivot1 &lt;= pivot2) {
+                k -= (newIndex1 - index1 + 1);
+                index1 = newIndex1 + 1;
+            } else {
+                k -= (newIndex2 - index2 + 1);
+                index2 = newIndex2 + 1;
+            }
+        }
+    }
+};
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
 
                 
             </div>
@@ -1007,7 +1111,7 @@ public:
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">21.7k</span>
+                        class="white-color">22.1k</span>
             
             
             
