@@ -401,21 +401,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2025-04-13
+                    2025-04-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.1k
+                    2.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    11 分
                 </div>
                 
 
@@ -857,7 +857,73 @@ public:
     }
 };<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h3 id="6-Z-字形变换"><a href="#6-Z-字形变换" class="headerlink" title="6. Z 字形变换"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/zigzag-conversion/">6. Z 字形变换</a></h3><h4 id="解题步骤：按行模拟"><a href="#解题步骤：按行模拟" class="headerlink" title="解题步骤：按行模拟"></a>解题步骤：按行模拟</h4><ol>
+<li><p><strong>处理特殊情况</strong>：如果 <code>numRows == 1</code>，说明不需要 Z 字形排列，直接返回原字符串。</p>
+</li>
+<li><p><strong>定义变量</strong>：</p>
+<ul>
+<li><code>length</code>: 字符串的长度</li>
+<li><code>ans</code>: 最终的结果字符串</li>
+<li>Z 字形一轮的周期为 <code>cycleLen = 2 * numRows - 2</code>，即从最顶层往下，再折回到最顶层所需的字符数。</li>
+</ul>
+</li>
+<li><p><strong>处理每一行的字符：</strong></p>
+<p>a. <strong>第一行（行号 = 0）</strong></p>
+<ul>
+<li>这行的字符位置是间隔 <code>cycleLen</code> 的，比如索引：0，0 + cycleLen，0 + 2*cycleLen，…</li>
+<li>把这些字符依次加入结果中。</li>
+</ul>
+<p>b. <strong>中间行（行号 = 1 到 numRows - 2）</strong></p>
+<ul>
+<li>这些行的字符每轮出现两次，分别在下降和上升阶段。</li>
+<li>对于第 i 行（1 ≤ i &lt; numRows - 1）：<ul>
+<li>第一次出现在位置 <code>j = i</code>；</li>
+<li>第二次出现在 <code>j + cycleLen - 2 * i</code>；</li>
+<li>然后继续循环下一个周期 <code>j += cycleLen</code>；</li>
+<li>每轮取两个字符（如果还在字符串范围内）。</li>
+</ul>
+</li>
+</ul>
+<p>c. <strong>最后一行（行号 = numRows - 1）</strong></p>
+<ul>
+<li>和第一行类似，索引是：<code>numRows - 1</code>, <code>numRows - 1 + cycleLen</code>, …</li>
+<li>依次加入结果中。</li>
+</ul>
+</li>
+<li><p><strong>返回结果字符串 <code>ans</code>。</strong></p>
+</li>
+</ol>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;string&gt;
 
+using namespace  std;
+
+class Solution {
+public:
+    string convert(string s, int numRows) {
+        if(numRows == 1){
+            return s;
+        }
+        int length = s.size();
+        string ans;
+        for(int i=0;i&lt;length;i+=2*numRows-2){
+            ans.push_back(s[i]);
+        }
+        for(int i=1;i&lt;numRows-1;i++){
+            for(int j=i;j&lt;length;){
+                ans.push_back(s[j]);
+                j += 2 * numRows - 2 * (i + 1);
+                if(j &lt; length){
+                    ans.push_back(s[j]);
+                }
+                j += 2 * i;
+            }
+        }
+        for(int i=numRows-1;i&lt;length;i+=2*numRows-2){
+            ans.push_back(s[i]);
+        }
+        return ans;
+    }
+};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
@@ -1293,7 +1359,7 @@ public:
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">22.8k</span>
+                        class="white-color">23.2k</span>
             
             
             
