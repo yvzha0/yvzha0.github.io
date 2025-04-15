@@ -401,21 +401,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2025-04-14
+                    2025-04-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.4k
+                    2.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    12 分
                 </div>
                 
 
@@ -925,7 +925,57 @@ public:
     }
 };<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h3 id="7-整数反转"><a href="#7-整数反转" class="headerlink" title="7. 整数反转"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-integer/">7. 整数反转</a></h3><h4 id="解题步骤：模拟"><a href="#解题步骤：模拟" class="headerlink" title="解题步骤：模拟"></a>解题步骤：模拟</h4><ol>
+<li><p><strong>初始化变量</strong>：定义一个整数变量 <code>ans = 0</code>，用于保存反转后的结果。</p>
+</li>
+<li><p><strong>循环处理每一位数字</strong>：</p>
+<ul>
+<li>每次从末尾取一位数字 <code>digit = x % 10</code>。</li>
+<li>把当前这位数字追加到 <code>ans</code> 的末尾（<code>ans = ans * 10 + digit</code>）。</li>
+<li>去掉 <code>x</code> 的末尾数字：<code>x /= 10</code>。</li>
+</ul>
+</li>
+<li><p><strong>在追加前判断是否溢出</strong>：</p>
+<p>因为不能用 64 位整数，要<strong>提前判断乘以 10 之后是否会超出 int 范围</strong>：</p>
+<ul>
+<li><p>正溢出判断：</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">if (ans &gt; INT_MAX / 10 || (ans == INT_MAX / 10 &amp;&amp; digit &gt; 7)) return 0;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
+<ul>
+<li>因为 <code>INT_MAX = 2147483647</code>，所以当 <code>ans == 214748364</code> 且下一位大于 <code>7</code> 时会溢出。</li>
+</ul>
+</li>
+<li><p>负溢出判断：</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">if</span> <span class="token punctuation">(</span>ans <span class="token operator">&lt;</span> INT_MIN <span class="token operator">/</span> <span class="token number">10</span> <span class="token operator">||</span> <span class="token punctuation">(</span>ans <span class="token operator">==</span> INT_MIN <span class="token operator">/</span> <span class="token number">10</span> <span class="token operator">&amp;&amp;</span> digit <span class="token operator">&lt;</span> <span class="token operator">-</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li><code>INT_MIN = -2147483648</code>，所以当 <code>ans == -214748364</code> 且下一位小于 <code>-8</code> 时会溢出。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>循环结束后返回反转后的 <code>ans</code>。</strong></p>
+</li>
+</ol>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;climits&gt;
+
+class Solution {
+public:
+    int reverse(int x) {
+        int ans = 0;
+        while (x != 0) {
+            int digit = x % 10;
+            x /= 10;
+
+            if (ans &gt; INT_MAX / 10 || (ans == INT_MAX / 10 &amp;&amp; digit &gt; 7)) return 0;
+            if (ans &lt; INT_MIN / 10 || (ans == INT_MIN / 10 &amp;&amp; digit &lt; -8)) return 0;
+
+            ans = ans * 10 + digit;
+        }
+        return ans;
+    }
+};
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 
@@ -1359,7 +1409,7 @@ public:
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">23.2k</span>
+                        class="white-color">23.5k</span>
             
             
             
