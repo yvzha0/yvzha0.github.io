@@ -55,9 +55,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0">
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Blog Of yvzha0" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="Blog Of yvzha0" type="application/atom+xml">
 </head>
 
 
@@ -401,21 +401,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2025-04-16
+                    2025-04-17
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.3k
+                    3.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    15 分
+                    17 分
                 </div>
                 
 
@@ -1078,6 +1078,122 @@ public:
     }
 };<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h3 id="14-最长公共前缀"><a href="#14-最长公共前缀" class="headerlink" title="14. 最长公共前缀"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/longest-common-prefix/">14. 最长公共前缀</a></h3><h4 id="解题步骤：逐字符比较"><a href="#解题步骤：逐字符比较" class="headerlink" title="解题步骤：逐字符比较"></a>解题步骤：逐字符比较</h4><ol>
+<li><strong>初始化变量</strong>：<ul>
+<li><code>length</code>：字符串数组的长度。</li>
+<li><code>ans</code>：用于保存最终的公共前缀。</li>
+</ul>
+</li>
+<li><strong>逐位遍历第一个字符串</strong>（因为公共前缀最多不超过第一个字符串的长度）：<ul>
+<li>使用外层循环 <code>i</code> 遍历 <code>strs[0]</code> 的每个字符。</li>
+</ul>
+</li>
+<li><strong>对每一位进行横向比较</strong>：<ul>
+<li>用 <code>strs[0][i]</code> 作为参考字符 <code>c</code>。</li>
+<li>遍历数组中其余的字符串（从第 1 个开始），检查它们第 <code>i</code> 位的字符是否和参考字符相同。</li>
+<li>如果有任何一个字符串第 <code>i</code> 位不相同，则说明公共前缀在此终止，设置 <code>flag = false</code>，并 <code>break</code>。</li>
+</ul>
+</li>
+<li><strong>根据比较结果更新前缀</strong>：<ul>
+<li>如果 <code>flag == true</code>，说明当前位所有字符串都相同，将当前字符 <code>c</code> 加入到答案中。</li>
+<li>否则，终止外层循环。</li>
+</ul>
+</li>
+<li>**返回结果 <code>ans</code>**。</li>
+</ol>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;string&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+class Solution {
+public:
+    string longestCommonPrefix(vector&lt;string&gt;&amp; strs) {
+        int length = strs.size();
+        string ans;
+        for(int i=0;i&lt;strs[0].size();i++){
+            bool flag = true;
+            char c = strs[0][i];
+            for(int j=1;j&lt;length;j++){
+                if(strs[j][i] != c){
+                    flag = false;
+                    break;
+                }
+            }
+            if(flag){
+                ans.push_back(c);
+            }else{
+                break;
+            }
+        }
+        return ans;
+    }
+};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="20-有效的括号"><a href="#20-有效的括号" class="headerlink" title="20. 有效的括号"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/valid-parentheses/">20. 有效的括号</a></h3><h4 id="解题步骤：栈"><a href="#解题步骤：栈" class="headerlink" title="解题步骤：栈"></a>解题步骤：栈</h4><ol>
+<li><strong>准备映射表</strong>：<ul>
+<li>使用 <code>unordered_map&lt;char, char&gt;</code> 记录每个<strong>右括号</strong>对应的<strong>左括号</strong>：</li>
+</ul>
+</li>
+<li><strong>遍历字符串中的每个字符</strong>：<ul>
+<li>如果遇到左括号（<code>'('、'{'、'['</code>）：<ul>
+<li>将其压入栈中，等待后续匹配。</li>
+</ul>
+</li>
+<li>如果遇到右括号（<code>')'、'}'、']'</code>）：<ul>
+<li>先判断栈是否为空：<ul>
+<li>若为空，说明没有与当前右括号匹配的左括号，直接返回 <code>false</code>。</li>
+</ul>
+</li>
+<li>若不为空，取出栈顶的元素：<ul>
+<li>判断其是否与当前右括号匹配（通过查找映射表 <code>umap</code>）。</li>
+<li>不匹配 → 返回 <code>false</code>。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>检查栈是否为空</strong>：<ul>
+<li>如果最终栈不为空，说明还有未匹配的左括号 → 返回 <code>false</code>。</li>
+<li>否则，说明括号全部有效匹配 → 返回 <code>true</code>。</li>
+</ul>
+</li>
+</ol>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;string&gt;
+#include &lt;stack&gt;
+#include &lt;unordered_map&gt;
+
+using namespace std;
+
+class Solution {
+public:
+    bool isValid(string s) {
+        stack&lt;char&gt; stack1;
+        unordered_map&lt;char,char&gt; umap;
+        umap[')'] = '(';umap['}'] = '{';umap[']'] = '[';
+        for(int i=0;i&lt;s.size();i++){
+            if(s[i] == '(' || s[i] == '{' || s[i] == '['){
+                stack1.push(s[i]);
+            }else{
+                if(stack1.empty()){
+                    return false;
+                }else{
+                    char c = stack1.top();
+                    stack1.pop();
+                    if(c != umap[s[i]]){
+                        return false;
+                    }
+                }
+            }
+        }
+        if(!stack1.empty()){
+            return false;
+        }
+        return true;
+    }
+};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
 
 
@@ -1512,7 +1628,7 @@ public:
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">24.1k</span>
+                        class="white-color">24.7k</span>
             
             
             
