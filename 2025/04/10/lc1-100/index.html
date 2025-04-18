@@ -401,21 +401,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2025-04-17
+                    2025-04-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.2k
+                    4.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    19 分
+                    21 分
                 </div>
                 
 
@@ -1282,8 +1282,78 @@ public:
     }
 };<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h2 id="21-30"><a href="#21-30" class="headerlink" title="21-30"></a>21-30</h2><h3 id="21-合并两个有序链表"><a href="#21-合并两个有序链表" class="headerlink" title="21. 合并两个有序链表"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/merge-two-sorted-lists/">21. 合并两个有序链表</a></h3><h4 id="解题步骤-1"><a href="#解题步骤-1" class="headerlink" title="解题步骤"></a>解题步骤</h4><ol>
+<li><strong>定义两个指针</strong> <code>cur1</code> 和 <code>cur2</code>：<ul>
+<li><code>cur1</code> 指向第一个链表的当前节点，初始为 <code>list1</code>。</li>
+<li><code>cur2</code> 指向第二个链表的当前节点，初始为 <code>list2</code>。</li>
+</ul>
+</li>
+<li><strong>创建虚拟头结点</strong>：<ul>
+<li>新建一个值为 <code>0</code> 的节点 <code>res</code> 作为新链表的起点。</li>
+<li>指针 <code>cur</code> 用于在新链表中移动，初始指向 <code>res</code>。</li>
+</ul>
+</li>
+<li><strong>循环合并两个链表</strong>：<ul>
+<li>当 <code>cur1</code> 和 <code>cur2</code> 都不为空时，比较它们的值：<ul>
+<li>如果 <code>cur1-&gt;val &lt;= cur2-&gt;val</code>，将 <code>cur1</code> 接到新链表末尾，移动 <code>cur1</code>。</li>
+<li>否则，将 <code>cur2</code> 接到新链表末尾，移动 <code>cur2</code>。</li>
+</ul>
+</li>
+<li>每次都更新 <code>cur</code> 到当前新链表末尾。</li>
+</ul>
+</li>
+<li><strong>处理剩余节点</strong>：如果一个链表遍历完了，把另一个链表剩下的部分直接接到新链表后面</li>
+<li><strong>返回结果</strong>：虚拟头结点不是真正数据的一部分，最终返回的是 <code>res-&gt;next</code>，即合并后的链表头指针。</li>
+</ol>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include "ListNode.h"
 
+class Solution {
+public:
+    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
+        ListNode* cur1 = list1;
+        ListNode* cur2 = list2;
+        ListNode* res = new ListNode(0);
+        ListNode* cur = res;
+        while(cur1 != nullptr &amp;&amp; cur2 != nullptr){
+            if(cur1-&gt;val &lt;= cur2-&gt;val){
+                cur-&gt;next = cur1;
+                cur = cur1;
+                cur1 = cur1-&gt;next;
+            }else{
+                cur-&gt;next = cur2;
+                cur = cur2;
+                cur2 = cur2-&gt;next;
+            }
+        }
+        cur-&gt;next = cur1 == nullptr?cur2:cur1;
+        return res-&gt;next;
+    }
+};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h3 id="26-删除有序数组中的重复项"><a href="#26-删除有序数组中的重复项" class="headerlink" title="26. 删除有序数组中的重复项"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-duplicates-from-sorted-array/">26. 删除有序数组中的重复项</a></h3><h4 id="解题步骤：双指针法-1"><a href="#解题步骤：双指针法-1" class="headerlink" title="解题步骤：双指针法"></a>解题步骤：双指针法</h4><ol>
+<li><strong>初始化指针变量</strong>：<ul>
+<li><code>k = 1</code>：表示下一个应放入不重复元素的位置，也是最终唯一元素的个数。</li>
+<li><code>a = nums[0]</code>：记录当前唯一元素的值。</li>
+</ul>
+</li>
+<li><strong>遍历数组从第2个元素开始（i = 1）</strong>：<ul>
+<li>对于每个 <code>nums[i]</code>，检查它是否等于 <code>a</code>：<ul>
+<li>如果 <strong>不等于</strong>，说明遇到了一个新的唯一值：<ul>
+<li>把该元素复制到 <code>nums[k]</code> 位置。</li>
+<li>更新 <code>a = nums[i]</code>，并将 <code>k++</code>。</li>
+</ul>
+</li>
+<li>如果相等，则跳过该元素（是重复的）。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>**返回结果 <code>k</code>**：<ul>
+<li>即唯一元素的数量。</li>
+<li>并且 <code>nums</code> 的前 <code>k</code> 个位置已经被替换为不重复的元素，顺序保持不变。</li>
+</ul>
+</li>
+</ol>
 
                 
             </div>
@@ -1716,7 +1786,7 @@ public:
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">24.9k</span>
+                        class="white-color">25.5k</span>
             
             
             
