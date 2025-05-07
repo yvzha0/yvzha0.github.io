@@ -401,21 +401,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2025-04-21
+                    2025-05-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    6.8k
+                    8.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    30 分
+                    39 分
                 </div>
                 
 
@@ -1110,6 +1110,64 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h3 id="8-字符串转换整数-atoi"><a href="#8-字符串转换整数-atoi" class="headerlink" title="8. 字符串转换整数 (atoi)"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/string-to-integer-atoi/">8. 字符串转换整数 (atoi)</a></h3><h4 id="解题步骤：模拟-1"><a href="#解题步骤：模拟-1" class="headerlink" title="解题步骤：模拟"></a>解题步骤：模拟</h4><ol>
+<li><strong>跳过前导空格</strong>：从字符串开头开始，忽略所有空格字符，直到遇到第一个非空格字符。</li>
+<li><strong>判断符号</strong>：检查当前字符是否为 <code>'-'</code> 或 <code>'+'</code>，用于确定结果的正负。如果存在符号，记录下来，并将索引向后移动。</li>
+<li><strong>逐位转换数字</strong>：<ul>
+<li>从当前位置开始遍历，只要当前字符是数字字符（’0’-‘9’），就将其转换为对应数值并累加到结果中（即每次乘以 10 加上新数位）。</li>
+<li>同时使用一个 <code>long</code> 类型的变量存储结果，以便及时判断是否超出 32 位整数范围。</li>
+</ul>
+</li>
+<li><strong>处理溢出</strong>：<ul>
+<li>如果累加后的值超过 <code>INT_MAX</code>（2³¹ − 1）或小于 <code>INT_MIN</code>（−2³¹），则立即返回边界值。</li>
+</ul>
+</li>
+<li><strong>返回结果</strong>：<ul>
+<li>最后根据之前记录的符号，返回最终结果（若为负则取反）。</li>
+</ul>
+</li>
+</ol>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"string"</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;cmath&gt;</span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">int</span> <span class="token function">myAtoi</span><span class="token punctuation">(</span>string s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> len <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">bool</span> isZ <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> max <span class="token operator">=</span> INT_MAX<span class="token punctuation">;</span>
+        <span class="token keyword">int</span> min <span class="token operator">=</span> INT_MIN<span class="token punctuation">;</span>
+        <span class="token keyword">long</span> res <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token char">' '</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            i<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token char">'-'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            isZ <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+            i<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token char">'+'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            i<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&gt;=</span> <span class="token char">'0'</span> <span class="token operator">&amp;&amp;</span> s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> <span class="token char">'9'</span> <span class="token operator">&amp;&amp;</span> i <span class="token operator">&lt;</span> len<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            res <span class="token operator">=</span> res <span class="token operator">*</span> <span class="token number">10</span> <span class="token operator">+</span> s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token char">'0'</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>isZ<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>res <span class="token operator">&gt;=</span> max<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    res <span class="token operator">=</span> max<span class="token punctuation">;</span>
+                    <span class="token keyword">return</span> <span class="token keyword">int</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">-</span>res <span class="token operator">&lt;=</span> min<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    res <span class="token operator">=</span> min<span class="token punctuation">;</span>
+                    <span class="token keyword">return</span> <span class="token keyword">int</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            i<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> isZ <span class="token operator">?</span> <span class="token keyword">int</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token punctuation">(</span><span class="token operator">-</span>res<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h3 id="9-回文数"><a href="#9-回文数" class="headerlink" title="9. 回文数"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/palindrome-number/">9. 回文数</a></h3><h4 id="解题步骤：双指针法"><a href="#解题步骤：双指针法" class="headerlink" title="解题步骤：双指针法"></a>解题步骤：双指针法</h4><ol>
 <li><strong>排除负数情况</strong>：因为负数的符号 <code>-</code> 使其不可能是回文，所以如果 <code>x &lt; 0</code>，直接返回 <code>false</code>。</li>
 <li><strong>计算整数的位数（位数计数）</strong>：用一个临时变量 <code>a</code>（初始为 <code>x</code>）不断除以 10，直到变成 0，同时计数器 <code>weishu</code> 自增，用来记录整数 <code>x</code> 的位数。</li>
@@ -1158,7 +1216,121 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="10-20"><a href="#10-20" class="headerlink" title="10-20"></a>10-20</h2><h3 id="13-罗马数字转整数"><a href="#13-罗马数字转整数" class="headerlink" title="13. 罗马数字转整数"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/roman-to-integer/">13. 罗马数字转整数</a></h3><h4 id="解题步骤"><a href="#解题步骤" class="headerlink" title="解题步骤"></a>解题步骤</h4><ol>
+<h2 id="11-20"><a href="#11-20" class="headerlink" title="11-20"></a>11-20</h2><h3 id="11-盛最多水的容器"><a href="#11-盛最多水的容器" class="headerlink" title="11. 盛最多水的容器"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/container-with-most-water/">11. 盛最多水的容器</a></h3><h4 id="解题步骤：双指针法-1"><a href="#解题步骤：双指针法-1" class="headerlink" title="解题步骤：双指针法"></a>解题步骤：双指针法</h4><ol>
+<li><strong>初始化双指针</strong>：设置两个指针 <code>left</code> 和 <code>right</code>，分别指向数组的起始和末尾位置，表示当前考虑的两条垂线。</li>
+<li><strong>计算当前面积</strong>：<ul>
+<li>在每一步中，计算两个指针间的宽度 <code>b = right - left</code>。</li>
+<li>取两个高度中较小值 <code>a = min(height[left], height[right])</code> 作为有效高度。</li>
+<li>当前容器能盛的水量为 <code>a * b</code>，更新最大值记录。</li>
+</ul>
+</li>
+<li><strong>移动指针优化结果</strong>：<ul>
+<li>为了尽可能找到更大的面积，移动较短的那一侧的指针（因为只有提高短边才可能增大面积）：<ul>
+<li>若左侧高度较小，则移动左指针 <code>left++</code>；</li>
+<li>若右侧高度较小或相等，则移动右指针 <code>right--</code>。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>重复判断</strong>：重复上述步骤直到两个指针相遇。</li>
+<li><strong>返回最大面积</strong>：循环结束后返回记录的最大水量。</li>
+</ol>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;vector&gt;</span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">int</span> <span class="token function">maxArea</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token operator">&amp;</span> height<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> left <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> right <span class="token operator">=</span> height<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> ans <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>left <span class="token operator">&lt;</span> right<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">int</span> b <span class="token operator">=</span> right <span class="token operator">-</span> left<span class="token punctuation">;</span>
+            <span class="token keyword">int</span> a<span class="token punctuation">;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>height<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">&lt;</span> height<span class="token punctuation">[</span>right<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                a <span class="token operator">=</span> height<span class="token punctuation">[</span>left<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                left<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+                a <span class="token operator">=</span> height<span class="token punctuation">[</span>right<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                right<span class="token operator">--</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">int</span> captin <span class="token operator">=</span> a <span class="token operator">*</span> b<span class="token punctuation">;</span>
+            ans <span class="token operator">=</span> <span class="token function">max</span><span class="token punctuation">(</span>ans<span class="token punctuation">,</span>captin<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="12-整数转罗马数字"><a href="#12-整数转罗马数字" class="headerlink" title="12. 整数转罗马数字"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/integer-to-roman/">12. 整数转罗马数字</a></h3><h4 id="解题步骤：模拟法-1"><a href="#解题步骤：模拟法-1" class="headerlink" title="解题步骤：模拟法"></a>解题步骤：模拟法</h4><ol>
+<li><strong>定义罗马数字规则</strong>：根据罗马数字的构造规则，列出所有可能的符号及其对应的整数值，包括减法形式（如 IV、IX、XL 等）。</li>
+<li><strong>按从大到小顺序处理</strong>：使用一个有序的符号-数值对列表，从最大值开始依次匹配当前整数。</li>
+<li><strong>贪心选择最大符号</strong>：<ul>
+<li>在每次循环中，查找当前整数 <code>num</code> 是否大于或等于某个符号对应的值。</li>
+<li>如果是，就将该符号加入结果字符串，并从 <code>num</code> 中减去对应的数值。</li>
+<li>重复这一过程，直到 <code>num</code> 小于该值，再继续尝试下一个更小的符号。</li>
+</ul>
+</li>
+<li><strong>终止条件</strong>：当 <code>num</code> 减至 0 时，表示所有部分已成功转换为罗马数字。</li>
+<li><strong>返回结果</strong>：最后将构造的罗马数字字符串作为结果返回。</li>
+</ol>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string&gt;</span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    string <span class="token function">intToRoman</span><span class="token punctuation">(</span><span class="token keyword">int</span> num<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        string ans<span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>num <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>num <span class="token operator">&gt;=</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                num <span class="token operator">-=</span> <span class="token number">1000</span><span class="token punctuation">;</span>
+                ans<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span><span class="token char">'M'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>num <span class="token operator">&gt;=</span> <span class="token number">900</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                num <span class="token operator">-=</span> <span class="token number">900</span><span class="token punctuation">;</span>
+                ans <span class="token operator">+=</span> <span class="token string">"CM"</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>num <span class="token operator">&gt;=</span> <span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                num <span class="token operator">-=</span> <span class="token number">500</span><span class="token punctuation">;</span>
+                ans<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span><span class="token char">'D'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>num <span class="token operator">&gt;=</span> <span class="token number">400</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                num <span class="token operator">-=</span> <span class="token number">400</span><span class="token punctuation">;</span>
+                ans <span class="token operator">+=</span> <span class="token string">"CD"</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>num <span class="token operator">&gt;=</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                num <span class="token operator">-=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+                ans<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span><span class="token char">'C'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>num <span class="token operator">&gt;=</span> <span class="token number">90</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                num <span class="token operator">-=</span> <span class="token number">90</span><span class="token punctuation">;</span>
+                ans <span class="token operator">+=</span> <span class="token string">"XC"</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>num <span class="token operator">&gt;=</span> <span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                num <span class="token operator">-=</span> <span class="token number">50</span><span class="token punctuation">;</span>
+                ans<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span><span class="token char">'L'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>num <span class="token operator">&gt;=</span> <span class="token number">40</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                num <span class="token operator">-=</span> <span class="token number">40</span><span class="token punctuation">;</span>
+                ans <span class="token operator">+=</span> <span class="token string">"XL"</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>num <span class="token operator">&gt;=</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                num <span class="token operator">-=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+                ans<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span><span class="token char">'X'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>num <span class="token operator">&gt;=</span> <span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                num <span class="token operator">-=</span> <span class="token number">9</span><span class="token punctuation">;</span>
+                ans <span class="token operator">+=</span> <span class="token string">"IX"</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>num <span class="token operator">&gt;=</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                num <span class="token operator">-=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+                ans<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span><span class="token char">'V'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>num <span class="token operator">&gt;=</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                num <span class="token operator">-=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+                ans <span class="token operator">+=</span> <span class="token string">"IV"</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span><span class="token punctuation">{</span>
+                num <span class="token operator">-=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+                ans<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span><span class="token char">'I'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="13-罗马数字转整数"><a href="#13-罗马数字转整数" class="headerlink" title="13. 罗马数字转整数"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/roman-to-integer/">13. 罗马数字转整数</a></h3><h4 id="解题步骤"><a href="#解题步骤" class="headerlink" title="解题步骤"></a>解题步骤</h4><ol>
 <li><strong>建立罗马字符与数值的映射表</strong>：使用 <code>unordered_map&lt;char, int&gt;</code> 把罗马字符 <code>'I'~'M'</code> 映射到相应的整数值。</li>
 <li>**初始化总和变量 <code>ans</code> 和索引变量 <code>i</code>**：<ul>
 <li><code>ans</code> 用来累加转换结果。</li>
@@ -1262,6 +1434,127 @@
         <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="15-三数之和"><a href="#15-三数之和" class="headerlink" title="15. 三数之和"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/3sum/">15. 三数之和</a></h3><h4 id="解题步骤：排序-双指针"><a href="#解题步骤：排序-双指针" class="headerlink" title="解题步骤：排序+双指针"></a>解题步骤：排序+双指针</h4><ol>
+<li><strong>排序数组</strong>：对输入数组 <code>nums</code> 进行升序排序，便于后续使用双指针方法并去除重复三元组。</li>
+<li><strong>固定第一个数</strong>：<ul>
+<li>从数组起始位置开始遍历，用变量 <code>first</code> 表示三元组的第一个元素索引。</li>
+<li>如果当前 <code>nums[first]</code> 与前一个相同，跳过以避免重复解。</li>
+<li>如果 <code>nums[first] &gt; 0</code>，由于数组已排序，后续所有数都为正，三数之和不可能为 0，提前结束遍历。</li>
+</ul>
+</li>
+<li><strong>使用双指针查找其余两个数</strong>：<ul>
+<li>对于每个 <code>first</code>，从 <code>first + 1</code> 开始遍历 <code>second</code>，并设置 <code>third</code> 为数组末尾索引。</li>
+<li>若 <code>nums[second] == nums[second - 1]</code>（且 second &gt; first+1），则跳过以避免重复。</li>
+<li>移动 <code>third</code> 指针，直到 <code>nums[first] + nums[second] + nums[third] &lt;= 0</code>。</li>
+<li>若此时三数之和等于 0，说明找到一个符合条件的三元组，添加到结果中。</li>
+</ul>
+</li>
+<li><strong>终止条件</strong>：当 <code>second</code> 与 <code>third</code> 相遇时，说明当前 <code>first</code> 所能组合的三元组已全部处理。</li>
+<li><strong>返回结果</strong>：返回收集到的所有不重复的三元组。</li>
+</ol>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;vector&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;algorithm&gt;</span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;&gt;</span> <span class="token function">threeSum</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token operator">&amp;</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">sort</span><span class="token punctuation">(</span>nums<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> nums<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;&gt;</span> ans<span class="token punctuation">;</span>
+        <span class="token keyword">int</span> len <span class="token operator">=</span> nums<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> first<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>first<span class="token operator">&lt;</span>len<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">;</span>first<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>first <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> nums<span class="token punctuation">[</span>first<span class="token punctuation">]</span> <span class="token operator">==</span> nums<span class="token punctuation">[</span>first<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">continue</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>first<span class="token punctuation">]</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">int</span> third <span class="token operator">=</span> len <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> second<span class="token operator">=</span>first<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>second<span class="token operator">&lt;</span>len<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>second<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>second <span class="token operator">&gt;</span> first <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">&amp;&amp;</span> nums<span class="token punctuation">[</span>second<span class="token punctuation">]</span> <span class="token operator">==</span> nums<span class="token punctuation">[</span>second<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    <span class="token keyword">continue</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">while</span><span class="token punctuation">(</span>third <span class="token operator">&gt;</span> second <span class="token operator">&amp;&amp;</span> nums<span class="token punctuation">[</span>first<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>second<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>third<span class="token punctuation">]</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    third<span class="token operator">--</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>third <span class="token operator">==</span> second<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    <span class="token keyword">break</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>first<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>second<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>third<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    ans<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span><span class="token punctuation">{</span>nums<span class="token punctuation">[</span>first<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>second<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>third<span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="16-最接近的三数之和"><a href="#16-最接近的三数之和" class="headerlink" title="16. 最接近的三数之和"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/3sum-closest/">16. 最接近的三数之和</a></h3><h4 id="解题步骤：排序-双指针-1"><a href="#解题步骤：排序-双指针-1" class="headerlink" title="解题步骤：排序+双指针"></a>解题步骤：排序+双指针</h4><ol>
+<li><strong>数组排序</strong>：先将数组 <code>nums</code> 升序排序，以便后续使用双指针技术优化查找。</li>
+<li><strong>初始化最优解</strong>：定义变量 <code>ans</code> 存储当前找到的最接近目标值的三数之和，初始值设置为一个足够大的整数。</li>
+<li><strong>遍历第一个元素</strong>：<ul>
+<li>使用变量 <code>first</code> 遍历数组的前 <code>n - 2</code> 个位置。</li>
+<li>可跳过重复值（<code>nums[first] == nums[first - 1]</code>）优化效率，但非必要。</li>
+</ul>
+</li>
+<li><strong>双指针寻找剩余两个数</strong>：<ul>
+<li>固定 <code>first</code> 后，从 <code>first + 1</code> 到末尾，用 <code>second</code> 向右移动，<code>third</code> 向左移动。</li>
+<li>对于每对 <code>(second, third)</code>，计算当前三数之和 <code>sum = nums[first] + nums[second] + nums[third]</code>。</li>
+</ul>
+</li>
+<li><strong>比较并更新最优解</strong>：<ul>
+<li>若 <code>sum</code> 恰好等于 <code>target</code>，直接返回结果；</li>
+<li>否则判断当前 <code>sum</code> 与 <code>target</code> 的距离是否比 <code>ans</code> 更接近，若是则更新 <code>ans</code>。</li>
+</ul>
+</li>
+<li><strong>移动指针以尝试更优解</strong>：<ul>
+<li>若当前 <code>sum &gt; target</code>，说明总和偏大，移动 <code>third</code> 向左；</li>
+<li>若 <code>sum &lt; target</code>，说明总和偏小，移动 <code>second</code> 向右。</li>
+</ul>
+</li>
+<li><strong>返回最终答案</strong>：所有可能组合遍历后，返回记录的最接近目标的三数之和 <code>ans</code>。</li>
+</ol>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;vector&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;algorithm&gt;</span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">int</span> <span class="token function">threeSumClosest</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token operator">&amp;</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> len <span class="token operator">=</span> nums<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">sort</span><span class="token punctuation">(</span>nums<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> nums<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> ans <span class="token operator">=</span> INT_MAX <span class="token operator">-</span> <span class="token number">1e4</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> first <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>first<span class="token operator">&lt;</span>len<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">;</span>first<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>first <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> nums<span class="token punctuation">[</span>first<span class="token punctuation">]</span> <span class="token operator">==</span> nums<span class="token punctuation">[</span>first<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">continue</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">int</span> third <span class="token operator">=</span> len <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> second<span class="token operator">=</span>first<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>second<span class="token operator">&lt;</span>len<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>second<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">while</span><span class="token punctuation">(</span>third <span class="token operator">&gt;</span> second <span class="token operator">&amp;&amp;</span> nums<span class="token punctuation">[</span>first<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>second<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>third<span class="token punctuation">]</span> <span class="token operator">&gt;</span> target<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>first<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>second<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>third<span class="token punctuation">]</span> <span class="token operator">-</span> target <span class="token operator">&lt;</span> <span class="token function">abs</span><span class="token punctuation">(</span>ans <span class="token operator">-</span> target<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                        ans <span class="token operator">=</span> nums<span class="token punctuation">[</span>first<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>second<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>third<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                    third<span class="token operator">--</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>second <span class="token operator">==</span> third<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    <span class="token keyword">break</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>first<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>second<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>third<span class="token punctuation">]</span> <span class="token operator">==</span> target<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    <span class="token keyword">return</span> target<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>first<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>second<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>third<span class="token punctuation">]</span> <span class="token operator">-</span> target<span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token function">abs</span><span class="token punctuation">(</span>ans <span class="token operator">-</span> target<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    ans <span class="token operator">=</span> nums<span class="token punctuation">[</span>first<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>second<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>third<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
 
 <h3 id="20-有效的括号"><a href="#20-有效的括号" class="headerlink" title="20. 有效的括号"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/valid-parentheses/">20. 有效的括号</a></h3><h4 id="解题步骤：栈"><a href="#解题步骤：栈" class="headerlink" title="解题步骤：栈"></a>解题步骤：栈</h4><ol>
 <li><strong>准备映射表</strong>：<ul>
@@ -1375,7 +1668,7 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="26-删除有序数组中的重复项"><a href="#26-删除有序数组中的重复项" class="headerlink" title="26. 删除有序数组中的重复项"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-duplicates-from-sorted-array/">26. 删除有序数组中的重复项</a></h3><h4 id="解题步骤：双指针法-1"><a href="#解题步骤：双指针法-1" class="headerlink" title="解题步骤：双指针法"></a>解题步骤：双指针法</h4><ol>
+<h3 id="26-删除有序数组中的重复项"><a href="#26-删除有序数组中的重复项" class="headerlink" title="26. 删除有序数组中的重复项"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-duplicates-from-sorted-array/">26. 删除有序数组中的重复项</a></h3><h4 id="解题步骤：双指针法-2"><a href="#解题步骤：双指针法-2" class="headerlink" title="解题步骤：双指针法"></a>解题步骤：双指针法</h4><ol>
 <li><strong>初始化指针变量</strong>：<ul>
 <li><code>k = 1</code>：表示下一个应放入不重复元素的位置，也是最终唯一元素的个数。</li>
 <li><code>a = nums[0]</code>：记录当前唯一元素的值。</li>
@@ -2139,7 +2432,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">27.6k</span>
+                        class="white-color">29.4k</span>
             
             
             
